@@ -1,8 +1,17 @@
 # 🏆 Honors and Awards
-- *2025.03* 2024 Beijing Outstanding Doctoral Dissertation Nomination (北京市优秀博士学位论文提名)(**<font color="#C00000">Top 0.1%</font>**)
-- *2024.01* Excellent Doctoral Thesis of Beihang University (北航优秀博士学位论文)(**<font color="#C00000">Top 1%</font>**)
-- *2023.06* "Outstanding Graduates" of Beijing,  Ministry of Education of Beijing (北京市优秀毕业生)(**<font color="#C00000">Top 1%</font>**)
-- *2022.07* 《Remote Sensing》2022 Best Paper Award (RS最佳论文奖)(**<font color="#C00000">Top 0.1%</font>**)
-- *2021.10* National Scholarship, Ministry of Education of China (国家奖学金)(**<font color="#C00000">Top 1%</font>**)
-- *2017.06* "Outstanding Graduates" of Beijing,  Ministry of Education of Beijing (北京市优秀毕业生)(**<font color="#C00000">Top 1%</font>**)
 
+- *2024* Top Ten Outstanding Student Models of Xi'an Jiaotong University (西安交通大学十大优秀学生标兵)(**<font color="#C00000">本科生最高荣誉</font>**)
+
+- *2023* American Mathematical Contest in Modeling (MCM/ICM) Finalist (美国大学生数学建模竞赛决赛入围)
+
+- *2023* China Scientist Scholarship (20,000 ¥) (中国科学家奖学金)
+
+- *2022* National Scholarship, Ministry of Education of China (国家奖学金)
+
+- *2021* RoboCup Robot World Cup China First Prize (RoboCup 机器人世界杯中国赛一等奖)
+
+- *2021* National Mathematical Contest in Modeling Shaanxi First Prize (全国大学生数学建模竞赛陕西一等奖)
+
+- *2020* National College Mathematics Competition Shaanxi Province First Prize (全国大学生数学竞赛陕西一等奖)
+
+- *2019* Xi'an Jiaotong University First Prize Scholarship (西安交通大学一等奖学金)
