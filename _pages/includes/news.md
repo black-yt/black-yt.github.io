@@ -1,8 +1,8 @@
 # 🔥 News
 
-- *2025.10*: Our new paper on multi-agent reasoning, **Eigen-1: Adaptive Multi-Agent Refinement with Monitor-Based RAG for Scientific Reasoning**, reached **38w views on BiliBili**! ([link](https://www.bilibili.com/video/BV1own2zFEf7/?share_source=copy_web&vd_source=7b9d898a8c3bbebf65c411956ed7f8ce))
+- *2025.10*: Our new paper on multi-agent reasoning, **Eigen-1: Adaptive Multi-Agent Refinement with Monitor-Based RAG for Scientific Reasoning**, reached **36w views on BiliBili**! ([link](https://www.bilibili.com/video/BV1own2zFEf7/?share_source=copy_web&vd_source=7b9d898a8c3bbebf65c411956ed7f8ce))
 
-- *2025.10*: **Eigen-1** achieves **60%+ score on Humanity's Last Exam (HLE) benchmark**, establishing a new SOTA for multi-agent scientific reasoning.
+- *2025.10*: Our new paper on multi-agent reasoning, **Eigen-1: Adaptive Multi-Agent Refinement with Monitor-Based RAG for Scientific Reasoning** achieves **60%+ score on Humanity's Last Exam (HLE) benchmark**, establishing a new SOTA for multi-agent scientific reasoning on HLE.
 
 - *2025.09*: Two papers accepted by **NeurIPS 2024**.
 
