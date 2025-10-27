@@ -11,6 +11,8 @@
 
 - *2025.06*: *InfGen: A Resolution-Agnostic Paradigm for Scalable Image Synthesis* accepted by ICCV 2025.
 
+- *2025.06*: Our website [PrismaX](https://prismax.opencompass.org.cn/), an evaluation-driven platform for AI scientific discovery, is launched 🎉.
+
 - *2024.09*: *Generalizing Weather Forecast to Fine-grained Temporal Scales via Physics-AI Hybrid Modeling* (first author) accepted by NeurIPS 2024.
 
 - *2024.05*: *CasCast: Skillful High-resolution Precipitation Nowcasting via Cascaded Modelling* accepted by ICML 2024.
