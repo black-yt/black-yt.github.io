@@ -15,8 +15,8 @@ main:
   - title: "Services"
     url: "/#-services"
 
-  # - title: "Others"
-  #   url: "/#-others"
+  - title: "Others"
+    url: "/#-others"
 
 
 
