@@ -3,7 +3,7 @@
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/InfGen.png"><img src='images/InfGen.png' alt="InfGen" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="xxx"><b>InfGen: A Resolution-Agnostic Paradigm for Scalable Image Synthesis</b></a> \\
+<a class=PaperTitle href="https://openaccess.thecvf.com/content/ICCV2025/papers/Han_InfGen_A_Resolution-Agnostic_Paradigm_for_Scalable_Image_Synthesis_ICCV_2025_paper.pdf"><b>InfGen: A Resolution-Agnostic Paradigm for Scalable Image Synthesis</b></a> \\
 *ICCV, 2025 (Accept)* \\
 Tao Han, **<font color="#000000">Wanghan Xu</font>**, Junchao Gong, Xiaoyu Yue, Song Guo, Luping Zhou, Lei Bai \\
 [<a href="https://arxiv.org/pdf/2509.10441">Arxiv</a>] [<a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Han_InfGen_A_Resolution-Agnostic_Paradigm_for_Scalable_Image_Synthesis_ICCV_2025_paper.pdf">ICCV</a>] 
@@ -14,10 +14,10 @@ Tao Han, **<font color="#000000">Wanghan Xu</font>**, Junchao Gong, Xiaoyu Yue, 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/Eigen1.png"><img src='images/Eigen1.png' alt="Eigen-1" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="xxx"><b>Eigen-1: Adaptive Multi-Agent Refinement with Monitor-Based RAG for Scientific Reasoning</b></a> \\
+<a class=PaperTitle href="https://arxiv.org/pdf/2509.21193"><b>Eigen-1: Adaptive Multi-Agent Refinement with Monitor-Based RAG for Scientific Reasoning</b></a> \\
 *ICLR, 2026 (Under Review)* \\
 Xiangru Tang*, **<font color="#000000">Wanghan Xu*</font>**, Yujie Wang*, Zijie Guo*, Daniel Shao, Jiapeng Chen, Cixuan Zhang, Ziyi Wang, Lixin Zhang, Guancheng Wan, Wenlong Zhang, Lei Bai, Zhenfei Yin, Philip Torr, Hanrui Wang, Di Jin \\
-[<a href="xxx">Link</a>]
+[<a href="https://arxiv.org/pdf/2509.21193">Arxiv</a>]
 
 </div>
 </div>
