@@ -134,13 +134,12 @@ Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<font
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/WeatherGFT.png"><img src='images/WeatherGFT.png' alt="WeatherGFT" width="100%"></a></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/GFT.png"><img src='images/GFT.png' alt="GFT" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://proceedings.neurips.cc/paper_files/paper/2024/file/298c3e32d7d402189444be2ff5d19979-Paper-Conference.pdf"><b>Generalizing Weather Forecast to Fine-grained Temporal Scales via Physics-AI Hybrid Modeling</b></a> \\
 *NeurIPS, 2024 (Accept)* \\
 **<font color="#000000">Wanghan Xu</font>**, Fenghua Ling, Wenlong Zhang, Tao Han, Hao Chen, Wanli Ouyang, Lei Bai \\
-[<a href="">Link</a>]
 [<a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/298c3e32d7d402189444be2ff5d19979-Paper-Conference.pdf">NeurIPS</a>] [<a href="https://arxiv.org/pdf/2405.13796">Arxiv</a>] [<a href="https://github.com/black-yt/WeatherGFT">Code</a>]
 
 </div>
@@ -160,7 +159,7 @@ Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<font
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/CasCast.png"><img src='images/CasCast.png' alt="CasCast" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://openreview.net/forum?id=YuNFJSEkTi"><b>CasCast: Skillful High-resolution Precipitation Nowcasting via Cascaded Modelling</b></a> \\
+<a class=PaperTitle href="https://openreview.net/pdf?id=YuNFJSEkTi"><b>CasCast: Skillful High-resolution Precipitation Nowcasting via Cascaded Modelling</b></a> \\
 *ICML, 2024 (Accept)* \\
 Junchao Gong, Lei Bai, Peng Ye, **<font color="#000000">Wanghan Xu</font>**, Na Liu, Jianhua Dai, Xiaokang Yang, Wanli Ouyang \\
 [<a href="https://openreview.net/pdf?id=YuNFJSEkTi">ICML</a>] [<a href="https://arxiv.org/pdf/2402.04290">Arxiv</a>] [<a href="https://github.com/OpenEarthLab/CasCast">Code</a>]
@@ -185,7 +184,7 @@ Tao Han, Song Guo, Zhenghao Chen, **<font color="#000000">Wanghan Xu</font>**, L
 <a class=PaperTitle href="https://arxiv.org/pdf/2405.03376"><b>CRA5: Extreme Compression of ERA5 for Portable Global Climate and Weather Research via an Efficient Variational Transformer</b></a> \\
 *Arxiv, 2024 (Preprint)* \\
 Tao Han, Zhenghao Chen, Song Guo, **<font color="#000000">Wanghan Xu</font>**, Lei Bai \\
-[<a href="https://arxiv.org/pdf/2405.03376">ICML</a>] [<a href="https://github.com/taohan10200/CRA5">Code</a>]
+[<a href="https://arxiv.org/pdf/2405.03376">Arxiv</a>] [<a href="https://github.com/taohan10200/CRA5">Code</a>]
 
 </div>
 </div>
