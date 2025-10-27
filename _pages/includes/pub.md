@@ -38,7 +38,7 @@ Peilin Feng, Zhutao Lv, Junyan Ye, Xiaolei Wang, Xinjie Huo, Jinhua Yu, **<font 
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2508.21148"><b>A Survey of Scientific Large Language Models: From Data Foundations to Agent Frontiers</b></a> \\
 *Arxiv, 2025* \\
-Ming Hu, Chenglong Ma, Wei Li, **<font color="#000000">Wanghan Xu</font>**, Jiamin Wu, Jucheng Hu, Tianbin Li, Guohang Zhuang, Jiaqi Liu …(103 authors) \\
+Ming Hu, Chenglong Ma, Wei Li, **<font color="#000000">Wanghan Xu</font>**, Jiamin Wu, Jucheng Hu, Tianbin Li, Guohang Zhuang, Jiaqi Liu ... (103 authors) \\
 [<a href="https://arxiv.org/pdf/2508.21148">Arxiv</a>] [<a href="https://github.com/open-sciencelab/Awesome-Scientific-Datasets-and-LLMs">Data</a>]
 
 </div>
@@ -49,7 +49,7 @@ Ming Hu, Chenglong Ma, Wei Li, **<font color="#000000">Wanghan Xu</font>**, Jiam
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2508.15763"><b>Intern-S1: A Scientific Multimodal Foundation Model</b></a> \\
 *Arxiv, 2025* \\
-Lei Bai, (177 authors listed in alphabetical order by their last names) \\
+Lei Bai ... (177 authors listed in alphabetical order by their last names) \\
 [<a href="https://arxiv.org/pdf/2508.15763">Arxiv</a>] [<a href="https://huggingface.co/internlm/Intern-S1">Model</a>] [<a href="https://github.com/InternLM/Intern-S1">Code</a>] [<a href="https://chat.intern-ai.org.cn/">Online Chat</a>]
 
 </div>
