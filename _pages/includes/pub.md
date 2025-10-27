@@ -15,7 +15,7 @@ Tao Han, **<font color="#000000">Wanghan Xu</font>**, Junchao Gong, Xiaoyu Yue, 
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2509.21193"><b>Eigen-1: Adaptive Multi-Agent Refinement with Monitor-Based RAG for Scientific Reasoning</b></a> \\
-*ICLR, 2026 (Under Review)* \\
+*Arxiv, 2025* \\
 Xiangru Tang\*, **<font color="#000000">Wanghan Xu*</font>**, Yujie Wang\*, Zijie Guo\*, Daniel Shao, Jiapeng Chen, Cixuan Zhang, Ziyi Wang, Lixin Zhang, Guancheng Wan, Wenlong Zhang, Lei Bai, Zhenfei Yin, Philip Torr, Hanrui Wang, Di Jin \\
 [<a href="https://arxiv.org/pdf/2509.21193">Arxiv</a>] [<a href="https://github.com/tangxiangru/Eigen-1">Code</a>]
 
@@ -26,7 +26,7 @@ Xiangru Tang\*, **<font color="#000000">Wanghan Xu*</font>**, Yujie Wang\*, Ziji
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2509.23141"><b>Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents</b></a> \\
-*ICLR, 2026 (Under Review)* \\
+*Arxiv, 2025* \\
 Peilin Feng, Zhutao Lv, Junyan Ye, Xiaolei Wang, Xinjie Huo, Jinhua Yu, **<font color="#000000">Wanghan Xu</font>**, Wenlong Zhang, Lei Bai, Conghui He, Weijia Li \\
 [<a href="https://arxiv.org/pdf/2509.23141">Arxiv</a>] [<a href="https://opendatalab.github.io/Earth-Agent/">Project Page</a>] [<a href="https://github.com/opendatalab/Earth-Agent">Code</a>] [<a href="https://huggingface.co/datasets/Sssunset/Earth-Bench">Dataset</a>]
 
@@ -37,7 +37,7 @@ Peilin Feng, Zhutao Lv, Junyan Ye, Xiaolei Wang, Xinjie Huo, Jinhua Yu, **<font 
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2508.21148"><b>A Survey of Scientific Large Language Models: From Data Foundations to Agent Frontiers</b></a> \\
-*Arxiv, 2025 (Preprint)* \\
+*Arxiv, 2025* \\
 Ming Hu, Chenglong Ma, Wei Li, **<font color="#000000">Wanghan Xu</font>**, Jiamin Wu, Jucheng Hu, Tianbin Li, Guohang Zhuang, Jiaqi Liu …(103 authors) \\
 [<a href="https://arxiv.org/pdf/2508.21148">Arxiv</a>] [<a href="https://github.com/open-sciencelab/Awesome-Scientific-Datasets-and-LLMs">Data</a>]
 
@@ -48,7 +48,7 @@ Ming Hu, Chenglong Ma, Wei Li, **<font color="#000000">Wanghan Xu</font>**, Jiam
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2508.15763"><b>Intern-S1: A Scientific Multimodal Foundation Model</b></a> \\
-*Arxiv, 2025 (Preprint)* \\
+*Arxiv, 2025* \\
 Lei Bai, (177 authors listed in alphabetical order by their last names) \\
 [<a href="https://arxiv.org/pdf/2508.15763">Arxiv</a>] [<a href="https://huggingface.co/internlm/Intern-S1">Model</a>] [<a href="https://github.com/InternLM/Intern-S1">Code</a>] [<a href="https://chat.intern-ai.org.cn/">Online Chat</a>]
 
@@ -59,7 +59,7 @@ Lei Bai, (177 authors listed in alphabetical order by their last names) \\
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2507.17311"><b>EarthLink: A Self-Evolving AI Agent for Climate Science</b></a> \\
-*Arxiv, 2025 (Preprint)* \\
+*Arxiv, 2025* \\
 Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<font color="#000000">Wanghan Xu</font>**, Ben Fei, Wenlong Zhang, Xinyu Gu, Lijing Cheng, Jing-Jia Luo, Chao Li, Yaqiang Wang, Tao Chen, Wanli Ouyang, Fenghua Ling, Lei Bai \\
 [<a href="https://arxiv.org/pdf/2507.17311">Arxiv</a>] [<a href=" https://earthlink.intern-ai.org.cn/">Platform</a>]
 
@@ -70,7 +70,7 @@ Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<font color="#000000"
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2505.20310"><b>Manalyzer: End-to-end Automated Meta-analysis with Multi-agent System</b></a> \\
-*Arxiv, 2025 (Preprint)* \\
+*Arxiv, 2025* \\
 **<font color="#000000">Wanghan Xu</font>**, Wenlong Zhang, Fenghua Ling, Ben Fei, Yusong Hu, Fangxuan Ren, Jintai Lin, Wanli Ouyang, Lei Bai \\
 [<a href="https://arxiv.org/pdf/2505.20310">Arxiv</a>] [<a href="https://black-yt.github.io/meta-analysis-page/">Project Page</a>] [<a href="https://github.com/black-yt/Manalyzer">Code</a>] [<a href="https://huggingface.co/datasets/CoCoOne/Manalyzer">Dataset</a>]
 
@@ -81,7 +81,7 @@ Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<font color="#000000"
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2505.17139"><b>EarthSE: A Benchmark Evaluating Earth Scientific Exploration Capability for Large Language Models</b></a> \\
-*Arxiv, 2025 (Preprint)* \\
+*Arxiv, 2025* \\
 **<font color="#000000">Wanghan Xu</font>**, Xiangyu Zhao, Yuhao Zhou, Xiaoyu Yue, Ben Fei, Fenghua Ling, Wenlong Zhang, Lei Bai \\
 [<a href="https://arxiv.org/pdf/2505.17139">Arxiv</a>] [<a href="https://github.com/black-yt/EarthSE">Code</a>] [<a href="https://huggingface.co/ai-earth">Dataset</a>] 
 
@@ -92,7 +92,7 @@ Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<font color="#000000"
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2505.20740"><b>MSEarth: A Benchmark for Multimodal Scientific Comprehension of Earth Science</b></a> \\
-*Arxiv, 2025 (Preprint)* \\
+*Arxiv, 2025* \\
 Xiangyu Zhao\*, **<font color="#000000">Wanghan Xu*</font>**, Bo Liu, Yuhao Zhou, Fenghua Ling, Ben Fei, Xiaoyu Yue, Lei Bai, Wenlong Zhang, Xiao-Ming Wu \\
 [<a href="https://arxiv.org/pdf/2505.20740">Arxiv</a>] [<a href="https://github.com/xiangyu-mm/MSEarth">Code</a>] [<a href="https://huggingface.co/MSEarth-Data">Dataset</a>] 
 
@@ -127,7 +127,7 @@ Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<font
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2502.00359"><b>Exploring Representation-Aligned Latent Space for Better Generation</b></a> \\
-*Arxiv, 2025 (Preprint)* \\
+*Arxiv, 2025* \\
 **<font color="#000000">Wanghan Xu</font>**, Xiaoyu Yue, Zidong Wang, Yao Teng, Wenlong Zhang, Xihui Liu, Luping Zhou, Wanli Ouyang, Lei Bai \\
 [<a href="https://arxiv.org/pdf/2502.00359">Arxiv</a>] [<a href="https://github.com/black-yt/ReaLS">Code</a>]
 
@@ -149,7 +149,7 @@ Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<font
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2402.01295"><b>ExtremeCast: Boosting Extreme Value Prediction for Global Weather Forecast</b></a> \\
-*Arxiv, 2024 (Preprint)* \\
+*Arxiv, 2024* \\
 **<font color="#000000">Wanghan Xu</font>**, Kang Chen, Tao Han, Hao Chen, Wanli Ouyang, Lei Bai \\
 [<a href="https://arxiv.org/pdf/2402.01295">Arxiv</a>] [<a href="https://github.com/black-yt/ExtremeCast">Code</a>]
 
@@ -171,7 +171,7 @@ Junchao Gong, Lei Bai, Peng Ye, **<font color="#000000">Wanghan Xu</font>**, Na 
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2406.14399"><b>WEATHER-5K: A Large-scale Global Station Weather Dataset Towards Comprehensive Time-series Forecasting Benchmark</b></a> \\
-*Arxiv, 2024 (Preprint)* \\
+*Arxiv, 2024* \\
 Tao Han, Song Guo, Zhenghao Chen, **<font color="#000000">Wanghan Xu</font>**, Lei Bai\\
 [<a href="https://arxiv.org/pdf/2406.14399">Arxiv</a>] [<a href="https://github.com/taohan10200/WEATHER-5K">Code</a>]
 
@@ -182,7 +182,7 @@ Tao Han, Song Guo, Zhenghao Chen, **<font color="#000000">Wanghan Xu</font>**, L
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2405.03376"><b>CRA5: Extreme Compression of ERA5 for Portable Global Climate and Weather Research via an Efficient Variational Transformer</b></a> \\
-*Arxiv, 2024 (Preprint)* \\
+*Arxiv, 2024* \\
 Tao Han, Zhenghao Chen, Song Guo, **<font color="#000000">Wanghan Xu</font>**, Lei Bai \\
 [<a href="https://arxiv.org/pdf/2405.03376">Arxiv</a>] [<a href="https://github.com/taohan10200/CRA5">Code</a>]
 
@@ -193,7 +193,7 @@ Tao Han, Zhenghao Chen, Song Guo, **<font color="#000000">Wanghan Xu</font>**, L
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2402.08429"><b>Is 3-(F)WL Enough to Distinguish All 3D Graphs?</b></a> \\
-*Arxiv, 2024 (Preprint)* \\
+*Arxiv, 2024* \\
 **<font color="#000000">Wanghan Xu</font>** \\
 [<a href="https://arxiv.org/pdf/2402.08429">Arxiv</a>]
 
@@ -204,7 +204,7 @@ Tao Han, Zhenghao Chen, Song Guo, **<font color="#000000">Wanghan Xu</font>**, L
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2403.00030"><b>GraphPub: Generation of Differential Privacy Graph with High Availability</b></a> \\
-*Arxiv, 2024 (Preprint)* \\
+*Arxiv, 2024* \\
 **<font color="#000000">Wanghan Xu</font>**, Bin Shi, Ao Liu, Jiqiang Zhang, Bo Dong \\
 [<a href="https://arxiv.org/pdf/2403.00030">Arxiv</a>]
 
