@@ -6,9 +6,9 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Hao Chen (陈浩)"
-description              : "A researcher at Shanghai AI Laboratory."
-repository               : "justchenhao/justchenhao.github.io"
+title                    : "Wanghan Xu (徐望瀚)"
+description              : "PhD at Shanghai Jiao Tong University."
+repository               : "black-yt/black-yt.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -21,31 +21,31 @@ baidu_site_verification  :
 
 # Site Author
 author:
-  name             : "Hao Chen <br /> (陈浩)"
+  name             : "Wanghan Xu <br /> (徐望瀚)"
   avatar           : "images/Profi.jpg"
-  bio              : "AI4Earth"
+  bio              : ""
   location         : "Shanghai"
   employer         :
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=BEDNoZIAAAAJ"
-  email            : "justchenhao@buaa.edu.cn"
+  googlescholar    : "https://scholar.google.com/citations?user=lmCL5xQAAAAJ&hl=zh-CN&oi=ao"
+  email            : "xu_wanghan@sjtu.edu.cn"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              : "https://justchenhao.github.io/blog/"
+  uri              : "https://black-yt.github.io/"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           : "justchenhao"
+  github           : "black-yt"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : #"rayeren"
-  dblp             : "https://dblp.org/pid/175/3324-45.html"
-  orcid            : "https://orcid.org/my-orcid?orcid=0000-0002-6418-3761"
+  dblp             : "https://dblp.org/pid/367/7191"
+  orcid            : "https://orcid.org/0009-0003-2627-8318"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
