@@ -8,6 +8,7 @@
 # Site Settings
 title                    : "Wanghan Xu (徐望瀚)"
 description              : "PhD at Shanghai Jiao Tong University"
+direction                : "Focusing on developing Foundation Models to build AI Agents in both physical and virtual world."
 repository               : "black-yt/black-yt.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,7 +24,7 @@ baidu_site_verification  :
 author:
   name             : "Wanghan Xu <br /> (徐望瀚)"
   avatar           : "images/Profi.jpg"
-  bio              : "Focusing on developing Foundation Models to build AI Agents in both physical and virtual world."
+  bio              : ""
   location         : "Shanghai"
   employer         :
   pubmed           : 
