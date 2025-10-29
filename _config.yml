@@ -24,14 +24,14 @@ baidu_site_verification  :
 author:
   name             : "Wanghan Xu <br /> (徐望瀚)"
   avatar           : "images/Profi.jpg"
-  bio              : ""
+  bio              : 
   location         : "Shanghai"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=lmCL5xQAAAAJ&hl=zh-CN&oi=ao"
   email            : "xu_wanghan@sjtu.edu.cn"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              : "https://black-yt.github.io/"
+  uri              : 
   bitbucket        :
   codepen          :
   dribbble         :
