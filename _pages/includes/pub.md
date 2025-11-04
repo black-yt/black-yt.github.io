@@ -122,6 +122,17 @@ Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<font
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/LO-SDA.png"><img src='images/LO-SDA.png' alt="LO-SDA" width="100%"></a></div></div>
+<div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2510.22562"><b>LO-SDA: Latent Optimization for Score-based Atmospheric Data Assimilation</b></a> \\
+*Arxiv, 2025* \\
+Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zhang, **<font color="#000000">Wanghan Xu</font>**, Li Yan, Pierre Gentine, Lei Bai \\
+[<a href="https://arxiv.org/pdf/2510.22562">Arxiv</a>]
+
+</div>
+</div>
+
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/RepAlign.png"><img src='images/RepAlign.png' alt="RepAlign" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
