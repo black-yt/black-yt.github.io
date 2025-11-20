@@ -17,6 +17,8 @@ redirect_from:
 
 {% include_relative includes/honers.md %}
 
+{% include_relative includes/talks.md %}
+
 {% include_relative includes/services.md %}
 
 {% include_relative includes/others.md %}
