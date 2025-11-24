@@ -1,4 +1,4 @@
-# 🎤 Talks
+# 🎤 Invited Talks
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/talks-1.jpg"><img src='images/talks-1.jpg' alt="InfGen" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
