@@ -296,10 +296,10 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
   </div>
 </div>
 
-<div class='paper-box' data-core='false'>
+<div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge"></div>
+      <div class="badge core">Key Contributor</div>
       <a href="/images/CasCast.png"><img src='/images/CasCast.png' alt="CasCast" width="100%"></a>
     </div>
   </div>
