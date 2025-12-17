@@ -117,29 +117,31 @@ h1:before, .anchor:before {
 
 /* filter buttons */
 .pub-filter {
-  display: flex;
-  gap: .5rem;
-  margin: .5rem 0 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 4px;
+  border-radius: 9999px;
+  margin: 0.5rem 0 1.25rem;
+  border: 1px solid #e9ecef;
 }
 .filter-btn {
   appearance: none;
-  background: #fff;
-  border: 1px solid #d9d9e3;
-  color: #333;
-  padding: .35rem .9rem;
-  border-radius: 999px;
-  font-size: .9rem;
+  background: transparent;
+  border: none;
+  color: #6c757d;
+  padding: 8px 20px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+  transition: all 0.2s ease;
 }
 .filter-btn:hover {
-  background-color: #f5f7ff;
-  border-color: #00369f;
-  color: #00369f;
+  color: #212529;
 }
 .filter-btn.active {
-  background-color: #00369f;
-  border-color: #00369f;
+  background-color: #0f172a;
   color: #fff;
-  box-shadow: 0 2px 8px rgba(0,54,159,.25);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
