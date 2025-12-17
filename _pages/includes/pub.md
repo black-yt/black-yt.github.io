@@ -1,6 +1,11 @@
 # 📝 Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/SGI.png"><img src='images/SGI.png' alt="SGI" width="100%"></a></div></div>
+<div class="pub-filter" role="group" aria-label="Publications filter">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="core">Core</button>
+</div>
+
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/SGI.png"><img src='images/SGI.png' alt="SGI" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://internscience.github.io/SGI-Page/paper.pdf"><b>Probing Scientific General Intelligence of LLMs with Scientist-Aligned Workflows</b></a> \\
@@ -11,7 +16,7 @@
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/EvalKit.png"><img src='images/EvalKit.png' alt="EvalKit" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core">Non-core</div><a href="images/EvalKit.png"><img src='images/EvalKit.png' alt="EvalKit" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://github.com/InternScience/SciEvalKit/blob/main/docs/SciEvalKit.pdf"><b>SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence</b></a> \\
@@ -22,7 +27,7 @@ Yiheng Wang, ... (38 authors)\\
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/InfGen.png"><img src='images/InfGen.png' alt="InfGen" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/InfGen.png"><img src='images/InfGen.png' alt="InfGen" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://openaccess.thecvf.com/content/ICCV2025/papers/Han_InfGen_A_Resolution-Agnostic_Paradigm_for_Scalable_Image_Synthesis_ICCV_2025_paper.pdf"><b>InfGen: A Resolution-Agnostic Paradigm for Scalable Image Synthesis</b></a> \\
@@ -33,7 +38,7 @@ Tao Han, **<font color="#000000">Wanghan Xu</font>**, Junchao Gong, Xiaoyu Yue, 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/Eigen1.png"><img src='images/Eigen1.png' alt="Eigen-1" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/Eigen1.png"><img src='images/Eigen1.png' alt="Eigen-1" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2509.21193"><b>Eigen-1: Adaptive Multi-Agent Refinement with Monitor-Based RAG for Scientific Reasoning</b></a> \\
@@ -44,7 +49,7 @@ Xiangru Tang\*, **<font color="#000000">Wanghan Xu*</font>**, Yujie Wang\*, Ziji
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/Earth-Agent.png"><img src='images/Earth-Agent.png' alt="Earth-Agent" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core">Non-core</div><a href="images/Earth-Agent.png"><img src='images/Earth-Agent.png' alt="Earth-Agent" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2509.23141"><b>Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents</b></a> \\
@@ -55,7 +60,7 @@ Peilin Feng, Zhutao Lv, Junyan Ye, Xiaolei Wang, Xinjie Huo, Jinhua Yu, **<font 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/LLM_Survey.png"><img src='images/LLM_Survey.png' alt="LLM_Survey" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/LLM_Survey.png"><img src='images/LLM_Survey.png' alt="LLM_Survey" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2508.21148"><b>A Survey of Scientific Large Language Models: From Data Foundations to Agent Frontiers</b></a> \\
@@ -66,7 +71,7 @@ Ming Hu, Chenglong Ma, Wei Li, **<font color="#000000">Wanghan Xu</font>**, Jiam
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/Intern-S1.png"><img src='images/Intern-S1.png' alt="Intern-S1" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core">Non-core</div><a href="images/Intern-S1.png"><img src='images/Intern-S1.png' alt="Intern-S1" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2508.15763"><b>Intern-S1: A Scientific Multimodal Foundation Model</b></a> \\
@@ -77,7 +82,7 @@ Lei Bai ... (177 authors listed in alphabetical order by their last names) \\
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/EarthLink.png"><img src='images/EarthLink.png' alt="EarthLink" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core">Non-core</div><a href="images/EarthLink.png"><img src='images/EarthLink.png' alt="EarthLink" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2507.17311"><b>EarthLink: A Self-Evolving AI Agent for Climate Science</b></a> \\
@@ -88,7 +93,7 @@ Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<font color="#000000"
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/Manalyzer.png"><img src='images/Manalyzer.png' alt="Manalyzer" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/Manalyzer.png"><img src='images/Manalyzer.png' alt="Manalyzer" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2505.20310"><b>Manalyzer: End-to-end Automated Meta-analysis with Multi-agent System</b></a> \\
@@ -99,7 +104,7 @@ Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<font color="#000000"
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/EarthSE.png"><img src='images/EarthSE.png' alt="EarthSE" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/EarthSE.png"><img src='images/EarthSE.png' alt="EarthSE" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2505.17139"><b>EarthSE: A Benchmark Evaluating Earth Scientific Exploration Capability for Large Language Models</b></a> \\
@@ -110,7 +115,7 @@ Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<font color="#000000"
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/MSEarth.png"><img src='images/MSEarth.png' alt="MSEarth" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/MSEarth.png"><img src='images/MSEarth.png' alt="MSEarth" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2505.20740"><b>MSEarth: A Benchmark for Multimodal Scientific Comprehension of Earth Science</b></a> \\
@@ -121,7 +126,7 @@ Xiangyu Zhao\*, **<font color="#000000">Wanghan Xu*</font>**, Bo Liu, Yuhao Zhou
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/Align-DA.png"><img src='images/Align-DA.png' alt="Align-DA" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core">Non-core</div><a href="images/Align-DA.png"><img src='images/Align-DA.png' alt="Align-DA" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2505.22008"><b>Align-DA: Align Score-based Atmospheric Data Assimilation with Multiple Preferences</b></a> \\
@@ -133,7 +138,7 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/DAWP.png"><img src='images/DAWP.png' alt="DAWP" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core">Non-core</div><a href="images/DAWP.png"><img src='images/DAWP.png' alt="DAWP" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2510.15978"><b>DAWP: A framework for global observation forecasting via Data Assimilation and Weather Prediction in satellite observation space</b></a> \\
@@ -144,7 +149,7 @@ Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<font
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/LO-SDA.png"><img src='images/LO-SDA.png' alt="LO-SDA" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core">Non-core</div><a href="images/LO-SDA.png"><img src='images/LO-SDA.png' alt="LO-SDA" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2510.22562"><b>LO-SDA: Latent Optimization for Score-based Atmospheric Data Assimilation</b></a> \\
@@ -156,7 +161,7 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/RepAlign.png"><img src='images/RepAlign.png' alt="RepAlign" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/RepAlign.png"><img src='images/RepAlign.png' alt="RepAlign" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2502.00359"><b>Exploring Representation-Aligned Latent Space for Better Generation</b></a> \\
@@ -167,7 +172,7 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/GFT.png"><img src='images/GFT.png' alt="GFT" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/GFT.png"><img src='images/GFT.png' alt="GFT" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://proceedings.neurips.cc/paper_files/paper/2024/file/298c3e32d7d402189444be2ff5d19979-Paper-Conference.pdf"><b>Generalizing Weather Forecast to Fine-grained Temporal Scales via Physics-AI Hybrid Modeling</b></a> \\
@@ -178,7 +183,7 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/ExtremeCast.png"><img src='images/ExtremeCast.png' alt="ExtremeCast" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/ExtremeCast.png"><img src='images/ExtremeCast.png' alt="ExtremeCast" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2402.01295"><b>ExtremeCast: Boosting Extreme Value Prediction for Global Weather Forecast</b></a> \\
@@ -189,7 +194,7 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/CasCast.png"><img src='images/CasCast.png' alt="CasCast" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/CasCast.png"><img src='images/CasCast.png' alt="CasCast" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://openreview.net/pdf?id=YuNFJSEkTi"><b>CasCast: Skillful High-resolution Precipitation Nowcasting via Cascaded Modelling</b></a> \\
@@ -200,7 +205,7 @@ Junchao Gong, Lei Bai, Peng Ye, **<font color="#000000">Wanghan Xu</font>**, Na 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/WEATHER-5K.png"><img src='images/WEATHER-5K.png' alt="WEATHER-5K" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/WEATHER-5K.png"><img src='images/WEATHER-5K.png' alt="WEATHER-5K" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2406.14399"><b>WEATHER-5K: A Large-scale Global Station Weather Dataset Towards Comprehensive Time-series Forecasting Benchmark</b></a> \\
@@ -211,7 +216,7 @@ Tao Han, Song Guo, Zhenghao Chen, **<font color="#000000">Wanghan Xu</font>**, L
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/CRA5.png"><img src='images/CRA5.png' alt="CRA5" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/CRA5.png"><img src='images/CRA5.png' alt="CRA5" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2405.03376"><b>CRA5: Extreme Compression of ERA5 for Portable Global Climate and Weather Research via an Efficient Variational Transformer</b></a> \\
@@ -222,7 +227,7 @@ Tao Han, Zhenghao Chen, Song Guo, **<font color="#000000">Wanghan Xu</font>**, L
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/3FWL.png"><img src='images/3FWL.png' alt="3FWL" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/3FWL.png"><img src='images/3FWL.png' alt="3FWL" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2402.08429"><b>Is 3-(F)WL Enough to Distinguish All 3D Graphs?</b></a> \\
@@ -233,7 +238,7 @@ Tao Han, Zhenghao Chen, Song Guo, **<font color="#000000">Wanghan Xu</font>**, L
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/GraphPub.png"><img src='images/GraphPub.png' alt="GraphPub" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/GraphPub.png"><img src='images/GraphPub.png' alt="GraphPub" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2403.00030"><b>GraphPub: Generation of Differential Privacy Graph with High Availability</b></a> \\
@@ -245,7 +250,7 @@ Tao Han, Zhenghao Chen, Song Guo, **<font color="#000000">Wanghan Xu</font>**, L
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/MDP.png"><img src='images/MDP.png' alt="MDP" width="100%"></a></div></div>
+<div class='paper-box' data-core='true'><div class='paper-box-image'><div><div class="badge core">Core</div><a href="images/MDP.png"><img src='images/MDP.png' alt="MDP" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://ieeexplore.ieee.org/abstract/document/10229600"><b>MDP: Privacy-Preserving GNN Based on Matrix Decomposition and Differential Privacy</b></a> \\
@@ -255,3 +260,25 @@ Tao Han, Zhenghao Chen, Song Guo, **<font color="#000000">Wanghan Xu</font>**, L
 
 </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll('.pub-filter .filter-btn');
+  const boxes = document.querySelectorAll('.paper-box');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      boxes.forEach(box => {
+        const isCore = box.dataset.core === 'true';
+        if (filter === 'all' || (filter === 'core' && isCore)) {
+          box.style.display = '';
+        } else {
+          box.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>

@@ -98,12 +98,48 @@ h1:before, .anchor:before {
 }
 
 .badge {
-    padding-left: 1rem;
-    padding-right: 1rem;
     position: absolute;
-    margin-top: .5em;
-    margin-left: -.5em;
-    color: white;
-    background-color: #00369f;
-    font-size: .8em;
+    top: .5em;
+    left: .5em;
+    padding: .2rem .6rem;
+    border-radius: .4rem;
+    color: #fff;
+    font-size: .75em;
+    font-weight: 600;
+    letter-spacing: .02em;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+.badge.core { background-color: #1a8917; } /* Core: green */
+.badge.non-core { background-color: #6c757d; } /* Non-core: gray */
+
+/* image wrapper for badge overlay */
+.paper-box-image > div { position: relative; display: inline-block; }
+
+/* filter buttons */
+.pub-filter {
+  display: flex;
+  gap: .5rem;
+  margin: .5rem 0 1.25rem;
+}
+.filter-btn {
+  appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9e3;
+  color: #333;
+  padding: .35rem .9rem;
+  border-radius: 999px;
+  font-size: .9rem;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.filter-btn:hover {
+  background-color: #f5f7ff;
+  border-color: #00369f;
+  color: #00369f;
+}
+.filter-btn.active {
+  background-color: #00369f;
+  border-color: #00369f;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,54,159,.25);
 }
