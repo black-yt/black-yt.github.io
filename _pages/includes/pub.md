@@ -1,5 +1,16 @@
 # 📝 Publications
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/SGI.png"><img src='images/SGI.png' alt="SGI" width="100%"></a></div></div>
+<div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://internscience.github.io/SGI-Page/paper.pdf"><b>Probing Scientific General Intelligence of LLMs with Scientist-Aligned Workflows</b></a> \\
+*Preprint, 2025* \\
+**<font color="#000000">Wanghan Xu</font>**, Yuhao Zhou, Yifan Zhou, Qinglong Cao, Shuo Li, Jia Bu ... (107 authors)\\
+[<a href="https://internscience.github.io/SGI-Page/paper.pdf">PDF</a>] [<a href="https://internscience.github.io/SGI-Page/">Project Page</a>] [<a href="https://github.com/InternScience/SGI-Bench">Code</a>] [<a href="https://huggingface.co/collections/InternScience/sgi-bench">Dataset</a>]
+
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/InfGen.png"><img src='images/InfGen.png' alt="InfGen" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
