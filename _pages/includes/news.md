@@ -1,7 +1,7 @@
 # 🔥 News
 
 <div class="news-wrapper">
-  <div class="news-content" id="newsContent">
+  <div class="news-content" id="newsContent" markdown="1">
     <div class="news-overlay"></div>
     
 - *2025.12*: Our large-scale benchmark *[SGI-Bench](https://internscience.github.io/SGI-Page/)* is released 👏 -- a **<font color="#C00000">150+</font>** page comprehensive report co-authored by **<font color="#C00000">100+</font>** researchers, providing the most extensive evaluation to date of LLMs and Agents on **deep research**, **idea generation**, **code generation**, **multimodal reasoning**, and more. *[SGI-Bench](https://internscience.github.io/SGI-Page/)* offers a unified and rigorous framework for measuring AI systems’ automated research capabilities, marking a major milestone toward building truly automated research agents.
