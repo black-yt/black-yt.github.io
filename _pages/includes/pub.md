@@ -11,6 +11,17 @@
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/EvalKit.png"><img src='images/EvalKit.png' alt="EvalKit" width="100%"></a></div></div>
+<div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://github.com/InternScience/SciEvalKit/blob/main/docs/SciEvalKit.pdf"><b>SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence</b></a> \\
+*Preprint, 2025* \\
+Yiheng Wang, ... (38 authors)\\
+[<a href="https://github.com/InternScience/SciEvalKit/blob/main/docs/SciEvalKit.pdf">PDF</a>] [<a href="https://opencompass.org.cn/Intern-Discovery-Eval">Project Page</a>] [<a href="https://github.com/InternScience/SciEvalKit">Code</a>] [<a href="https://huggingface.co/spaces/InternScience/SciEval-Leaderboard">Leaderboard</a>]
+
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge"></div><a href="images/InfGen.png"><img src='images/InfGen.png' alt="InfGen" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
