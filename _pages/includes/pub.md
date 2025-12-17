@@ -16,7 +16,7 @@
 </div>
 </div>
 
-<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core"></div><a href="images/EvalKit.png"><img src='images/EvalKit.png' alt="EvalKit" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge"></div><a href="images/EvalKit.png"><img src='images/EvalKit.png' alt="EvalKit" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://github.com/InternScience/SciEvalKit/blob/main/docs/SciEvalKit.pdf"><b>SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence</b></a> \\
@@ -49,7 +49,7 @@ Xiangru Tang\*, **<font color="#000000">Wanghan Xu*</font>**, Yujie Wang\*, Ziji
 </div>
 </div>
 
-<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core"></div><a href="images/Earth-Agent.png"><img src='images/Earth-Agent.png' alt="Earth-Agent" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge"></div><a href="images/Earth-Agent.png"><img src='images/Earth-Agent.png' alt="Earth-Agent" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2509.23141"><b>Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents</b></a> \\
@@ -71,7 +71,7 @@ Ming Hu, Chenglong Ma, Wei Li, **<font color="#000000">Wanghan Xu</font>**, Jiam
 </div>
 </div>
 
-<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core"></div><a href="images/Intern-S1.png"><img src='images/Intern-S1.png' alt="Intern-S1" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge"></div><a href="images/Intern-S1.png"><img src='images/Intern-S1.png' alt="Intern-S1" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2508.15763"><b>Intern-S1: A Scientific Multimodal Foundation Model</b></a> \\
@@ -82,7 +82,7 @@ Lei Bai ... (177 authors listed in alphabetical order by their last names) \\
 </div>
 </div>
 
-<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core"></div><a href="images/EarthLink.png"><img src='images/EarthLink.png' alt="EarthLink" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge"></div><a href="images/EarthLink.png"><img src='images/EarthLink.png' alt="EarthLink" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2507.17311"><b>EarthLink: A Self-Evolving AI Agent for Climate Science</b></a> \\
@@ -126,7 +126,7 @@ Xiangyu Zhao\*, **<font color="#000000">Wanghan Xu*</font>**, Bo Liu, Yuhao Zhou
 </div>
 </div>
 
-<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core"></div><a href="images/Align-DA.png"><img src='images/Align-DA.png' alt="Align-DA" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge"></div><a href="images/Align-DA.png"><img src='images/Align-DA.png' alt="Align-DA" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2505.22008"><b>Align-DA: Align Score-based Atmospheric Data Assimilation with Multiple Preferences</b></a> \\
@@ -138,7 +138,7 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
 </div>
 
 
-<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core"></div><a href="images/DAWP.png"><img src='images/DAWP.png' alt="DAWP" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge"></div><a href="images/DAWP.png"><img src='images/DAWP.png' alt="DAWP" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2510.15978"><b>DAWP: A framework for global observation forecasting via Data Assimilation and Weather Prediction in satellite observation space</b></a> \\
@@ -149,7 +149,7 @@ Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<font
 </div>
 </div>
 
-<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge non-core"></div><a href="images/LO-SDA.png"><img src='images/LO-SDA.png' alt="LO-SDA" width="100%"></a></div></div>
+<div class='paper-box' data-core='false'><div class='paper-box-image'><div><div class="badge"></div><a href="images/LO-SDA.png"><img src='images/LO-SDA.png' alt="LO-SDA" width="100%"></a></div></div>
 <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2510.22562"><b>LO-SDA: Latent Optimization for Score-based Atmospheric Data Assimilation</b></a> \\
