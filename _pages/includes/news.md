@@ -7,7 +7,7 @@
 
 - *2025.10*: Our new paper on multi-agent reasoning, *[Eigen-1: Adaptive Multi-Agent Refinement with Monitor-Based RAG for Scientific Reasoning](https://arxiv.org/pdf/2509.21193)* achieves **<span class="highlight-red">60%+</span>** score on [Humanity's Last Exam (HLE)](https://lastexam.ai/) benchmark, establishing a **<span class="highlight-red">new SOTA on HLE</span>**.
 
-- *2025.09*: Two papers were accepted by NeurIPS 2024.
+- *2025.09*: Two papers were accepted by NeurIPS 2025.
 
 - *2025.08*: During my first year of PhD, my personal [Google Scholar](https://scholar.google.com/citations?user=lmCL5xQAAAAJ&hl=zh-CN&oi=ao) citations exceeded 100 🎉.
 
