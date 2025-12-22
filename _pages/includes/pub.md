@@ -14,10 +14,10 @@
   </div>
   <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://internscience.github.io/SGI-Page/paper.pdf"><b>Probing Scientific General Intelligence of LLMs with Scientist-Aligned Workflows</b></a> \\
-*Preprint, 2025* \\
+<a class=PaperTitle href="https://arxiv.org/pdf/2512.16969"><b>Probing Scientific General Intelligence of LLMs with Scientist-Aligned Workflows</b></a> \\
+*Arxiv, 2025* \\
 **<span class="author-highlight">Wanghan Xu</span>**, Yuhao Zhou, Yifan Zhou, Qinglong Cao, Shuo Li, Jia Bu ... (107 authors)\\
-[<a href="https://internscience.github.io/SGI-Page/paper.pdf">PDF</a>] [<a href="https://internscience.github.io/SGI-Page/">Project Page</a>] [<a href="https://github.com/InternScience/SGI-Bench">Code</a>] [<a href="https://huggingface.co/collections/InternScience/sgi-bench">Dataset</a>]
+[<a href="https://arxiv.org/pdf/2512.16969">Arxiv</a>] [<a href="https://internscience.github.io/SGI-Page/">Project Page</a>] [<a href="https://github.com/InternScience/SGI-Bench">Code</a>] [<a href="https://huggingface.co/collections/InternScience/sgi-bench">Dataset</a>] [<a href="https://www.bilibili.com/video/BV16yqdBnE82/?share_source=copy_web&vd_source=7b9d898a8c3bbebf65c411956ed7f8ce">Talk</a>]
 
   </div>
 </div>
