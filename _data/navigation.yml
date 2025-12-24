@@ -10,7 +10,7 @@ main:
     url: "/#-publications"
 
   - title: "My Tools"
-    url: "/#-my-tools"
+    url: "/#-tools"
 
   - title: "Honors and Awards"
     url: "/#-honors-and-awards"
