@@ -15,6 +15,7 @@ redirect_from:
 
 {% include_relative includes/pub.md %}
 
+<span class='anchor' id='apps'></span>
 {% include_relative includes/apps.md %}
 
 {% include_relative includes/honors.md %}
