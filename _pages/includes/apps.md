@@ -1,10 +1,10 @@
-# Tools
+# 🛠️ My Apps
 
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div>
       <div class="badge"></div>
-      <a href="/images/tool-1.png"><img src='/images/tool-1.png' alt="tool-1" width="100%"></a>
+      <a href="/images/app-1.png"><img src='/images/app-1.png' alt="app-1" width="100%"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -21,7 +21,7 @@ Get a high-quality graduate-level report ready for you in just 5 minutes! \\
   <div class='paper-box-image'>
     <div>
       <div class="badge"></div>
-      <a href="/images/tool-1.png"><img src='/images/tool-1.png' alt="tool-1" width="100%"></a>
+      <a href="/images/app-1.png"><img src='/images/app-1.png' alt="app-1" width="100%"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
