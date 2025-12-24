@@ -1,4 +1,4 @@
-# 🛠️ My Apps
+# 🛠️ Apps
 
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
