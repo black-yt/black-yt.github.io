@@ -25,7 +25,7 @@
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge"></div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/EvalKit.png"><img src='/images/EvalKit.png' alt="EvalKit" width="100%"></a>
     </div>
   </div>
@@ -76,7 +76,7 @@ Xiangru Tang\*, **<span class="author-highlight">Wanghan Xu*</span>**, Yujie Wan
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge"></div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/Earth-Agent.png"><img src='/images/Earth-Agent.png' alt="Earth-Agent" width="100%"></a>
     </div>
   </div>
@@ -110,7 +110,7 @@ Ming Hu, Chenglong Ma, Wei Li, **<span class="author-highlight">Wanghan Xu</span
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge"></div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/Intern-S1.png"><img src='/images/Intern-S1.png' alt="Intern-S1" width="100%"></a>
     </div>
   </div>
@@ -127,7 +127,7 @@ Lei Bai ... (177 authors listed in alphabetical order by their last names) \\
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge"></div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/EarthLink.png"><img src='/images/EarthLink.png' alt="EarthLink" width="100%"></a>
     </div>
   </div>
@@ -195,7 +195,7 @@ Xiangyu Zhao\*, **<span class="author-highlight">Wanghan Xu*</span>**, Bo Liu, Y
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge"></div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/Align-DA.png"><img src='/images/Align-DA.png' alt="Align-DA" width="100%"></a>
     </div>
   </div>
@@ -213,7 +213,7 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge"></div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/DAWP.png"><img src='/images/DAWP.png' alt="DAWP" width="100%"></a>
     </div>
   </div>
@@ -230,7 +230,7 @@ Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<span
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge"></div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/LO-SDA.png"><img src='/images/LO-SDA.png' alt="LO-SDA" width="100%"></a>
     </div>
   </div>
@@ -316,7 +316,7 @@ Junchao Gong, Lei Bai, Peng Ye, **<span class="author-highlight">Wanghan Xu</spa
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge"></div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/WEATHER-5K.png"><img src='/images/WEATHER-5K.png' alt="WEATHER-5K" width="100%"></a>
     </div>
   </div>
@@ -333,7 +333,7 @@ Tao Han, Song Guo, Zhenghao Chen, **<span class="author-highlight">Wanghan Xu</s
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge"></div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/CRA5.png"><img src='/images/CRA5.png' alt="CRA5" width="100%"></a>
     </div>
   </div>

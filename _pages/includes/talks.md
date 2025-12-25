@@ -3,7 +3,7 @@
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge"></div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/talk-2.jpg"><img src='/images/talk-2.jpg' alt="talk-2" width="100%"></a>
     </div>
   </div>
@@ -20,7 +20,7 @@
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge"></div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/talk-1.jpg"><img src='/images/talk-1.jpg' alt="talk-1" width="100%"></a>
     </div>
   </div>
