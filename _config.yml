@@ -29,7 +29,7 @@ author:
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=lmCL5xQAAAAJ&hl=zh-CN&oi=ao"
-  email            : "xu_wanghan@sjtu.edu.cn"
+  email            : #"xu_wanghan@sjtu.edu.cn"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              : 
   bitbucket        :
@@ -45,8 +45,8 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "wanghan-xu/"
-  dblp             : "https://dblp.org/pid/367/7191"
-  orcid            : "https://orcid.org/0009-0003-2627-8318"
+  dblp             : #"https://dblp.org/pid/367/7191"
+  orcid            : #"https://orcid.org/0009-0003-2627-8318"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
