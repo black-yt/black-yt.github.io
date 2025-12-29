@@ -263,10 +263,10 @@ Xiangyu Zhao\*, **<span class="author-highlight">Wanghan Xu*</span>**, Bo Liu, Y
   </div>
   <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://arxiv.org/pdf/2505.22008"><b>Align-DA: Align Score-based Atmospheric Data Assimilation with Multiple Preferences</b></a> \\
+<a class=PaperTitle href="https://openreview.net/pdf/c5063c90468d1add5e95519d7384b996016532c3.pdf"><b>Align-DA: Align Score-based Atmospheric Data Assimilation with Multiple Preferences</b></a> \\
 *NeurIPS, 2025 (Accept)* \\
 Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zhang, **<span class="author-highlight">Wanghan Xu</span>**, Li Yan, Pierre Gentine, Lei Bai \\
-[<a href="https://arxiv.org/pdf/2505.22008">Arxiv</a>]
+[<a href="https://openreview.net/pdf/c5063c90468d1add5e95519d7384b996016532c3.pdf">NeurIPS</a>] [<a href="https://arxiv.org/pdf/2505.22008">Arxiv</a>]
 
   </div>
 </div>
@@ -282,10 +282,10 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
   </div>
   <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://arxiv.org/pdf/2510.15978"><b>DAWP: A framework for global observation forecasting via Data Assimilation and Weather Prediction in satellite observation space</b></a> \\
+<a class=PaperTitle href="https://openreview.net/pdf?id=32JgYdTfT9"><b>DAWP: A framework for global observation forecasting via Data Assimilation and Weather Prediction in satellite observation space</b></a> \\
 *NeurIPS, 2025 (Accept)* \\
 Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<span class="author-highlight">Wanghan Xu</span>**, Weidong Yang, Xiaokang Yang, Lei Bai \\
-[<a href="https://arxiv.org/pdf/2510.15978">Arxiv</a>] [<a href="https://github.com/jasong-ovo/DAWP-NIPS25">Code</a>]
+[<a href="https://openreview.net/pdf?id=32JgYdTfT9">NeurIPS</a>] [<a href="https://arxiv.org/pdf/2510.15978">Arxiv</a>] [<a href="https://github.com/jasong-ovo/DAWP-NIPS25">Code</a>]
 
   </div>
 </div>
@@ -303,7 +303,7 @@ Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<span
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2510.22562"><b>LO-SDA: Latent Optimization for Score-based Atmospheric Data Assimilation</b></a> \\
 *Arxiv, 2025* \\
-Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zhang, **<span class="author-highlight">Wanghan Xu</span>**, Li Yan, Pierre Gentine, Lei Bai \\
+Jing-An Sun, Hang Fan, Ben Fei, Junchao Gong, Kun Chen, Fenghua Ling, Wenlong Zhang, **<span class="author-highlight">Wanghan Xu</span>**, Li Yan, Pierre Gentine, Lei Bai \\
 [<a href="https://arxiv.org/pdf/2510.22562">Arxiv</a>]
 
   </div>
