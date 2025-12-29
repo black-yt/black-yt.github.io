@@ -282,7 +282,7 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
   </div>
   <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://openreview.net/pdf?id=32JgYdTfT9"><b>DAWP: A framework for global observation forecasting via Data Assimilation and Weather Prediction in satellite observation space</b></a> \\
+<a class=PaperTitle href="https://openreview.net/pdf?id=32JgYdTfT9"><b>DAWP: A Framework for Global Observation Forecasting via Data Assimilation and Weather Prediction in Satellite Observation Space</b></a> \\
 *NeurIPS, 2025 (Accept)* \\
 Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<span class="author-highlight">Wanghan Xu</span>**, Weidong Yang, Xiaokang Yang, Lei Bai \\
 [<a href="https://openreview.net/pdf?id=32JgYdTfT9">NeurIPS</a>] [<a href="https://arxiv.org/pdf/2510.15978">Arxiv</a>] [<a href="https://github.com/jasong-ovo/DAWP-NIPS25">Code</a>]
