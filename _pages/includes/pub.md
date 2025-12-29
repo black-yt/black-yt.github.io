@@ -5,6 +5,8 @@
   <button class="filter-btn" data-filter="core">Key Contributor</button>
 </div>
 
+
+
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div>
@@ -22,22 +24,7 @@
   </div>
 </div>
 
-<div class='paper-box' data-core='false'>
-  <div class='paper-box-image'>
-    <div>
-      <!-- <div class="badge"></div> -->
-      <a href="/images/EvalKit.png"><img src='/images/EvalKit.png' alt="EvalKit" width="100%"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://github.com/InternScience/SciEvalKit/blob/main/docs/SciEvalKit.pdf"><b>SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence</b></a> \\
-*Preprint, 2025* \\
-Yiheng Wang, ... (38 authors)\\
-[<a href="https://github.com/InternScience/SciEvalKit/blob/main/docs/SciEvalKit.pdf">PDF</a>] [<a href="https://opencompass.org.cn/Intern-Discovery-Eval">Project Page</a>] [<a href="https://github.com/InternScience/SciEvalKit">Code</a>] [<a href="https://huggingface.co/spaces/InternScience/SciEval-Leaderboard">Leaderboard</a>]
-
-  </div>
-</div>
 
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
@@ -56,6 +43,8 @@ Tao Han, **<span class="author-highlight">Wanghan Xu</span>**, Junchao Gong, Xia
   </div>
 </div>
 
+
+
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div>
@@ -73,22 +62,7 @@ Xiangru Tang\*, **<span class="author-highlight">Wanghan Xu*</span>**, Yujie Wan
   </div>
 </div>
 
-<div class='paper-box' data-core='false'>
-  <div class='paper-box-image'>
-    <div>
-      <!-- <div class="badge"></div> -->
-      <a href="/images/Earth-Agent.png"><img src='/images/Earth-Agent.png' alt="Earth-Agent" width="100%"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://arxiv.org/pdf/2509.23141"><b>Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents</b></a> \\
-*Arxiv, 2025* \\
-Peilin Feng, Zhutao Lv, Junyan Ye, Xiaolei Wang, Xinjie Huo, Jinhua Yu, **<span class="author-highlight">Wanghan Xu</span>**, Wenlong Zhang, Lei Bai, Conghui He, Weijia Li \\
-[<a href="https://arxiv.org/pdf/2509.23141">Arxiv</a>] [<a href="https://opendatalab.github.io/Earth-Agent/">Project Page</a>] [<a href="https://github.com/opendatalab/Earth-Agent">Code</a>] [<a href="https://huggingface.co/datasets/Sssunset/Earth-Bench">Dataset</a>] [<a href="https://mp.weixin.qq.com/s/-rOj8w2Gv4Lf9baIJyoGoA">机器之心</a>]
-
-  </div>
-</div>
 
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
@@ -107,6 +81,8 @@ Ming Hu, Chenglong Ma, Wei Li, **<span class="author-highlight">Wanghan Xu</span
   </div>
 </div>
 
+
+
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
@@ -124,22 +100,7 @@ Lei Bai ... (177 authors listed in alphabetical order by their last names) \\
   </div>
 </div>
 
-<div class='paper-box' data-core='false'>
-  <div class='paper-box-image'>
-    <div>
-      <!-- <div class="badge"></div> -->
-      <a href="/images/EarthLink.png"><img src='/images/EarthLink.png' alt="EarthLink" width="100%"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://arxiv.org/pdf/2507.17311"><b>EarthLink: A Self-Evolving AI Agent for Climate Science</b></a> \\
-*Arxiv, 2025* \\
-Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<span class="author-highlight">Wanghan Xu</span>**, Ben Fei, Wenlong Zhang, Xinyu Gu, Lijing Cheng, Jing-Jia Luo, Chao Li, Yaqiang Wang, Tao Chen, Wanli Ouyang, Fenghua Ling, Lei Bai \\
-[<a href="https://arxiv.org/pdf/2507.17311">Arxiv</a>] [<a href=" https://earthlink.intern-ai.org.cn/">Platform</a>]
-
-  </div>
-</div>
 
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
@@ -158,6 +119,46 @@ Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<span class="author-h
   </div>
 </div>
 
+
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/RepAlign.png"><img src='/images/RepAlign.png' alt="RepAlign" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2502.00359"><b>Exploring Representation-Aligned Latent Space for Better Generation</b></a> \\
+*Arxiv, 2025* \\
+**<span class="author-highlight">Wanghan Xu</span>**, Xiaoyu Yue, Zidong Wang, Yao Teng, Wenlong Zhang, Xihui Liu, Luping Zhou, Wanli Ouyang, Lei Bai \\
+[<a href="https://arxiv.org/pdf/2502.00359">Arxiv</a>] [<a href="https://github.com/black-yt/ReaLS">Code</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/EvalKit.png"><img src='/images/EvalKit.png' alt="EvalKit" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://github.com/InternScience/SciEvalKit/blob/main/docs/SciEvalKit.pdf"><b>SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence</b></a> \\
+*Preprint, 2025* \\
+Yiheng Wang, ... (38 authors)\\
+[<a href="https://github.com/InternScience/SciEvalKit/blob/main/docs/SciEvalKit.pdf">PDF</a>] [<a href="https://opencompass.org.cn/Intern-Discovery-Eval">Project Page</a>] [<a href="https://github.com/InternScience/SciEvalKit">Code</a>] [<a href="https://huggingface.co/spaces/InternScience/SciEval-Leaderboard">Leaderboard</a>]
+
+  </div>
+</div>
+
+
+
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div>
@@ -175,6 +176,65 @@ Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<span class="author-h
   </div>
 </div>
 
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/Earth-Agent.png"><img src='/images/Earth-Agent.png' alt="Earth-Agent" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2509.23141"><b>Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents</b></a> \\
+*Arxiv, 2025* \\
+Peilin Feng, Zhutao Lv, Junyan Ye, Xiaolei Wang, Xinjie Huo, Jinhua Yu, **<span class="author-highlight">Wanghan Xu</span>**, Wenlong Zhang, Lei Bai, Conghui He, Weijia Li \\
+[<a href="https://arxiv.org/pdf/2509.23141">Arxiv</a>] [<a href="https://opendatalab.github.io/Earth-Agent/">Project Page</a>] [<a href="https://github.com/opendatalab/Earth-Agent">Code</a>] [<a href="https://huggingface.co/datasets/Sssunset/Earth-Bench">Dataset</a>] [<a href="https://mp.weixin.qq.com/s/-rOj8w2Gv4Lf9baIJyoGoA">机器之心</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/Omni-Weather.png"><img src='/images/Omni-Weather.png' alt="Omni-Weather" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2512.21643"><b>Omni-Weather: Unified Multimodal Foundation Model for Weather Generation and Understanding</b></a> \\
+*Arxiv, 2025* \\
+Zhiwang Zhou, Yuandong Pu, Xuming He, Yidi Liu, Yixin Chen, Junchao Gong, Xiang Zhuang, **<span class="author-highlight">Wanghan Xu</span>**, Qinglong Cao, Shixiang Tang, Yihao Liu, Wenlong Zhang, Lei Bai \\
+[<a href="https://arxiv.org/pdf/2512.21643">Arxiv</a>] [<a href="https://github.com/Zhouzone/OmniWeather">Code</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/EarthLink.png"><img src='/images/EarthLink.png' alt="EarthLink" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2507.17311"><b>EarthLink: A Self-Evolving AI Agent for Climate Science</b></a> \\
+*Arxiv, 2025* \\
+Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<span class="author-highlight">Wanghan Xu</span>**, Ben Fei, Wenlong Zhang, Xinyu Gu, Lijing Cheng, Jing-Jia Luo, Chao Li, Yaqiang Wang, Tao Chen, Wanli Ouyang, Fenghua Ling, Lei Bai \\
+[<a href="https://arxiv.org/pdf/2507.17311">Arxiv</a>] [<a href=" https://earthlink.intern-ai.org.cn/">Platform</a>]
+
+  </div>
+</div>
+
+
+
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div>
@@ -191,6 +251,8 @@ Xiangyu Zhao\*, **<span class="author-highlight">Wanghan Xu*</span>**, Bo Liu, Y
 
   </div>
 </div>
+
+
 
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
@@ -210,6 +272,7 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
 </div>
 
 
+
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
@@ -222,10 +285,12 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
 <a class=PaperTitle href="https://arxiv.org/pdf/2510.15978"><b>DAWP: A framework for global observation forecasting via Data Assimilation and Weather Prediction in satellite observation space</b></a> \\
 *NeurIPS, 2025 (Accept)* \\
 Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<span class="author-highlight">Wanghan Xu</span>**, Weidong Yang, Xiaokang Yang, Lei Bai \\
-[<a href="https://arxiv.org/pdf/2510.15978">Arxiv</a>]
+[<a href="https://arxiv.org/pdf/2510.15978">Arxiv</a>] [<a href="https://github.com/jasong-ovo/DAWP-NIPS25">Code</a>]
 
   </div>
 </div>
+
+
 
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
@@ -249,23 +314,6 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/RepAlign.png"><img src='/images/RepAlign.png' alt="RepAlign" width="100%"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://arxiv.org/pdf/2502.00359"><b>Exploring Representation-Aligned Latent Space for Better Generation</b></a> \\
-*Arxiv, 2025* \\
-**<span class="author-highlight">Wanghan Xu</span>**, Xiaoyu Yue, Zidong Wang, Yao Teng, Wenlong Zhang, Xihui Liu, Luping Zhou, Wanli Ouyang, Lei Bai \\
-[<a href="https://arxiv.org/pdf/2502.00359">Arxiv</a>] [<a href="https://github.com/black-yt/ReaLS">Code</a>]
-
-  </div>
-</div>
-
-<div class='paper-box' data-core='true'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge core">Key Contributor</div>
       <a href="/images/GFT.png"><img src='/images/GFT.png' alt="GFT" width="100%"></a>
     </div>
   </div>
@@ -278,6 +326,8 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
 
   </div>
 </div>
+
+
 
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
@@ -296,6 +346,8 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
   </div>
 </div>
 
+
+
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div>
@@ -312,6 +364,8 @@ Junchao Gong, Lei Bai, Peng Ye, **<span class="author-highlight">Wanghan Xu</spa
 
   </div>
 </div>
+
+
 
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
@@ -330,6 +384,8 @@ Tao Han, Song Guo, Zhenghao Chen, **<span class="author-highlight">Wanghan Xu</s
   </div>
 </div>
 
+
+
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
@@ -346,6 +402,8 @@ Tao Han, Zhenghao Chen, Song Guo, **<span class="author-highlight">Wanghan Xu</s
 
   </div>
 </div>
+
+
 
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
@@ -364,6 +422,8 @@ Tao Han, Zhenghao Chen, Song Guo, **<span class="author-highlight">Wanghan Xu</s
   </div>
 </div>
 
+
+
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div>
@@ -380,6 +440,7 @@ Tao Han, Zhenghao Chen, Song Guo, **<span class="author-highlight">Wanghan Xu</s
 
   </div>
 </div>
+
 
 
 <div class='paper-box' data-core='true'>
