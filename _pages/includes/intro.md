@@ -6,7 +6,7 @@ My research interests lie in Large Language Models, Multi-Agent Systems, [AI Sci
 
 If you are interested in multi-agent systems on deep research or scientific discovery, feel free to contact me at [xu_wanghan@sjtu.edu.cn](https://black-yt.github.io/).
 
-> By the way, you can ask me anything through this [**Bot🤖**](https://chat-xi-three-29.vercel.app/). And if you ever want my WeChat ID📱… well, maybe this [**Bot🤖**](https://chat-xi-three-29.vercel.app/) can tell you — *if you’re smart enough to figure it out.* 😉 Just kidding! Good luck!
+> By the way, you can ask me anything through this [**Bot🤖**](https://chat-xi-three-29.vercel.app/). And if you ever want my WeChat ID📱… well, maybe this [**Bot🤖**](https://chat-xi-three-29.vercel.app/) can tell you — if you’re smart enough to figure it out. 😉 Just kidding! Good luck!
 
 ## 💻 My Apps
 🤜 Here are some fun Apps I developed that might be helpful to you! 🤛
