@@ -149,10 +149,10 @@ Lei Bai ... (177 authors listed in alphabetical order by their last names) \\
   </div>
   <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://github.com/InternScience/SciEvalKit/blob/main/docs/SciEvalKit.pdf"><b>SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence</b></a> \\
+<a class=PaperTitle href="https://arxiv.org/pdf/2512.22334"><b>SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence</b></a> \\
 *Preprint, 2025* \\
 Yiheng Wang, ... (38 authors)\\
-[<a href="https://github.com/InternScience/SciEvalKit/blob/main/docs/SciEvalKit.pdf">PDF</a>] [<a href="https://opencompass.org.cn/Intern-Discovery-Eval">Project Page</a>] [<a href="https://github.com/InternScience/SciEvalKit">Code</a>] [<a href="https://huggingface.co/spaces/InternScience/SciEval-Leaderboard">Leaderboard</a>]
+[<a href="https://arxiv.org/pdf/2512.22334">PDF</a>] [<a href="https://opencompass.org.cn/Intern-Discovery-Eval/rank">Project Page</a>] [<a href="https://github.com/InternScience/SciEvalKit">Code</a>] [<a href="https://huggingface.co/spaces/InternScience/SciEval-Leaderboard">Leaderboard</a>]
 
   </div>
 </div>
