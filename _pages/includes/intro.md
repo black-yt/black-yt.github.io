@@ -13,5 +13,6 @@ If you are interested in multi-agent systems on deep research or scientific disc
 
 | App                                                                | Description                                                                                                                                         |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**Deep Research🔎**](https://dr-sigma-wheat.vercel.app/)                | Get a high-quality graduate-level report ready for you in just 5 minutes!                                                                            |
+| [**Deep Research🔎**](https://dr-sigma-wheat.vercel.app/)         | Get a high-quality graduate-level report ready for you in just 5 minutes!                                                                            |
 | [**Wanghan-Pro🤖**](https://chat-xi-three-29.vercel.app/)         | Wanghan-Pro is here to chat anytime or help with any problem.                                                                                        |
+| [**Iris🧿**](https://github.com/black-yt/IrisGUI)                 | Your AI-powered hands and eyes for desktop automation.                                                                                               |

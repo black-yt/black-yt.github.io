@@ -1,6 +1,8 @@
 # 🔥 News
 
 {% capture news_items %}
+- *2026.01*: Introducing *[Iris](https://github.com/black-yt/IrisGUI)*, a desktop GUI Agent that is simple to start but powerful enough to execute any workflow you need.
+
 - *2025.12*: Our large-scale benchmark *[SGI-Bench](https://internscience.github.io/SGI-Page/)* is released 👏 —— a comprehensive report of over **<span class="highlight-red">150</span>** pages co-authored by more than **<span class="highlight-red">100</span>** researchers, providing the most extensive evaluation to date of LLMs and Agents on **deep research**, **idea generation**, **code generation**, **multimodal reasoning**, and more. *[SGI-Bench](https://internscience.github.io/SGI-Page/)* offers a unified and rigorous framework for measuring AI systems’ automated research capabilities, marking a major milestone toward building truly automated research agents.
 
 - *2025.10*: Our new paper on multi-agent reasoning, *[Eigen-1: Adaptive Multi-Agent Refinement with Monitor-Based RAG for Scientific Reasoning](https://arxiv.org/pdf/2509.21193)* reached **<span class="highlight-red">36w views</span>** on [BiliBili](https://www.bilibili.com/video/BV1own2zFEf7/?share_source=copy_web&vd_source=7b9d898a8c3bbebf65c411956ed7f8ce)!
