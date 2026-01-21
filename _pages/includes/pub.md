@@ -113,7 +113,7 @@ Lei Bai ... (177 authors listed in alphabetical order by their last names) \\
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2505.20310"><b>Manalyzer: End-to-end Automated Meta-analysis with Multi-agent System</b></a> \\
 *Arxiv, 2025* \\
-**<span class="author-highlight">Wanghan Xu</span>**, Wenlong Zhang, Fenghua Ling, Ben Fei, Yusong Hu, Fangxuan Ren, Jintai Lin, Wanli Ouyang, Lei Bai \\
+**<span class="author-highlight">Wanghan Xu</span>**, Wenlong Zhang, Fenghua Ling, Ben Fei, Yusong Hu, Runmin Ma, Bo Zhang, Fangxuan Ren, Jintai Lin, Wanli Ouyang, Lei Bai \\
 [<a href="https://arxiv.org/pdf/2505.20310">Arxiv</a>] [<a href="https://black-yt.github.io/meta-analysis-page/">Project Page</a>] [<a href="https://github.com/black-yt/Manalyzer">Code</a>] [<a href="https://huggingface.co/datasets/CoCoOne/Manalyzer">Dataset</a>]
 
   </div>
