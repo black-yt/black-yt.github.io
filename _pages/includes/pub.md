@@ -6,6 +6,24 @@
 </div>
 
 
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/InternAgent.png"><img src='/images/InternAgent.png' alt="InternAgent" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2602.08990"><b>InternAgent-1.5: A Unified Agentic Framework for Long-Horizon Autonomous Scientific Discovery</b></a> \\
+*Arxiv, 2025* \\
+Shiyang Feng ... (57 authors) \\
+[<a href="https://arxiv.org/pdf/2602.08990">Arxiv</a>] [<a href="https://huggingface.co/collections/InternScience/internagent">Hugging Face</a>] [<a href="https://github.com/InternScience/InternAgent">Code</a>] [<a href="https://discovery.intern-ai.org.cn/home">Website</a>]
+
+  </div>
+</div>
+
+
 
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
@@ -151,7 +169,7 @@ Lei Bai ... (177 authors listed in alphabetical order by their last names) \\
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2512.22334"><b>SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence</b></a> \\
 *Preprint, 2025* \\
-Yiheng Wang, ... (38 authors)\\
+Yiheng Wang ... (38 authors)\\
 [<a href="https://arxiv.org/pdf/2512.22334">PDF</a>] [<a href="https://opencompass.org.cn/Intern-Discovery-Eval/rank">Project Page</a>] [<a href="https://github.com/InternScience/SciEvalKit">Code</a>] [<a href="https://huggingface.co/spaces/InternScience/SciEval-Leaderboard">Leaderboard</a>]
 
   </div>
