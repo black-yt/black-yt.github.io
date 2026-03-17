@@ -263,20 +263,22 @@ html, body {
     background: transparent !important;
 }
 
-/* 3. Sidebar: fixed while page scrolls, no independent scroll needed */
+/* 3. Sidebar: JS pins to fixed position (CSS sticky unreliable — see custom-scripts.js) */
 @media (min-width: 925px) {
     #main {
         display: flex !important;
         align-items: flex-start;
-        animation: none !important; /* intro animation uses opacity<1 → stacking context → breaks sticky */
+        animation: none !important;
     }
     .sidebar {
         flex-shrink: 0;
         transform: none !important;
-        position: sticky !important;
-        top: 0;
-        max-height: 100vh;
         overflow: hidden;
+    }
+    .sidebar--pinned {
+        position: fixed !important;
+        overflow: hidden !important;
+        max-height: 100vh;
     }
     .page {
         flex: 1 1 0 !important;
