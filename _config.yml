@@ -1,19 +1,8 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
-
 # Site Settings
 title                    : "Wanghan Xu (徐望瀚)"
 description              : "PhD at Shanghai Jiao Tong University"
 direction                : "Focusing on developing Foundation Models to build AI Agents in both physical and virtual world."
 repository               : "black-yt/black-yt.github.io"
-google_scholar_stats_use_cdn : true
-
-# google analytics
-google_analytics_id      :
 
 # SEO Related
 google_site_verification :
@@ -22,42 +11,13 @@ baidu_site_verification  :
 
 # Site Author
 author:
-  name             : "Wanghan Xu <br /> (徐望瀚)"
-  avatar           : "images/Profi.jpg"
-  bio              : ""
-  location         :
-  employer         :
-  pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=lmCL5xQAAAAJ&hl=zh-CN&oi=ao"
-  email            : "xu_wanghan@sjtu.edu.cn"
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              : 
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : "black-yt"
-  google_plus      :
-  keybase          :
-  instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
-  linkedin         : "wanghan-xu/"
-  dblp             : #"https://dblp.org/pid/367/7191"
-  orcid            : #"https://orcid.org/0009-0003-2627-8318"
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
-  tumblr           :
-  twitter          : "wanghan_xu"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-  wikipedia        :
+  name          : "Wanghan Xu <br /> (徐望瀚)"
+  avatar        : "images/Profi.jpg"
+  email         : "xu_wanghan@sjtu.edu.cn"
+  googlescholar : "https://scholar.google.com/citations?user=lmCL5xQAAAAJ&hl=zh-CN&oi=ao"
+  github        : "black-yt"
+  twitter       : "wanghan_xu"
+  linkedin      : "wanghan-xu/"
 
 
 # Reading Files
@@ -79,9 +39,6 @@ exclude:
   - LICENSE
   - README
   - Rakefile
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
   - config
   - gulpfile.js
   - log
@@ -89,8 +46,6 @@ exclude:
   - package.json
   - tmp
   - vendor
-  - google_scholar_crawler
-  - github_myprofile_updater
 keep_files:
   - .git
   - .svn
@@ -119,7 +74,6 @@ kramdown:
 
 # Defaults
 defaults:
-  # _pages
   - scope:
       path: ""
       type: pages
@@ -131,12 +85,12 @@ defaults:
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
 
 
 # Outputting
 permalink: /:categories/:title/
-timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Shanghai
 
 
 # Plugins
@@ -146,7 +100,6 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
-# mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
   - jekyll-sitemap
@@ -156,7 +109,6 @@ whitelist:
 
 
 # HTML Compression
-# - http://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:

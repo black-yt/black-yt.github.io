@@ -50,33 +50,27 @@ function toggleNews() {
 
 // Remove sidebar from Stickyfill — our custom pin() handles desktop positioning;
 // Stickyfill causes visual position / touch-hit-area mismatch on mobile.
+// Also initialise publication filter buttons.
 document.addEventListener('DOMContentLoaded', function() {
+  // Detach sidebar from Stickyfill
   var sidebar = document.querySelector('.sidebar');
   if (sidebar) {
     sidebar.classList.remove('sticky');
     if (window.Stickyfill) Stickyfill.remove(sidebar);
   }
-});
 
-// Publication Filter
-document.addEventListener('DOMContentLoaded', function() {
+  // Publication Filter
   const buttons = document.querySelectorAll('.pub-filter .filter-btn');
   const boxes = document.querySelectorAll('.paper-box');
-
   if (buttons.length > 0) {
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
         buttons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
         const filter = btn.dataset.filter;
         boxes.forEach(box => {
           const isCore = box.dataset.core === 'true';
-          if (filter === 'all' || (filter === 'core' && isCore)) {
-            box.style.display = '';
-          } else {
-            box.style.display = 'none';
-          }
+          box.style.display = (filter === 'all' || (filter === 'core' && isCore)) ? '' : 'none';
         });
       });
     });
