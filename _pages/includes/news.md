@@ -1,4 +1,4 @@
-# 🔥 News
+# <i class="fas fa-newspaper section-icon"></i> News
 
 {% capture news_items %}
 - *2026.01:* Four papers were accepted at ICLR 2026, including two first-author papers: *[Eigen-1](https://arxiv.org/pdf/2509.21193)* and *[EarthSE](https://arxiv.org/pdf/2505.17139)* 🎉.

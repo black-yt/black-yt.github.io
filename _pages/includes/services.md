@@ -1,4 +1,4 @@
-# 📑 Services
+# <i class="fas fa-tasks section-icon"></i> Services
 
 Program Committee
 

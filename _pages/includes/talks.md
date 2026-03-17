@@ -1,4 +1,4 @@
-# 🎤 Invited Talks
+# <i class="fas fa-microphone-alt section-icon"></i> Invited Talks
 
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>

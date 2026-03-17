@@ -1,5 +1,5 @@
 
-# 📖 Others
+# <i class="fas fa-ellipsis-h section-icon"></i> Others
 
 - [Recommendation letter](/images/others-1.jpg) from Prof. [Wanli Ouyang](https://wlouyang.github.io/), Professor at the Chinese University of Hong Kong, Leading Scientist (领军科学家) at the [Shanghai Artificial Intelligence Laboratory](https://www.shlab.org.cn/).
 

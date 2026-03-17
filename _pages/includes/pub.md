@@ -1,4 +1,4 @@
-# 📝 Publications
+# <i class="fas fa-book-open section-icon"></i> Publications
 
 <div class="seg-control" id="pubFilter" role="group" aria-label="Publications filter">
   <div class="seg-indicator"></div>
