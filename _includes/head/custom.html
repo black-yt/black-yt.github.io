@@ -22,4 +22,17 @@
     }
   });
 </script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script>
+  // Load MathJax after page is interactive to avoid blocking initial render
+  function _loadMathJax() {
+    var s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML';
+    s.async = true;
+    document.head.appendChild(s);
+  }
+  if (document.readyState === 'complete') {
+    _loadMathJax();
+  } else {
+    window.addEventListener('load', _loadMathJax);
+  }
+</script>

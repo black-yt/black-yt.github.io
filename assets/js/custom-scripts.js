@@ -10,6 +10,8 @@
   var TILE = 26, GAP = 1;
   var rafId = null;
   var cachedRgb = '10,10,10';
+  var lastDraw = 0;
+  var FRAME_MS = 1000 / 24; // ~24 fps — smooth enough, half the CPU of 60 fps
 
   function rgb() {
     var th = document.documentElement.getAttribute('data-theme') || 'white';
@@ -19,7 +21,11 @@
     return '10,10,10';
   }
 
-  function frame() {
+  function frame(ts) {
+    rafId = requestAnimationFrame(frame);
+    if (ts - lastDraw < FRAME_MS) return; // skip frame — throttle to 24 fps
+    lastDraw = ts;
+
     var w = canvas.width, h = canvas.height;
     var cols = Math.ceil(w / TILE) + 1;
     var rows = Math.ceil(h / TILE) + 1;
@@ -43,7 +49,6 @@
     }
 
     t += 0.007; // slow, calm wave speed
-    rafId = requestAnimationFrame(frame);
   }
 
   function resize() {
@@ -63,7 +68,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     canvas = document.createElement('canvas');
     canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;' +
-                           'z-index:0;pointer-events:none;';
+                           'z-index:0;pointer-events:none;will-change:transform;';
     document.body.insertBefore(canvas, document.body.firstChild);
     ctx = canvas.getContext('2d');
     resize();
