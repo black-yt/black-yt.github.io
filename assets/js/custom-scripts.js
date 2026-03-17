@@ -41,8 +41,8 @@
         // Cubic bias: crests ~19%, troughs ~0.4% — visible 2:1 light:dark ratio
         var norm = (wave + 1) * 0.5;
         var v    = norm * norm * norm;
-        var a    = 0.004 + v * 0.186;
-        if (a < 0.014) continue;    // skip near-invisible tiles for speed
+        var a    = Math.round((0.004 + v * 0.186) * 100) / 100; // 2dp — browser caches fillStyle
+        if (a < 0.02) continue;    // skip near-invisible tiles for speed
         ctx.fillStyle = pre + a + ')';
         ctx.fillRect(c * TILE + GAP, r * TILE + GAP, TILE - GAP, TILE - GAP);
       }
@@ -51,9 +51,13 @@
     t += 0.007; // slow, calm wave speed
   }
 
+  var resizeTimer;
   function resize() {
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      canvas.width  = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }, 100); // debounce — avoids thrashing during drag-resize
   }
 
   // Pause animation when tab is hidden to save CPU/battery
@@ -71,23 +75,16 @@
                            'z-index:0;pointer-events:none;will-change:transform;';
     document.body.insertBefore(canvas, document.body.firstChild);
     ctx = canvas.getContext('2d');
-    resize();
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
     window.addEventListener('resize', resize);
     document.addEventListener('visibilitychange', onVisibilityChange);
     rafId = requestAnimationFrame(frame);
   });
 
-  // Invalidate rgb cache on theme change so color updates immediately
-  var _origSetAttr = Element.prototype.setAttribute;
-  Element.prototype.setAttribute = function (name, value) {
-    _origSetAttr.call(this, name, value);
-    if (this === document.documentElement && name === 'data-theme') cachedRgb = rgb();
-  };
-  var _origRemoveAttr = Element.prototype.removeAttribute;
-  Element.prototype.removeAttribute = function (name) {
-    _origRemoveAttr.call(this, name);
-    if (this === document.documentElement && name === 'data-theme') cachedRgb = rgb();
-  };
+  // Watch for data-theme changes with MutationObserver — avoids patching Element.prototype
+  new MutationObserver(function () { cachedRgb = rgb(); })
+    .observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 })();
 
 // ── Theme Switcher ──────────────────────────────────────────────────────────
@@ -154,18 +151,15 @@
     // Scroll the nav strip so the active link is always visible
     function scrollNavToLink(link) {
       if (!nav) return;
-      var navWidth = nav.clientWidth;
-      var linkLeft = link.offsetLeft;   // relative to ul (offsetParent)
-      var linkRight = linkLeft + link.offsetWidth;
-      var ulLeft = link.offsetParent ? link.offsetParent.offsetLeft : 0;
-      // Convert to nav-relative coordinates
-      var visLeft  = linkLeft  + ulLeft - nav.scrollLeft;
-      var visRight = linkRight + ulLeft - nav.scrollLeft;
+      var navRect  = nav.getBoundingClientRect();
+      var linkRect = link.getBoundingClientRect();
       var pad = 12;
+      var visLeft  = linkRect.left  - navRect.left;
+      var visRight = linkRect.right - navRect.left;
       if (visLeft < pad) {
         nav.scrollLeft += visLeft - pad;
-      } else if (visRight > navWidth - pad) {
-        nav.scrollLeft += visRight - navWidth + pad;
+      } else if (visRight > navRect.width - pad) {
+        nav.scrollLeft += visRight - navRect.width + pad;
       }
     }
 
