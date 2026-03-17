@@ -26,7 +26,6 @@
 
 <div class="news-wrapper">
   <div class="news-content" id="newsContent">
-    <div class="news-overlay"></div>
     {{ news_items | markdownify }}
   </div>
   <div class="news-toggle-container">

@@ -235,3 +235,47 @@ document.addEventListener('DOMContentLoaded', function() {
     resizeTimer = setTimeout(function () { requestAnimationFrame(pin); }, 150);
   });
 })();
+
+// ── Scroll-spy — highlight the active section's nav link ─────────────────────
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var links = document.querySelectorAll('.greedy-nav .visible-links a[href*="#"]');
+    if (!links.length) return;
+
+    // Build list of { el, link } pairs for anchors that exist on the page
+    var anchors = [];
+    links.forEach(function (link) {
+      var hash = (link.getAttribute('href') || '').split('#')[1];
+      if (!hash) return;
+      var el = document.getElementById(hash);
+      if (el) anchors.push({ el: el, link: link });
+    });
+    if (!anchors.length) return;
+
+    var current = null;
+
+    function setActive(link) {
+      if (current === link) return;
+      links.forEach(function (l) { l.classList.remove('nav-active'); });
+      current = link;
+      if (current) current.classList.add('nav-active');
+    }
+
+    function onScroll() {
+      // masthead height offset so highlight triggers before heading hits top
+      var offset = 80;
+      var scrollY = window.scrollY + offset;
+      var active = anchors[0].link; // default to first section
+      for (var i = anchors.length - 1; i >= 0; i--) {
+        if (anchors[i].el.getBoundingClientRect().top + window.scrollY <= scrollY) {
+          active = anchors[i].link;
+          break;
+        }
+      }
+      setActive(active);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  });
+})();
