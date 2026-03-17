@@ -349,12 +349,12 @@ h1:before, .anchor:before {
 @keyframes glowBreathe {
     0%, 100% {
         box-shadow: 0 0 0 0 rgba(var(--glow-rgb), 0),
-                    0 2px 12px rgba(var(--glow-rgb), 0.12);
+                    0 2px 8px rgba(var(--glow-rgb), 0.07);
     }
     50% {
-        box-shadow: 0 0 0 8px rgba(var(--glow-rgb), 0.08),
-                    0 0 40px 14px rgba(var(--glow-rgb), 0.26),
-                    0 2px 12px rgba(var(--glow-rgb), 0.14);
+        box-shadow: 0 0 0 5px rgba(var(--glow-rgb), 0.04),
+                    0 0 28px 8px rgba(var(--glow-rgb), 0.16),
+                    0 2px 8px rgba(var(--glow-rgb), 0.09);
     }
 }
 
@@ -385,9 +385,9 @@ h1:before, .anchor:before {
         transform: translateY(-2px);
         text-decoration: none !important;
         animation: none;
-        box-shadow: 0 0 0 8px rgba(var(--glow-rgb), 0.08),
-                    0 0 40px 14px rgba(var(--glow-rgb), 0.28),
-                    0 6px 18px rgba(var(--glow-rgb), 0.18);
+        box-shadow: 0 0 0 5px rgba(var(--glow-rgb), 0.04),
+                    0 0 28px 8px rgba(var(--glow-rgb), 0.16),
+                    0 2px 8px rgba(var(--glow-rgb), 0.09);
     }
 }
 
@@ -412,9 +412,9 @@ h1:before, .anchor:before {
    Design Overrides — Modern AI Researcher Aesthetic
    ========================================================================== */
 
-/* 1. Font: Inter — clean, modern, technical */
+/* 1. Font: Space Grotesk — geometric, modern, technical */
 body, .sidebar, .page__content, .author__name, .masthead {
-    font-family: 'Inter', "Trebuchet MS", Helvetica, sans-serif;
+    font-family: 'Space Grotesk', "Trebuchet MS", Helvetica, sans-serif;
 }
 
 /* 2. Warm cream background — Claude-style low-saturation yellow */
@@ -627,18 +627,18 @@ html, body {
     z-index: 1000;
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 12px;
     background: var(--masthead-bg);
     border: 1px solid var(--masthead-border);
     border-radius: 9999px;
-    padding: 7px 12px;
+    padding: 9px 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
     transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .theme-dot {
-    width: 15px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     border: 2px solid transparent;
     cursor: pointer;
