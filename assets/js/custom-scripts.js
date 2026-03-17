@@ -253,6 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!anchors.length) return;
 
     var current = null;
+    var suppressUntil = 0; // timestamp — ignore scroll-spy until this time
 
     function setActive(link) {
       if (current === link) return;
@@ -261,7 +262,17 @@ document.addEventListener('DOMContentLoaded', function() {
       if (current) current.classList.add('nav-active');
     }
 
+    // When user explicitly clicks a nav link, lock the highlight immediately
+    // and suppress scroll-spy for 1 s so the scroll animation doesn't fight it
+    links.forEach(function (link) {
+      link.addEventListener('click', function () {
+        setActive(link);
+        suppressUntil = Date.now() + 1000;
+      });
+    });
+
     function onScroll() {
+      if (Date.now() < suppressUntil) return; // respect explicit click
       // masthead height offset so highlight triggers before heading hits top
       var offset = 80;
       var scrollY = window.scrollY + offset;
