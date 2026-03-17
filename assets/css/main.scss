@@ -174,7 +174,7 @@ h1:before, .anchor:before {
     left: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+    background: linear-gradient(to bottom, rgba(247,247,245,0), rgba(247,247,245,1));
     pointer-events: none;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
@@ -249,25 +249,29 @@ html, body {
 .page__content {
     background-color: transparent;
 }
-/* Keep sidebar profile box white so it lifts off the background */
+/* Keep sidebar background transparent — inherits page background */
 .sidebar {
-    background-color: #ffffff;
+    background-color: transparent;
 }
-/* Masthead stays white */
+/* Masthead: slightly darker than off-white background */
 .masthead {
-    background-color: #ffffff !important;
-    border-bottom: 1px solid #eeeeeb;
+    background-color: #eaeae8 !important;
+    border-bottom: 1px solid #e2e2df;
 }
 
-/* 3. Sidebar: scrollable on small monitors (fix clipped social links) */
+/* 3. Sidebar: sticky on large screens (flexbox required — sticky ignored on floats) */
 @media (min-width: 925px) {
+    #main {
+        display: flex !important;
+        align-items: flex-start;
+    }
     .sidebar {
-        position: sticky;
+        flex-shrink: 0;
+        position: sticky !important;
         top: 0;
         max-height: 100vh;
         overflow-y: auto;
         padding-bottom: 1.5em;
-        /* Subtle scrollbar so it doesn't look broken */
         scrollbar-width: thin;
         scrollbar-color: rgba(0,0,0,0.12) transparent;
         &::-webkit-scrollbar {
@@ -280,6 +284,10 @@ html, body {
             background-color: rgba(0,0,0,0.15);
             border-radius: 10px;
         }
+    }
+    .page {
+        flex: 1 1 0 !important;
+        min-width: 0;
     }
 }
 
@@ -297,7 +305,7 @@ html, body {
     margin-right: -0.75em;
     transition: box-shadow 0.22s ease, transform 0.22s ease, background 0.22s ease;
     &:hover {
-        background: #ffffff;
+        background: #f0f0ee;
         box-shadow: 0 4px 20px rgba(0,0,0,0.07);
         transform: translateY(-2px);
     }
