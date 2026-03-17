@@ -489,23 +489,73 @@ body, #main {
     background: transparent !important;
 }
 
-/* Scrollable nav — replace hamburger collapse with horizontal scroll */
-.greedy-nav > button {
-    display: none !important;
+/* ── Custom site-nav — fully independent of greedy-nav ──────────────────────── */
+
+/* Center the nav within the masthead */
+.masthead__menu,
+.masthead__inner-wrap {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
 }
-.greedy-nav .visible-links {
-    overflow-x: auto;
-    overflow-y: visible;
-    white-space: nowrap;
-    flex-wrap: nowrap !important;
-    -webkit-overflow-scrolling: touch;
+
+.site-nav {
+    width: 100%;
+    min-width: 0; /* prevent flex child from expanding page width */
+    overflow-x: auto; /* scroll container — isolates overflow from page */
     scrollbar-width: none;
-    max-width: 100%;
     &::-webkit-scrollbar { display: none; }
 }
-/* Hidden-links dropdown is unused — JS also keeps it empty */
-.greedy-nav .hidden-links {
-    display: none !important;
+
+.site-nav__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    /* min-width:100% → centered when fits; max-content → overflows right-only when narrow */
+    width: max-content;
+    min-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 6px 8px;
+    gap: 2px;
+}
+
+.site-nav__link {
+    display: inline-block;
+    padding: 0.3em 0.8em;
+    border-radius: 7px;
+    font-weight: normal !important;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none !important;
+    color: inherit;
+    white-space: nowrap;
+    outline: 1px solid transparent;
+    transition: background 0.2s ease, outline-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+
+    &:hover {
+        background: rgba(var(--glow-rgb), 0.06);
+        outline-color: rgba(var(--glow-rgb), 0.18);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+        text-decoration: none !important;
+    }
+
+    &.nav-active {
+        background: rgba(var(--glow-rgb), 0.07);
+        outline-color: rgba(var(--glow-rgb), 0.30);
+        outline-width: 1.5px;
+        box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.28),
+            0 2px 8px rgba(var(--glow-rgb), 0.1);
+    }
+}
+
+/* Dark mode nav link colour */
+[data-theme="dark"] .site-nav__link {
+    color: #e8e6df;
+    &:hover { color: #ffffff; }
 }
 
 /* 3. Sidebar: JS pins to fixed position (CSS sticky unreliable — see custom-scripts.js) */
@@ -735,63 +785,4 @@ body, #main {
     &:hover:not(.active) { transform: scale(1.18); }
 }
 
-/* ==========================================================================
-   Nav Links — Premium pill with edge highlight + scroll-spy active
-   ========================================================================== */
-
-.greedy-nav .visible-links a {
-    border-radius: 7px;
-    padding: 0.28em 0.75em !important;
-    margin: 0 2px;
-    transition: background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
-
-    &::before { display: none !important; }
-
-    &:hover {
-        background: rgba(var(--glow-rgb), 0.06);
-        box-shadow:
-            0 0 0 1px rgba(var(--glow-rgb), 0.14),
-            inset 0 1px 0 rgba(255, 255, 255, 0.14);
-    }
-
-    &.nav-active {
-        background: rgba(var(--glow-rgb), 0.07);
-        font-weight: 600;
-        box-shadow:
-            0 0 0 1.5px rgba(var(--glow-rgb), 0.22),
-            inset 0 1px 0 rgba(255, 255, 255, 0.28),
-            0 3px 12px rgba(var(--glow-rgb), 0.1);
-    }
-}
-
-/* Dropdown (hidden-links): themed background + refined shape */
-.greedy-nav .hidden-links {
-    background: var(--masthead-bg) !important;
-    border-color: var(--masthead-border) !important;
-    border-radius: 12px !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06) !important;
-
-    &::before { border-color: var(--masthead-border) transparent !important; }
-    &::after  { border-color: var(--masthead-bg) transparent !important; }
-
-    a {
-        border-radius: 7px;
-        margin: 2px 4px !important;
-        padding: 9px 16px !important;
-        transition: background 0.15s ease, color 0.15s ease;
-
-        &:hover {
-            background: var(--paper-hover) !important;
-            color: var(--c-text) !important;
-        }
-    }
-
-    li { border-bottom-color: var(--paper-border) !important; }
-}
-
-/* Dark mode: hamburger button + nav text */
-[data-theme="dark"] {
-    .greedy-nav button { background-color: #333330; }
-    .greedy-nav a      { color: #e8e6df; }
-    .greedy-nav a:hover { color: #ffffff; }
-}
+/* (nav link styles now in .site-nav__link above) */

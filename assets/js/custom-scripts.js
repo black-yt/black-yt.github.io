@@ -126,29 +126,70 @@
   });
 })();
 
-// Close mobile nav when clicking outside
-document.addEventListener('click', function(e) {
-  var nav = document.getElementById('site-nav');
-  if (!nav) return;
-  var hlinks = nav.querySelector('.hidden-links');
-  var btn = nav.querySelector('button');
-  if (!hlinks || hlinks.classList.contains('hidden')) return;
-  if (btn && btn.contains(e.target)) return;
-  hlinks.classList.add('hidden');
-  btn.classList.remove('close');
-});
-
-// Keep all nav items in visible-links (override greedy-nav collapse behaviour)
-// Greedy-nav JS moves overflowing items to hidden-links; we immediately move them back.
+// ── Scroll-spy — highlight the active section's nav link ─────────────────────
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
-    var visible = document.querySelector('.greedy-nav .visible-links');
-    var hidden  = document.querySelector('.greedy-nav .hidden-links');
-    if (!visible || !hidden) return;
-    var obs = new MutationObserver(function () {
-      while (hidden.children.length) visible.appendChild(hidden.children[0]);
+    var links = document.querySelectorAll('.site-nav__link[href*="#"]');
+    if (!links.length) return;
+
+    // Build list of { el, link } pairs for anchors that exist on the page
+    var anchors = [];
+    links.forEach(function (link) {
+      var hash = (link.getAttribute('href') || '').split('#')[1];
+      if (!hash) return;
+      var el = document.getElementById(hash);
+      if (el) anchors.push({ el: el, link: link });
     });
-    obs.observe(hidden, { childList: true });
+    if (!anchors.length) return;
+
+    var current = null;
+    var suppressUntil = 0;
+
+    function setActive(link) {
+      if (current === link) return;
+      links.forEach(function (l) { l.classList.remove('nav-active'); });
+      current = link;
+      if (current) current.classList.add('nav-active');
+    }
+
+    // Click: lock highlight + suppress scroll-spy for 1 s
+    // About Me: always scroll to top instead of jumping to anchor.
+    // Use capture phase so we fire before jQuery's bubble-phase smoothScroll handler.
+    links.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        setActive(link);
+        suppressUntil = Date.now() + 1000;
+        if ((link.getAttribute('href') || '').indexOf('about-me') !== -1) {
+          e.preventDefault();
+          e.stopImmediatePropagation(); // block jQuery smoothScroll which fires in bubble phase
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, { capture: true });
+    });
+
+    var scrollPending = false;
+    function onScroll() {
+      if (Date.now() < suppressUntil) return;
+      if (scrollPending) return;
+      scrollPending = true;
+      requestAnimationFrame(function () {
+        scrollPending = false;
+        if (Date.now() < suppressUntil) return;
+        var offset = 80;
+        var scrollY = window.scrollY + offset;
+        var active = anchors[0].link;
+        for (var i = anchors.length - 1; i >= 0; i--) {
+          if (anchors[i].el.getBoundingClientRect().top + window.scrollY <= scrollY) {
+            active = anchors[i].link;
+            break;
+          }
+        }
+        setActive(active);
+      });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   });
 })();
 
@@ -274,71 +315,4 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 })();
 
-// ── Scroll-spy — highlight the active section's nav link ─────────────────────
-(function () {
-  document.addEventListener('DOMContentLoaded', function () {
-    var links = document.querySelectorAll('.greedy-nav .visible-links a[href*="#"]');
-    if (!links.length) return;
-
-    // Build list of { el, link } pairs for anchors that exist on the page
-    var anchors = [];
-    links.forEach(function (link) {
-      var hash = (link.getAttribute('href') || '').split('#')[1];
-      if (!hash) return;
-      var el = document.getElementById(hash);
-      if (el) anchors.push({ el: el, link: link });
-    });
-    if (!anchors.length) return;
-
-    var current = null;
-    var suppressUntil = 0; // timestamp — ignore scroll-spy until this time
-
-    function setActive(link) {
-      if (current === link) return;
-      links.forEach(function (l) { l.classList.remove('nav-active'); });
-      current = link;
-      if (current) current.classList.add('nav-active');
-    }
-
-    // When user explicitly clicks a nav link, lock the highlight immediately
-    // and suppress scroll-spy for 1 s so the scroll animation doesn't fight it.
-    // About Me → always scroll to top (section may not reach viewport top).
-    links.forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        setActive(link);
-        suppressUntil = Date.now() + 1000;
-        var href = link.getAttribute('href') || '';
-        if (href.indexOf('about-me') !== -1) {
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      });
-    });
-
-    var scrollPending = false;
-
-    function onScroll() {
-      if (Date.now() < suppressUntil) return; // respect explicit click
-      if (scrollPending) return;
-      scrollPending = true;
-      requestAnimationFrame(function () {
-        scrollPending = false;
-        if (Date.now() < suppressUntil) return;
-        // masthead height offset so highlight triggers before heading hits top
-        var offset = 80;
-        var scrollY = window.scrollY + offset;
-        var active = anchors[0].link; // default to first section
-        for (var i = anchors.length - 1; i >= 0; i--) {
-          if (anchors[i].el.getBoundingClientRect().top + window.scrollY <= scrollY) {
-            active = anchors[i].link;
-            break;
-          }
-        }
-        setActive(active);
-      });
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  });
-})();
+// (scroll-spy and nav click handling moved above)
