@@ -2,24 +2,32 @@
  * Custom scripts for news toggle, publication filtering, and sidebar pin
  */
 
-// News Toggle Function
+// News Toggle — smooth animation using exact scrollHeight
 function toggleNews() {
   const content = document.getElementById('newsContent');
   const btn = document.getElementById('newsToggleBtn');
+  if (!content || !btn) return;
 
-  if (content && btn) {
-    const btnText = btn.querySelector('span');
+  const btnText = btn.querySelector('span');
+  const isExpanded = content.classList.contains('expanded');
 
-    content.classList.toggle('expanded');
-    btn.classList.toggle('expanded');
-
-    if (btnText) {
-      if (content.classList.contains('expanded')) {
-        btnText.textContent = 'Show Less';
-      } else {
-        btnText.textContent = 'Show More';
-      }
-    }
+  if (isExpanded) {
+    // Collapse: set explicit px value first, then animate to 300px
+    content.style.maxHeight = content.scrollHeight + 'px';
+    content.classList.remove('expanded');
+    btn.classList.remove('expanded');
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      content.style.maxHeight = '300px';
+    }));
+    if (btnText) btnText.textContent = 'Show More';
+  } else {
+    // Expand: animate to exact content height, then clear inline style
+    const fullHeight = content.scrollHeight;
+    content.style.maxHeight = fullHeight + 'px';
+    content.classList.add('expanded');
+    btn.classList.add('expanded');
+    setTimeout(() => { content.style.maxHeight = ''; }, 380);
+    if (btnText) btnText.textContent = 'Show Less';
   }
 }
 

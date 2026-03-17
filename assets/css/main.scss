@@ -157,15 +157,14 @@ h1:before, .anchor:before {
 }
 
 .news-content {
-    max-height: 300px; /* Adjust height as needed */
+    max-height: 300px;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.35s ease;
     position: relative;
 }
 
 .news-content.expanded {
-    max-height: none;
-    padding-bottom: 30px; /* Add space for the toggle button */
+    /* max-height set by JS to exact scrollHeight for smooth animation */
 }
 
 .news-overlay {
@@ -252,6 +251,7 @@ html, body {
 /* Keep sidebar background transparent — inherits page background */
 .sidebar {
     background-color: transparent;
+    transform: none !important; /* remove theme's translate3d globally — causes stacking context on mobile blocking click events */
 }
 /* Masthead: slightly darker than off-white background */
 .masthead {
@@ -272,7 +272,7 @@ html, body {
     }
     .sidebar {
         flex-shrink: 0;
-        transform: none !important;
+        padding-top: 1.5em;
         overflow: hidden;
     }
     .sidebar--pinned {
@@ -292,11 +292,6 @@ html, body {
     &::-webkit-scrollbar {
         display: none;
     }
-}
-
-/* 4. Bug fix: max-height: none can't be CSS-transitioned — use a large px value */
-.news-content.expanded {
-    max-height: 5000px !important;
 }
 
 /* 5. Paper-box: subtle hover lift for interactivity */
