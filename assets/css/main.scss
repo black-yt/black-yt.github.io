@@ -40,13 +40,121 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
+/* =====================================================================
+   Theme System — 4 colour schemes via CSS custom properties
+   Switch by setting data-theme="" | "yellow" | "blue" | "dark" on <html>
+   ===================================================================== */
+:root {
+  /* --- Pure White (default) --- */
+  --bg:              #ffffff;
+  --masthead-bg:     #f5f5f5;
+  --masthead-border: #e8e8e8;
+  --paper-border:    #efefef;
+  --paper-hover:     #f7f7f7;
+  --h1-border:       #e8e8e8;
+  --overlay-start:   rgba(255, 255, 255, 0);
+  --overlay-end:     rgba(255, 255, 255, 1);
+  /* component (buttons, seg-control) */
+  --c-bg-start:      #ffffff;
+  --c-bg-end:        #f5f5f5;
+  --c-border:        rgba(0, 0, 0, 0.12);
+  --c-text:          #1a1a1a;
+  --c-hover-start:   #f0f0f0;
+  --c-hover-end:     #e8e8e8;
+  --c-hover-border:  rgba(0, 0, 0, 0.28);
+  --c-hover-text:    #000000;
+  /* seg-control active indicator */
+  --seg-start:       #1a1a1a;
+  --seg-end:         #333333;
+  --seg-shadow:      rgba(0, 0, 0, 0.22);
+  --seg-inactive:    #888888;
+  --seg-active-text: #ffffff;
+  /* glow (ask-me-btn breathing animation) */
+  --glow-rgb:        0, 0, 0;
+}
+
+[data-theme="yellow"] {
+  --bg:              #faf8f4;
+  --masthead-bg:     #f0ebe1;
+  --masthead-border: #e5ddd0;
+  --paper-border:    #e8e0d5;
+  --paper-hover:     #f0ece4;
+  --h1-border:       #ddd6c8;
+  --overlay-start:   rgba(250, 248, 244, 0);
+  --overlay-end:     rgba(250, 248, 244, 1);
+  --c-bg-start:      #ffffff;
+  --c-bg-end:        #faf4ea;
+  --c-border:        rgba(140, 95, 35, 0.22);
+  --c-text:          #3d2810;
+  --c-hover-start:   #f5ede0;
+  --c-hover-end:     #ede0cc;
+  --c-hover-border:  rgba(140, 95, 35, 0.5);
+  --c-hover-text:    #1c1208;
+  --seg-start:       #1c1208;
+  --seg-end:         #3a2410;
+  --seg-shadow:      rgba(28, 18, 8, 0.28);
+  --seg-inactive:    #8a7055;
+  --seg-active-text: #ffffff;
+  --glow-rgb:        180, 128, 40;
+}
+
+[data-theme="blue"] {
+  --bg:              #f3f5f8;
+  --masthead-bg:     #e3e8ef;
+  --masthead-border: #d3dae3;
+  --paper-border:    #dde4ed;
+  --paper-hover:     #e8eef5;
+  --h1-border:       #ccd4de;
+  --overlay-start:   rgba(243, 245, 248, 0);
+  --overlay-end:     rgba(243, 245, 248, 1);
+  --c-bg-start:      #ffffff;
+  --c-bg-end:        #edf2fa;
+  --c-border:        rgba(38, 88, 155, 0.22);
+  --c-text:          #1a3654;
+  --c-hover-start:   #e8f0fb;
+  --c-hover-end:     #d8e8f8;
+  --c-hover-border:  rgba(38, 88, 155, 0.5);
+  --c-hover-text:    #102847;
+  --seg-start:       #1a3654;
+  --seg-end:         #1e4a7a;
+  --seg-shadow:      rgba(26, 54, 84, 0.3);
+  --seg-inactive:    #6a8aaa;
+  --seg-active-text: #ffffff;
+  --glow-rgb:        38, 88, 155;
+}
+
+[data-theme="dark"] {
+  --bg:              #111110;
+  --masthead-bg:     #1c1c1a;
+  --masthead-border: #2e2e2b;
+  --paper-border:    #252522;
+  --paper-hover:     #1a1a18;
+  --h1-border:       #2e2e2b;
+  --overlay-start:   rgba(17, 17, 16, 0);
+  --overlay-end:     rgba(17, 17, 16, 1);
+  --c-bg-start:      #1e1e1c;
+  --c-bg-end:        #252520;
+  --c-border:        rgba(255, 255, 255, 0.1);
+  --c-text:          #e8e6df;
+  --c-hover-start:   #2a2a26;
+  --c-hover-end:     #303028;
+  --c-hover-border:  rgba(255, 255, 255, 0.22);
+  --c-hover-text:    #ffffff;
+  --seg-start:       #e8e6df;
+  --seg-end:         #d0cec7;
+  --seg-shadow:      rgba(232, 230, 223, 0.12);
+  --seg-inactive:    #666660;
+  --seg-active-text: #111110;
+  --glow-rgb:        220, 210, 180;
+}
+
 .paper-box {
     display: flex;
     justify-content: left;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 1px #efefef solid;
+    border-bottom: 1px var(--paper-border) solid;
     padding: 2em 0.75em;
     border-radius: 6px;
     margin-left: -0.75em;
@@ -54,7 +162,7 @@
     transition: box-shadow 0.22s ease, transform 0.22s ease, background 0.22s ease;
 
     &:hover {
-        background: #f0f0ee;
+        background: var(--paper-hover);
         box-shadow: 0 4px 20px rgba(0,0,0,0.07);
         transform: translateY(-2px);
     }
@@ -124,36 +232,54 @@ h1:before, .anchor:before {
 /* image wrapper for badge overlay */
 .paper-box-image > div { position: relative; display: inline-block; }
 
-/* filter buttons */
-.pub-filter {
+/* Segmented control — used for pub filter and news toggle */
+.seg-control {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  background-color: #f8f9fa;
-  padding: 4px;
-  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--c-bg-start) 0%, var(--c-bg-end) 100%);
+  border: 1.5px solid var(--c-border);
+  border-radius: 10px;
+  padding: 3px;
+  user-select: none;
+
+  .seg-indicator {
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    border-radius: 7px;
+    background: linear-gradient(135deg, var(--seg-start) 0%, var(--seg-end) 100%);
+    box-shadow: 0 4px 14px var(--seg-shadow);
+    transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .seg-btn {
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: var(--seg-inactive);
+    padding: 7px 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+    border-radius: 7px;
+    font-family: inherit;
+
+    &.active {
+      color: var(--seg-active-text);
+    }
+  }
+}
+
+#pubFilter {
   margin: 0.5rem 0 1.25rem;
-  border: 1px solid #e9ecef;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
-}
-.filter-btn {
-  appearance: none;
-  background: transparent;
-  border: none;
-  color: #6c757d;
-  padding: 8px 20px;
-  border-radius: 9999px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
-}
-.filter-btn:hover {
-  color: #212529;
-}
-.filter-btn.active {
-  background-color: #0f172a;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3);
 }
 
 /* News Section Styles */
@@ -176,7 +302,7 @@ h1:before, .anchor:before {
     left: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to bottom, rgba(247,247,245,0), rgba(247,247,245,1));
+    background: linear-gradient(to bottom, var(--overlay-start), var(--overlay-end));
     pointer-events: none;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
@@ -193,34 +319,76 @@ h1:before, .anchor:before {
     z-index: 10;
 }
 
-.news-toggle-btn {
-    background-color: #fff;
-    border: 1px solid #e9ecef;
-    color: #6c757d;
-    padding: 8px 24px;
-    border-radius: 20px;
-    font-size: 0.9rem;
+.news-content.expanded ~ .news-toggle-container {
+    margin-top: 0.75em;
+}
+
+.seg-toggle-btn {
+    appearance: none;
+    background: linear-gradient(135deg, var(--c-bg-start) 0%, var(--c-bg-end) 100%);
+    border: 1.5px solid var(--c-border);
+    border-radius: 10px;
+    color: var(--c-text);
+    padding: 7px 28px;
+    font-size: 0.875rem;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: all 0.2s ease;
-    display: inline-flex;
+    font-family: inherit;
+    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        background: linear-gradient(135deg, var(--c-hover-start) 0%, var(--c-hover-end) 100%);
+        border-color: var(--c-hover-border);
+        color: var(--c-hover-text);
+        transform: translateY(-1px);
+        box-shadow: 0 3px 12px rgba(var(--glow-rgb), 0.15);
+    }
+}
+
+/* Ask Me Anything Button */
+@keyframes glowBreathe {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(var(--glow-rgb), 0),
+                    0 2px 12px rgba(var(--glow-rgb), 0.12);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(var(--glow-rgb), 0.08),
+                    0 0 40px 14px rgba(var(--glow-rgb), 0.26),
+                    0 2px 12px rgba(var(--glow-rgb), 0.14);
+    }
+}
+
+.ask-me-btn {
+    display: flex;
     align-items: center;
-    gap: 6px;
-}
+    justify-content: center;
+    gap: 0.55em;
+    width: 80%;
+    margin: 1.75em auto 2.5em;
+    padding: 0.85em 2em;
+    border-radius: 12px;
+    border: 1.5px solid var(--c-border);
+    background: linear-gradient(135deg, var(--c-bg-start) 0%, var(--c-bg-end) 100%);
+    color: var(--c-text);
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-decoration: none !important;
+    cursor: pointer;
+    animation: glowBreathe 3.5s ease-in-out infinite;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 
-.news-toggle-btn:hover {
-    color: #0f172a;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-    transform: translateY(-1px);
-}
-
-.news-toggle-btn i {
-    transition: transform 0.3s ease;
-}
-
-.news-toggle-btn.expanded i {
-    transform: rotate(180deg);
+    &:hover {
+        background: linear-gradient(135deg, var(--c-hover-start) 0%, var(--c-hover-end) 100%);
+        border-color: var(--c-hover-border);
+        color: var(--c-hover-text);
+        transform: translateY(-2px);
+        text-decoration: none !important;
+        animation: none;
+        box-shadow: 0 0 0 8px rgba(var(--glow-rgb), 0.08),
+                    0 0 40px 14px rgba(var(--glow-rgb), 0.28),
+                    0 6px 18px rgba(var(--glow-rgb), 0.18);
+    }
 }
 
 /* Custom Highlights */
@@ -241,12 +409,12 @@ body, .sidebar, .page__content, .author__name, .masthead {
     font-family: 'Inter', "Trebuchet MS", Helvetica, sans-serif;
 }
 
-/* 2. Subtle off-white background — low saturation, easy on eyes */
+/* 2. Warm cream background — Claude-style low-saturation yellow */
 html, body {
-    background-color: #f7f7f5;
+    background-color: var(--bg);
 }
 #main {
-    background-color: #f7f7f5;
+    background-color: var(--bg);
 }
 .page__content {
     background-color: transparent;
@@ -257,10 +425,10 @@ html, body {
     -webkit-transform: none !important;
     transform: none !important; /* remove theme's translate3d globally — causes stacking context on mobile blocking click events */
 }
-/* Masthead: slightly darker than off-white background */
+/* Masthead: slightly darker than background */
 .masthead {
-    background-color: #eaeae8 !important;
-    border-bottom: 1px solid #e2e2df;
+    background-color: var(--masthead-bg) !important;
+    border-bottom: 1px solid var(--masthead-border);
 }
 /* Nav bar inside masthead: transparent so it inherits masthead color */
 .greedy-nav {
@@ -305,7 +473,7 @@ html, body {
 .page__content h1 {
     font-weight: 600;
     letter-spacing: -0.015em;
-    border-bottom-color: #e8e8e4;
+    border-bottom-color: var(--h1-border);
 }
 
 /* 7. Page entry animation: subtle fade-up for main content */
@@ -403,4 +571,82 @@ html, body {
     .author__social-icons a {
         font-size: 1.1em;
     }
+}
+
+/* ==========================================================================
+   Dark Mode — text & link colour overrides
+   ========================================================================== */
+[data-theme="dark"] {
+    color-scheme: dark;
+
+    body, .page__content, .page__content p, .page__content li,
+    .page__content h1, .page__content h2, .page__content h3,
+    .page__content h4, .page__content h5, .page__content h6,
+    .author__name, .author__bio, .author__direction,
+    .masthead, .greedy-nav, .greedy-nav a,
+    .nav__title, .page__footer {
+        color: #e8e6df;
+    }
+
+    .page__content a {
+        color: #a8c0d8;
+        &:hover { color: #c8daf0; }
+    }
+
+    .greedy-nav a:hover { color: #ffffff; }
+
+    blockquote {
+        border-left-color: #3a3a36;
+        color: #b0aea8;
+    }
+
+    table th, table td {
+        border-color: #2e2e2b;
+    }
+
+    table tr:nth-child(2n) {
+        background: #1a1a18;
+    }
+}
+
+/* ==========================================================================
+   Theme Switcher — floating dot palette
+   ========================================================================== */
+#theme-switcher {
+    position: fixed;
+    bottom: 1.5em;
+    right: 1.5em;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--masthead-bg);
+    border: 1px solid var(--masthead-border);
+    border-radius: 9999px;
+    padding: 7px 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+    &[data-theme="white"]  { background: #ffffff; border-color: #c8c8c8; }
+    &[data-theme="yellow"] { background: #e8d5a0; border-color: #c4a060; }
+    &[data-theme="blue"]   { background: #a8c4e8; border-color: #5e8ec8; }
+    &[data-theme="dark"]   { background: #2a2a26; border-color: #585852; }
+
+    &.active {
+        transform: scale(1.35);
+        box-shadow: 0 0 0 2px var(--bg), 0 0 0 3.5px var(--masthead-border);
+    }
+
+    &:hover:not(.active) { transform: scale(1.18); }
 }

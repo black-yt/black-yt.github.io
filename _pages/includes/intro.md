@@ -17,3 +17,8 @@ If you are interested in multi-agent systems on deep research or scientific disc
 | [**Wanghan-Pro🤖**](https://chat-xi-three-29.vercel.app/)         | Wanghan-Pro is here to chat anytime or help with any problem.                                                                                        |
 | [**Iris🧿**](https://github.com/black-yt/IrisGUI)                 | Your AI-powered hands and eyes for desktop automation.                                                                                               |
 | [**StructAI🚀**](https://github.com/black-yt/structai)            | A pip library for LLM Agent interaction, memory, concurrency, and evaluation.                                                                                               |
+
+<a href="https://chat-xi-three-29.vercel.app/" class="ask-me-btn" target="_blank" rel="noopener">
+  <i class="fas fa-comments" aria-hidden="true"></i>
+  <span>Ask Me Anything</span>
+</a>

@@ -1,8 +1,9 @@
 # 📝 Publications
 
-<div class="pub-filter" role="group" aria-label="Publications filter">
-  <button class="filter-btn active" data-filter="all">All</button>
-  <button class="filter-btn" data-filter="core">Key Contributor</button>
+<div class="seg-control" id="pubFilter" role="group" aria-label="Publications filter">
+  <div class="seg-indicator"></div>
+  <button class="seg-btn active" data-filter="all">All</button>
+  <button class="seg-btn" data-filter="core">Key Contributor</button>
 </div>
 
 

@@ -2,6 +2,47 @@
  * Custom scripts for news toggle, publication filtering, sidebar pin, and nav close
  */
 
+// ── Theme Switcher ──────────────────────────────────────────────────────────
+(function () {
+  var THEMES = ['white', 'yellow', 'blue', 'dark'];
+  var LABELS = { white: 'Pure White', yellow: 'Warm Yellow', blue: 'Cool Blue', dark: 'Dark' };
+
+  function applyTheme(theme) {
+    if (theme === 'white') {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+    try { localStorage.setItem('site-theme', theme); } catch(e) {}
+    document.querySelectorAll('.theme-dot').forEach(function (dot) {
+      dot.classList.toggle('active', dot.dataset.theme === theme);
+    });
+  }
+
+  // Apply saved theme immediately (before DOMContentLoaded to avoid flash)
+  var saved = 'white';
+  try { saved = localStorage.getItem('site-theme') || 'white'; } catch(e) {}
+  applyTheme(saved);
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var switcher = document.createElement('div');
+    switcher.id = 'theme-switcher';
+    switcher.setAttribute('aria-label', 'Choose colour theme');
+    THEMES.forEach(function (t) {
+      var btn = document.createElement('button');
+      btn.className = 'theme-dot';
+      btn.dataset.theme = t;
+      btn.title = LABELS[t];
+      btn.setAttribute('aria-label', LABELS[t]);
+      btn.addEventListener('click', function () { applyTheme(t); });
+      switcher.appendChild(btn);
+    });
+    document.body.appendChild(switcher);
+    // Re-apply to mark active dot after DOM is ready
+    applyTheme(saved);
+  });
+})();
+
 // Close mobile nav when clicking outside
 document.addEventListener('click', function(e) {
   var nav = document.getElementById('site-nav');
@@ -14,43 +55,40 @@ document.addEventListener('click', function(e) {
   btn.classList.remove('close');
 });
 
+// Segmented control — move indicator to the active segment
+function moveSegIndicator(control, activeBtn) {
+  var indicator = control.querySelector('.seg-indicator');
+  if (!indicator) return;
+  indicator.style.left = activeBtn.offsetLeft + 'px';
+  indicator.style.width = activeBtn.offsetWidth + 'px';
+}
+
 // News Toggle — smooth animation using exact scrollHeight
 function toggleNews() {
-  const content = document.getElementById('newsContent');
-  const btn = document.getElementById('newsToggleBtn');
+  var content = document.getElementById('newsContent');
+  var btn = document.getElementById('newsToggleBtn');
   if (!content || !btn) return;
 
-  const btnText = btn.querySelector('span');
-  const isExpanded = content.classList.contains('expanded');
+  var btnText = btn.querySelector('span');
+  var isExpanded = content.classList.contains('expanded');
 
   if (isExpanded) {
-    // Collapse: materialize current height as px (none→px can't transition),
-    // then animate down to 300px in the next frame
     content.style.maxHeight = content.scrollHeight + 'px';
     content.classList.remove('expanded');
-    btn.classList.remove('expanded');
-    requestAnimationFrame(() => requestAnimationFrame(() => {
+    requestAnimationFrame(function() { requestAnimationFrame(function() {
       content.style.maxHeight = '300px';
-    }));
+    }); });
     if (btnText) btnText.textContent = 'Show More';
   } else {
-    // Expand: animate from 300px to exact content height,
-    // then release height constraint once transition finishes
     content.style.maxHeight = content.scrollHeight + 'px';
     content.classList.add('expanded');
-    btn.classList.add('expanded');
     content.addEventListener('transitionend', function handler(e) {
-      if (e.propertyName === 'max-height') {
-        content.style.maxHeight = 'none';
-      }
+      if (e.propertyName === 'max-height') content.style.maxHeight = 'none';
     }, { once: true });
     if (btnText) btnText.textContent = 'Show Less';
   }
 }
 
-// Remove sidebar from Stickyfill — our custom pin() handles desktop positioning;
-// Stickyfill causes visual position / touch-hit-area mismatch on mobile.
-// Also initialise publication filter buttons.
 document.addEventListener('DOMContentLoaded', function() {
   // Detach sidebar from Stickyfill
   var sidebar = document.querySelector('.sidebar');
@@ -59,22 +97,35 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.Stickyfill) Stickyfill.remove(sidebar);
   }
 
-  // Publication Filter
-  const buttons = document.querySelectorAll('.pub-filter .filter-btn');
-  const boxes = document.querySelectorAll('.paper-box');
-  if (buttons.length > 0) {
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('active'));
+  // Init all seg-controls: position indicator over the active button
+  requestAnimationFrame(function() {
+    document.querySelectorAll('.seg-control').forEach(function(control) {
+      var activeBtn = control.querySelector('.seg-btn.active');
+      if (activeBtn) moveSegIndicator(control, activeBtn);
+    });
+  });
+
+  // Publication filter
+  var pubFilter = document.getElementById('pubFilter');
+  var boxes = document.querySelectorAll('.paper-box');
+  if (pubFilter) {
+    pubFilter.querySelectorAll('.seg-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        pubFilter.querySelectorAll('.seg-btn').forEach(function(b) { b.classList.remove('active'); });
         btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        boxes.forEach(box => {
-          const isCore = box.dataset.core === 'true';
+        moveSegIndicator(pubFilter, btn);
+        var filter = btn.dataset.filter;
+        boxes.forEach(function(box) {
+          var isCore = box.dataset.core === 'true';
           box.style.display = (filter === 'all' || (filter === 'core' && isCore)) ? '' : 'none';
         });
       });
     });
   }
+
+  // News toggle
+  var newsToggle = document.getElementById('newsToggleBtn');
+  if (newsToggle) newsToggle.addEventListener('click', toggleNews);
 });
 
 // Sidebar Pin — JS-based because CSS position:sticky is unreliable with the
@@ -125,4 +176,3 @@ document.addEventListener('DOMContentLoaded', function() {
     resizeTimer = setTimeout(function () { requestAnimationFrame(pin); }, 150);
   });
 })();
-
