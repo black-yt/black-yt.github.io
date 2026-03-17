@@ -4,7 +4,7 @@
       <nav id="site-nav" class="site-nav">
         <ul class="site-nav__links">
           {% for link in site.data.navigation.main %}
-            <li><a href="{{ link.url }}" class="site-nav__link">{{ link.title }}</a></li>
+            <li><a href="{{ link.url }}" class="site-nav__link" target="_self">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
       </nav>
