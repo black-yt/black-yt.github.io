@@ -526,7 +526,7 @@ body, #main {
 }
 
 .site-nav__link {
-    padding: 0.42em 0.9em;
+    padding: 0.6em 0.9em;
     border-radius: 7px;
     font-weight: normal !important;
     font-family: inherit;
@@ -595,7 +595,7 @@ body, #main {
 
 /* 6. Section h1: slightly refined weight and tracking */
 .page__content {
-    font-size: 1.22em; /* main content text larger than sidebar */
+    font-size: 1.32em; /* main content text larger than sidebar */
 }
 .page__content h1 {
     font-weight: 600;
@@ -688,11 +688,11 @@ body, #main {
         margin: 0 0 0.2em !important;
     }
     .author__bio {
-        font-size: 0.7em !important;
+        font-size: 0.68em !important;
         margin: 0 !important;
     }
     .author__direction {
-        font-size: 0.65em;
+        font-size: 0.68em;
         margin-top: 0.4em;
     }
     .author__social-icons a {
