@@ -706,26 +706,31 @@ body, #main {
 }
 
 /* ==========================================================================
-   Nav Links — Pill hover + scroll-spy active highlight
+   Nav Links — Premium pill with edge highlight + scroll-spy active
    ========================================================================== */
 
 .greedy-nav .visible-links a {
     border-radius: 7px;
-    padding: 0.28em 0.7em !important;
-    margin: 0 1px;
-    transition: background 0.18s ease, color 0.18s ease;
+    padding: 0.28em 0.75em !important;
+    margin: 0 2px;
+    transition: background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 
-    /* Disable old underline pseudo-element */
     &::before { display: none !important; }
 
     &:hover {
-        background: rgba(var(--glow-rgb), 0.08);
+        background: rgba(var(--glow-rgb), 0.07);
+        box-shadow:
+            0 0 0 1px rgba(var(--glow-rgb), 0.18),
+            inset 0 1px 0 rgba(255, 255, 255, 0.14);
     }
 
-    /* Active section highlight (set by scroll-spy JS) */
     &.nav-active {
-        background: rgba(var(--glow-rgb), 0.13);
+        background: rgba(var(--glow-rgb), 0.11);
         font-weight: 600;
+        box-shadow:
+            0 0 0 1.5px rgba(var(--glow-rgb), 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.28),
+            0 3px 12px rgba(var(--glow-rgb), 0.15);
     }
 }
 
