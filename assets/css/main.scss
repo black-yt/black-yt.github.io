@@ -627,7 +627,7 @@ html, body {
     z-index: 1000;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     background: var(--masthead-bg);
     border: 1px solid var(--masthead-border);
     border-radius: 9999px;
@@ -657,4 +657,60 @@ html, body {
     }
 
     &:hover:not(.active) { transform: scale(1.18); }
+}
+
+/* ==========================================================================
+   Premium Nav Link Animation
+   ========================================================================== */
+
+/* Masthead nav links: thin centered-expand underline + color fade */
+.greedy-nav .visible-links a {
+    transition: color 0.2s ease, opacity 0.2s ease;
+
+    &::before {
+        height: 1.5px !important;
+        background: currentColor !important;
+        opacity: 0;
+        transform: scaleX(0) !important;
+        transform-origin: center !important;
+        transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+                    opacity 0.28s ease !important;
+    }
+
+    &:hover::before {
+        transform: scaleX(1) !important;
+        opacity: 0.45;
+    }
+}
+
+/* Dropdown (hidden-links): themed background + refined shape */
+.greedy-nav .hidden-links {
+    background: var(--masthead-bg) !important;
+    border-color: var(--masthead-border) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+
+    &::before { border-color: var(--masthead-border) transparent !important; }
+    &::after  { border-color: var(--masthead-bg) transparent !important; }
+
+    a {
+        border-radius: 7px;
+        margin: 2px 4px !important;
+        padding: 9px 16px !important;
+        transition: background 0.15s ease, color 0.15s ease;
+
+        &:hover {
+            background: var(--paper-hover) !important;
+            color: var(--c-text) !important;
+        }
+    }
+
+    li { border-bottom-color: var(--paper-border) !important; }
+}
+
+/* Dark mode: hamburger button + nav text */
+[data-theme="dark"] {
+    .greedy-nav button { background-color: #333330; }
+    .greedy-nav a      { color: #e8e6df; }
+    .greedy-nav a:hover { color: #ffffff; }
 }
