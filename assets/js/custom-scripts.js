@@ -55,9 +55,16 @@
   function resize() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
-      canvas.width  = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }, 100); // debounce — avoids thrashing during drag-resize
+      var newW = window.innerWidth;
+      var newH = window.innerHeight;
+      // Skip height-only changes ≤ 90px — those are caused by the mobile
+      // address bar appearing/disappearing, not a real layout change.
+      // Resetting canvas.height in that case blanks the canvas for one frame,
+      // producing the visible "shake" on iOS Safari.
+      if (newW === canvas.width && Math.abs(newH - canvas.height) <= 90) return;
+      canvas.width  = newW;
+      canvas.height = newH;
+    }, 120);
   }
 
   // Pause animation when tab is hidden to save CPU/battery
@@ -72,7 +79,8 @@
   document.addEventListener('DOMContentLoaded', function () {
     canvas = document.createElement('canvas');
     canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;' +
-                           'z-index:0;pointer-events:none;will-change:transform;';
+                           'z-index:0;pointer-events:none;will-change:transform;' +
+                           '-webkit-backface-visibility:hidden;backface-visibility:hidden;';
     document.body.insertBefore(canvas, document.body.firstChild);
     ctx = canvas.getContext('2d');
     canvas.width  = window.innerWidth;

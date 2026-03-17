@@ -519,12 +519,12 @@ body, #main {
     min-width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 4px 8px;
-    gap: 4px;                   /* gap >= outline spread so rings never touch neighbours */
+    padding: 6px 8px;
+    gap: 4px;                   /* gap >= inset ring spread so rings never touch neighbours */
 }
 
 .site-nav__link {
-    padding: 0.3em 0.8em;
+    padding: 0.42em 0.9em;
     border-radius: 7px;
     font-weight: normal !important;
     font-family: inherit;
