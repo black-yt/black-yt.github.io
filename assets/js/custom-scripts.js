@@ -2,6 +2,62 @@
  * Custom scripts for news toggle, publication filtering, sidebar pin, and nav close
  */
 
+// ── Background wave-mosaic grid ──────────────────────────────────────────────
+// Fixed grid of tiles; each tile's opacity is driven by overlapping sine waves
+// → looks like ocean surface viewed from above (gentle rise-and-fall ripple)
+(function () {
+  var canvas, ctx, t = 0;
+  var TILE = 40, GAP = 1;
+
+  function rgb() {
+    var th = document.documentElement.getAttribute('data-theme') || 'white';
+    if (th === 'dark')   return '220,210,175';
+    if (th === 'yellow') return '120,85,20';
+    if (th === 'blue')   return '38,88,155';
+    return '10,10,10';
+  }
+
+  function frame() {
+    var w = canvas.width, h = canvas.height;
+    var cols = Math.ceil(w / TILE) + 1;
+    var rows = Math.ceil(h / TILE) + 1;
+    var pre  = 'rgba(' + rgb() + ',';
+
+    ctx.clearRect(0, 0, w, h);
+
+    for (var r = 0; r < rows; r++) {
+      for (var c = 0; c < cols; c++) {
+        // Two crossing wave trains + a slow diagonal swell
+        var wave = 0.55 * Math.sin(c * 0.32 + t * 0.36) * Math.sin(r * 0.26 + t * 0.28)
+                 + 0.45 * Math.sin(c * 0.17 - r * 0.21 + t * 0.19);
+        var a = (wave + 1) * 0.018; // range [0, 0.036] — max ~3.6% opacity
+        if (a < 0.003) continue;    // skip invisible tiles for speed
+        ctx.fillStyle = pre + a + ')';
+        ctx.fillRect(c * TILE + GAP, r * TILE + GAP, TILE - GAP, TILE - GAP);
+      }
+    }
+
+    t += 0.007; // slow, calm wave speed
+    requestAnimationFrame(frame);
+  }
+
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    canvas = document.createElement('canvas');
+    canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;' +
+                           'z-index:0;pointer-events:none;';
+    document.body.insertBefore(canvas, document.body.firstChild);
+    ctx = canvas.getContext('2d');
+    resize();
+    window.addEventListener('resize', resize);
+    frame();
+  });
+})();
+
 // ── Theme Switcher ──────────────────────────────────────────────────────────
 (function () {
   var THEMES = ['white', 'yellow', 'blue', 'dark'];

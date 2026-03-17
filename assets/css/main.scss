@@ -447,11 +447,15 @@ html, body {
 /* Remove intro animation globally — prevents stacking context that breaks sidebar on all screen sizes */
 #main {
     animation: none !important;
+    position: relative;
+    z-index: 1;
 }
 @media (min-width: 925px) {
     #main {
         display: flex !important;
         align-items: flex-start;
+        position: relative;
+        z-index: 1;
     }
     .sidebar {
         flex-shrink: 0;
