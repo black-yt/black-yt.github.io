@@ -258,18 +258,28 @@ html, body {
     background-color: #eaeae8 !important;
     border-bottom: 1px solid #e2e2df;
 }
+/* Nav bar inside masthead: transparent so it inherits masthead color */
+.greedy-nav {
+    background: transparent !important;
+}
 
-/* 3. Sidebar: sticky on large screens (flexbox required — sticky ignored on floats) */
+/* 3. Two-panel layout: sidebar and content scroll independently
+   Strategy: body becomes a flex column; masthead takes natural height;
+   #main fills the rest and hosts two independently-scrolling panels. */
 @media (min-width: 925px) {
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
     #main {
         display: flex !important;
-        align-items: flex-start;
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
     }
     .sidebar {
         flex-shrink: 0;
-        position: sticky !important;
-        top: 0;
-        max-height: 100vh;
         overflow-y: auto;
         padding-bottom: 1.5em;
         scrollbar-width: thin;
@@ -288,6 +298,7 @@ html, body {
     .page {
         flex: 1 1 0 !important;
         min-width: 0;
+        overflow-y: auto;
     }
 }
 
