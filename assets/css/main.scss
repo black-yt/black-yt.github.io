@@ -594,6 +594,9 @@ body, #main {
 }
 
 /* 6. Section h1: slightly refined weight and tracking */
+.page__content {
+    font-size: 1.08em; /* main content text larger than sidebar */
+}
 .page__content h1 {
     font-weight: 600;
     letter-spacing: -0.015em;
@@ -627,7 +630,7 @@ body, #main {
 
 .author__direction {
     flex: 1 1 100%;
-    font-size: 0.9em;
+    font-size: 0.78em;
     line-height: 1.55;
     margin: 0.5em 0 0.25em;
     color: inherit;
@@ -681,19 +684,19 @@ body, #main {
         min-width: 0;
     }
     .author__name {
-        font-size: 1.25em !important;
+        font-size: 1.05em !important;
         margin: 0 0 0.2em !important;
     }
     .author__bio {
-        font-size: 0.95em !important;
+        font-size: 0.8em !important;
         margin: 0 !important;
     }
     .author__direction {
-        font-size: 0.87em;
+        font-size: 0.74em;
         margin-top: 0.4em;
     }
     .author__social-icons a {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 }
 
