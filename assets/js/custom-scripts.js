@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Sidebar Pin — JS-based because CSS position:sticky is unreliable in this theme
-// (opacity animation on #main creates stacking context that breaks sticky)
+// Sidebar Pin — JS-based because CSS position:sticky is unreliable with the
+// Susy float-based grid layout used by this theme.
 (function () {
   var BREAKPOINT = 925;
 

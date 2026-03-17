@@ -47,8 +47,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     border-bottom: 1px #efefef solid;
-    padding: 2em 0 2em 0;
-    
+    padding: 2em 0.75em;
+    border-radius: 6px;
+    margin-left: -0.75em;
+    margin-right: -0.75em;
+    transition: box-shadow 0.22s ease, transform 0.22s ease, background 0.22s ease;
+
+    &:hover {
+        background: #f0f0ee;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+        transform: translateY(-2px);
+    }
 
     .paper-box-image{
         justify-content: center;
@@ -61,12 +70,12 @@
             object-fit: cover;
         }
     }
-    
+
     .paper-box-text{
         max-width: 100%;
         order: 1;
     }
-    
+
     @include breakpoint($medium) {
         .paper-box-image{
             justify-content: left;
@@ -74,17 +83,14 @@
             max-width: 35%;
             order: 1;
         }
-        
+
         .paper-box-text{
             justify-content: left;
             padding-left: 2em;
             max-width: 65%;
             order: 2;
         }
-
     }
-
-
 }
 
 $scroll_offset : 2em;
@@ -139,7 +145,7 @@ h1:before, .anchor:before {
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 .filter-btn:hover {
   color: #212529;
@@ -295,21 +301,6 @@ html, body {
     }
 }
 
-/* 5. Paper-box: subtle hover lift for interactivity */
-.paper-box {
-    border-radius: 6px;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    margin-left: -0.75em;
-    margin-right: -0.75em;
-    transition: box-shadow 0.22s ease, transform 0.22s ease, background 0.22s ease;
-    &:hover {
-        background: #f0f0ee;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-        transform: translateY(-2px);
-    }
-}
-
 /* 6. Section h1: slightly refined weight and tracking */
 .page__content h1 {
     font-weight: 600;
@@ -320,7 +311,6 @@ html, body {
 /* 7. Page entry animation: subtle fade-up for main content */
 .page__content {
     animation: fadeUpIn 0.2s ease both;
-    animation-delay: 0s;
 }
 @keyframes fadeUpIn {
     from {
@@ -367,7 +357,6 @@ html, body {
         line-height: 1;
         transition: opacity 0.15s ease;
         touch-action: manipulation; /* remove 300ms tap delay on mobile */
-        cursor: pointer;
 
         &:hover {
             opacity: 1;
