@@ -144,12 +144,34 @@
 
     var current = null;
     var suppressUntil = 0;
+    var nav = document.querySelector('.site-nav');
+
+    // Scroll the nav strip so the active link is always visible
+    function scrollNavToLink(link) {
+      if (!nav) return;
+      var navWidth = nav.clientWidth;
+      var linkLeft = link.offsetLeft;   // relative to ul (offsetParent)
+      var linkRight = linkLeft + link.offsetWidth;
+      var ulLeft = link.offsetParent ? link.offsetParent.offsetLeft : 0;
+      // Convert to nav-relative coordinates
+      var visLeft  = linkLeft  + ulLeft - nav.scrollLeft;
+      var visRight = linkRight + ulLeft - nav.scrollLeft;
+      var pad = 12;
+      if (visLeft < pad) {
+        nav.scrollLeft += visLeft - pad;
+      } else if (visRight > navWidth - pad) {
+        nav.scrollLeft += visRight - navWidth + pad;
+      }
+    }
 
     function setActive(link) {
       if (current === link) return;
       links.forEach(function (l) { l.classList.remove('nav-active'); });
       current = link;
-      if (current) current.classList.add('nav-active');
+      if (current) {
+        current.classList.add('nav-active');
+        scrollNavToLink(current);
+      }
     }
 
     // Click: lock highlight + suppress scroll-spy for 1 s
