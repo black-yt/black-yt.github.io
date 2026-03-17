@@ -146,7 +146,6 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 1px var(--paper-border) solid;
     padding: 2em 0.75em;
     border-radius: 6px;
     margin-left: -0.75em;
@@ -520,7 +519,7 @@ body, #main {
 .page__content h1 {
     font-weight: 600;
     letter-spacing: -0.015em;
-    border-bottom-color: var(--h1-border);
+    border-bottom: none;
 }
 
 /* 7. Page entry animation: subtle fade-up for main content */
@@ -718,19 +717,19 @@ body, #main {
     &::before { display: none !important; }
 
     &:hover {
-        background: rgba(var(--glow-rgb), 0.07);
+        background: rgba(var(--glow-rgb), 0.06);
         box-shadow:
-            0 0 0 1px rgba(var(--glow-rgb), 0.18),
+            0 0 0 1px rgba(var(--glow-rgb), 0.14),
             inset 0 1px 0 rgba(255, 255, 255, 0.14);
     }
 
     &.nav-active {
-        background: rgba(var(--glow-rgb), 0.11);
+        background: rgba(var(--glow-rgb), 0.07);
         font-weight: 600;
         box-shadow:
-            0 0 0 1.5px rgba(var(--glow-rgb), 0.35),
+            0 0 0 1.5px rgba(var(--glow-rgb), 0.22),
             inset 0 1px 0 rgba(255, 255, 255, 0.28),
-            0 3px 12px rgba(var(--glow-rgb), 0.15);
+            0 3px 12px rgba(var(--glow-rgb), 0.1);
     }
 }
 
