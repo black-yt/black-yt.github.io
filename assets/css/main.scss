@@ -307,7 +307,6 @@ h1:before, .anchor:before {
 
 .news-toggle-icon {
     font-size: 0.78em;
-    margin-left: 0.4em;
     transition: transform 0.35s ease;
 }
 
@@ -317,6 +316,9 @@ h1:before, .anchor:before {
 
 .seg-toggle-btn {
     appearance: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
     background: linear-gradient(135deg, var(--c-bg-start) 0%, var(--c-bg-end) 100%);
     border: 1.5px solid var(--c-border);
     border-radius: 10px;
@@ -386,7 +388,7 @@ h1:before, .anchor:before {
 /* App Cards — premium card grid replacing Markdown table */
 .app-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 0.8em;
   margin: 1em 0 1.5em;
 }
@@ -503,7 +505,7 @@ body, #main {
     }
     .sidebar {
         flex-shrink: 0;
-        padding-top: 1.8em;
+        padding-top: 2.4em;
         overflow: hidden;
     }
     .sidebar--pinned {

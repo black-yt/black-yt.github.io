@@ -8,6 +8,8 @@
 (function () {
   var canvas, ctx, t = 0;
   var TILE = 26, GAP = 1;
+  var rafId = null;
+  var cachedRgb = '10,10,10';
 
   function rgb() {
     var th = document.documentElement.getAttribute('data-theme') || 'white';
@@ -21,7 +23,7 @@
     var w = canvas.width, h = canvas.height;
     var cols = Math.ceil(w / TILE) + 1;
     var rows = Math.ceil(h / TILE) + 1;
-    var pre  = 'rgba(' + rgb() + ',';
+    var pre  = 'rgba(' + cachedRgb + ',';
 
     ctx.clearRect(0, 0, w, h);
 
@@ -41,12 +43,21 @@
     }
 
     t += 0.007; // slow, calm wave speed
-    requestAnimationFrame(frame);
+    rafId = requestAnimationFrame(frame);
   }
 
   function resize() {
     canvas.width  = window.innerWidth;
     canvas.height = window.innerHeight;
+  }
+
+  // Pause animation when tab is hidden to save CPU/battery
+  function onVisibilityChange() {
+    if (document.hidden) {
+      if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+    } else {
+      if (!rafId) rafId = requestAnimationFrame(frame);
+    }
   }
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -57,8 +68,21 @@
     ctx = canvas.getContext('2d');
     resize();
     window.addEventListener('resize', resize);
-    frame();
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    rafId = requestAnimationFrame(frame);
   });
+
+  // Invalidate rgb cache on theme change so color updates immediately
+  var _origSetAttr = Element.prototype.setAttribute;
+  Element.prototype.setAttribute = function (name, value) {
+    _origSetAttr.call(this, name, value);
+    if (this === document.documentElement && name === 'data-theme') cachedRgb = rgb();
+  };
+  var _origRemoveAttr = Element.prototype.removeAttribute;
+  Element.prototype.removeAttribute = function (name) {
+    _origRemoveAttr.call(this, name);
+    if (this === document.documentElement && name === 'data-theme') cachedRgb = rgb();
+  };
 })();
 
 // ── Theme Switcher ──────────────────────────────────────────────────────────
@@ -271,19 +295,27 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
+    var scrollPending = false;
+
     function onScroll() {
       if (Date.now() < suppressUntil) return; // respect explicit click
-      // masthead height offset so highlight triggers before heading hits top
-      var offset = 80;
-      var scrollY = window.scrollY + offset;
-      var active = anchors[0].link; // default to first section
-      for (var i = anchors.length - 1; i >= 0; i--) {
-        if (anchors[i].el.getBoundingClientRect().top + window.scrollY <= scrollY) {
-          active = anchors[i].link;
-          break;
+      if (scrollPending) return;
+      scrollPending = true;
+      requestAnimationFrame(function () {
+        scrollPending = false;
+        if (Date.now() < suppressUntil) return;
+        // masthead height offset so highlight triggers before heading hits top
+        var offset = 80;
+        var scrollY = window.scrollY + offset;
+        var active = anchors[0].link; // default to first section
+        for (var i = anchors.length - 1; i >= 0; i--) {
+          if (anchors[i].el.getBoundingClientRect().top + window.scrollY <= scrollY) {
+            active = anchors[i].link;
+            break;
+          }
         }
-      }
-      setActive(active);
+        setActive(active);
+      });
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
