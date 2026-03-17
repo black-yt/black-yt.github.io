@@ -12,7 +12,8 @@ function toggleNews() {
   const isExpanded = content.classList.contains('expanded');
 
   if (isExpanded) {
-    // Collapse: set explicit px value first, then animate to 300px
+    // Collapse: materialize current height as px (none→px can't transition),
+    // then animate down to 300px in the next frame
     content.style.maxHeight = content.scrollHeight + 'px';
     content.classList.remove('expanded');
     btn.classList.remove('expanded');
@@ -21,12 +22,16 @@ function toggleNews() {
     }));
     if (btnText) btnText.textContent = 'Show More';
   } else {
-    // Expand: animate to exact content height, then clear inline style
-    const fullHeight = content.scrollHeight;
-    content.style.maxHeight = fullHeight + 'px';
+    // Expand: animate from 300px to exact content height,
+    // then release height constraint once transition finishes
+    content.style.maxHeight = content.scrollHeight + 'px';
     content.classList.add('expanded');
     btn.classList.add('expanded');
-    setTimeout(() => { content.style.maxHeight = ''; }, 380);
+    content.addEventListener('transitionend', function handler(e) {
+      if (e.propertyName === 'max-height') {
+        content.style.maxHeight = 'none';
+      }
+    }, { once: true });
     if (btnText) btnText.textContent = 'Show Less';
   }
 }
