@@ -263,7 +263,7 @@ html, body {
     background: transparent !important;
 }
 
-/* 3. Sidebar: stays fixed while page scrolls; scrolls independently if content overflows */
+/* 3. Sidebar: fixed while page scrolls, no independent scroll needed */
 @media (min-width: 925px) {
     #main {
         display: flex !important;
@@ -271,16 +271,11 @@ html, body {
     }
     .sidebar {
         flex-shrink: 0;
-        transform: none !important; /* remove translate3d — conflicts with position:sticky */
+        transform: none !important;
         position: sticky !important;
         top: 0;
         max-height: 100vh;
-        overflow-y: auto;
-        padding-bottom: 1.5em;
-        scrollbar-width: none;
-        &::-webkit-scrollbar {
-            display: none;
-        }
+        overflow: hidden;
     }
     .page {
         flex: 1 1 0 !important;
@@ -325,8 +320,8 @@ html, body {
 
 /* 7. Page entry animation: subtle fade-up for main content */
 .page__content {
-    animation: fadeUpIn 0.45s ease both;
-    animation-delay: 0.1s;
+    animation: fadeUpIn 0.2s ease both;
+    animation-delay: 0s;
 }
 @keyframes fadeUpIn {
     from {
@@ -342,4 +337,77 @@ html, body {
 /* 8. Link hover transition */
 .page__content a {
     transition: color 0.15s ease;
+}
+
+/* 9. Author profile: compact icon-only social row */
+.profile_box {
+    flex-wrap: wrap; /* allow direction + icons to stack below avatar row on mobile */
+}
+
+.author__direction {
+    flex: 1 1 100%;
+    font-size: 0.82em;
+    line-height: 1.55;
+    margin: 0.5em 0 0.25em;
+    color: inherit;
+    opacity: 0.8;
+}
+
+.author__social-icons {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55em;
+    margin-top: 0.4em;
+
+    a {
+        color: inherit;
+        font-size: 1.25em;
+        opacity: 0.6;
+        text-decoration: none;
+        line-height: 1;
+        transition: opacity 0.15s ease;
+
+        &:hover {
+            opacity: 1;
+            text-decoration: none;
+        }
+    }
+}
+
+/* Mobile sidebar: compact horizontal layout */
+@media (max-width: 924px) {
+    .profile_box {
+        padding: 0.75em 1em;
+        gap: 0;
+    }
+    .author__avatar {
+        width: 64px !important;
+        flex-shrink: 0;
+    }
+    .author__avatar img {
+        max-width: 64px !important;
+        min-width: 48px !important;
+        border-radius: 50%;
+    }
+    .author__content {
+        padding-left: 0.75em;
+        flex: 1;
+        min-width: 0;
+    }
+    .author__name {
+        font-size: 1em !important;
+        margin: 0 0 0.2em !important;
+    }
+    .author__bio {
+        font-size: 0.82em !important;
+        margin: 0 !important;
+    }
+    .author__direction {
+        font-size: 0.78em;
+        margin-top: 0.4em;
+    }
+    .author__social-icons a {
+        font-size: 1.1em;
+    }
 }
