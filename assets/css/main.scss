@@ -229,3 +229,104 @@ h1:before, .anchor:before {
 .author-highlight {
     color: #000000;
 }
+
+/* ==========================================================================
+   Design Overrides — Modern AI Researcher Aesthetic
+   ========================================================================== */
+
+/* 1. Font: Inter — clean, modern, technical */
+body, .sidebar, .page__content, .author__name, .masthead {
+    font-family: 'Inter', "Trebuchet MS", Helvetica, sans-serif;
+}
+
+/* 2. Subtle off-white background — low saturation, easy on eyes */
+html, body {
+    background-color: #f7f7f5;
+}
+#main {
+    background-color: #f7f7f5;
+}
+.page__content {
+    background-color: transparent;
+}
+/* Keep sidebar profile box white so it lifts off the background */
+.sidebar {
+    background-color: #ffffff;
+}
+/* Masthead stays white */
+.masthead {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #eeeeeb;
+}
+
+/* 3. Sidebar: scrollable on small monitors (fix clipped social links) */
+@media (min-width: 925px) {
+    .sidebar {
+        position: sticky;
+        top: 0;
+        max-height: 100vh;
+        overflow-y: auto;
+        padding-bottom: 1.5em;
+        /* Subtle scrollbar so it doesn't look broken */
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0,0,0,0.12) transparent;
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(0,0,0,0.15);
+            border-radius: 10px;
+        }
+    }
+}
+
+/* 4. Bug fix: max-height: none can't be CSS-transitioned — use a large px value */
+.news-content.expanded {
+    max-height: 5000px !important;
+}
+
+/* 5. Paper-box: subtle hover lift for interactivity */
+.paper-box {
+    border-radius: 6px;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    margin-left: -0.75em;
+    margin-right: -0.75em;
+    transition: box-shadow 0.22s ease, transform 0.22s ease, background 0.22s ease;
+    &:hover {
+        background: #ffffff;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+        transform: translateY(-2px);
+    }
+}
+
+/* 6. Section h1: slightly refined weight and tracking */
+.page__content h1 {
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    border-bottom-color: #e8e8e4;
+}
+
+/* 7. Page entry animation: subtle fade-up for main content */
+.page__content {
+    animation: fadeUpIn 0.45s ease both;
+    animation-delay: 0.1s;
+}
+@keyframes fadeUpIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 8. Link hover transition */
+.page__content a {
+    transition: color 0.15s ease;
+}
