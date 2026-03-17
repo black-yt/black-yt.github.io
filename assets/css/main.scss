@@ -460,6 +460,8 @@ h1:before, .anchor:before {
 body, .sidebar, .page__content, .author__name, .masthead {
     font-family: 'Space Grotesk', "Trebuchet MS", Helvetica, sans-serif;
 }
+html { font-size: 16.5px; }       /* slightly larger than browser default 16px */
+body { font-weight: 500; }        /* Space Grotesk medium — one step above regular */
 
 /* 2. Warm cream background — Claude-style low-saturation yellow */
 /* Only html gets the solid colour; body/#main are transparent so the
