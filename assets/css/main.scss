@@ -489,6 +489,25 @@ body, #main {
     background: transparent !important;
 }
 
+/* Scrollable nav — replace hamburger collapse with horizontal scroll */
+.greedy-nav > button {
+    display: none !important;
+}
+.greedy-nav .visible-links {
+    overflow-x: auto;
+    overflow-y: visible;
+    white-space: nowrap;
+    flex-wrap: nowrap !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    max-width: 100%;
+    &::-webkit-scrollbar { display: none; }
+}
+/* Hidden-links dropdown is unused — JS also keeps it empty */
+.greedy-nav .hidden-links {
+    display: none !important;
+}
+
 /* 3. Sidebar: JS pins to fixed position (CSS sticky unreliable — see custom-scripts.js) */
 /* Remove intro animation globally — prevents stacking context that breaks sidebar on all screen sizes */
 #main {

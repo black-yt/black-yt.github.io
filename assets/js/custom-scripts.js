@@ -138,6 +138,20 @@ document.addEventListener('click', function(e) {
   btn.classList.remove('close');
 });
 
+// Keep all nav items in visible-links (override greedy-nav collapse behaviour)
+// Greedy-nav JS moves overflowing items to hidden-links; we immediately move them back.
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var visible = document.querySelector('.greedy-nav .visible-links');
+    var hidden  = document.querySelector('.greedy-nav .hidden-links');
+    if (!visible || !hidden) return;
+    var obs = new MutationObserver(function () {
+      while (hidden.children.length) visible.appendChild(hidden.children[0]);
+    });
+    obs.observe(hidden, { childList: true });
+  });
+})();
+
 // Segmented control — move indicator to the active segment
 function moveSegIndicator(control, activeBtn) {
   var indicator = control.querySelector('.seg-indicator');
@@ -287,11 +301,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // When user explicitly clicks a nav link, lock the highlight immediately
-    // and suppress scroll-spy for 1 s so the scroll animation doesn't fight it
+    // and suppress scroll-spy for 1 s so the scroll animation doesn't fight it.
+    // About Me → always scroll to top (section may not reach viewport top).
     links.forEach(function (link) {
-      link.addEventListener('click', function () {
+      link.addEventListener('click', function (e) {
         setActive(link);
         suppressUntil = Date.now() + 1000;
+        var href = link.getAttribute('href') || '';
+        if (href.indexOf('about-me') !== -1) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
       });
     });
 
