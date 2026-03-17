@@ -424,12 +424,12 @@ h1:before, .anchor:before {
 
 .app-card__name {
   font-weight: 700;
-  font-size: 0.82em;
+  font-size: 1em;
   color: inherit;
 }
 
 .app-card__desc {
-  font-size: 0.72em;
+  font-size: 0.9em;
   line-height: 1.5;
   opacity: 0.7;
   color: inherit;
@@ -595,7 +595,7 @@ body, #main {
 
 /* 6. Section h1: slightly refined weight and tracking */
 .page__content {
-    font-size: 1.15em; /* main content text larger than sidebar */
+    font-size: 1.22em; /* main content text larger than sidebar */
 }
 .page__content h1 {
     font-weight: 600;
@@ -630,7 +630,7 @@ body, #main {
 
 .author__direction {
     flex: 1 1 100%;
-    font-size: 0.78em;
+    font-size: 0.68em;
     line-height: 1.55;
     margin: 0.5em 0 0.25em;
     color: inherit;
@@ -684,19 +684,19 @@ body, #main {
         min-width: 0;
     }
     .author__name {
-        font-size: 1.05em !important;
+        font-size: 0.9em !important;
         margin: 0 0 0.2em !important;
     }
     .author__bio {
-        font-size: 0.8em !important;
+        font-size: 0.7em !important;
         margin: 0 !important;
     }
     .author__direction {
-        font-size: 0.74em;
+        font-size: 0.65em;
         margin-top: 0.4em;
     }
     .author__social-icons a {
-        font-size: 1.1em;
+        font-size: 1.0em;
     }
 }
 
