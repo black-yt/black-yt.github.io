@@ -305,6 +305,16 @@ h1:before, .anchor:before {
     margin-top: 0.75em;
 }
 
+.news-toggle-icon {
+    font-size: 0.78em;
+    margin-left: 0.4em;
+    transition: transform 0.35s ease;
+}
+
+.news-content.expanded ~ .news-toggle-container .news-toggle-icon {
+    transform: rotate(180deg);
+}
+
 .seg-toggle-btn {
     appearance: none;
     background: linear-gradient(135deg, var(--c-bg-start) 0%, var(--c-bg-end) 100%);

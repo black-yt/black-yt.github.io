@@ -31,6 +31,7 @@
   <div class="news-toggle-container">
     <button class="seg-toggle-btn" id="newsToggleBtn">
       <span>Show More</span>
+      <i class="fas fa-chevron-down news-toggle-icon"></i>
     </button>
   </div>
 </div>
