@@ -366,6 +366,8 @@ html, body {
         text-decoration: none;
         line-height: 1;
         transition: opacity 0.15s ease;
+        touch-action: manipulation; /* remove 300ms tap delay on mobile */
+        cursor: pointer;
 
         &:hover {
             opacity: 1;
@@ -376,6 +378,10 @@ html, body {
 
 /* Mobile sidebar: compact horizontal layout */
 @media (max-width: 924px) {
+    .sidebar {
+        position: relative;
+        z-index: 2;
+    }
     .profile_box {
         padding: 0.75em 1em;
         gap: 0;
