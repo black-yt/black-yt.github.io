@@ -248,6 +248,7 @@ html, body {
 /* Keep sidebar background transparent — inherits page background */
 .sidebar {
     background-color: transparent;
+    -webkit-transform: none !important;
     transform: none !important; /* remove theme's translate3d globally — causes stacking context on mobile blocking click events */
 }
 /* Masthead: slightly darker than off-white background */
