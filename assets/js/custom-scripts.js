@@ -48,6 +48,16 @@ function toggleNews() {
   }
 }
 
+// Remove sidebar from Stickyfill — our custom pin() handles desktop positioning;
+// Stickyfill causes visual position / touch-hit-area mismatch on mobile.
+document.addEventListener('DOMContentLoaded', function() {
+  var sidebar = document.querySelector('.sidebar');
+  if (sidebar) {
+    sidebar.classList.remove('sticky');
+    if (window.Stickyfill) Stickyfill.remove(sidebar);
+  }
+});
+
 // Publication Filter
 document.addEventListener('DOMContentLoaded', function() {
   const buttons = document.querySelectorAll('.pub-filter .filter-btn');
