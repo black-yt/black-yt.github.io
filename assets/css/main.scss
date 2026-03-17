@@ -418,11 +418,13 @@ body, .sidebar, .page__content, .author__name, .masthead {
 }
 
 /* 2. Warm cream background — Claude-style low-saturation yellow */
-html, body {
+/* Only html gets the solid colour; body/#main are transparent so the
+   canvas wave-mosaic (z-index:0) shows through */
+html {
     background-color: var(--bg);
 }
-#main {
-    background-color: var(--bg);
+body, #main {
+    background-color: transparent;
 }
 .page__content {
     background-color: transparent;
