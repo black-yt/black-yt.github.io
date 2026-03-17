@@ -532,25 +532,17 @@ body, #main {
     text-decoration: none !important;
     color: inherit;
     white-space: nowrap;
-    /* inset shadow stays inside the element — never clips or overlaps neighbours */
-    box-shadow: inset 0 0 0 1px transparent;
-    transition: background 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 
     &.nav-active {
-        background: rgba(var(--glow-rgb), 0.09);
-        box-shadow:
-            inset 0 0 0 1.5px rgba(var(--glow-rgb), 0.35),
-            inset 0 1px 0 rgba(255, 255, 255, 0.28);
+        background: rgba(var(--glow-rgb), 0.13);
     }
 }
 
 /* Hover only on real pointer devices — prevents sticky hover on touch screens */
 @media (hover: hover) and (pointer: fine) {
     .site-nav__link:hover {
-        background: rgba(var(--glow-rgb), 0.06);
-        box-shadow:
-            inset 0 0 0 1px rgba(var(--glow-rgb), 0.20),
-            inset 0 1px 0 rgba(255, 255, 255, 0.14);
+        background: rgba(var(--glow-rgb), 0.07);
         text-decoration: none !important;
     }
     [data-theme="dark"] .site-nav__link:hover { color: #ffffff; }
