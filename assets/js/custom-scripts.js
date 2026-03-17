@@ -9,10 +9,9 @@ document.addEventListener('click', function(e) {
   var hlinks = nav.querySelector('.hidden-links');
   var btn = nav.querySelector('button');
   if (!hlinks || hlinks.classList.contains('hidden')) return;
-  if (!nav.contains(e.target)) {
-    hlinks.classList.add('hidden');
-    btn.classList.remove('close');
-  }
+  if (btn && btn.contains(e.target)) return;
+  hlinks.classList.add('hidden');
+  btn.classList.remove('close');
 });
 
 // News Toggle — smooth animation using exact scrollHeight
