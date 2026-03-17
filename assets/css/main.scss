@@ -268,6 +268,7 @@ html, body {
     #main {
         display: flex !important;
         align-items: flex-start;
+        animation: none !important; /* intro animation uses opacity<1 → stacking context → breaks sticky */
     }
     .sidebar {
         flex-shrink: 0;
