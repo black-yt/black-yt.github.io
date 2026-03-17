@@ -163,9 +163,6 @@ h1:before, .anchor:before {
     position: relative;
 }
 
-.news-content.expanded {
-    /* max-height set by JS to exact scrollHeight for smooth animation */
-}
 
 .news-overlay {
     position: absolute;
@@ -272,7 +269,7 @@ html, body {
     }
     .sidebar {
         flex-shrink: 0;
-        padding-top: 1.5em;
+        padding-top: 2.5em;
         overflow: hidden;
     }
     .sidebar--pinned {
