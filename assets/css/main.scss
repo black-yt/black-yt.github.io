@@ -263,42 +263,36 @@ html, body {
     background: transparent !important;
 }
 
-/* 3. Two-panel layout: sidebar and content scroll independently
-   Strategy: body becomes a flex column; masthead takes natural height;
-   #main fills the rest and hosts two independently-scrolling panels. */
+/* 3. Sidebar: stays fixed while page scrolls; scrolls independently if content overflows */
 @media (min-width: 925px) {
-    body {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
     #main {
         display: flex !important;
-        flex: 1;
-        min-height: 0;
-        overflow: hidden;
+        align-items: flex-start;
     }
     .sidebar {
         flex-shrink: 0;
+        transform: none !important; /* remove translate3d — conflicts with position:sticky */
+        position: sticky !important;
+        top: 0;
+        max-height: 100vh;
         overflow-y: auto;
         padding-bottom: 1.5em;
-        scrollbar-width: thin;
-        scrollbar-color: rgba(0,0,0,0.12) transparent;
+        scrollbar-width: none;
         &::-webkit-scrollbar {
-            width: 3px;
-        }
-        &::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: rgba(0,0,0,0.15);
-            border-radius: 10px;
+            display: none;
         }
     }
     .page {
         flex: 1 1 0 !important;
         min-width: 0;
-        overflow-y: auto;
+    }
+}
+
+/* Hide scrollbars everywhere (scroll still works via wheel/trackpad) */
+* {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
     }
 }
 
