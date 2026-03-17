@@ -1,6 +1,19 @@
 /**
- * Custom scripts for news toggle, publication filtering, and sidebar pin
+ * Custom scripts for news toggle, publication filtering, sidebar pin, and nav close
  */
+
+// Close mobile nav when clicking outside
+document.addEventListener('click', function(e) {
+  var nav = document.getElementById('site-nav');
+  if (!nav) return;
+  var hlinks = nav.querySelector('.hidden-links');
+  var btn = nav.querySelector('button');
+  if (!hlinks || hlinks.classList.contains('hidden')) return;
+  if (!nav.contains(e.target)) {
+    hlinks.classList.add('hidden');
+    btn.classList.remove('close');
+  }
+});
 
 // News Toggle — smooth animation using exact scrollHeight
 function toggleNews() {
