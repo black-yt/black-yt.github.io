@@ -11,12 +11,32 @@ If you are interested in multi-agent systems on deep research or scientific disc
 ## <i class="fas fa-th-large section-icon"></i> My Apps
 🤜 Here are some fun Apps I developed that might be helpful to you! 🤛
 
-| App                                                                | Description                                                                                                                                         |
-| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**Deep Research🔎**](https://dr-sigma-wheat.vercel.app/)         | Get a high-quality graduate-level report ready for you in just 5 minutes!                                                                            |
-| [**Wanghan-Pro🤖**](https://chat-xi-three-29.vercel.app/)         | Wanghan-Pro is here to chat anytime or help with any problem.                                                                                        |
-| [**Iris🧿**](https://github.com/black-yt/IrisGUI)                 | Your AI-powered hands and eyes for desktop automation.                                                                                               |
-| [**StructAI🚀**](https://github.com/black-yt/structai)            | A pip library for LLM Agent interaction, memory, concurrency, and evaluation.                                                                                               |
+<div class="app-cards">
+  <a href="https://dr-sigma-wheat.vercel.app/" class="app-card" target="_blank" rel="noopener">
+    <div class="app-card__inner">
+      <div class="app-card__name">Deep Research🔎</div>
+      <div class="app-card__desc">Get a high-quality graduate-level report ready for you in just 5 minutes!</div>
+    </div>
+  </a>
+  <a href="https://chat-xi-three-29.vercel.app/" class="app-card" target="_blank" rel="noopener">
+    <div class="app-card__inner">
+      <div class="app-card__name">Wanghan-Pro🤖</div>
+      <div class="app-card__desc">Wanghan-Pro is here to chat anytime or help with any problem.</div>
+    </div>
+  </a>
+  <a href="https://github.com/black-yt/IrisGUI" class="app-card" target="_blank" rel="noopener">
+    <div class="app-card__inner">
+      <div class="app-card__name">Iris🧿</div>
+      <div class="app-card__desc">Your AI-powered hands and eyes for desktop automation.</div>
+    </div>
+  </a>
+  <a href="https://github.com/black-yt/structai" class="app-card" target="_blank" rel="noopener">
+    <div class="app-card__inner">
+      <div class="app-card__name">StructAI🚀</div>
+      <div class="app-card__desc">A pip library for LLM Agent interaction, memory, concurrency, and evaluation.</div>
+    </div>
+  </a>
+</div>
 
 <a href="https://chat-xi-three-29.vercel.app/" class="ask-me-btn" target="_blank" rel="noopener">
   <i class="fas fa-comments" aria-hidden="true"></i>

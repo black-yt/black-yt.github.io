@@ -7,7 +7,7 @@
 // → looks like ocean surface viewed from above (gentle rise-and-fall ripple)
 (function () {
   var canvas, ctx, t = 0;
-  var TILE = 40, GAP = 1;
+  var TILE = 26, GAP = 1;
 
   function rgb() {
     var th = document.documentElement.getAttribute('data-theme') || 'white';
@@ -28,10 +28,13 @@
     for (var r = 0; r < rows; r++) {
       for (var c = 0; c < cols; c++) {
         // Two crossing wave trains + a slow diagonal swell
-        var wave = 0.55 * Math.sin(c * 0.32 + t * 0.36) * Math.sin(r * 0.26 + t * 0.28)
-                 + 0.45 * Math.sin(c * 0.17 - r * 0.21 + t * 0.19);
-        var a = (wave + 1) * 0.018; // range [0, 0.036] — max ~3.6% opacity
-        if (a < 0.003) continue;    // skip invisible tiles for speed
+        var wave = 0.6 * Math.sin(c * 0.21 + t * 0.36) * Math.sin(r * 0.17 + t * 0.28)
+                 + 0.4 * Math.sin(c * 0.11 - r * 0.13 + t * 0.19);
+        // Cubic bias: crests ~19%, troughs ~0.4% — visible 2:1 light:dark ratio
+        var norm = (wave + 1) * 0.5;
+        var v    = norm * norm * norm;
+        var a    = 0.004 + v * 0.186;
+        if (a < 0.014) continue;    // skip near-invisible tiles for speed
         ctx.fillStyle = pre + a + ')';
         ctx.fillRect(c * TILE + GAP, r * TILE + GAP, TILE - GAP, TILE - GAP);
       }
