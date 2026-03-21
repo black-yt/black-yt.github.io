@@ -1,6 +1,8 @@
 # <i class="fas fa-newspaper section-icon"></i> News
 
 {% capture news_items %}
+- *2026.03:* *[ResearchClawBench](https://internscience.github.io/ResearchClawBench-Home/)* is released 🔬 — an end-to-end benchmark evaluating whether AI coding agents can independently conduct scientific research, from **Re-Discovery** to **New-Discovery**. 40 tasks across 10 scientific domains, with dual-mode scoring (objective + subjective) against real published papers. [[GitHub](https://github.com/InternScience/ResearchClawBench)] [[Website](https://internscience.github.io/ResearchClawBench-Home/)]
+
 - *2026.01:* Four papers were accepted at ICLR 2026, including two first-author papers: *[Eigen-1](https://arxiv.org/pdf/2509.21193)* and *[EarthSE](https://arxiv.org/pdf/2505.17139)* 🎉.
 
 - *2026.01:* Introducing *[Iris](https://github.com/black-yt/IrisGUI)*, a desktop GUI Agent that is simple to start but powerful enough to execute any workflow you need.

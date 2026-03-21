@@ -36,6 +36,12 @@ If you are interested in multi-agent systems on deep research or scientific disc
       <div class="app-card__desc">A pip library for LLM Agent interaction, memory, concurrency, and evaluation.</div>
     </div>
   </a>
+  <a href="https://internscience.github.io/ResearchClawBench-Home/" class="app-card" target="_blank" rel="noopener">
+    <div class="app-card__inner">
+      <div class="app-card__name">ResearchClawBench🔬</div>
+      <div class="app-card__desc">Benchmark AI agents on end-to-end scientific research — from Re-Discovery to New-Discovery.</div>
+    </div>
+  </a>
 </div>
 
 <a href="https://chat-xi-three-29.vercel.app/" class="ask-me-btn" target="_blank" rel="noopener">
