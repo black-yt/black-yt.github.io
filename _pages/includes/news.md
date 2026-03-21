@@ -1,7 +1,7 @@
 # <i class="fas fa-newspaper section-icon"></i> News
 
 {% capture news_items %}
-- *2026.03:* *[ResearchClawBench](https://internscience.github.io/ResearchClawBench-Home/)* is released 🔬 — an end-to-end benchmark evaluating whether AI coding agents can independently conduct scientific research, from **<span class="highlight-red">Re-Discovery</span>** to **<span class="highlight-red">New-Discovery</span>**. 40 tasks across 10 scientific domains. [[GitHub](https://github.com/InternScience/ResearchClawBench)] [[Website](https://internscience.github.io/ResearchClawBench-Home/)]
+- *2026.03:* *[ResearchClawBench](https://internscience.github.io/ResearchClawBench-Home/)* is released — an end-to-end benchmark with 40 tasks across 10 domains, evaluating whether AI coding agents can independently conduct research, from **<span class="highlight-red">Re-Discovery</span>** to **<span class="highlight-red">New-Discovery</span>**.
 
 - *2026.01:* Four papers were accepted at ICLR 2026, including two first-author papers: *[Eigen-1](https://arxiv.org/pdf/2509.21193)* and *[EarthSE](https://arxiv.org/pdf/2505.17139)* 🎉.
 
