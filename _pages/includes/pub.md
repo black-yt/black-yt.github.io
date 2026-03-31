@@ -11,13 +11,32 @@
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
+      <a href="/images/Intern-S1-Pro.png"><img src='/images/Intern-S1-Pro.png' alt="Intern-S1-Pro" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2603.25040"><b>Intern-S1-Pro: Scientific Multimodal Foundation Model at Trillion Scale</b></a> \\
+*Arxiv, 2026* \\
+Yicheng Zou ... (174 authors) \\
+[<a href="https://arxiv.org/pdf/2603.25040">Arxiv</a>] [<a href="https://huggingface.co/internlm/Intern-S1-Pro">Model</a>] [<a href="https://github.com/InternLM/Intern-S1">Code</a>] [<a href="https://chat.intern-ai.org.cn/">Online Chat</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/InternAgent.png"><img src='/images/InternAgent.png' alt="InternAgent" width="100%"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2602.08990"><b>InternAgent-1.5: A Unified Agentic Framework for Long-Horizon Autonomous Scientific Discovery</b></a> \\
-*Arxiv, 2025* \\
+*Arxiv, 2026* \\
 Shiyang Feng ... (57 authors) \\
 [<a href="https://arxiv.org/pdf/2602.08990">Arxiv</a>] [<a href="https://huggingface.co/collections/InternScience/internagent">Hugging Face</a>] [<a href="https://github.com/InternScience/InternAgent">Code</a>] [<a href="https://discovery.intern-ai.org.cn/home">Website</a>]
 
