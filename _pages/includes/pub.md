@@ -283,7 +283,7 @@ Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<span class="author-h
   <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2505.20740"><b>MSEarth: A Benchmark for Multimodal Scientific Comprehension of Earth Science</b></a> \\
-*Arxiv, 2025* \\
+*ACL Main Conference, 2026 (Accept)* \\
 Xiangyu Zhao\*, **<span class="author-highlight">Wanghan Xu*</span>**, Bo Liu, Yuhao Zhou, Fenghua Ling, Ben Fei, Xiaoyu Yue, Lei Bai, Wenlong Zhang, Xiao-Ming Wu \\
 [<a href="https://arxiv.org/pdf/2505.20740">Arxiv</a>] [<a href="https://github.com/xiangyu-mm/MSEarth">Code</a>] [<a href="https://huggingface.co/MSEarth-Data">Dataset</a>] 
 
