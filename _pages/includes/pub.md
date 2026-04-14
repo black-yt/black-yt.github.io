@@ -87,7 +87,7 @@ Tao Han, **<span class="author-highlight">Wanghan Xu</span>**, Junchao Gong, Xia
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/Eigen1.png"><img src='/images/Eigen1.png' alt="Eigen-1" width="100%"></a>
+      <a href="/images/Eigen1.png"><img src='/images/Eigen1.png' alt="Eigen-Agent" width="100%"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -95,7 +95,7 @@ Tao Han, **<span class="author-highlight">Wanghan Xu</span>**, Junchao Gong, Xia
 <a class=PaperTitle href="https://openreview.net/pdf?id=bGtmGTbmaz"><b>Eigen-Agent: Adaptive Multi-Agent Scientific Reasoning with Monitor-Based RAG</b></a> \\
 *ICLR, 2026 (Accept)* \\
 Xiangru Tang\*, **<span class="author-highlight">Wanghan Xu*</span>**, Yujie Wang\*, Zijie Guo\*, Daniel Shao, Jiapeng Chen, Cixuan Zhang, Ziyi Wang, Lixin Zhang, Guancheng Wan, Wenlong Zhang, Lei Bai, Zhenfei Yin, Philip Torr, Hanrui Wang, Di Jin \\
-[<a href="https://openreview.net/pdf?id=bGtmGTbmaz">ICLR</a>] [<a href="https://arxiv.org/pdf/2509.21193">Arxiv</a>] [<a href="https://github.com/tangxiangru/Eigen-1">Code</a>] [<a href="https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247829247&idx=3&sn=958cd2958cab31c1885538f9caf7b5c0&chksm=e9f37ecd71b13373ca3c382c435b3a999ceb06d783d630aa0dede64ce43079daa5302a359062&mpshare=1&scene=24&srcid=0928F9AefT0tpiFVM4lWOzhb&sharer_shareinfo=462230b613cc7209451c5701a66d3b3e&sharer_shareinfo_first=f15603e48119a5960b8f603995f045d5#rd">量子位</a>] [<a href="https://www.bilibili.com/video/BV1own2zFEf7/?share_source=copy_web&vd_source=7b9d898a8c3bbebf65c411956ed7f8ce">BiliBili</a>]
+[<a href="https://openreview.net/pdf?id=bGtmGTbmaz">ICLR</a>] [<a href="https://arxiv.org/pdf/2509.21193">Arxiv</a>] [<a href="https://github.com/tangxiangru/Eigen-Agent">Code</a>] [<a href="https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247829247&idx=3&sn=958cd2958cab31c1885538f9caf7b5c0&chksm=e9f37ecd71b13373ca3c382c435b3a999ceb06d783d630aa0dede64ce43079daa5302a359062&mpshare=1&scene=24&srcid=0928F9AefT0tpiFVM4lWOzhb&sharer_shareinfo=462230b613cc7209451c5701a66d3b3e&sharer_shareinfo_first=f15603e48119a5960b8f603995f045d5#rd">量子位</a>] [<a href="https://www.bilibili.com/video/BV1own2zFEf7/?share_source=copy_web&vd_source=7b9d898a8c3bbebf65c411956ed7f8ce">BiliBili</a>]
 
   </div>
 </div>
