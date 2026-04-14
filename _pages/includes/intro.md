@@ -45,7 +45,7 @@ If you are interested in multi-agent systems on deep research, auto research or 
   <a href="https://github.com/AutoX-AI-Labs/AutoR" class="app-card" target="_blank" rel="noopener">
     <div class="app-card__inner">
       <div class="app-card__name">AutoR✏️</div>
-      <div class="app-card__desc">A research harness that turns long, messy work into reproducible runs.</div>
+      <div class="app-card__desc">A auto research harness that turns long, messy work into reproducible runs.</div>
     </div>
   </a>
 </div>
