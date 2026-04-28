@@ -3,11 +3,9 @@
    ========================================================================== */
 
 %tab-focus {
-  /* Default*/
-  outline: thin dotted $warning-color;
-  /* Webkit*/
-  outline: 5px auto $warning-color;
-  outline-offset: -2px;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 0 0 0 3px rgba(var(--glow-rgb), 0.10);
 }
 
 /*

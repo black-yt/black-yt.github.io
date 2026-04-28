@@ -403,6 +403,7 @@ h1:before, .anchor:before {
   &:hover { text-decoration: none !important; color: var(--c-hover-text); }
   &:focus {
     outline: none;
+    box-shadow: none;
     text-decoration: none !important;
     color: var(--c-hover-text);
   }
@@ -551,6 +552,13 @@ body, #main {
     &.nav-active {
         background: rgba(var(--glow-rgb), 0.13);
     }
+
+    &:focus {
+        outline: none;
+        background: rgba(var(--glow-rgb), 0.07);
+        text-decoration: none !important;
+        box-shadow: 0 0 0 4px rgba(var(--glow-rgb), 0.08);
+    }
 }
 
 /* Hover only on real pointer devices — prevents sticky hover on touch screens */
@@ -565,6 +573,10 @@ body, #main {
 /* Dark mode nav link colour */
 [data-theme="dark"] .site-nav__link {
     color: #e8e6df;
+
+    &:focus {
+        color: #ffffff;
+    }
 }
 
 /* 3. Sidebar: JS pins to fixed position (CSS sticky unreliable — see custom-scripts.js) */

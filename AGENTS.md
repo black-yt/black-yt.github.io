@@ -227,12 +227,15 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 文件：
 
 - `assets/css/main.scss`
+- `_sass/_mixins.scss`
 
 已完成：
 
 - 去掉项目卡片点击后的黄色 `outline`
 - 改为与卡片本身视觉风格一致的边框和阴影高亮
 - 仅修改 `.app-card`，保持改动面最小
+- 后续又将全局链接焦点态 `%tab-focus` 从黄色 `outline` 改为主题色 `box-shadow`
+- 顶部导航 `.site-nav__link` 也已使用一致的背景和阴影焦点态
 
 ## 8. 后续维护建议
 
