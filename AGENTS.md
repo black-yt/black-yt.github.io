@@ -256,6 +256,36 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 - 只在必要时再下沉到 `_sass/` 的主题文件
 - 如果只想修某个局部交互，不要贸然改全局 `a:focus`、`button`、`p`、`h1` 等基础规则
 
+### 8.4 遇到 Git 网络问题时的处理规范
+
+如果 `git push`、`git fetch`、`git ls-remote` 等 Git 命令因为网络问题失败，例如：
+
+- `Recv failure: Connection reset by peer`
+- HTTPS 连接被重置
+- 远端暂时不可达
+
+处理原则如下：
+
+1. 不要改用其他绕路方案上传代码
+2. 不要临时切换到 `curl`、`gh`、网页上传、API 写入等替代方式完成原本的 Git 推送
+3. 应直接把需要用户执行的原始 Git 命令明确告诉用户，由用户在自己的网络环境中执行
+
+默认应优先提供的命令通常是：
+
+```bash
+git push origin main
+```
+
+如果本地还有未提交改动，则按顺序提供：
+
+```bash
+git add <files>
+git commit -m "<message>"
+git push origin main
+```
+
+这条规则是本仓库后续维护中的明确经验，后面继续沿用。
+
 ## 9. 一句话总结
 
 这是一个已经定制较深的 Jekyll 学术主页仓库。后续维护时，优先尊重现有结构和视觉系统，谨慎处理全局样式、换行符和二进制文件，改动尽量局部、清晰、可追踪。
