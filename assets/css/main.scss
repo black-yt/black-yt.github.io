@@ -401,11 +401,22 @@ h1:before, .anchor:before {
   text-decoration: none !important;
 
   &:hover { text-decoration: none !important; color: var(--c-hover-text); }
+  &:focus {
+    outline: none;
+    text-decoration: none !important;
+    color: var(--c-hover-text);
+  }
   &:hover .app-card__inner {
     transform: translateY(-2px);
     border-color: var(--c-hover-border);
     background: linear-gradient(135deg, var(--c-hover-start) 0%, var(--c-hover-end) 100%);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  &:focus .app-card__inner {
+    border-color: var(--c-hover-border);
+    background: linear-gradient(135deg, var(--c-hover-start) 0%, var(--c-hover-end) 100%);
+    box-shadow: 0 0 0 4px rgba(var(--glow-rgb), 0.08),
+                0 6px 20px rgba(0, 0, 0, 0.1);
   }
 }
 
