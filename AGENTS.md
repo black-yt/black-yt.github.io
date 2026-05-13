@@ -191,7 +191,7 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 - 邮箱链接由错误的主页链接修正为 `mailto:xu_wanghan@sjtu.edu.cn`
 - 文案中补充了 `auto research` 表述
 - `My Apps` 区域新增 `AutoR`
-- `My Apps` 区域新增 `ResearchHarness`，链接到 Hugging Face Space
+- `My Apps` 区域新增 `ResearchHarness🎠`，链接到 Hugging Face Space
 - `ResearchClaw` 描述改为更贴近 `auto research`
 
 ### 7.2 论文链接更新

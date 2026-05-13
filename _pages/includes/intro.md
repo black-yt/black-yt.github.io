@@ -50,7 +50,7 @@ If you are interested in multi-agent systems on deep research, auto research or 
   </a>
   <a href="https://huggingface.co/spaces/CoCoOne/ResearchHarness" class="app-card" target="_blank" rel="noopener">
     <div class="app-card__inner">
-      <div class="app-card__name">ResearchHarness</div>
+      <div class="app-card__name">ResearchHarness🎠</div>
       <div class="app-card__desc">A lightweight, general-purpose harness for tool-using LLM agents.</div>
     </div>
   </a>
