@@ -48,6 +48,12 @@ If you are interested in multi-agent systems on deep research, auto research or 
       <div class="app-card__desc">A auto research harness that turns long, messy work into reproducible runs.</div>
     </div>
   </a>
+  <a href="https://huggingface.co/spaces/CoCoOne/ResearchHarness" class="app-card" target="_blank" rel="noopener">
+    <div class="app-card__inner">
+      <div class="app-card__name">ResearchHarness</div>
+      <div class="app-card__desc">A lightweight, general-purpose harness for tool-using LLM agents.</div>
+    </div>
+  </a>
 </div>
 
 <a href="https://chat-xi-three-29.vercel.app/" class="ask-me-btn" target="_blank" rel="noopener">
