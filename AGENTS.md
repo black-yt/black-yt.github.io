@@ -210,7 +210,7 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 - `Earth-Agent` 增加 ICLR / OpenReview 链接
 - `Omni-Weather` 链接改为 ICLR / OpenReview，但标题按要求保留原文案
 - 新增核心作者论文 `ReCrit: Transition-Aware Reinforcement Learning for Scientific Critic Reasoning`
-- 新增合作论文 `Sci-PRM: A Tool Aware Process Reward Model for Scientific Reasoning Verification`
+- 新增合作论文 `Sci-PRM: A Tool Aware Process Reward Model for Scientific Reasoning Verification`，venue 写作 `KDD, 2026 (Accept)`
 - `Sci-PRM` 暂无链接时使用 `[Camera-ready coming soon]` 占位，避免 Markdown 行尾换行符裸露
 - Publications 中展示文本统一使用 `arXiv` 大小写
 

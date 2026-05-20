@@ -36,7 +36,7 @@
   <div class='paper-box-text' markdown="1">
 
 <b>Sci-PRM: A Tool Aware Process Reward Model for Scientific Reasoning Verification</b> \\
-*KDD, 2026* \\
+*KDD, 2026 (Accept)* \\
 Xiangyu Zhao, Hengyuan Zhao, Yiheng Wang, **<span class="author-highlight">Wanghan Xu</span>**, Yuhao Zhou, Qinglong Cao, Zhiwang Zhou, Lei Bai, Wenlong Zhang, Xiao-Ming Wu \\
 [Camera-ready coming soon]
 
