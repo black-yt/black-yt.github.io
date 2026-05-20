@@ -90,7 +90,7 @@ bundle exec jekyll liveserve
 更新时建议注意三件事：
 
 1. 标题文本是否与落地页一致
-2. 标题链接、Arxiv 链接、Code 链接是否各自指向正确位置
+2. 标题链接、arXiv 链接、Code 链接是否各自指向正确位置
 3. 若保留旧标题但链接改到新页面，需要明确这是有意为之
 
 ### 4.3 App 卡片区更新
@@ -109,13 +109,13 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 
 ### 5.1 主题全局链接焦点样式
 
-主题默认对全局链接 `a:focus` 应用了黄色系 `outline`。来源如下：
+主题原始默认对全局链接 `a:focus` 应用了黄色系 `outline`。来源如下：
 
 - `_sass/_mixins.scss`
 - `_sass/_reset.scss`
 - `_sass/_base.scss`
 
-其中 `$warning-color` 是偏黄橙色，因此链接点击后出现黄色外轮廓属于主题原生行为，不是浏览器偶发 bug。
+其中 `$warning-color` 是偏黄橙色，因此旧版本中链接点击后出现黄色外轮廓属于主题原生行为，不是浏览器偶发 bug。当前仓库已将全局链接焦点态覆盖为主题色 `box-shadow`，并对 `.app-card` 与 `.site-nav__link` 做了局部一致化处理。
 
 ### 5.2 App 卡片焦点态已做局部覆盖
 
@@ -190,6 +190,9 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 
 - 邮箱链接由错误的主页链接修正为 `mailto:xu_wanghan@sjtu.edu.cn`
 - 文案中补充了 `auto research` 表述
+- About Me 中新增 Stanford University Visiting Scholar (remote) 经历与 Embodied AI / Automated Science Discovery 方向
+- 侧边栏姓名下新增 `Visiting Scholar at Stanford University (remote)`，通过 `_config.yml` 的 `visiting` 字段渲染
+- `_config.yml` 中的研究方向改为 `from virtual world to physical world`
 - `My Apps` 区域新增 `AutoR`
 - `My Apps` 区域新增 `Harness🎠`，链接到 `https://huggingface.co/spaces/InternScience/ResearchHarness`
 - `ResearchClaw` 描述改为更贴近 `auto research`
@@ -206,6 +209,9 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 - `EarthSE` 增加 ICLR / OpenReview 链接
 - `Earth-Agent` 增加 ICLR / OpenReview 链接
 - `Omni-Weather` 链接改为 ICLR / OpenReview，但标题按要求保留原文案
+- 新增核心作者论文 `ReCrit: Transition-Aware Reinforcement Learning for Scientific Critic Reasoning`
+- 新增合作论文 `Sci-PRM: A Tool Aware Process Reward Model for Scientific Reasoning Verification`
+- Publications 中展示文本统一使用 `arXiv` 大小写
 
 特别说明：
 

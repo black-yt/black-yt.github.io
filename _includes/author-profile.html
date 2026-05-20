@@ -13,6 +13,7 @@
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
     {% if site.description %}<p class="author__bio">{{ site.description }}</p>{% endif %}
+    {% if site.visiting %}<p class="author__bio">{{ site.visiting }}</p>{% endif %}
   </div>
 
   {% if site.direction %}

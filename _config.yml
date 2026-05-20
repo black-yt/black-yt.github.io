@@ -1,7 +1,8 @@
 # Site Settings
 title                    : "Wanghan Xu (徐望瀚)"
 description              : "PhD at Shanghai Jiao Tong University"
-direction                : "Focusing on developing Foundation Models to build AI Agents in both physical and virtual world."
+visiting                 : "Visiting Scholar at Stanford University (remote)"
+direction                : "Focusing on developing Foundation Models to build AI Agents from virtual world to physical world."
 repository               : "black-yt/black-yt.github.io"
 
 # SEO Related
