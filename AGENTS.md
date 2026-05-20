@@ -279,8 +279,14 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 
 1. 不要改用其他绕路方案上传代码
 2. 不要临时切换到 `curl`、`gh`、网页上传、API 写入等替代方式完成原本的 Git 推送
-3. 优先提醒用户关闭代理后再执行原始 Git 命令
-4. 应直接把需要用户执行的原始 Git 命令明确告诉用户，由用户在自己的网络环境中执行
+3. 应先在当前命令进程中关闭代理后重试原始 Git 命令
+4. 关闭代理重试仍失败时，再把需要用户执行的原始 Git 命令明确告诉用户，由用户在自己的网络环境中执行
+
+关闭代理重试 `push` 时优先使用：
+
+```bash
+env -u http_proxy -u https_proxy -u HTTP_PROXY -u HTTPS_PROXY -u all_proxy -u ALL_PROXY git -c http.proxy= -c https.proxy= push origin main
+```
 
 默认应优先提供的命令通常是：
 
