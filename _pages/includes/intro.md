@@ -4,7 +4,7 @@ I am a PhD student in Electronic Information at Shanghai Jiao Tong University, s
 
 I am currently a Visiting Scholar at Stanford University (remote), advised by Prof. [Le Cong](https://profiles.stanford.edu/186687). My research focuses on Embodied AI, Automated Science Discovery from Virtual World to Physical World.
 
-My research interests lie in Large Language Models, Multi-Agent Systems, [AI Scientists](https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/), and Generative AI. My current focus is on enhancing the reasoning capabilities of AI models in complex problem-solving scenarios, including multidisciplinary knowledge reasoning, [deep research](https://openai.com/index/introducing-deep-research/) (try my [**Deep Research🔎**](https://dr-sigma-wheat.vercel.app/)) and automated scientific discovery (auto research). You can download my [[CV](/pdfs/WanghanXu.pdf)] here.
+Beyond this visiting research direction, my broader research interests lie in Large Language Models, Multi-Agent Systems, [AI Scientists](https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/), and Generative AI. My current focus is on enhancing the reasoning capabilities of AI models in complex problem-solving scenarios, including multidisciplinary knowledge reasoning, [deep research](https://openai.com/index/introducing-deep-research/) (try my [**Deep Research🔎**](https://dr-sigma-wheat.vercel.app/)) and automated scientific discovery (auto research). You can download my [[CV](/pdfs/WanghanXu.pdf)] here.
 
 If you are interested in multi-agent systems on deep research, auto research or scientific discovery, feel free to contact me at [xu_wanghan@sjtu.edu.cn](mailto:xu_wanghan@sjtu.edu.cn).
 

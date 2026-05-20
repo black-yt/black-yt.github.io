@@ -191,7 +191,7 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 - 邮箱链接由错误的主页链接修正为 `mailto:xu_wanghan@sjtu.edu.cn`
 - 文案中补充了 `auto research` 表述
 - About Me 中新增 Stanford University Visiting Scholar (remote) 经历与 Embodied AI / Automated Science Discovery 方向
-- 侧边栏姓名下新增 `Visiting Scholar at Stanford University (remote)`，通过 `_config.yml` 的 `visiting` 字段渲染
+- 侧边栏姓名下新增 `Visiting Scholar at Stanford University`，通过 `_config.yml` 的 `visiting` 字段渲染
 - `_config.yml` 中的研究方向改为 `from virtual world to physical world`
 - `My Apps` 区域新增 `AutoR`
 - `My Apps` 区域新增 `Harness🎠`，链接到 `https://huggingface.co/spaces/InternScience/ResearchHarness`
@@ -211,6 +211,7 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 - `Omni-Weather` 链接改为 ICLR / OpenReview，但标题按要求保留原文案
 - 新增核心作者论文 `ReCrit: Transition-Aware Reinforcement Learning for Scientific Critic Reasoning`
 - 新增合作论文 `Sci-PRM: A Tool Aware Process Reward Model for Scientific Reasoning Verification`
+- `Sci-PRM` 暂无链接时使用 `[Camera-ready coming soon]` 占位，避免 Markdown 行尾换行符裸露
 - Publications 中展示文本统一使用 `arXiv` 大小写
 
 特别说明：
