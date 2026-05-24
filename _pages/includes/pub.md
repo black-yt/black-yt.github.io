@@ -254,6 +254,25 @@ Yiheng Wang ... (38 authors)\\
 
 
 
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/MSEarth.png"><img src='/images/MSEarth.png' alt="MSEarth" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2505.20740"><b>MSEarth: A Benchmark for Multimodal Scientific Comprehension of Earth Science</b></a> \\
+*ACL Main Conference, 2026 (Accept)* \\
+Xiangyu Zhao\*, **<span class="author-highlight">Wanghan Xu*</span>**, Bo Liu, Yuhao Zhou, Fenghua Ling, Ben Fei, Xiaoyu Yue, Lei Bai, Wenlong Zhang, Xiao-Ming Wu \\
+[<a href="https://arxiv.org/pdf/2505.20740">arXiv</a>] [<a href="https://github.com/xiangyu-mm/MSEarth">Code</a>] [<a href="https://huggingface.co/MSEarth-Data">Dataset</a>]
+
+  </div>
+</div>
+
+
+
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
@@ -296,6 +315,25 @@ Zhiwang Zhou, Yuandong Pu, Xuming He, Yidi Liu, Yixin Chen, Junchao Gong, Xiang 
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
+      <a href="/images/Earth-Survey.png"><img src='/images/Earth-Survey.png' alt="Earth-Survey" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2605.12542"><b>Earth Science Foundation Models: From Perception to Reasoning and Discovery</b></a> \\
+*arXiv, 2026* \\
+Xiangyu Zhao, Bo Liu, Yuehan Zhang, Zelin Song, **<span class="author-highlight">Wanghan Xu</span>**, Feng Liu, Fengxiang Wang, Ben Fei, Fenghua Ling, Wangxu Wei, Wenlong Zhang, Xiao-Ming Wu \\
+[<a href="https://arxiv.org/pdf/2605.12542">arXiv</a>] [<a href="https://github.com/xiangyu-mm/Cool-EarthScience-Foundation-Models">Data</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/EarthLink.png"><img src='/images/EarthLink.png' alt="EarthLink" width="100%"></a>
     </div>
   </div>
@@ -304,26 +342,7 @@ Zhiwang Zhou, Yuandong Pu, Xuming He, Yidi Liu, Yixin Chen, Junchao Gong, Xiang 
 <a class=PaperTitle href="https://arxiv.org/pdf/2507.17311"><b>EarthLink: A Self-Evolving AI Agent for Climate Science</b></a> \\
 *arXiv, 2025* \\
 Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<span class="author-highlight">Wanghan Xu</span>**, Ben Fei, Wenlong Zhang, Xinyu Gu, Lijing Cheng, Jing-Jia Luo, Chao Li, Yaqiang Wang, Tao Chen, Wanli Ouyang, Fenghua Ling, Lei Bai \\
-[<a href="https://arxiv.org/pdf/2507.17311">arXiv</a>] [<a href=" https://earthlink.intern-ai.org.cn/">Platform</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='true'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge core">Key Contributor</div>
-      <a href="/images/MSEarth.png"><img src='/images/MSEarth.png' alt="MSEarth" width="100%"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://arxiv.org/pdf/2505.20740"><b>MSEarth: A Benchmark for Multimodal Scientific Comprehension of Earth Science</b></a> \\
-*ACL Main Conference, 2026 (Accept)* \\
-Xiangyu Zhao\*, **<span class="author-highlight">Wanghan Xu*</span>**, Bo Liu, Yuhao Zhou, Fenghua Ling, Ben Fei, Xiaoyu Yue, Lei Bai, Wenlong Zhang, Xiao-Ming Wu \\
-[<a href="https://arxiv.org/pdf/2505.20740">arXiv</a>] [<a href="https://github.com/xiangyu-mm/MSEarth">Code</a>] [<a href="https://huggingface.co/MSEarth-Data">Dataset</a>]
+[<a href="https://arxiv.org/pdf/2507.17311">arXiv</a>] [<a href="https://earthlink.intern-ai.org.cn/">Platform</a>]
 
   </div>
 </div>
