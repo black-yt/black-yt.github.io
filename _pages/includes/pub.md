@@ -30,6 +30,25 @@
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
+      <a href="/images/EvoMemory.png"><img src='/images/EvoMemory.png' alt="EvoMemory" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2605.21951"><b>Dynamic Mixture of Latent Memories for Self-Evolving Agents</b></a> \\
+*arXiv, 2026* \\
+Dianzhi Yu, Vireo Zhang, Hongru Wang, Yanyu Chen, Minda Hu, **<span class="author-highlight">Wanghan Xu</span>**, Siki Chen, Philip Torr, Zhenfei Yin, Irwin King \\
+[<a href="https://arxiv.org/pdf/2605.21951">arXiv</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/SciPRM.png"><img src='/images/SciPRM.png' alt="Sci-PRM" width="100%"></a>
     </div>
   </div>
