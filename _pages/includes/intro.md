@@ -16,43 +16,43 @@ If you are interested in multi-agent systems on deep research, auto research or 
 <div class="app-cards">
   <a href="https://dr-sigma-wheat.vercel.app/" class="app-card" target="_blank" rel="noopener">
     <div class="app-card__inner">
-      <div class="app-card__name">Deep Research🔎</div>
+      <div class="app-card__name">Deep Research</div>
       <div class="app-card__desc">Get a high-quality graduate-level report ready for you in just 5 minutes!</div>
     </div>
   </a>
   <a href="https://chat-xi-three-29.vercel.app/" class="app-card" target="_blank" rel="noopener">
     <div class="app-card__inner">
-      <div class="app-card__name">Wanghan-Pro🤖</div>
+      <div class="app-card__name">Wanghan-Pro</div>
       <div class="app-card__desc">Wanghan-Pro is here to chat anytime or help with any problem.</div>
     </div>
   </a>
   <a href="https://github.com/black-yt/IrisGUI" class="app-card" target="_blank" rel="noopener">
     <div class="app-card__inner">
-      <div class="app-card__name">Iris🧿</div>
+      <div class="app-card__name">Iris</div>
       <div class="app-card__desc">Your AI-powered hands and eyes for desktop automation.</div>
     </div>
   </a>
   <a href="https://github.com/black-yt/structai" class="app-card" target="_blank" rel="noopener">
     <div class="app-card__inner">
-      <div class="app-card__name">StructAI🚀</div>
+      <div class="app-card__name">StructAI</div>
       <div class="app-card__desc">A pip library for LLM Agent interaction, memory, concurrency, and evaluation.</div>
     </div>
   </a>
   <a href="https://internscience.github.io/ResearchClawBench-Home/" class="app-card" target="_blank" rel="noopener">
     <div class="app-card__inner">
-      <div class="app-card__name">ResearchClaw🔬</div>
+      <div class="app-card__name">ResearchClaw</div>
       <div class="app-card__desc">Benchmark agents on end-to-end auto research — from Re-Discovery to New-Discovery.</div>
     </div>
   </a>
   <a href="https://github.com/AutoX-AI-Labs/AutoR" class="app-card" target="_blank" rel="noopener">
     <div class="app-card__inner">
-      <div class="app-card__name">AutoR✏️</div>
+      <div class="app-card__name">AutoR</div>
       <div class="app-card__desc">An auto research harness that turns long, messy work into reproducible runs.</div>
     </div>
   </a>
   <a href="https://huggingface.co/spaces/InternScience/ResearchHarness" class="app-card" target="_blank" rel="noopener">
     <div class="app-card__inner">
-      <div class="app-card__name">Harness🎠</div>
+      <div class="app-card__name">Harness</div>
       <div class="app-card__desc">A lightweight, general-purpose harness for tool-using LLM agents.</div>
     </div>
   </a>
