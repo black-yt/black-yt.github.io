@@ -56,6 +56,12 @@ If you are interested in multi-agent systems on deep research, auto research or 
       <div class="app-card__desc">A lightweight, general-purpose harness for tool-using LLM agents.</div>
     </div>
   </a>
+  <a href="https://black-yt.github.io/skills/" class="app-card" target="_blank" rel="noopener">
+    <div class="app-card__inner">
+      <div class="app-card__name">Skills</div>
+      <div class="app-card__desc">Reusable agent skills distilled from Wanghan's daily work.</div>
+    </div>
+  </a>
 </div>
 
 <a href="https://chat-xi-three-29.vercel.app/" class="ask-me-btn" target="_blank" rel="noopener">
