@@ -44,12 +44,6 @@ If you are interested in multi-agent systems on deep research, auto research or 
       <div class="app-card__desc">Benchmark agents on end-to-end auto research — from Re-Discovery to New-Discovery.</div>
     </div>
   </a>
-  <a href="https://github.com/AutoX-AI-Labs/AutoR" class="app-card" target="_blank" rel="noopener">
-    <div class="app-card__inner">
-      <div class="app-card__name">AutoR</div>
-      <div class="app-card__desc">An auto research harness that turns long, messy work into reproducible runs.</div>
-    </div>
-  </a>
   <a href="https://huggingface.co/spaces/InternScience/ResearchHarness" class="app-card" target="_blank" rel="noopener">
     <div class="app-card__inner">
       <div class="app-card__name">Harness</div>
