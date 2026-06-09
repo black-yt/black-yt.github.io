@@ -11,6 +11,25 @@
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
+      <a href="/images/ResearchClawBench.png"><img src='/images/ResearchClawBench.png' alt="ResearchClawBench" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2606.07591"><b>ResearchClawBench: A Benchmark for End-to-End Autonomous Scientific Research</b></a> \\
+*arXiv, 2026* \\
+**<span class="author-highlight">Wanghan Xu*</span>**, Shuo Li\*, Tianlin Ye, Qinglong Cao, Yixin Chen, Hengjian Gao ... (50 authors)\\
+[<a href="https://arxiv.org/pdf/2606.07591">arXiv</a>] [<a href="https://internscience.github.io/ResearchClawBench-Home/">Project Page</a>] [<a href="https://github.com/InternScience/ResearchClawBench">Code</a>] [<a href="https://huggingface.co/datasets/InternScience/ResearchClawBench">Dataset</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
       <a href="/images/ReCrit.png"><img src='/images/ReCrit.png' alt="ReCrit" width="100%"></a>
     </div>
   </div>
