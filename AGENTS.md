@@ -305,6 +305,24 @@ git push origin main
 
 这条规则是本仓库后续维护中的明确经验，后面继续沿用。
 
+### 8.5 WSL Bash、Windows 路径与 apply_patch 可靠性经验
+
+经验来源：
+
+- `/mnt/d/xwh/ailab记录/工作/26年05月/skills/wsl-bash-windows/SKILL.md`
+
+这个仓库位于 `/mnt/d/...`，后续默认应按 WSL 项目处理：
+
+1. 看到 `/mnt/c/...` 或 `/mnt/d/...` 路径时，优先使用 WSL 内的 `bash` 和 Linux 命令链，不要切到 PowerShell、cmd、Windows `node.exe` 或浏览器 `fetch`。
+2. Windows 路径需要转换为 WSL 路径，例如 `D:\path\repo` 对应 `/mnt/d/path/repo`；中文路径、空格路径或特殊字符路径必须整体加引号。
+3. 非交互 shell 中 `PS1` 为空是正常现象。需要确认交互 shell 时，可用 `bash -i -c 'printf "%s\n" "$PS1"'`，看到 `/mnt/d/...` prompt 才说明交互初始化正常。
+4. 如果报 `Read-only file system`、`Permission denied`、无法创建 `.git/index.lock`、网络受限等，优先判断为沙箱/权限限制并申请提权，不要误判成仓库坏了或 Bash 不存在。
+5. 如果报 `codex-linux-sandbox` 不存在，或 `CreateProcess` 找不到 `/bin/bash`，通常是执行器或沙箱包装器没有真正进入 WSL；这时应停止改文件，提示用户修复或重启 Codex 的 WSL 绑定，而不是绕到 Windows 工具链。
+6. 文件修改必须优先用 `apply_patch`。如果 `apply_patch` 行为异常，不要用 `cat > file`、Python 写文件、`sed -i` 等方式绕过，应先确认执行器和文件系统视图可信。
+7. 在环境可疑或跨 WSL/Windows 边界工作前，做 `apply_patch` 探针闭环：新建临时文件、用 Bash 读取、用 `apply_patch` 修改、再用 `apply_patch` 删除、最后用 Bash 确认文件不存在。
+8. `apply_patch` 返回 `Success` 但 Bash 看不到文件、同一文件能重复 `Add File`、刚新增文件删除时报不存在，都是文件系统视图不可信的信号，应立即停止继续编辑。
+9. 临时测试文件必须用后清理，并通过 `git status --short` 或 `test ! -e <file>` 确认没有残留。
+
 ## 9. 一句话总结
 
 这是一个已经定制较深的 Jekyll 学术主页仓库。后续维护时，优先尊重现有结构和视觉系统，谨慎处理全局样式、换行符和二进制文件，改动尽量局部、清晰、可追踪。
