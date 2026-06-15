@@ -322,7 +322,9 @@ git push origin main
 7. 文件修改必须优先用 `apply_patch`。如果 `apply_patch` 行为异常，不要用 `cat > file`、Python 写文件、`sed -i` 等方式绕过，应先确认执行器和文件系统视图可信。
 8. 在环境可疑或跨 WSL/Windows 边界工作前，做 `apply_patch` 探针闭环：新建临时文件、用 Bash 读取、用 `apply_patch` 修改、再用 `apply_patch` 删除、最后用 Bash 确认文件不存在。
 9. `apply_patch` 返回 `Success` 但 Bash 看不到文件、同一文件能重复 `Add File`、刚新增文件删除时报不存在，都是文件系统视图不可信的信号，应立即停止继续编辑。
-10. 临时测试文件必须用后清理，并通过 `git status --short` 或 `test ! -e <file>` 确认没有残留。
+10. 用户贴来 Windows 图片或临时截图路径时，先把 `C:\Users\...\file.png` 转为 `/mnt/c/Users/.../file.png`，或把 `D:\...\file.png` 转为 `/mnt/d/.../file.png`；反斜杠改正斜杠，中文、空格和特殊字符路径要加引号。
+11. 读取用户图片前先用 `ls -l "<WSL path>"` 确认文件仍存在，再把转换后的 WSL 路径交给图片查看工具；如果文件不存在，通常是临时截图已被清理，应让用户重新上传或重新截图。不要把用户真实临时路径写进仓库文档。
+12. 临时测试文件必须用后清理，并通过 `git status --short` 或 `test ! -e <file>` 确认没有残留。
 
 ## 9. 一句话总结
 
