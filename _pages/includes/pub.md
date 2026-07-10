@@ -106,6 +106,25 @@ Xiangyu Zhao, Hengyuan Zhao, Yiheng Wang, **<span class="author-highlight">Wangh
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
+      <a href="/images/IdeaGen.png"><img src='/images/IdeaGen.png' alt="IdeaGen" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2607.08758"><b>Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation</b></a> \\
+*arXiv, 2026* \\
+Yifan Zhou, Qihao Yang, Yan Li, Donggang Li, Xiru Hu, Hokin Deng, Ziyang Gong, Xuanyi Zhou, Huacan Wang, Xiangchao Yan, **<span class="author-highlight">Wanghan Xu</span>**, Wenlong Zhang, Shaofeng Zhang, Yue Zhou, Yifan Yang, Zhihang Zhong, Xue Yang \\
+[<a href="https://arxiv.org/pdf/2607.08758">arXiv</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/Intern-S1-Pro.png"><img src='/images/Intern-S1-Pro.png' alt="Intern-S1-Pro" width="100%"></a>
     </div>
   </div>
