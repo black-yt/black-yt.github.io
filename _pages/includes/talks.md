@@ -9,7 +9,7 @@
   </div>
   <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="/images/talk-3.png"><b>Exploring the Boundaries of Autonomous Scientific Research Capabilities in Large Language Models and Agents</b></a> \\
+<span class=PaperTitle><b>Exploring the Boundaries of Autonomous Scientific Research Capabilities in Large Language Models and Agents</b></span> \\
 *Zhejiang University, 2026* \\
 **<span class="author-highlight">Wanghan Xu</span>**
 
