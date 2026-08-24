@@ -4,6 +4,22 @@
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
+      <a href="/images/talk-3.png"><img src='/images/talk-3.png' alt="talk-3" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="/images/talk-3.png"><b>Exploring the Boundaries of Autonomous Scientific Research Capabilities in Large Language Models and Agents</b></a> \\
+*Zhejiang University, 2026* \\
+**<span class="author-highlight">Wanghan Xu</span>**
+
+  </div>
+</div>
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/talk-2.jpg"><img src='/images/talk-2.jpg' alt="talk-2" width="100%"></a>
     </div>
   </div>
