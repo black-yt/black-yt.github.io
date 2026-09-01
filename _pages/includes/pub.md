@@ -74,7 +74,7 @@ Dianzhi Yu, Vireo Zhang, Hongru Wang, Yanyu Chen, Minda Hu, **<span class="autho
   <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://arxiv.org/pdf/2606.15872"><b>SciOrch: Learning to Orchestrate Expert LLMs for Solving Frontier Multimodal Scientific Reasoning Tasks</b></a> \\
-*arXiv, 2026* \\
+*EMNLP 2026 Findings* \\
 Jingru Guo, Xiangyuan Xue, Lian Zhang, **<span class="author-highlight">Wanghan Xu</span>**, Siki Chen, Philip Torr, Wanli Ouyang, Lei Bai, Zhenfei Yin \\
 [<a href="https://arxiv.org/pdf/2606.15872">arXiv</a>] [<a href="https://github.com/llexieguo/SciOrch">Code</a>]
 
