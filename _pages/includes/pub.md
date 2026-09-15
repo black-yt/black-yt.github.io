@@ -126,6 +126,25 @@ Xiangyu Zhao, Hengyuan Zhao, Yiheng Wang, **<span class="author-highlight">Wangh
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
+      <a href="/images/BenchmarkRadar.png"><img src='/images/BenchmarkRadar.png' alt="Benchmark Radar Pareto view of benchmark scores and model coverage" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2609.11115"><b>Benchmark Radar: A Living Database and Search Engine for AI Benchmarks and Evaluation</b></a> \\
+*arXiv, 2026* \\
+Koutian Wu, Junjie Zhou, Ergan Shang, Jiayu Wang, Pengqian Han, Junkai Wang, **<span class="author-highlight">Wanghan Xu</span>** \\
+[<a href="https://arxiv.org/pdf/2609.11115">arXiv</a>] [<a href="https://github.com/ktwu01/benchmark-radar">Code</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/IdeaGen.png"><img src='/images/IdeaGen.png' alt="IdeaGen" width="100%"></a>
     </div>
   </div>
