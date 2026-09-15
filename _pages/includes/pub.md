@@ -11,6 +11,27 @@
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
+      <a href="/images/Atria.png"><img src='/images/Atria.png' alt="Atria Dawn Preview benchmark results" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://raw.githubusercontent.com/atria-asi/Atria-Dawn-Preview/main/atria-dawn-preview.pdf"><b>Atria Dawn: The Dawn of Agentic Superintelligence</b></a> \\
+*Technical Report, 2026* \\
+**<span class="author-highlight">Wanghan Xu</span>**, one of the core contributors among 143 contributors \\
+[<a href="https://raw.githubusercontent.com/atria-asi/Atria-Dawn-Preview/main/atria-dawn-preview.pdf">PDF</a>] [<a href="https://atria-asi.ai/">Website</a>] [<a href="https://github.com/atria-asi/Atria-Dawn-Preview">GitHub</a>] [<a href="https://huggingface.co/internlm/Atria-Dawn-Preview">Hugging Face</a>] [<a href="https://www.modelscope.cn/models/Shanghai_AI_Laboratory/Atria-Dawn-Preview">ModelScope</a>] [<a href="https://x.com/AtriaASI/status/2099490911822794901?s=20">X</a>] [<a href="https://mp.weixin.qq.com/s/vVA9ZKR8DcAHr-1gDOP50Q">新智元</a>] [<a href="https://www.bilibili.com/video/BV1CKe56NEyE/">Video</a>]
+
+<iframe class="paper-video" src="https://player.bilibili.com/player.html?isOutside=true&amp;aid=117269904623547&amp;bvid=BV1CKe56NEyE&amp;cid=41894611921&amp;p=1&amp;autoplay=0" title="Atria Dawn Preview introduction video" loading="lazy" scrolling="no" allowfullscreen></iframe>
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
       <a href="/images/ResearchClawBench.png"><img src='/images/ResearchClawBench.png' alt="ResearchClawBench" width="100%"></a>
     </div>
   </div>
