@@ -755,8 +755,11 @@ body, #main {
     }
 }
 
-/* Remove border/padding around profile photo on all screen sizes */
+/* Keep photo sizing independent of the avatar container's layout. */
 .author__avatar img {
+    display: block;
+    width: 100%;
+    height: auto;
     border: none !important;
     padding: 0 !important;
     box-shadow: none !important;

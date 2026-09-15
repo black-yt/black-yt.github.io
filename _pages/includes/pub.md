@@ -20,7 +20,7 @@
 <a class=PaperTitle href="https://arxiv.org/pdf/2609.15818"><b>Atria Dawn: The Dawn of Agentic Superintelligence</b></a> \\
 *Technical Report, 2026* \\
 **<span class="author-highlight">Wanghan Xu</span>**, one of the core contributors among 143 contributors \\
-[<a href="https://arxiv.org/pdf/2609.15818">arXiv</a>] [<a href="https://atria-asi.ai/">Website</a>] [<a href="https://github.com/atria-asi/Atria-Dawn-Preview">GitHub</a>] [<a href="https://huggingface.co/internlm/Atria-Dawn-Preview">Hugging Face</a>] [<a href="https://www.modelscope.cn/models/Shanghai_AI_Laboratory/Atria-Dawn-Preview">ModelScope</a>] [<a href="https://x.com/AtriaASI/status/2099490911822794901?s=20">X</a>] [<a href="https://mp.weixin.qq.com/s/vVA9ZKR8DcAHr-1gDOP50Q">新智元</a>] [<a href="https://xhslink.cn/o/QaPOjcDdsE">Video</a>]
+[<a href="https://arxiv.org/pdf/2609.15818">arXiv</a>] [<a href="https://atria-asi.ai/">Website</a>] [<a href="https://github.com/atria-asi/Atria-Dawn-Preview">Code</a>] [<a href="https://huggingface.co/internlm/Atria-Dawn-Preview">Hugging Face</a>] [<a href="https://www.modelscope.cn/models/Shanghai_AI_Laboratory/Atria-Dawn-Preview">ModelScope</a>] [<a href="https://x.com/AtriaASI/status/2099490911822794901?s=20">X</a>] [<a href="https://mp.weixin.qq.com/s/vVA9ZKR8DcAHr-1gDOP50Q">新智元</a>] [<a href="https://xhslink.cn/o/QaPOjcDdsE">Video</a>]
 
   </div>
 </div>
