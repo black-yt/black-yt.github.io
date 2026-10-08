@@ -1,0 +1,6 @@
+<section class="blog-comments" aria-labelledby="blog-comments-title">
+  <h2 id="blog-comments-title">{% if page.lang == "zh" %}评论{% else %}Comments{% endif %}</h2>
+  <p class="blog-comments__notice" role="status" hidden>{% if page.lang == "zh" %}评论暂时无法加载，你可以通过下方链接前往 GitHub Discussions。{% else %}Comments are temporarily unavailable. You can visit GitHub Discussions using the link below.{% endif %}</p>
+  <div class="giscus" data-repo="{{ site.repository }}" data-repo-id="{{ site.blog_comments.repo_id }}" data-category="{{ site.blog_comments.category }}" data-category-id="{{ site.blog_comments.category_id }}" data-term="blog:{{ page.translation_key | default: page.slug | escape }}" data-lang="{% if page.lang == 'zh' %}zh-CN{% else %}en{% endif %}"></div>
+  <p class="blog-comments__fallback"><a href="https://github.com/{{ site.repository }}/discussions" target="_blank" rel="noopener noreferrer">{% if page.lang == "zh" %}在 GitHub Discussions 中查看评论{% else %}View comments on GitHub Discussions{% endif %}</a></p>
+</section>

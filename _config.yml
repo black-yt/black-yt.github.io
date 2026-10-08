@@ -4,6 +4,7 @@ description              : "PhD at Shanghai Jiao Tong University"
 visiting                 :
 direction                : "Focusing on developing Foundation Models to build AI Agents from virtual world to physical world."
 repository               : "black-yt/black-yt.github.io"
+url                      : "https://black-yt.github.io"
 
 # SEO Related
 google_site_verification :
@@ -80,6 +81,12 @@ collections:
     output: true
     permalink: /blogs/:path/
 
+# GitHub Discussions used by the Giscus blog comment embed.
+blog_comments:
+  repo_id: R_kgDOQJWTZw
+  category: Announcements
+  category_id: DIC_kwDOQJWTZ84DHW9E
+
 # Defaults
 defaults:
   - scope:
@@ -95,6 +102,7 @@ defaults:
       layout: blog
       author_profile: false
       author: "Wanghan Xu (徐望瀚)"
+      citation_author: "Xu, Wanghan"
 
 
 # Sass/SCSS

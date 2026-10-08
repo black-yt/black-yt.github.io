@@ -1,0 +1,2 @@
+{%- assign text = include.text | strip_newlines | replace: '\', '\textbackslash ' | replace: '{', '\{' | replace: '}', '\}' | replace: '&', '\\&' | replace: '%', '\%' | replace: '$', '\$' | replace: '#', '\#' | replace: '_', '\_' | replace: '~', '\textasciitilde ' | replace: '^', '\textasciicircum ' -%}
+{{- text -}}

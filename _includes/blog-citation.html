@@ -1,0 +1,19 @@
+{%- assign citation_author = page.citation_author | default: page.author -%}
+{%- capture default_key -%}{{ page.translation_key | default: page.slug | slugify }}{{ page.date | date: '%Y' }}{{ page.lang }}{%- endcapture -%}
+{%- assign citation_key = page.citation_key | default: default_key | slugify -%}
+{%- assign brace_open = '{' -%}
+{%- assign brace_close = '}' -%}
+{%- capture bibtex -%}
+@misc{ {{- citation_key -}},
+  author = {{ brace_open }}{% include bibtex-text.html text=citation_author %}{{ brace_close }},
+  title = {{ brace_open }}{{ brace_open }}{% include bibtex-text.html text=page.title %}{{ brace_close }}{{ brace_close }},
+  year = {{ brace_open }}{{ page.date | date: '%Y' }}{{ brace_close }},
+  month = {{ page.date | date: '%b' | downcase }},
+  url = {{ brace_open }}{{ page.url | absolute_url }}{{ brace_close }},
+  note = {Blog post}
+}
+{%- endcapture -%}
+<section class="blog-citation" aria-labelledby="blog-citation-title">
+  <h2 id="blog-citation-title">{% if page.lang == "zh" %}引用{% else %}Citation{% endif %}</h2>
+  <pre class="blog-citation__box" tabindex="0" aria-labelledby="blog-citation-title"><code id="blog-bibtex">{{ bibtex | escape }}</code></pre>
+</section>

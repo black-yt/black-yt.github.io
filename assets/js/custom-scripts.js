@@ -235,16 +235,16 @@ if (window.jQuery) {
   });
 })();
 
-// Share the current language's article URL, without query strings or fragments.
+// Copy the current language's URL or exactly the BibTeX displayed below it.
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
-    var button = document.querySelector('.blog-share');
+    var buttons = document.querySelectorAll('.blog-share, .blog-copy-citation');
     var status = document.querySelector('.blog-share-status');
-    if (!button || !status) return;
+    if (!buttons.length || !status) return;
 
-    function fallbackCopy(url) {
+    function fallbackCopy(value, button) {
       var field = document.createElement('textarea');
-      field.value = url;
+      field.value = value;
       field.setAttribute('readonly', '');
       field.style.cssText = 'position:fixed;left:-9999px;top:0;font-size:16px;';
       document.body.appendChild(field);
@@ -258,23 +258,85 @@ if (window.jQuery) {
       }
     }
 
-    button.addEventListener('click', async function () {
-      var url = new URL(button.dataset.shareUrl, window.location.href).href;
-      var copied = false;
-      status.textContent = '';
-      try {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          await navigator.clipboard.writeText(url);
-          copied = true;
+    buttons.forEach(function (button) {
+      button.addEventListener('click', async function () {
+        var target = document.getElementById(button.dataset.copyTarget);
+        var value = target ? target.textContent : new URL(button.dataset.shareUrl, window.location.href).href;
+        var copied = false;
+        status.textContent = '';
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(value);
+            copied = true;
+          }
+        } catch (error) {
+          // Fall back when the Clipboard API is unavailable or permission is denied.
         }
-      } catch (error) {
-        // Fall back when the Clipboard API is unavailable or permission is denied.
-      }
-      if (!copied) {
-        try { copied = fallbackCopy(url); } catch (error) { copied = false; }
-      }
-      status.textContent = copied ? button.dataset.copied : button.dataset.copyFailed;
+        if (!copied) {
+          try { copied = fallbackCopy(value, button); } catch (error) { copied = false; }
+        }
+        status.textContent = copied ? button.dataset.copied : button.dataset.copyFailed;
+      });
     });
+  });
+})();
+
+// Giscus uses one discussion per translation group, with localized controls.
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var container = document.querySelector('.giscus');
+    if (!container || !container.dataset.categoryId) return;
+
+    function theme() {
+      return document.documentElement.dataset.theme === 'dark' ? 'transparent_dark' : 'light';
+    }
+    function syncTheme() {
+      var frame = container.querySelector('iframe.giscus-frame');
+      if (frame && frame.contentWindow) {
+        frame.contentWindow.postMessage({ giscus: { setConfig: { theme: theme() } } }, 'https://giscus.app');
+      }
+    }
+    function showUnavailable() {
+      container.hidden = true;
+      document.querySelector('.blog-comments__notice').hidden = false;
+    }
+    window.addEventListener('message', function (event) {
+      var frame = container.querySelector('iframe.giscus-frame');
+      if (event.origin !== 'https://giscus.app' || !frame || event.source !== frame.contentWindow) return;
+      var message = event.data && event.data.giscus;
+      // A first comment creates the discussion; its initial absence is expected.
+      if (message && message.error && !/discussion not found/i.test(message.error)) showUnavailable();
+    });
+    var script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.async = true;
+    script.crossOrigin = 'anonymous';
+    script.addEventListener('error', showUnavailable);
+    var config = {
+      repo: container.dataset.repo,
+      'repo-id': container.dataset.repoId,
+      category: container.dataset.category,
+      'category-id': container.dataset.categoryId,
+      mapping: 'specific',
+      term: container.dataset.term,
+      strict: '1',
+      'reactions-enabled': '1',
+      'emit-metadata': '0',
+      'input-position': 'top',
+      theme: theme(),
+      lang: container.dataset.lang,
+      loading: 'lazy'
+    };
+    Object.keys(config).forEach(function (key) { script.setAttribute('data-' + key, config[key]); });
+    container.appendChild(script);
+    new MutationObserver(syncTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    new MutationObserver(function () {
+      var frame = container.querySelector('iframe.giscus-frame');
+      if (frame && !frame.dataset.themeSync) {
+        frame.dataset.themeSync = 'true';
+        frame.addEventListener('load', syncTheme);
+      }
+    }).observe(container, { childList: true, subtree: true });
   });
 })();
 

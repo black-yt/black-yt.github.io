@@ -808,8 +808,11 @@ body, #main {
     overflow-wrap: anywhere;
 
     img {
+        display: block;
         max-width: 60%;
         height: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .blog-image-link, .blog-image-link img {
@@ -847,8 +850,49 @@ body, #main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 0.75em;
+}
+
+.blog-citation, .blog-comments {
+    margin-top: 2em;
+}
+
+.blog-citation__box {
+    padding: 1em;
+    border: 1px solid var(--c-border);
+    border-radius: 6px;
+    background: var(--paper-hover);
+    color: var(--c-text);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-size: 0.9em;
+    line-height: 1.6;
+
+    code {
+        padding: 0;
+        background: transparent;
+        color: inherit;
+        white-space: inherit;
+        font-size: inherit;
+    }
+}
+
+.giscus, .giscus-frame {
+    width: 100%;
+}
+
+.giscus[hidden], .blog-comments__notice[hidden] {
+    display: none;
+}
+
+.page__content .blog-comments__fallback {
+    margin-top: 1em;
+    font-size: 0.9em;
+}
+
+.page__content .blog-footer__back {
+    margin-top: 2em;
 }
 
 .page__content .blog-share-status {

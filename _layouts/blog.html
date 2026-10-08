@@ -5,15 +5,21 @@ layout: default
 {% if page.lang == "zh" %}
   {% assign back_label = "返回主页" %}
   {% assign language_label = "切换语言" %}
-  {% assign share_label = "分享链接" %}
+  {% assign share_label = "复制链接" %}
+  {% assign cite_label = "复制引用" %}
   {% assign copied_label = "链接已复制" %}
+  {% assign citation_copied_label = "BibTeX 引用已复制" %}
   {% assign copy_failed_label = "复制失败，请复制浏览器地址栏中的链接。" %}
+  {% assign citation_failed_label = "复制失败，请手动选择并复制下方的 BibTeX 引用。" %}
 {% else %}
   {% assign back_label = "Back to homepage" %}
   {% assign language_label = "Article language" %}
-  {% assign share_label = "Share link" %}
+  {% assign share_label = "Copy link" %}
+  {% assign cite_label = "Copy citation" %}
   {% assign copied_label = "Link copied" %}
+  {% assign citation_copied_label = "BibTeX citation copied" %}
   {% assign copy_failed_label = "Could not copy the link. Please copy it from your browser's address bar." %}
+  {% assign citation_failed_label = "Could not copy the citation. Please select and copy the BibTeX below." %}
 {% endif %}
 
 <div class="blog-post">
@@ -37,9 +43,12 @@ layout: default
 
   <footer class="blog-footer">
     <div class="blog-footer__actions">
-      <a class="blog-back" href="{{ '/' | relative_url }}#-blogs" target="_self"><i class="fas fa-arrow-left" aria-hidden="true"></i> {{ back_label }}</a>
       <button class="seg-toggle-btn blog-share" type="button" data-share-url="{{ page.url | relative_url }}" data-copied="{{ copied_label }}" data-copy-failed="{{ copy_failed_label | escape }}"><i class="fas fa-link" aria-hidden="true"></i> {{ share_label }}</button>
+      <button class="seg-toggle-btn blog-copy-citation" type="button" data-copy-target="blog-bibtex" data-copied="{{ citation_copied_label }}" data-copy-failed="{{ citation_failed_label | escape }}"><i class="fas fa-quote-right" aria-hidden="true"></i> {{ cite_label }}</button>
     </div>
     <p class="blog-share-status" role="status" aria-live="polite"></p>
+    {% include blog-citation.html %}
+    {% include blog-comments.html %}
+    <p class="blog-footer__back"><a class="blog-back" href="{{ '/' | relative_url }}#-blogs" target="_self"><i class="fas fa-arrow-left" aria-hidden="true"></i> {{ back_label }}</a></p>
   </footer>
 </div>
