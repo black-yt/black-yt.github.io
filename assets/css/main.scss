@@ -682,6 +682,10 @@ body, #main {
         height: auto;
     }
 
+    .blog-image-link, .blog-image-link img {
+        cursor: zoom-in;
+    }
+
     blockquote {
         font-style: normal;
         border-left-color: var(--c-border);

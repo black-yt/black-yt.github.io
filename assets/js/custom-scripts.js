@@ -136,10 +136,48 @@
   });
 })();
 
-// Native article anchors respect scroll-margin and preserve reference hashes.
+// Prepare Markdown images before the theme's DOM-ready lightbox setup.
+// custom-scripts.js is loaded synchronously after the article markup.
+(function () {
+  var article = document.querySelector('.blog-body');
+  if (!article) return;
+  var label = document.documentElement.lang === 'zh' ? '放大图片' : 'Enlarge image';
+
+  article.querySelectorAll('img').forEach(function (img) {
+    var link = img.closest('a');
+    if (link) {
+      // Preserve images deliberately linked to a page rather than an image.
+      if (!/\.(?:avif|gif|jpe?g|png|svg|webp)(?:[?#]|$)/i.test(link.href)) return;
+    } else {
+      var source = img.currentSrc || img.src;
+      if (!source) return;
+      var figure = img.closest('picture') || img;
+      link = document.createElement('a');
+      link.href = source;
+      figure.parentNode.insertBefore(link, figure);
+      link.appendChild(figure);
+    }
+    link.classList.add('image-popup', 'blog-image-link');
+    if (!link.hasAttribute('aria-label')) {
+      link.setAttribute('aria-label', label + (img.alt ? ': ' + img.alt : ''));
+    }
+  });
+})();
+
+// Keep the theme's popup options, with a gallery limited to this article.
 if (window.jQuery) {
   window.jQuery(function () {
-    window.jQuery('.blog-body a[href*="#"]').off('click.smoothscroll');
+    var $ = window.jQuery;
+    var images = $('.blog-body .blog-image-link');
+    var themeOptions = images.first().data('magnificPopup');
+    if (themeOptions) {
+      var options = $.extend({}, themeOptions);
+      delete options.items;
+      delete options.mainEl;
+      images.magnificPopup(options);
+    }
+    // Native article anchors respect scroll-margin and preserve reference hashes.
+    $('.blog-body a[href*="#"]').off('click.smoothscroll');
   });
 }
 
