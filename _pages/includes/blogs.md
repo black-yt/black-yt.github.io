@@ -2,6 +2,6 @@
 
 {% assign blog_posts = site.blogs | where: "lang", "en" | sort: "date" | reverse %}
 {% for post in blog_posts %}
-- <a href="{{ post.url | relative_url }}" target="_self">{{ post.title | escape }}</a>
+- *{{ post.date | date: "%Y-%m-%d" }}* <a href="{{ post.url | relative_url }}" target="_self">{{ post.title | escape }}</a>
 
 {% endfor %}

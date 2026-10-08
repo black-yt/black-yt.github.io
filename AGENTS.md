@@ -108,7 +108,7 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 
 ### 4.4 博客维护（2026-10-08 新增）
 
-主页 Blogs 位于 Honors and Awards 与 Invited Talks 之间，沿用现有一级标题和普通列表样式，仅展示文章标题。文章页由 `_layouts/blog.html` 渲染，继承主页布局、字体、侧栏、主题切换和动态背景。
+主页 Blogs 位于 Honors and Awards 与 Invited Talks 之间，沿用现有一级标题和普通列表样式，展示斜体发布日期（`YYYY-MM-DD`）、空格与文章标题。文章页由 `_layouts/blog.html` 渲染，继承主页布局、字体、侧栏、主题切换和动态背景。
 
 新增文章只需添加两份 Markdown，无需修改主页或导航：
 
@@ -132,7 +132,7 @@ description: "A short description of this article."
 - 作者默认是 `Wanghan Xu (徐望瀚)`，需要时可在 front matter 中通过 `author` 覆盖。
 - 正文从二级标题 `##` 开始，文章标题、日期、作者由布局生成。支持 Markdown 段落、列表、引用块 `>`、链接、代码、图片和 Kramdown 脚注（`[^ref]` 与 `[^ref]: ...`）。
 - 站内图片使用根路径（例如 `/images/example.png`）。博客页的链接默认在当前页面打开，脚注跳转与返回引用不会新开标签页。
-- 图片推荐写为 `![说明文字]({{ '/images/example.png' | relative_url }})`；正文图片自动适配容器宽度，不会拉伸比例。
+- 图片推荐写为 `![说明文字]({{ '/images/example.png' | relative_url }})`；正文图片最大宽度为正文行宽的 60%，保持原始比例，点击后的放大弹窗不受此限制。
 - 普通 Markdown 图片自动复用主页的 Magnific Popup 点击放大、关闭和多图切换，无需手写链接；SVG 也支持，图库仅包含当前文章配图。显式链接到高清图片时保留该图片地址，链接到普通网页时保留原有跳转。自动图片链接在 `custom-scripts.js` 中同步准备，必须保持该脚本在正文之后、DOM 就绪之前加载，让主题现有的 `.image-popup` 初始化统一处理，再沿用同一配置建立文章图库。
 - 公式使用 Kramdown + MathJax。行内推荐 `$$y = f_{\theta}(x)$$`，独立公式使用单独成行的 `$$` 包围内容，并在公式块前后留空行。不要把公式包在反引号中；代码块内的公式示例不会被渲染。
 - `> **备注：** 内容` 会渲染为带左侧竖线的备注块；多段备注之间保留一行 `>`，块内可以使用加粗、链接、列表和公式。
