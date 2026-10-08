@@ -5,6 +5,7 @@ lang: en
 translation_key: first-blog
 permalink: /blogs/first-blog/
 description: "The first blog post by Wanghan Xu. Full article coming soon."
+cover: /blogs/first-blog/assets/placeholder-diagram.svg
 ---
 
 Welcome to my blog. This is a placeholder for my first post; the full article will be added soon.
@@ -15,7 +16,7 @@ The article text will appear here. The examples below show how figures, equation
 
 ## Figure
 
-![A diagram showing an input x transformed by a model f into an output y.]({{ '/images/blogs/placeholder-diagram.svg' | relative_url }})
+![A diagram showing an input x transformed by a model f into an output y.]({{ '/blogs/first-blog/assets/placeholder-diagram.svg' | relative_url }})
 
 *Figure 1. A placeholder diagram for the first article.*
 

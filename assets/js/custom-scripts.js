@@ -181,6 +181,103 @@ if (window.jQuery) {
   });
 }
 
+// Build article navigation from the headings of the current language version.
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var sidebar = document.querySelector('.blog-toc');
+    var article = document.querySelector('.blog-body');
+    if (!sidebar || !article) return;
+    var headings = article.querySelectorAll('h2, h3, h4, h5, h6');
+    if (!headings.length) return;
+
+    var stack = [{ level: 0, list: sidebar.querySelector('.blog-toc__list') }];
+    headings.forEach(function (heading, index) {
+      if (!heading.id) {
+        var id = 'blog-section-' + (index + 1);
+        while (document.getElementById(id)) id += '-section';
+        heading.id = id;
+      }
+      heading.setAttribute('tabindex', '-1');
+      var level = Number(heading.tagName.slice(1));
+      while (stack.length > 1 && stack[stack.length - 1].level >= level) stack.pop();
+      var parent = stack[stack.length - 1];
+      if (!parent.list) {
+        parent.list = document.createElement('ul');
+        parent.item.appendChild(parent.list);
+      }
+      var item = document.createElement('li');
+      var link = document.createElement('a');
+      link.href = '#' + encodeURIComponent(heading.id);
+      link.target = '_self';
+      link.textContent = heading.textContent.trim();
+      item.appendChild(link);
+      parent.list.appendChild(item);
+      stack.push({ level: level, item: item });
+    });
+
+    var panel = sidebar.querySelector('details');
+    var desktop = window.matchMedia('(min-width: 925px)');
+    function setExpanded() { panel.open = desktop.matches; }
+    setExpanded();
+    desktop.addEventListener('change', setExpanded);
+    sidebar.hidden = false;
+
+    function markLocation() {
+      sidebar.querySelectorAll('a').forEach(function (link) {
+        if (link.hash === window.location.hash) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    }
+    window.addEventListener('hashchange', markLocation);
+    markLocation();
+    // Keep native anchors, including Chinese IDs, browser history and scroll-margin.
+    if (window.jQuery) window.jQuery('.blog-toc a').off('click.smoothscroll');
+  });
+})();
+
+// Share the current language's article URL, without query strings or fragments.
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var button = document.querySelector('.blog-share');
+    var status = document.querySelector('.blog-share-status');
+    if (!button || !status) return;
+
+    function fallbackCopy(url) {
+      var field = document.createElement('textarea');
+      field.value = url;
+      field.setAttribute('readonly', '');
+      field.style.cssText = 'position:fixed;left:-9999px;top:0;font-size:16px;';
+      document.body.appendChild(field);
+      try {
+        field.select();
+        field.setSelectionRange(0, field.value.length);
+        return document.execCommand('copy');
+      } finally {
+        field.remove();
+        button.focus({ preventScroll: true });
+      }
+    }
+
+    button.addEventListener('click', async function () {
+      var url = new URL(button.dataset.shareUrl, window.location.href).href;
+      var copied = false;
+      status.textContent = '';
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(url);
+          copied = true;
+        }
+      } catch (error) {
+        // Fall back when the Clipboard API is unavailable or permission is denied.
+      }
+      if (!copied) {
+        try { copied = fallbackCopy(url); } catch (error) { copied = false; }
+      }
+      status.textContent = copied ? button.dataset.copied : button.dataset.copyFailed;
+    });
+  });
+})();
+
 // ── Scroll-spy — highlight the active section's nav link ─────────────────────
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
@@ -350,7 +447,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function pin() {
     if (window.innerWidth < BREAKPOINT) return;
     var sidebar = document.querySelector('.sidebar');
-    if (!sidebar || sidebar.classList.contains('sidebar--pinned')) return;
+    if (!sidebar || sidebar.hidden || sidebar.classList.contains('sidebar--pinned')) return;
 
     var masthead = document.querySelector('.masthead');
     var top = masthead ? Math.round(masthead.getBoundingClientRect().bottom) : 0;

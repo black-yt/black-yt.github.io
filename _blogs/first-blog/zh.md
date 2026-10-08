@@ -5,6 +5,7 @@ lang: zh
 translation_key: first-blog
 permalink: /blogs/first-blog/zh/
 description: "徐望瀚的第一篇博客，完整正文即将发布。"
+cover: /blogs/first-blog/assets/placeholder-diagram.svg
 ---
 
 欢迎来到我的博客。这是第一篇文章的占位页面，完整正文将在后续补充。
@@ -15,7 +16,7 @@ description: "徐望瀚的第一篇博客，完整正文即将发布。"
 
 ## 配图
 
-![输入 x 经过模型 f 转换为输出 y 的示意图。]({{ '/images/blogs/placeholder-diagram.svg' | relative_url }})
+![输入 x 经过模型 f 转换为输出 y 的示意图。]({{ '/blogs/first-blog/assets/placeholder-diagram.svg' | relative_url }})
 
 *图 1：第一篇文章的占位示意图。*
 

@@ -5,9 +5,15 @@ layout: default
 {% if page.lang == "zh" %}
   {% assign back_label = "返回主页" %}
   {% assign language_label = "切换语言" %}
+  {% assign share_label = "分享链接" %}
+  {% assign copied_label = "链接已复制" %}
+  {% assign copy_failed_label = "复制失败，请复制浏览器地址栏中的链接。" %}
 {% else %}
   {% assign back_label = "Back to homepage" %}
   {% assign language_label = "Article language" %}
+  {% assign share_label = "Share link" %}
+  {% assign copied_label = "Link copied" %}
+  {% assign copy_failed_label = "Could not copy the link. Please copy it from your browser's address bar." %}
 {% endif %}
 
 <div class="blog-post">
@@ -29,5 +35,11 @@ layout: default
     {{ content }}
   </div>
 
-  <p class="blog-footer"><a class="blog-back" href="{{ '/' | relative_url }}#-blogs" target="_self"><i class="fas fa-arrow-left" aria-hidden="true"></i> {{ back_label }}</a></p>
+  <footer class="blog-footer">
+    <div class="blog-footer__actions">
+      <a class="blog-back" href="{{ '/' | relative_url }}#-blogs" target="_self"><i class="fas fa-arrow-left" aria-hidden="true"></i> {{ back_label }}</a>
+      <button class="seg-toggle-btn blog-share" type="button" data-share-url="{{ page.url | relative_url }}" data-copied="{{ copied_label }}" data-copy-failed="{{ copy_failed_label | escape }}"><i class="fas fa-link" aria-hidden="true"></i> {{ share_label }}</button>
+    </div>
+    <p class="blog-share-status" role="status" aria-live="polite"></p>
+  </footer>
 </div>

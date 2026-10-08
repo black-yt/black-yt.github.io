@@ -93,7 +93,7 @@ defaults:
       type: blogs
     values:
       layout: blog
-      author_profile: true
+      author_profile: false
       author: "Wanghan Xu (徐望瀚)"
 
 

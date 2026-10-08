@@ -22,7 +22,8 @@
 - `_pages/includes/pub.md`：论文列表
 - `_pages/includes/news.md`：新闻动态
 - `_pages/includes/honors.md`：荣誉奖项
-- `_pages/includes/blogs.md`：博客标题列表（自动从 `_blogs/` 收集）
+- `_pages/includes/blogs.md`：博客图文列表（自动从 `_blogs/` 收集）
+- `_blogs/<slug>/`：单篇博客的中英文 Markdown 与配图，每篇文章独立一个目录
 - `_pages/includes/talks.md`：报告
 - `_pages/includes/services.md`：学术服务
 - `_pages/includes/others.md`：其他信息
@@ -108,13 +109,14 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 
 ### 4.4 博客维护（2026-10-08 新增）
 
-主页 Blogs 位于 Honors and Awards 与 Invited Talks 之间，沿用现有一级标题和普通列表样式，展示斜体发布日期（`YYYY-MM-DD`）、空格与文章标题。文章页由 `_layouts/blog.html` 渲染，继承主页布局、字体、侧栏、主题切换和动态背景。
+主页 Blogs 位于 Publications 与 Honors and Awards 之间，采用独立的 `.blog-entry` 图文列表：左侧缩略图，右侧仅展示标题和斜体日期（`YYYY-MM-DD`）。按发布日期倒序展示，不使用论文卡片的贡献标签或筛选器。文章页由 `_layouts/blog.html` 渲染，沿用主页字体、主题切换和动态背景，原个人侧栏的位置展示文章目录，正文保持原有网格宽度。
 
-新增文章只需添加两份 Markdown，无需修改主页或导航：
+每篇博客独立一个子文件夹，新增文章无需修改主页或导航：
 
-1. `_blogs/<slug>.en.md`：英文正文，`lang: en`，会自动加入主页标题列表，按日期倒序。
-2. `_blogs/<slug>.zh.md`：预先翻译好的中文正文，`lang: zh`。
-3. 两份文件使用相同且唯一的 `translation_key` 和相同的发布日期，各自设置标题、描述与独立链接。语言切换由 Jekyll 构建时自动配对，不依赖在线翻译服务。
+1. `_blogs/<slug>/en.md`：英文正文，`lang: en`，自动加入主页列表。
+2. `_blogs/<slug>/zh.md`：预先翻译好的中文正文，`lang: zh`。
+3. `_blogs/<slug>/assets/`：该文章的封面和正文图片；Jekyll 自动发布到 `/blogs/<slug>/assets/`，不要与其他博客的图片混放。
+4. 两份 Markdown 使用相同且唯一的 `translation_key` 和相同的发布日期，各自设置标题、描述与独立链接。`cover` 指向该文章目录中的封面发布路径。语言切换由 Jekyll 构建时自动配对，不依赖在线翻译服务。
 
 英文 front matter 示例（中文文件相应改为 `lang: zh`、中文标题/描述与 `/blogs/<slug>/zh/`）：
 
@@ -126,19 +128,23 @@ lang: en
 translation_key: my-article
 permalink: /blogs/my-article/
 description: "A short description of this article."
+cover: /blogs/my-article/assets/cover.png
 ---
 ```
 
 - 作者默认是 `Wanghan Xu (徐望瀚)`，需要时可在 front matter 中通过 `author` 覆盖。
 - 文章主标题通过 `.page__content .blog-header h1` 单独放大到 `1.75em`，高于正文二级标题；主页章节标题保持原有字号。
 - 正文从二级标题 `##` 开始，文章标题、日期、作者由布局生成。支持 Markdown 段落、列表、引用块 `>`、链接、代码、图片和 Kramdown 脚注（`[^ref]` 与 `[^ref]: ...`）。
-- 站内图片使用根路径（例如 `/images/example.png`）。博客页的链接默认在当前页面打开，脚注跳转与返回引用不会新开标签页。
-- 图片推荐写为 `![说明文字]({{ '/images/example.png' | relative_url }})`；正文图片最大宽度为正文行宽的 60%，保持原始比例，点击后的放大弹窗不受此限制。
+- 博客图片引用发布路径（例如 `/blogs/my-article/assets/figure.png`），不引用源码目录 `_blogs`。博客页的链接默认在当前页面打开，脚注跳转与返回引用不会新开标签页。
+- 图片推荐写为 `![说明文字]({{ '/blogs/my-article/assets/figure.png' | relative_url }})`；正文图片最大宽度为正文行宽的 60%，保持原始比例，点击后的放大弹窗不受此限制。
 - 普通 Markdown 图片自动复用主页的 Magnific Popup 点击放大、关闭和多图切换，无需手写链接；SVG 也支持，图库仅包含当前文章配图。显式链接到高清图片时保留该图片地址，链接到普通网页时保留原有跳转。自动图片链接在 `custom-scripts.js` 中同步准备，必须保持该脚本在正文之后、DOM 就绪之前加载，让主题现有的 `.image-popup` 初始化统一处理，再沿用同一配置建立文章图库。
 - 公式使用 Kramdown + MathJax。行内推荐 `$$y = f_{\theta}(x)$$`，独立公式使用单独成行的 `$$` 包围内容，并在公式块前后留空行。不要把公式包在反引号中；代码块内的公式示例不会被渲染。
 - `> **备注：** 内容` 会渲染为带左侧竖线的备注块；多段备注之间保留一行 `>`，块内可以使用加粗、链接、列表和公式。
 - MathJax 固定使用 2.7.9 的 `MathJax.js`，不要改回依赖额外版本查询的 `latest.js`。公式脚本与字体由 cdnjs 加载；博客长公式在自身区域横向滚动，不应撑宽手机页面。验证时需等待实际公式排版和字体加载完成，不能只检查 TeX 原文是否存在。
-- 第一篇占位文章为 `_blogs/first-blog.en.md` 和 `_blogs/first-blog.zh.md`；后续填入正文时同步两种语言。
+- 第一篇占位文章为 `_blogs/first-blog/en.md` 和 `_blogs/first-blog/zh.md`；配图位于同目录的 `assets/`，后续填入正文时同步两种语言。移动源文件时保留原有 `permalink`，避免更改已发布文章的网址。
+- 文章底部的分享按钮复制当前语言版本的文章网址，去掉查询参数和锚点；提供中英文成功/失败提示，Clipboard API 不可用时尝试兼容复制。复制失败不能显示成功提示。
+- 博客的 `author_profile` 默认为 `false`；`default.html` 对博客使用 `_includes/blog-toc.html`，不渲染个人照片与信息。不要修改主页的作者侧栏。
+- 目录自动读取当前语言正文的 `h2`–`h6`，按层级嵌套，保留 Markdown 生成的锚点，点击在当前页跳转。中英文目录随语言切换自动更新；无需手动维护。桌面端沿用侧栏固定位置，长目录可独立滚动，手机端移到正文上方并默认折叠。没有章节标题时隐藏目录，正文仍限制为原有宽度。
 - CSS、脚本与头像使用 `relative_url`，博客导航指向主页对应锚点，避免嵌套链接下资源失效。不要改回相对当前目录的资源路径。
 
 ## 5. 已确认的样式与前端经验

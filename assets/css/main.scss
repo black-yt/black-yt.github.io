@@ -650,6 +650,130 @@ body, #main {
     border-bottom: none;
 }
 
+/* Blog previews use simple rows, independent of publication cards and filters. */
+.blog-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 35%) minmax(0, 1fr);
+    align-items: center;
+    gap: 1em;
+    padding: 1.25em 0;
+
+    & + & {
+        border-top: 1px solid var(--h1-border);
+    }
+
+    @include breakpoint($medium) {
+        gap: 2em;
+    }
+}
+
+.page__content .blog-entry:hover {
+    text-decoration: none;
+
+    .blog-entry__title {
+        text-decoration: underline;
+    }
+}
+
+.blog-entry__image, .blog-entry__placeholder {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    border-radius: 4px;
+    background: var(--paper-hover);
+}
+
+.blog-entry__placeholder {
+    display: grid;
+    place-items: center;
+    color: var(--seg-inactive);
+    font-size: 2em;
+}
+
+.blog-entry__text {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.blog-entry__title {
+    display: block;
+    font-size: 1.2em;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.blog-entry__date {
+    display: block;
+    margin-top: 0.35em;
+    color: var(--c-text);
+    opacity: 0.75;
+    font-style: italic;
+}
+
+/* Article navigation occupies the profile column without changing text width. */
+@media (min-width: 925px) {
+    .page.blog-page {
+        max-width: 100% - span(2 of 12);
+    }
+}
+
+.sidebar.blog-toc {
+    overflow-wrap: anywhere;
+
+    &[hidden] {
+        display: none;
+    }
+
+    @media (min-width: 925px) {
+        width: span(2 of 12);
+        max-height: calc(100vh - 6rem);
+        overflow-y: auto !important;
+    }
+
+    @media (max-width: 924px) {
+        padding: 0.75em 0;
+        border-bottom: 1px solid var(--h1-border);
+    }
+}
+
+.blog-toc__title {
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.blog-toc ul {
+    margin: 0.65em 0 0;
+    padding: 0;
+    list-style: none;
+
+    ul {
+        margin: 0 0 0 0.85em;
+        padding-left: 0.65em;
+        border-left: 1px solid var(--h1-border);
+    }
+}
+
+.blog-toc li {
+    margin: 0;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.blog-toc a {
+    display: block;
+    padding: 0.4em 0;
+    line-height: 1.45;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover, &[aria-current="location"] {
+        color: var(--c-hover-text);
+        text-decoration: underline;
+    }
+}
+
 /* Blog articles inherit the homepage typography and animated background. */
 .blog-toolbar {
     display: flex;
@@ -716,6 +840,23 @@ body, #main {
 
 .page__content .blog-footer {
     margin-top: 2em;
+    padding-bottom: 4rem;
+}
+
+.blog-footer__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75em;
+}
+
+.page__content .blog-share-status {
+    margin: 0;
+
+    &:not(:empty) {
+        margin-top: 0.75em;
+    }
 }
 
 /* 7. Page entry animation: subtle fade-up for main content */
