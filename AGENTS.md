@@ -130,6 +130,7 @@ description: "A short description of this article."
 ```
 
 - 作者默认是 `Wanghan Xu (徐望瀚)`，需要时可在 front matter 中通过 `author` 覆盖。
+- 文章主标题通过 `.page__content .blog-header h1` 单独放大到 `1.75em`，高于正文二级标题；主页章节标题保持原有字号。
 - 正文从二级标题 `##` 开始，文章标题、日期、作者由布局生成。支持 Markdown 段落、列表、引用块 `>`、链接、代码、图片和 Kramdown 脚注（`[^ref]` 与 `[^ref]: ...`）。
 - 站内图片使用根路径（例如 `/images/example.png`）。博客页的链接默认在当前页面打开，脚注跳转与返回引用不会新开标签页。
 - 图片推荐写为 `![说明文字]({{ '/images/example.png' | relative_url }})`；正文图片最大宽度为正文行宽的 60%，保持原始比例，点击后的放大弹窗不受此限制。
