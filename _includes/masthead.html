@@ -4,7 +4,12 @@
       <nav id="site-nav" class="site-nav">
         <ul class="site-nav__links">
           {% for link in site.data.navigation.main %}
-            <li><a href="{{ link.url }}" class="site-nav__link" target="_self">{{ link.title }}</a></li>
+            {% assign nav_url = link.url %}
+            {% assign first_character = link.url | slice: 0 %}
+            {% if page.url != '/' and first_character == '#' %}
+              {% assign nav_url = '/' | relative_url | append: link.url %}
+            {% endif %}
+            <li><a href="{{ nav_url }}" class="site-nav__link{% if page.collection == 'blogs' and link.title == 'Blogs' %} nav-active{% endif %}" target="_self"{% if page.collection == 'blogs' and link.title == 'Blogs' %} aria-current="location"{% endif %}>{{ link.title }}</a></li>
           {% endfor %}
         </ul>
       </nav>

@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{% assign translations = site.blogs | where: "translation_key", page.translation_key | sort: "lang" %}
+{% if page.lang == "zh" %}
+  {% assign back_label = "返回主页" %}
+  {% assign language_label = "切换语言" %}
+{% else %}
+  {% assign back_label = "Back to homepage" %}
+  {% assign language_label = "Article language" %}
+{% endif %}
+
+<div class="blog-post">
+  <div class="blog-toolbar">
+    <a class="blog-back" href="{{ '/' | relative_url }}#-blogs" target="_self"><i class="fas fa-arrow-left" aria-hidden="true"></i> {{ back_label }}</a>
+    <nav class="seg-control blog-language" aria-label="{{ language_label }}">
+      {% for translation in translations %}
+        <a class="seg-btn{% if translation.url == page.url %} active{% endif %}" href="{{ translation.url | relative_url }}" hreflang="{{ translation.lang }}" lang="{{ translation.lang }}" target="_self"{% if translation.url == page.url %} aria-current="page"{% endif %}>{% if translation.lang == "zh" %}中文{% else %}English{% endif %}</a>
+      {% endfor %}
+    </nav>
+  </div>
+
+  <header class="blog-header">
+    <h1>{{ page.title | escape }}</h1>
+    <p class="blog-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time><span aria-hidden="true"> · </span><span itemprop="author">{{ page.author | escape }}</span></p>
+  </header>
+
+  <div class="blog-body">
+    {{ content }}
+  </div>
+
+  <p class="blog-footer"><a class="blog-back" href="{{ '/' | relative_url }}#-blogs" target="_self"><i class="fas fa-arrow-left" aria-hidden="true"></i> {{ back_label }}</a></p>
+</div>

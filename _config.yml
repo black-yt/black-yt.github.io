@@ -73,6 +73,12 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
+# Blog collection
+collections:
+  blogs:
+    output: true
+    permalink: /blogs/:path/
+
 # Defaults
 defaults:
   - scope:
@@ -81,6 +87,13 @@ defaults:
     values:
       layout: default
       author_profile: true
+  - scope:
+      path: ""
+      type: blogs
+    values:
+      layout: blog
+      author_profile: true
+      author: "Wanghan Xu (徐望瀚)"
 
 
 # Sass/SCSS

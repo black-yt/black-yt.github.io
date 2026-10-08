@@ -22,6 +22,7 @@
 - `_pages/includes/pub.md`：论文列表
 - `_pages/includes/news.md`：新闻动态
 - `_pages/includes/honors.md`：荣誉奖项
+- `_pages/includes/blogs.md`：博客标题列表（自动从 `_blogs/` 收集）
 - `_pages/includes/talks.md`：报告
 - `_pages/includes/services.md`：学术服务
 - `_pages/includes/others.md`：其他信息
@@ -104,6 +105,35 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 - 不要轻易把位移动画加在外层 `<a>` 上
 - 交互高亮优先改 `.app-card__inner`
 - 可以减少边缘抖动和点击区域漂移
+
+### 4.4 博客维护（2026-10-08 新增）
+
+主页 Blogs 位于 Honors and Awards 与 Invited Talks 之间，沿用现有一级标题和普通列表样式，仅展示文章标题。文章页由 `_layouts/blog.html` 渲染，继承主页布局、字体、侧栏、主题切换和动态背景。
+
+新增文章只需添加两份 Markdown，无需修改主页或导航：
+
+1. `_blogs/<slug>.en.md`：英文正文，`lang: en`，会自动加入主页标题列表，按日期倒序。
+2. `_blogs/<slug>.zh.md`：预先翻译好的中文正文，`lang: zh`。
+3. 两份文件使用相同且唯一的 `translation_key` 和相同的发布日期，各自设置标题、描述与独立链接。语言切换由 Jekyll 构建时自动配对，不依赖在线翻译服务。
+
+英文 front matter 示例（中文文件相应改为 `lang: zh`、中文标题/描述与 `/blogs/<slug>/zh/`）：
+
+```yaml
+---
+title: "Article title"
+date: 2026-10-08
+lang: en
+translation_key: my-article
+permalink: /blogs/my-article/
+description: "A short description of this article."
+---
+```
+
+- 作者默认是 `Wanghan Xu (徐望瀚)`，需要时可在 front matter 中通过 `author` 覆盖。
+- 正文从二级标题 `##` 开始，文章标题、日期、作者由布局生成。支持 Markdown 段落、列表、引用块 `>`、链接、代码、图片和 Kramdown 脚注（`[^ref]` 与 `[^ref]: ...`）。
+- 站内图片使用根路径（例如 `/images/example.png`）。博客页的链接默认在当前页面打开，脚注跳转与返回引用不会新开标签页。
+- 第一篇占位文章为 `_blogs/first-blog.en.md` 和 `_blogs/first-blog.zh.md`；后续填入正文时同步两种语言。
+- CSS、脚本与头像使用 `relative_url`，博客导航指向主页对应锚点，避免嵌套链接下资源失效。不要改回相对当前目录的资源路径。
 
 ## 5. 已确认的样式与前端经验
 

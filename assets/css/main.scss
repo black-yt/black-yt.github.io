@@ -650,6 +650,42 @@ body, #main {
     border-bottom: none;
 }
 
+/* Blog articles inherit the homepage typography and animated background. */
+.blog-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75em;
+    margin-top: 1em;
+}
+
+.blog-language {
+    .seg-btn {
+        text-decoration: none;
+    }
+    .seg-btn.active {
+        background: linear-gradient(135deg, var(--seg-start), var(--seg-end));
+        box-shadow: 0 4px 14px var(--seg-shadow);
+    }
+}
+
+.blog-meta {
+    opacity: 0.75;
+}
+
+.blog-body {
+    overflow-wrap: anywhere;
+
+    h2, h3, h4, [id] {
+        scroll-margin-top: 5rem;
+    }
+}
+
+.page__content .blog-footer {
+    margin-top: 2em;
+}
+
 /* 7. Page entry animation: subtle fade-up for main content */
 .page__content {
     animation: fadeUpIn 0.2s ease both;

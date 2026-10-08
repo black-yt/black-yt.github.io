@@ -136,6 +136,13 @@
   });
 })();
 
+// Native article anchors respect scroll-margin and preserve reference hashes.
+if (window.jQuery) {
+  window.jQuery(function () {
+    window.jQuery('.blog-body a[href*="#"]').off('click.smoothscroll');
+  });
+}
+
 // ── Scroll-spy — highlight the active section's nav link ─────────────────────
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
@@ -145,6 +152,8 @@
     // Build list of { el, link } pairs for anchors that exist on the page
     var anchors = [];
     links.forEach(function (link) {
+      // Article navigation points back to the homepage, not local headings.
+      if (link.origin !== window.location.origin || link.pathname !== window.location.pathname) return;
       var hash = (link.getAttribute('href') || '').split('#')[1];
       if (!hash) return;
       var el = document.getElementById(hash);
