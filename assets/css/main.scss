@@ -677,6 +677,28 @@ body, #main {
 .blog-body {
     overflow-wrap: anywhere;
 
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    blockquote {
+        font-style: normal;
+        border-left-color: var(--c-border);
+    }
+
+    .MJXc-display {
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0.25em 0;
+    }
+
+    // Nested formula spans must follow theme colors without chained transitions.
+    .mjx-chtml, .mjx-chtml * {
+        transition: none;
+    }
+
     h2, h3, h4, [id] {
         scroll-margin-top: 5rem;
     }
