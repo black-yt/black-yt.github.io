@@ -102,7 +102,7 @@ defaults:
       layout: blog
       author_profile: false
       author: "Wanghan Xu (徐望瀚)"
-      citation_author: "Xu, Wanghan"
+      citation_author: "Wanghan Xu"
 
 
 # Sass/SCSS

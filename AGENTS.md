@@ -109,7 +109,7 @@ App 卡片维护在 `_pages/includes/intro.md` 的 `My Apps` 区域。
 
 ### 4.4 博客维护（2026-10-08 新增）
 
-主页 Blogs 位于 Publications 与 Honors and Awards 之间，采用独立的 `.blog-entry` 图文列表：左侧缩略图，右侧仅展示标题和斜体日期（`YYYY-MM-DD`）。按发布日期倒序展示，不使用论文卡片的贡献标签或筛选器。文章页由 `_layouts/blog.html` 渲染，沿用主页字体、主题切换和动态背景，原个人侧栏的位置展示文章目录，正文保持原有网格宽度。
+主页 Blogs 位于 Publications 与 Honors and Awards 之间，采用独立的 `.blog-entry` 图文列表：左侧缩略图，右侧仅展示标题和斜体日期（`YYYY-MM-DD`）。按发布日期倒序展示，不使用论文卡片的贡献标签或筛选器。卡片外层使用普通 `div`：封面单独使用 `.image-popup` 链接复用论文区的图片放大，标题链接进入文章，日期和空白区域不可点击；标题链接保持行内显示，避免整个右侧区域可点击。悬停和键盘聚焦时沿用论文卡片的背景、阴影和轻微上移动效。文章页由 `_layouts/blog.html` 渲染，沿用主页字体、主题切换和动态背景，原个人侧栏的位置展示文章目录，正文保持原有网格宽度。
 
 每篇博客独立一个子文件夹，新增文章无需修改主页或导航：
 
@@ -143,7 +143,8 @@ cover: /blogs/my-article/assets/cover.png
 - MathJax 固定使用 2.7.9 的 `MathJax.js`，不要改回依赖额外版本查询的 `latest.js`。公式脚本与字体由 cdnjs 加载；博客长公式在自身区域横向滚动，不应撑宽手机页面。验证时需等待实际公式排版和字体加载完成，不能只检查 TeX 原文是否存在。
 - 第一篇占位文章为 `_blogs/first-blog/en.md` 和 `_blogs/first-blog/zh.md`；配图位于同目录的 `assets/`，后续填入正文时同步两种语言。移动源文件时保留原有 `permalink`，避免更改已发布文章的网址。
 - 文章正文后依次展示两个按钮（复制链接、复制引用）、BibTeX 引用框、Giscus 评论区，顶部与最底部均保留返回主页链接。复制链接使用当前语言版本的网址并去掉查询参数和锚点；复制引用与引用框的文本完全一致。两种复制均提供中英文成功/失败提示，Clipboard API 不可用时尝试兼容复制，失败不能显示成功提示。
-- `_includes/blog-citation.html` 根据当前 Markdown 的标题、作者、日期和正式网址生成 `@misc` 引用；`_includes/bibtex-text.html` 处理 TeX 特殊字符，标题额外加一层大括号保留大小写。默认 `citation_author: "Xu, Wanghan"`，可以在文章 front matter 中覆盖（多作者使用 BibTeX 的 `and` 分隔），也可以指定 `citation_key`。`_config.yml` 的 `url` 必须保持正式域名，避免引用生成本地预览地址。
+- `_includes/blog-citation.html` 根据相同 `translation_key` 的英文 Markdown 生成统一的 `@misc` 引用。中英文页面的 Citation 标题、BibTeX 内容与引用键保持一致，使用英文文章标题和英文版正式网址，引用键不附加语言后缀。默认 `citation_author: "Wanghan Xu"`，可在英文文章 front matter 中覆盖（多作者使用 BibTeX 的 `and` 分隔），也可指定 `citation_key`。`_includes/bibtex-text.html` 处理 TeX 特殊字符；`title` 字段只使用一层大括号。引用框使用正常字重，避免继承正文粗体。`_config.yml` 的 `url` 必须保持正式域名，避免引用生成本地预览地址。
+- 参考文献在正文末尾使用 Markdown 无序列表，每条写为 `- [文献标题](https://...)`，条目之间留一空行，沿用主页奖项列表的圆点与间距。占位文献应明确标注，正式发布时替换为真实来源。正文与底部复制按钮之间保留 `4em` 空隙，明确正文结束。
 - 评论使用参考站点同款 Giscus，关联本仓库 GitHub Discussions 的 Announcements 分类，仓库与分类 ID 配置在 `_config.yml` 的 `blog_comments`。GitHub 仓库须开启 Discussions 并安装 Giscus App。中英文文章以 `blog:<translation_key>` 严格匹配同一个讨论，因此发布后不要修改 `translation_key`；Giscus 控件语言随文章语言变化，明暗主题随站点切换。评论区下方保留 GitHub Discussions 链接，服务加载失败时显示简洁的中英文提示；仅接受来自 Giscus iframe 的错误消息。首次尚无讨论是正常状态，不能视为加载失败。测试时不要自动发表测试评论。
 - 博客的 `author_profile` 默认为 `false`；`default.html` 对博客使用 `_includes/blog-toc.html`，不渲染个人照片与信息。不要修改主页的作者侧栏。
 - 目录自动读取当前语言正文的 `h2`–`h6`，按层级嵌套，保留 Markdown 生成的锚点，点击在当前页跳转。中英文目录随语言切换自动更新；无需手动维护。桌面端沿用侧栏固定位置，长目录可独立滚动，手机端移到正文上方并默认折叠。没有章节标题时隐藏目录，正文仍限制为原有宽度。

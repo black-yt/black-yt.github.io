@@ -38,4 +38,8 @@ $$
 
 ## References
 
-References and citations will be added with the full article.
+Example references for this placeholder post; the final sources will be added with the full article.
+
+- [John Gruber — Markdown Syntax](https://daringfireball.net/projects/markdown/syntax)
+
+- [kramdown — Syntax](https://kramdown.gettalong.org/syntax.html)

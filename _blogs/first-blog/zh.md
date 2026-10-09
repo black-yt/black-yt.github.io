@@ -38,4 +38,8 @@ $$
 
 ## 参考文献
 
-参考文献与引用将随正文一同补充。
+以下为占位参考文献示例，正式参考文献将随正文更新。
+
+- [John Gruber — Markdown 语法](https://daringfireball.net/projects/markdown/syntax)
+
+- [kramdown — 语法说明](https://kramdown.gettalong.org/syntax.html)
