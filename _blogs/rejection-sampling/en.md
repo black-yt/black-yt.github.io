@@ -67,7 +67,7 @@ As an example of verifiability, suppose we ask a model to make 100 attempts to e
 As an example of discriminatory power, suppose we ask a model to solve an arithmetic exercise it has already mastered 100 times and then select the better attempts for learning.
 If most results are correct and scoring considers only whether the final answer is correct, there will be little discriminatory power, and the rejected and retained attempts may be much alike.
 
-Anyone who has worked on benchmarks can probably relate: finding answers or verifiers that are both verifiable and discriminative is very difficult.
+Anyone who has worked on benchmarks (such as ResearchClawBench [[4]](#ref-researchclawbench)) can probably relate: finding answers or verifiers that are both verifiable and discriminative is very difficult.
 Often, either all evaluated models can complete the task, leaving no distinction between them, or the models really cannot solve it, only for us to discover that the task itself is unsolvable.
 
 Thus, during rejection sampling, although the verifier does not directly provide a complete solution, it supplies additional information through evaluation, and constructing it also requires substantial knowledge that is difficult to obtain.
@@ -143,7 +143,7 @@ This indicates that, in this experiment, the retained tasks better distinguish t
 
 ## Training Validation
 
-On MLE-bench Lite [[4]](#ref-mle-bench), I compared the following three settings:
+On MLE-bench Lite [[5]](#ref-mle-bench), I compared the following three settings:
 
 1. The original Qwen 3.8 27B model.
 2. Using Qwen 3.8 27B to perform 3 rollouts for each of 2,000 training tasks, retaining the best trajectory for each task and then training on the resulting 2,000 samples, which means selecting samples solely for good model performance.
@@ -184,4 +184,6 @@ If we reject the bad and overly simple material and instead learn from content t
 
 - <span id="ref-rest"></span>[3] [Reinforced Self-Training (ReST) for Language Modeling](https://arxiv.org/abs/2308.08998)
 
-- <span id="ref-mle-bench"></span>[4] [MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering](https://arxiv.org/abs/2410.07095)
+- <span id="ref-researchclawbench"></span>[4] [ResearchClawBench: A Benchmark for End-to-End Autonomous Scientific Research](https://arxiv.org/abs/2606.07591)
+
+- <span id="ref-mle-bench"></span>[5] [MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering](https://arxiv.org/abs/2410.07095)

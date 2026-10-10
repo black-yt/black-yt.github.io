@@ -67,7 +67,7 @@ cover: /blogs/rejection-sampling/assets/rejection-sampling-quadrants.svg
 关于区分度，举个例子：让一个模型对一道已经掌握的四则运算题计算 100 次，再从中挑选较好的进行学习。
 如果大多数结果都正确，且只按最终答案是否正确打分，就没有多少区分度，被拒绝的和留下的也可能差不多。
 
-做过 benchmark 的同学应该会感同身受：找到既可验证、又有区分度的答案或 verifier，非常困难。
+做过 benchmark（例如 ResearchClawBench [[4]](#ref-researchclawbench)）的同学应该会感同身受：找到既可验证、又有区分度的答案或 verifier，非常困难。
 很多时候，要么所有被评测的模型都能完成任务，模型之间没有区分度；要么模型确实做不对，但最后发现是任务本身不可解。
 
 所以，在拒绝采样过程中，verifier 虽然没有直接提供完整解法，却通过评价带来了额外信息，而构建它本身也需要很强、很难获得的知识。
@@ -143,7 +143,7 @@ cover: /blogs/rejection-sampling/assets/rejection-sampling-quadrants.svg
 
 ## 训练验证
 
-在 MLE-bench Lite [[4]](#ref-mle-bench) 上，我比较了以下三种设置：
+在 MLE-bench Lite [[5]](#ref-mle-bench) 上，我比较了以下三种设置：
 
 1. 原始 Qwen 3.8 27B 模型。
 2. 使用 Qwen 3.8 27B 对 2,000 个训练任务各 rollout 3 次，每个任务保留最好的一条轨迹，得到 2,000 条训练样本后进行训练，也就是只筛选模型表现好的样本。
@@ -184,4 +184,6 @@ cover: /blogs/rejection-sampling/assets/rejection-sampling-quadrants.svg
 
 - <span id="ref-rest"></span>[3] [Reinforced Self-Training (ReST) for Language Modeling](https://arxiv.org/abs/2308.08998)
 
-- <span id="ref-mle-bench"></span>[4] [MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering](https://arxiv.org/abs/2410.07095)
+- <span id="ref-researchclawbench"></span>[4] [ResearchClawBench: A Benchmark for End-to-End Autonomous Scientific Research](https://arxiv.org/abs/2606.07591)
+
+- <span id="ref-mle-bench"></span>[5] [MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering](https://arxiv.org/abs/2410.07095)
