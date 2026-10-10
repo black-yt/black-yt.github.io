@@ -141,7 +141,8 @@ cover: /blogs/my-article/assets/cover.png
 - 公式使用 Kramdown + MathJax。行内推荐 `$$y = f_{\theta}(x)$$`，独立公式使用单独成行的 `$$` 包围内容，并在公式块前后留空行。不要把公式包在反引号中；代码块内的公式示例不会被渲染。
 - `> **备注：** 内容` 会渲染为带左侧竖线的备注块；多段备注之间保留一行 `>`，块内可以使用加粗、链接、列表和公式。
 - MathJax 固定使用 2.7.9 的 `MathJax.js`，不要改回依赖额外版本查询的 `latest.js`。公式脚本与字体由 cdnjs 加载；博客长公式在自身区域横向滚动，不应撑宽手机页面。验证时需等待实际公式排版和字体加载完成，不能只检查 TeX 原文是否存在。
-- 第一篇占位文章为 `_blogs/first-blog/en.md` 和 `_blogs/first-blog/zh.md`；配图位于同目录的 `assets/`，后续填入正文时同步两种语言。移动源文件时保留原有 `permalink`，避免更改已发布文章的网址。
+- 第一篇文章为《大模型实训经验：拒绝采样》（2026-10-10），中英文正文分别为 `_blogs/first-blog/zh.md` 和 `_blogs/first-blog/en.md`，按句对应维护；技术语境使用“任务”或“task”。配图位于同目录的 `assets/`：`rejection-sampling-quadrants.svg` 为四象限示意图兼封面，`std.png` 为作者提供的实验图。保留原有 `permalink` 和 `translation_key: first-blog`，避免改变网址与评论讨论。
+- 第一篇实验图横轴是得分标准差；阈值为 1 分时保留 251 个任务，其中 80.2% 的模型分差至少为 3 分。Human rank 经作者确认是归一化且越大越好的指标，三组原始值为 0.668、0.693、0.723。后续修改须同步中英文，并区分图表一致性核对与基于原始实验数据的复算。
 - 文章正文后依次展示两个按钮（复制链接、复制引用）、BibTeX 引用框、Giscus 评论区，顶部与最底部均保留返回主页链接。复制链接使用当前语言版本的网址并去掉查询参数和锚点；复制引用与引用框的文本完全一致。两种复制均提供中英文成功/失败提示，Clipboard API 不可用时尝试兼容复制，失败不能显示成功提示。
 - `_includes/blog-citation.html` 根据相同 `translation_key` 的英文 Markdown 生成统一的 `@misc` 引用。中英文页面的 Citation 标题、BibTeX 内容与引用键保持一致，使用英文文章标题和英文版正式网址，引用键不附加语言后缀。默认 `citation_author: "Wanghan Xu"`，可在英文文章 front matter 中覆盖（多作者使用 BibTeX 的 `and` 分隔），也可指定 `citation_key`。`_includes/bibtex-text.html` 处理 TeX 特殊字符；`title` 字段只使用一层大括号。引用框使用正常字重，避免继承正文粗体。`_config.yml` 的 `url` 必须保持正式域名，避免引用生成本地预览地址。
 - 参考文献在正文末尾使用 Markdown 无序列表，每条写为 `- [文献标题](https://...)`，条目之间留一空行，沿用主页奖项列表的圆点与间距。占位文献应明确标注，正式发布时替换为真实来源。正文与底部复制按钮之间保留 `4em` 空隙，明确正文结束。
