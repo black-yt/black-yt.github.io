@@ -3,9 +3,9 @@ title: "大模型实训经验：拒绝采样"
 date: 2026-10-10
 lang: zh
 translation_key: first-blog
-permalink: /blogs/first-blog/zh/
+permalink: /blogs/rejection-sampling/zh/
 description: "从实际训练经验出发，讨论拒绝采样、验证器，以及基于模型表现和任务得分波动的数据筛选。"
-cover: /blogs/first-blog/assets/rejection-sampling-quadrants.svg
+cover: /blogs/rejection-sampling/assets/rejection-sampling-quadrants.svg
 ---
 
 > 本文适合大模型训练初学者。
@@ -18,14 +18,12 @@ cover: /blogs/first-blog/assets/rejection-sampling-quadrants.svg
 在这些训练方法背后，有一个值得关注的思想——“拒绝采样”：生成候选，再筛选出适合学习的样本。
 今天，我想从自己有限的大模型实训经验出发，聊一聊拒绝采样为什么重要，以及怎样拒绝可能更有帮助。
 
-### 什么是拒绝采样
-
 如果直接搜索“拒绝采样”，你会看到很多从统计学角度解释它的文章；这里讨论的是大模型训练中生成候选并筛选数据的做法，并不等同于统计学中严格定义的拒绝采样算法。
 用一个生活中的例子来说，小明第一次打篮球，完全不知道怎样才能把球投进篮筐，于是按照自己的想法投了 10 次：其中 6 次很糟糕，三不沾；3 次还可以，碰到了篮板；还有 1 次运气很好，球进了。
 于是，他开始强化那几次较好投篮的手感。
 在这个例子中，可供学习的样本有 10 条，但他选择了其中较好的 4 次；换一种说法，他采样了 10 次，保留了 4 次，拒绝了 6 次。
 
-在大模型中，拒绝采样广泛用于准备 SFT 数据。
+在大模型中，拒绝采样广泛用于准备 SFT 数据 [[1]](#ref-swe-smith)。
 例如，可以让模型针对每个任务 rollout 多次，保留每次的轨迹，随后通过参考答案或基于规则的验证器（verifier）打分，拒绝低分轨迹，保留高分轨迹用于 SFT。
 
 初学者可能会有一个疑惑：如果一个任务本身有答案，为什么不让模型直接学习答案呢？
@@ -39,13 +37,13 @@ cover: /blogs/first-blog/assets/rejection-sampling-quadrants.svg
 
 因此，一种有用的办法是让模型自己做一遍；如果一遍做不对，就做多遍，可能有一次是对的，然后学习这次成功轨迹中呈现的完整推理过程。
 
-看到这里，你可能会想到：这不是和 GRPO 这类强化学习算法很像吗——让模型先自己做多次，再比较哪些轨迹更好，并加强相应行为？
+看到这里，你可能会想到：这不是和 GRPO [[2]](#ref-grpo) 这类强化学习算法很像吗——让模型先自己做多次，再比较哪些轨迹更好，并加强相应行为？
 事实上，拒绝采样后进行 SFT，与 on-policy RL 都可以利用模型自身生成的轨迹和验证器的评价信号。
 自身生成的轨迹往往更贴近当前模型的行为分布，而筛选或奖励信号则帮助模型提高好行为的概率。
 但两者的训练目标不同：拒绝采样加 SFT 通常只模仿保留的轨迹，而 GRPO 等 RL 方法还会利用相对奖励调整策略，并不只是丢弃低分轨迹。
 
 拒绝采样加 SFT 与 on-policy RL 的另一个差别在于采样与模型更新的频率。
-前者一般先准备一批数据，少则几百条，多则上万条，再用于训练；训练过程中，数据仍由旧策略模型产生，随着模型更新，这批数据与当前策略之间可能逐渐产生偏移。
+前者一般先准备一批数据，少则几百条，多则上万条，再用于训练；训练过程中，数据仍由旧策略模型产生，随着模型更新，这批数据与当前策略之间可能逐渐产生偏移 [[3]](#ref-rest)。
 后者通常更频繁地交替采样与更新，使训练数据更贴近当前策略，但也可能在多次更新中复用近期采样的数据。
 举个例子，如果我有 100 套试卷，可以选择一次性做完所有试卷，再结合答案查漏补缺。
 也可以做一套、改一套，分析学习后，再开始下一套。
@@ -96,9 +94,11 @@ cover: /blogs/first-blog/assets/rejection-sampling-quadrants.svg
 - **第三象限：任务难度低，模型表现差。** 就像考试中做错了简单的选择题。
 - **第四象限：任务难度高，模型表现差。** 就像考试中没做出最后的压轴题。
 
-![任务难度与模型表现的四象限图：第一象限优先学习，第二象限降低学习优先级，第三象限降权或拒绝，第四象限检查经过验证的局部推理。]({{ '/blogs/first-blog/assets/rejection-sampling-quadrants.svg' | relative_url }})
+![任务难度与模型表现的四象限图：第一象限优先学习，第二象限降低学习优先级，第三象限降权或拒绝，第四象限检查经过验证的局部推理。]({{ '/blogs/rejection-sampling/assets/rejection-sampling-quadrants.svg' | relative_url }})
+{: .blog-figure-image}
 
 *图 1：任务难度与模型表现的定性划分，中心表示一般难度和一般表现。*
+{: .blog-caption}
 
 总体来说，我们希望保留第一象限的样本用于训练，因为这些任务难，模型表现又好，很值得学习和强化。
 同时，我们希望尽量减少第三象限的样本，也就是任务简单，但模型没有发挥好，仍然做错。
@@ -126,9 +126,11 @@ cover: /blogs/first-blog/assets/rejection-sampling-quadrants.svg
 纵坐标表示筛选后的任务中，Opus 4.8 的得分比 GLM-5.2 的 4 次平均分至少高出指定分差的任务比例，不同曲线对应不同的分差门槛。
 例如，“gap ≥ 2%”这条线表示 Opus 4.8 至少高出 2 分的任务占比；这里的得分已归一化到 0–100，图中的“%”按这个量表理解。
 
-![按 GLM-5.2 的任务得分标准差筛选后，不同模型分差门槛下的任务占比；标准差阈值为 1 分时，保留 251 个任务，其中 80.2% 的任务分差至少为 3 分。]({{ '/blogs/first-blog/assets/std.png' | relative_url }})
+![按 GLM-5.2 的任务得分标准差筛选后，不同模型分差门槛下的任务占比；标准差阈值为 1 分时，保留 251 个任务，其中 80.2% 的任务分差至少为 3 分。]({{ '/blogs/rejection-sampling/assets/std.png' | relative_url }})
+{: .blog-figure-image}
 
 *图 2：标准差阈值、保留任务数量与模型分差的关系；阴影表示相应曲线的 90% 置信区间。*
+{: .blog-caption}
 
 可以看到，各条曲线总体呈上升趋势，但并非严格单调。
 换言之，在得分标准差较高的任务中，Opus 4.8 比 GLM-5.2 至少高出指定分差的比例通常更高。
@@ -141,7 +143,7 @@ cover: /blogs/first-blog/assets/rejection-sampling-quadrants.svg
 
 ## 训练验证
 
-在 MLE-bench Lite 上，我比较了以下三种设置：
+在 MLE-bench Lite [[4]](#ref-mle-bench) 上，我比较了以下三种设置：
 
 1. 原始 Qwen 3.8 27B 模型。
 2. 使用 Qwen 3.8 27B 对 2,000 个训练任务各 rollout 3 次，每个任务保留最好的一条轨迹，得到 2,000 条训练样本后进行训练，也就是只筛选模型表现好的样本。
@@ -153,13 +155,18 @@ cover: /blogs/first-blog/assets/rejection-sampling-quadrants.svg
 虽然在 AI 领域，少量高质量数据的训练效果优于大量质量参差不齐的数据，并不是什么新鲜事，但当我自己在实验中观察到时，还是很惊讶。
 而且数据量的差距很大：仅用 30% 就实现了反超。
 
-下表中的 Human rank 为归一化指标，数值越大越好。
+*表 1：Qwen 3.8 27B 在 MLE-bench Lite 上的结果；Human rank 为归一化指标，数值越大越好。*
+{: .blog-table-caption #training-results-caption}
 
-| 设置 | Human rank（归一化，↑） |
+<div class="blog-table-scroll" role="region" aria-labelledby="training-results-caption" tabindex="0" markdown="1">
+
+| 训练设置 | Human rank ↑ |
 | --- | ---: |
-| 1：原始模型 | 0.668 |
-| 2：2,000 条样本 | 0.693 |
-| 3：600 条样本 | 0.723 |
+| 1：原始 Qwen 3.8 27B（本次 SFT 前） | 0.668 |
+| 2：SFT：每个任务保留最佳轨迹（2,000 条样本） | 0.693 |
+| 3：SFT：得分标准差最高的 600 个任务各自的最佳轨迹 | 0.723 |
+
+</div>
 
 ## 人生哲理
 
@@ -170,8 +177,10 @@ cover: /blogs/first-blog/assets/rejection-sampling-quadrants.svg
 
 ## 参考文献
 
-- [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https://arxiv.org/abs/2402.03300)
+- <span id="ref-swe-smith"></span>[1] [SWE-smith: Scaling Data for Software Engineering Agents](https://arxiv.org/abs/2504.21798)
 
-- [Reinforced Self-Training (ReST) for Language Modeling](https://arxiv.org/abs/2308.08998)
+- <span id="ref-grpo"></span>[2] [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https://arxiv.org/abs/2402.03300)
 
-- [MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering](https://arxiv.org/abs/2410.07095)
+- <span id="ref-rest"></span>[3] [Reinforced Self-Training (ReST) for Language Modeling](https://arxiv.org/abs/2308.08998)
+
+- <span id="ref-mle-bench"></span>[4] [MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering](https://arxiv.org/abs/2410.07095)

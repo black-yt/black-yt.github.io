@@ -827,6 +827,34 @@ body, #main {
         cursor: zoom-in;
     }
 
+    // Keep image-to-caption spacing; add breathing room outside the pair.
+    .blog-figure-image {
+        margin-top: 2em;
+    }
+
+    .blog-caption {
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    .blog-table-caption {
+        text-align: center;
+        margin-top: 2em;
+    }
+
+    .blog-table-scroll {
+        max-width: 100%;
+        overflow-x: auto;
+        margin-bottom: 2em;
+
+        table {
+            width: auto;
+            margin: 0 auto;
+            white-space: nowrap;
+            overflow-wrap: normal;
+        }
+    }
+
     blockquote {
         font-style: normal;
         border-left-color: var(--c-border);
