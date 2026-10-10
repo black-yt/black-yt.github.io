@@ -16,3 +16,39 @@
     </div>
   </div>
 </div>
+<script>
+  // Restore the mobile nav strip as soon as its markup exists, before the page
+  // content loads, so opening an article does not reset the links to the left.
+  (function () {
+    var nav = document.getElementById('site-nav');
+    var storageKey = 'site-nav-scroll-left';
+    var saved = null;
+    try {
+      var stored = sessionStorage.getItem(storageKey);
+      if (stored !== null) saved = Number(stored);
+    } catch (e) {}
+    var hasSavedPosition = saved !== null && Number.isFinite(saved) && saved >= 0;
+    if (hasSavedPosition) {
+      nav.scrollLeft = saved;
+      nav.dataset.scrollRestored = 'true';
+    }
+
+    // Without a saved position, reveal the active section on a direct visit.
+    var active = nav.querySelector('[aria-current="location"]');
+    if (active && !hasSavedPosition) {
+      var navRect = nav.getBoundingClientRect();
+      var linkRect = active.getBoundingClientRect();
+      if (linkRect.left < navRect.left + 12) {
+        nav.scrollLeft += linkRect.left - navRect.left - 12;
+      } else if (linkRect.right > navRect.right - 12) {
+        nav.scrollLeft += linkRect.right - navRect.right + 12;
+      }
+    }
+
+    function savePosition() {
+      try { sessionStorage.setItem(storageKey, String(nav.scrollLeft)); } catch (e) {}
+    }
+    nav.addEventListener('scroll', savePosition, { passive: true });
+    window.addEventListener('pagehide', savePosition);
+  })();
+</script>

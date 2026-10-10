@@ -361,6 +361,13 @@ if (window.jQuery) {
     var current = null;
     var suppressUntil = 0;
     var nav = document.querySelector('.site-nav');
+    var followUserScroll = !nav || nav.dataset.scrollRestored !== 'true';
+
+    // History restoration and loading fonts/images can emit scroll events.
+    // Preserve the restored nav position until the user starts navigating.
+    ['wheel', 'touchmove', 'keydown'].forEach(function (type) {
+      window.addEventListener(type, function () { followUserScroll = true; }, { passive: true, once: true });
+    });
 
     // Scroll the nav strip so the active link is always visible
     function scrollNavToLink(link) {
@@ -377,13 +384,13 @@ if (window.jQuery) {
       }
     }
 
-    function setActive(link) {
+    function setActive(link, reveal) {
       if (current === link) return;
       links.forEach(function (l) { l.classList.remove('nav-active'); });
       current = link;
       if (current) {
         current.classList.add('nav-active');
-        scrollNavToLink(current);
+        if (reveal) scrollNavToLink(current);
       }
     }
 
@@ -392,7 +399,8 @@ if (window.jQuery) {
     // Use capture phase so we fire before jQuery's bubble-phase smoothScroll handler.
     links.forEach(function (link) {
       link.addEventListener('click', function (e) {
-        setActive(link);
+        followUserScroll = true;
+        setActive(link, true);
         suppressUntil = Date.now() + 1000;
         if ((link.getAttribute('href') || '').indexOf('about-me') !== -1) {
           e.preventDefault();
@@ -419,7 +427,7 @@ if (window.jQuery) {
             break;
           }
         }
-        setActive(active);
+        setActive(active, followUserScroll);
       });
     }
 
