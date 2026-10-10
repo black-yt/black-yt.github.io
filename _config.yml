@@ -101,7 +101,7 @@ defaults:
     values:
       layout: blog
       author_profile: false
-      author: "Wanghan Xu (徐望瀚)"
+      author: "Wanghan Xu"
       citation_author: "Wanghan Xu"
 
 

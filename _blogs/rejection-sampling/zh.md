@@ -2,7 +2,7 @@
 title: "大模型实训经验：拒绝采样"
 date: 2026-10-10
 lang: zh
-translation_key: first-blog
+translation_key: rejection-sampling
 permalink: /blogs/rejection-sampling/zh/
 description: "从实际训练经验出发，讨论拒绝采样、验证器，以及基于模型表现和任务得分波动的数据筛选。"
 cover: /blogs/rejection-sampling/assets/rejection-sampling-quadrants.svg

@@ -132,7 +132,7 @@ cover: /blogs/my-article/assets/cover.png
 ---
 ```
 
-- 作者默认是 `Wanghan Xu (徐望瀚)`，需要时可在 front matter 中通过 `author` 覆盖。
+- 博客作者栏默认显示 `Wanghan Xu`，不附带中文括注；需要时可在 front matter 中通过 `author` 覆盖。
 - 文章主标题通过 `.page__content .blog-header h1` 单独放大到 `1.75em`，高于正文二级标题；主页章节标题保持原有字号。
 - 正文从二级标题 `##` 开始，文章标题、日期、作者由布局生成。支持 Markdown 段落、列表、引用块 `>`、链接、代码、图片和 Kramdown 脚注（`[^ref]` 与 `[^ref]: ...`）。
 - 博客图片引用发布路径（例如 `/blogs/my-article/assets/figure.png`），不引用源码目录 `_blogs`。博客页的链接默认在当前页面打开，脚注跳转与返回引用不会新开标签页。
@@ -141,7 +141,7 @@ cover: /blogs/my-article/assets/cover.png
 - 公式使用 Kramdown + MathJax。行内推荐 `$$y = f_{\theta}(x)$$`，独立公式使用单独成行的 `$$` 包围内容，并在公式块前后留空行。不要把公式包在反引号中；代码块内的公式示例不会被渲染。
 - `> **备注：** 内容` 会渲染为带左侧竖线的备注块；多段备注之间保留一行 `>`，块内可以使用加粗、链接、列表和公式。
 - MathJax 固定使用 2.7.9 的 `MathJax.js`，不要改回依赖额外版本查询的 `latest.js`。公式脚本与字体由 cdnjs 加载；博客长公式在自身区域横向滚动，不应撑宽手机页面。验证时需等待实际公式排版和字体加载完成，不能只检查 TeX 原文是否存在。
-- 第一篇文章为《大模型实训经验：拒绝采样》（2026-10-10），中英文正文分别为 `_blogs/rejection-sampling/zh.md` 和 `_blogs/rejection-sampling/en.md`，按句对应维护；技术语境使用“任务”或“task”。英文地址为 `/blogs/rejection-sampling/`，中文地址为 `/blogs/rejection-sampling/zh/`；用户明确要求不保留旧地址兼容，不要添加旧 `first-blog` 地址跳转。`translation_key: first-blog` 仅用于维持已有双语配对、引用键与评论讨论，不代表页面地址。配图位于同目录的 `assets/`：`rejection-sampling-quadrants.svg` 为四象限示意图兼封面（内嵌 Lato 字体子集，许可见 `LICENSE-Lato.txt`），`std.png` 为作者提供的实验图。
+- 第一篇文章为《大模型实训经验：拒绝采样》（2026-10-10），中英文正文分别为 `_blogs/rejection-sampling/zh.md` 和 `_blogs/rejection-sampling/en.md`，按句对应维护；技术语境使用“任务”或“task”。英文地址为 `/blogs/rejection-sampling/`，中文地址为 `/blogs/rejection-sampling/zh/`；用户明确要求不保留旧地址兼容，不要添加旧 `first-blog` 地址跳转。正式文章的 `translation_key` 为 `rejection-sampling`，中英文共用 `blog:rejection-sampling` 评论讨论。之前保留占位标识导致旧测试评论继续显示，现已与占位文章分开；原 GitHub Discussion 保留，不删除评论，后续维持正式标识稳定。配图位于同目录的 `assets/`：`rejection-sampling-quadrants.svg` 为四象限示意图兼封面（内嵌 Lato 字体子集，许可见 `LICENSE-Lato.txt`），`std.png` 为作者提供的实验图。
 - 带图注的图片段落使用 Kramdown 属性 `{: .blog-figure-image}`，下一段斜体图注使用 `{: .blog-caption}`。图注居中，保留原有图与图注的间距，只增加图片上方及图注下方的留白。表格说明使用 `{: .blog-table-caption #caption-id}`，Markdown 表格放在带 `markdown="1"` 的 `.blog-table-scroll` 容器中，并用 `aria-labelledby` 关联说明；表格按内容宽度居中，单元格不换行，窄屏仅表格区域横向滚动。正文文献标号写成 `[[1]](#ref-name)`，参考文献列表对应条目提供同名锚点，编号按正文首次出现的顺序排列。
 - 第一篇实验图横轴是得分标准差；阈值为 1 分时保留 251 个任务，其中 80.2% 的模型分差至少为 3 分。Human rank 经作者确认是归一化且越大越好的指标，三组原始值为 0.668、0.693、0.723。后续修改须同步中英文，并区分图表一致性核对与基于原始实验数据的复算。
 - 四象限图不显示内部标题、副标题或底部坐标说明，已收紧画布；对应说明放在外部图注中。博客表格仅表头加粗，表体文字和数值使用常规字重。
@@ -150,6 +150,7 @@ cover: /blogs/my-article/assets/cover.png
 - 参考文献在正文末尾使用 Markdown 无序列表，每条写为 `- [文献标题](https://...)`，条目之间留一空行，沿用主页奖项列表的圆点与间距。参考文献标题添加 `{: .blog-references-heading}`，上方保留 `3em` 间距。占位文献应明确标注，正式发布时替换为真实来源。正文与底部复制按钮之间保留 `4em` 空隙，明确正文结束。
 - 评论使用参考站点同款 Giscus，关联本仓库 GitHub Discussions 的 Announcements 分类，仓库与分类 ID 配置在 `_config.yml` 的 `blog_comments`。GitHub 仓库须开启 Discussions 并安装 Giscus App。中英文文章以 `blog:<translation_key>` 严格匹配同一个讨论，因此发布后不要修改 `translation_key`；Giscus 控件语言随文章语言变化，明暗主题随站点切换。评论区下方保留 GitHub Discussions 链接，服务加载失败时显示简洁的中英文提示；仅接受来自 Giscus iframe 的错误消息。首次尚无讨论是正常状态，不能视为加载失败。测试时不要自动发表测试评论。
 - 博客的 `author_profile` 默认为 `false`；`default.html` 对博客使用 `_includes/blog-toc.html`，不渲染个人照片与信息。不要修改主页的作者侧栏。
+- 验证 Giscus 时先滚动到评论区，触发 iframe 懒加载，再检查实际评论内容；仅有 iframe 元素或 `src` 不代表组件已加载。
 - 目录自动读取当前语言正文的 `h2`–`h6`，按层级嵌套，保留 Markdown 生成的锚点，点击在当前页跳转。中英文目录随语言切换自动更新；无需手动维护。桌面端沿用侧栏固定位置，长目录可独立滚动，手机端移到正文上方并默认折叠。没有章节标题时隐藏目录，正文仍限制为原有宽度。
 - CSS、脚本与头像使用 `relative_url`，博客导航指向主页对应锚点，避免嵌套链接下资源失效。不要改回相对当前目录的资源路径。
 

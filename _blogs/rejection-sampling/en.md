@@ -2,7 +2,7 @@
 title: "Practical Experience in Training Large Language Models: Rejection Sampling"
 date: 2026-10-10
 lang: en
-translation_key: first-blog
+translation_key: rejection-sampling
 permalink: /blogs/rejection-sampling/
 description: "Drawing on practical training experience to discuss rejection sampling, verifiers, and data selection based on model performance and variability in task scores."
 cover: /blogs/rejection-sampling/assets/rejection-sampling-quadrants.svg
