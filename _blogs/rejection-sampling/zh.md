@@ -176,6 +176,7 @@ cover: /blogs/rejection-sampling/assets/rejection-sampling-quadrants.svg
 如果拒绝那些坏的和过于简单的内容，转而学习有难度、有挑战的内容，或许会进步得更快。
 
 ## 参考文献
+{: .blog-references-heading}
 
 - <span id="ref-swe-smith"></span>[1] [SWE-smith: Scaling Data for Software Engineering Agents](https://arxiv.org/abs/2504.21798)
 

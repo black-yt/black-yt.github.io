@@ -842,6 +842,10 @@ body, #main {
         margin-top: 2em;
     }
 
+    .blog-references-heading {
+        margin-top: 3em;
+    }
+
     .blog-table-scroll {
         max-width: 100%;
         overflow-x: auto;
@@ -852,6 +856,10 @@ body, #main {
             margin: 0 auto;
             white-space: nowrap;
             overflow-wrap: normal;
+
+            tbody td {
+                font-weight: 400;
+            }
         }
     }
 

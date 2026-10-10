@@ -176,6 +176,7 @@ If we learn only from good examples but do not filter out overly simple material
 If we reject the bad and overly simple material and instead learn from content that is difficult and challenging, we may improve faster.
 
 ## References
+{: .blog-references-heading}
 
 - <span id="ref-swe-smith"></span>[1] [SWE-smith: Scaling Data for Software Engineering Agents](https://arxiv.org/abs/2504.21798)
 

@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title description">
-  <title id="title">Choosing trajectories for training</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 120 1200 720" role="img" aria-labelledby="title description">
+  <title id="title">Task difficulty and model performance</title>
   <metadata>Embedded Lato Regular and Semibold subsets, renamed Rejection Diagram. Copyright (c) 2010-2011, Łukasz Dziedzic. Licensed under SIL OFL 1.1; see LICENSE-Lato.txt.</metadata>
   <desc id="description">Four qualitative quadrants of task difficulty and model performance. Quadrant I: hard tasks with good performance, prioritize for training. Quadrant II: easy tasks with good performance, lower learning priority. Quadrant III: easy tasks with poor performance, downweight or reject. Quadrant IV: hard tasks with poor performance, inspect verified partial reasoning.</desc>
   <defs>
@@ -19,9 +19,7 @@
       .hint { font-size: 20px; fill: #687680; }
     </style>
   </defs>
-  <rect width="1200" height="900" rx="24" fill="#fcfcfa"/>
-  <text x="76" y="65" font-size="35" font-weight="600">Choosing trajectories for training</text>
-  <text x="76" y="104" font-size="24" fill="#687680">Task difficulty × model performance</text>
+  <rect y="120" width="1200" height="720" rx="24" fill="#fcfcfa"/>
 
   <rect x="140" y="169" width="470" height="278" rx="22" fill="#e5edf4"/>
   <rect x="644" y="169" width="470" height="278" rx="22" fill="#e4eee6"/>
@@ -71,5 +69,4 @@
   <text x="627" y="813" class="axis" text-anchor="middle">Task difficulty</text>
   <text x="140" y="813" class="hint">Low</text>
   <text x="1114" y="813" class="hint" text-anchor="end">High</text>
-  <text x="627" y="860" class="hint" text-anchor="middle">Qualitative axes · Center = typical difficulty and performance</text>
 </svg>
