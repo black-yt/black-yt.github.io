@@ -77,7 +77,7 @@
 <a class=PaperTitle href="https://arxiv.org/pdf/2610.13912"><b>RSI-Anything: Unlocking Recursive Self-Improvement with World Models</b></a> \\
 *arXiv, 2026* \\
 Taoyong Cui, Pinxian Zeng, **<span class="author-highlight">Wanghan Xu</span>**, Hao Xiao, Shuhan Xue, Qiang Gao, Wanli Ouyang, Pheng Ann Heng, Zhenfei Yin, Yingcheng Wu, Ling Yang \\
-[<a href="https://arxiv.org/pdf/2610.13912">arXiv</a>] [<a href="https://github.com/Gen-Verse/RSI-Anything">Code</a>] [<a href="https://huggingface.co/datasets/Gen-Verse/RSI-Anything">Model</a>]
+[<a href="https://arxiv.org/pdf/2610.13912">arXiv</a>] [<a href="https://github.com/Gen-Verse/RSI-Anything">Code</a>] [<a href="https://huggingface.co/datasets/Gen-Verse/RSI-Anything">Model</a>] [<a href="https://mp.weixin.qq.com/s/zEt5cu_6gPXUdh25iers_Q">机器之心</a>]
 
   </div>
 </div>
