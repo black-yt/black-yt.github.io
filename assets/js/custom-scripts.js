@@ -488,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Publication filter
   var pubFilter = document.getElementById('pubFilter');
-  var boxes = document.querySelectorAll('.paper-box');
+  var boxes = document.querySelectorAll('.paper-box[data-core]');
   if (pubFilter) {
     pubFilter.querySelectorAll('.seg-btn').forEach(function(btn) {
       btn.addEventListener('click', function() {
