@@ -17,6 +17,8 @@ redirect_from:
 
 {% include_relative includes/blogs.md %}
 
+{% include_relative includes/internships.md %}
+
 {% include_relative includes/honors.md %}
 
 {% include_relative includes/talks.md %}

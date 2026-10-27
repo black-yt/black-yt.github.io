@@ -12,6 +12,9 @@ main:
   - title: "Blogs"
     url: "#-blogs"
 
+  - title: "Internship Experience"
+    url: "#-internship-experience"
+
   - title: "Honors and Awards"
     url: "#-honors-and-awards"
 
