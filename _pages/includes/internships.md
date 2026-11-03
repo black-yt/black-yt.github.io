@@ -9,7 +9,7 @@
   <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://www.robbyant.com/"><b>Research Intern at the LingBot Team, Robbyant, Ant Group</b></a> \\
-*2026.07–Present* \\
+*2026.06–Present* \\
 Research Topics: Embodied AI, World Model, VLA
 
   </div>

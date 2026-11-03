@@ -88,6 +88,25 @@ Taoyong Cui, Pinxian Zeng, **<span class="author-highlight">Wanghan Xu</span>**,
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
+      <a href="/images/CoworkOS.png"><img src='/images/CoworkOS.png' alt="CoworkOS real-world automation examples" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2611.03178"><b>CoworkOS: Scaling Agent Coworkers for Real-world Automation</b></a> \\
+*arXiv, 2026* \\
+Jiajie Jin ... (40 authors) \\
+[<a href="https://arxiv.org/pdf/2611.03178">arXiv</a>] [<a href="https://coworkos-ai.github.io/">Project Page</a>] [<a href="https://coworkos-ai.github.io/showcase.html">Demo Gallery</a>] [<a href="https://github.com/RUC-NLPIR/CoworkOS">Code</a>] [<a href="https://mp.weixin.qq.com/s/oWPhyARCHxUaNkgF60Os7w?scene=1">机器之心</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
       <a href="/images/EvoMemory.png"><img src='/images/EvoMemory.png' alt="EvoMemory" width="100%"></a>
     </div>
   </div>
