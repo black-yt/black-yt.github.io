@@ -1,5 +1,24 @@
 # <i class="fas fa-microphone-alt section-icon"></i> Invited Talks
 
+<div class='paper-box'>
+  <div class='paper-box-image'>
+    <div class="paper-box-media">
+      <button class="talk-video-trigger" type="button" data-video-src="{{ '/videos/cctv-13-rsi-interview.mp4' | relative_url }}" data-video-poster="{{ '/images/cctv-13-rsi-interview.jpg' | relative_url }}" data-video-title="How Do Large AI Models Achieve Recursive Self-Improvement (RSI)?" aria-label="Play the CCTV 13 interview" aria-haspopup="dialog">
+        <img src="{{ '/images/cctv-13-rsi-interview.jpg' | relative_url }}" alt="Wanghan Xu interviewed by CCTV 13 about recursive self-improvement" width="1280" height="720" loading="lazy">
+        <span class="talk-video-trigger__play" aria-hidden="true"><i class="fas fa-play"></i></span>
+      </button>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://tv.cctv.com/2026/11/04/VIDE4oxNZ2qi1xmzRdxa7k8B261104.shtml?spm=C28340.PxtGka5hyWPX.EORBCjGqZgig.31"><b>How Do Large AI Models Achieve Recursive Self-Improvement (RSI)?</b></a> \\
+*CCTV 13, 2026* \\
+Tao Gui, **<span class="author-highlight">Wanghan Xu</span>** \\
+[<a href="https://tv.cctv.com/2026/11/04/VIDE4oxNZ2qi1xmzRdxa7k8B261104.shtml?spm=C28340.PxtGka5hyWPX.EORBCjGqZgig.31">CCTV 13</a>]
+
+  </div>
+</div>
+
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div>

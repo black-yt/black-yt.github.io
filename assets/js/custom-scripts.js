@@ -558,4 +558,87 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 })();
 
+// Create the video player only after a visitor clicks a talk's cover.
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var triggers = document.querySelectorAll('.talk-video-trigger[data-video-src]');
+    if (!triggers.length) return;
+
+    var dialog;
+    var title;
+    var closeButton;
+    var player;
+    var video;
+    var activeTrigger;
+    var previousOverflow;
+
+    function createDialog() {
+      dialog = document.createElement('dialog');
+      dialog.className = 'talk-video-dialog';
+      dialog.setAttribute('aria-labelledby', 'talk-video-title');
+
+      var header = document.createElement('div');
+      header.className = 'talk-video-dialog__header';
+      title = document.createElement('h2');
+      title.id = 'talk-video-title';
+      title.className = 'talk-video-dialog__title';
+      closeButton = document.createElement('button');
+      closeButton.type = 'button';
+      closeButton.className = 'talk-video-dialog__close';
+      closeButton.setAttribute('aria-label', 'Close video');
+      closeButton.textContent = '\u00d7';
+      header.appendChild(title);
+      header.appendChild(closeButton);
+      player = document.createElement('div');
+      dialog.appendChild(header);
+      dialog.appendChild(player);
+      document.body.appendChild(dialog);
+
+      closeButton.addEventListener('click', function () { dialog.close(); });
+      dialog.addEventListener('click', function (event) {
+        if (event.target === dialog) dialog.close();
+      });
+      dialog.addEventListener('close', function () {
+        if (video) {
+          video.pause();
+          video.removeAttribute('src');
+          video.load();
+          player.removeChild(video);
+          video = null;
+        }
+        document.documentElement.style.overflow = previousOverflow;
+        if (activeTrigger) activeTrigger.focus({ preventScroll: true });
+        activeTrigger = null;
+      });
+    }
+
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        if (!dialog) createDialog();
+        if (dialog.open) return;
+
+        activeTrigger = trigger;
+        title.textContent = trigger.dataset.videoTitle;
+        video = document.createElement('video');
+        video.controls = true;
+        video.playsInline = true;
+        video.preload = 'none';
+        video.poster = trigger.dataset.videoPoster;
+        video.setAttribute('aria-label', trigger.dataset.videoTitle);
+        video.src = trigger.dataset.videoSrc;
+        player.appendChild(video);
+
+        previousOverflow = document.documentElement.style.overflow;
+        document.documentElement.style.overflow = 'hidden';
+        dialog.showModal();
+        closeButton.focus();
+        var playback = video.play();
+        if (playback) playback.catch(function () {
+          // Keep native controls available if automatic playback is blocked.
+        });
+      });
+    });
+  });
+})();
+
 // (scroll-spy and nav click handling moved above)
