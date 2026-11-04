@@ -233,14 +233,13 @@
 
     &__play {
         position: absolute;
-        top: 50%;
-        left: 50%;
+        bottom: 0.75rem;
+        left: 0.75rem;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 3.5rem;
         height: 3.5rem;
-        transform: translate(-50%, -50%);
         border-radius: 50%;
         background: rgba(0, 0, 0, 0.72);
         color: #fff;
