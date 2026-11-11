@@ -84,6 +84,25 @@ Taoyong Cui, Pinxian Zeng, **<span class="author-highlight">Wanghan Xu</span>**,
 
 
 
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/ARE-bench.png"><img src='/images/ARE-bench.png' alt="ARE-bench overview" width="100%"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2611.14364"><b>ARE-bench: Benchmarking Agents' Research Ability in Real-World Researcher Sessions and Workspaces</b></a> \\
+*arXiv, 2026* \\
+Jiahang Lin\*, Wanying Ren\*, **<span class="author-highlight">Wanghan Xu*</span>**, Huayu Sha, Yang Shu, Zhonghang Lu, Chengjun Pan, Yi Dong, Shichun Liu, Yuyang Hu, Shihan Dou, Honglin Guo, Huijie Lv, Pujun Zheng, Zhe Sun, Yuankai Ying, Yiding Wang, Jiahao Chen, Zhixiong Yang, Dingbo Yuan, Yicheng Zou, Zhecan Wang, Guoxiu He, Xiaoyu Xing, Qi Zhang, Tao Gui, Xuanjing Huang \\
+[<a href="https://arxiv.org/pdf/2611.14364">arXiv</a>] [<a href="https://arebench.com/">Project Page</a>]
+
+  </div>
+</div>
+
+
+
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
