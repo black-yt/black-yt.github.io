@@ -1,6 +1,8 @@
 # <i class="fas fa-newspaper section-icon"></i> News
 
 {% capture news_items %}
+- *2026.11:* We released *[Sage-S2.1-Flash](https://internlm.github.io/Sage-S2.1-Flash/)*, a frontier multimodal agent model with **<span class="highlight-red">320B parameters</span>**, built for challenging scientific research.
+
 - *2026.11:* I was interviewed by [CCTV-13](https://tv.cctv.com/2026/11/04/VIDE4oxNZ2qi1xmzRdxa7k8B261104.shtml) about how large AI models achieve recursive self-improvement (RSI).
 
 - *2026.09:* Introducing *[Atria Dawn Preview: From Research Questions to Verifiable Results](https://atria-asi.ai/)*. Atria Dawn Preview is an agentic foundation model built on **GLM-5.2**, with **<span class="highlight-red">744 B parameters</span>**. Designed for long-horizon tasks, it helps researchers and engineers turn open-ended questions into executable, verifiable, and reproducible outcomes.
