@@ -20,7 +20,7 @@
 <a class=PaperTitle href="https://arxiv.org/pdf/2611.21072"><b>Sage S2.1 Flash Technical Report</b></a> \\
 *Technical Report, 2026* \\
 **<span class="author-highlight">Wanghan Xu</span>**, one of the core contributors among 206 contributors \\
-[<a href="https://arxiv.org/pdf/2611.21072">arXiv</a>] [<a href="https://internlm.github.io/Sage-S2.1-Flash/">Project Page</a>] [<a href="https://github.com/InternLM/Sage-S2.1-Flash">GitHub</a>] [<a href="https://huggingface.co/internlm/Sage-S2.1-Flash">Hugging Face</a>] [<a href="https://www.modelscope.cn/models/Shanghai_AI_Laboratory/Sage-S2.1-Flash">ModelScope</a>] [<a href="https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0">API</a>] [<a href="https://mp.weixin.qq.com/s/OMha_XDywN7tsbNCtcQMyA">机器之心</a>]
+[<a href="https://arxiv.org/pdf/2611.21072">arXiv</a>] [<a href="https://internlm.github.io/Sage-S2.1-Flash/">Project Page</a>] [<a href="https://github.com/InternLM/Sage-S2.1-Flash">GitHub</a>] [<a href="https://huggingface.co/internlm/Sage-S2.1-Flash">Hugging Face</a>] [<a href="https://www.modelscope.cn/models/Shanghai_AI_Laboratory/Sage-S2.1-Flash">ModelScope</a>] [<a href="https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0">API</a>] [<a href="https://mp.weixin.qq.com/s/OMha_XDywN7tsbNCtcQMyA">机器之心1</a>] [<a href="https://mp.weixin.qq.com/s/vGHdgT8dR_CaeklmQMAf7w?scene=1&amp;click_id=618356782">机器之心2</a>]
 
   </div>
 </div>
