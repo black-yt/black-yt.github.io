@@ -495,7 +495,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var filterButtons = pubFilter.querySelectorAll('.seg-btn');
     var filter = 'all';
     var expanded = false;
-    var previewCount = 10;
+    var previewCount = 6;
 
     function renderPublications() {
       var matchingCount = 0;
