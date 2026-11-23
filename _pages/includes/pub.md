@@ -6,7 +6,7 @@
   <button type="button" class="seg-btn" data-filter="core" aria-pressed="false">Key Contributor</button>
 </div>
 
-<!-- Keep cards newest first. Use data-src for media and intrinsic pixel dimensions for thumbnails. -->
+<!-- Keep cards in the intended display order. Use data-src for media and intrinsic pixel dimensions for thumbnails. -->
 <div class="publications-list" id="publicationList" markdown="1">
 
 <div class='paper-box' data-core='true'>
@@ -23,6 +23,83 @@
 *Technical Report, 2026* \\
 **<span class="author-highlight">Wanghan Xu</span>**, one of the core contributors among 206 contributors \\
 [<a href="https://arxiv.org/pdf/2611.21072">arXiv</a>] [<a href="https://internlm.github.io/Sage-S2.1-Flash/">Project Page</a>] [<a href="https://github.com/InternLM/Sage-S2.1-Flash">GitHub</a>] [<a href="https://huggingface.co/internlm/Sage-S2.1-Flash">Hugging Face</a>] [<a href="https://www.modelscope.cn/models/Shanghai_AI_Laboratory/Sage-S2.1-Flash">ModelScope</a>] [<a href="https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0">API</a>] [<a href="https://mp.weixin.qq.com/s/OMha_XDywN7tsbNCtcQMyA">机器之心1</a>] [<a href="https://mp.weixin.qq.com/s/vGHdgT8dR_CaeklmQMAf7w?scene=1&amp;click_id=618356782">机器之心2</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div class="paper-box-media">
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/Atria.png"><img loading="lazy" data-src='/images/Atria.png' alt="Atria Dawn Preview benchmark results" width="4000" height="2250"></a>
+      <iframe class="paper-video" loading="lazy" data-src="//player.bilibili.com/player.html?isOutside=true&aid=117269904623547&bvid=BV1CKe56NEyE&cid=41894611921&p=1" title="Atria Dawn Preview introduction video" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2609.15818"><b>Atria Dawn: The Dawn of Agentic Superintelligence</b></a> \\
+*Technical Report, 2026* \\
+**<span class="author-highlight">Wanghan Xu</span>**, one of the core contributors among 143 contributors \\
+[<a href="https://arxiv.org/pdf/2609.15818">arXiv</a>] [<a href="https://atria-asi.ai/">Website</a>] [<a href="https://github.com/atria-asi/Atria-Dawn">GitHub</a>] [<a href="https://huggingface.co/internlm/Atria-Dawn-Preview">Hugging Face</a>] [<a href="https://www.modelscope.cn/models/Shanghai_AI_Laboratory/Atria-Dawn-Preview">ModelScope</a>] [<a href="https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0">API</a>] [<a href="https://x.com/AtriaASI/status/2099490911822794901?s=20">X</a>] [<a href="https://mp.weixin.qq.com/s/vVA9ZKR8DcAHr-1gDOP50Q">新智元</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/ResearchClawBench.png"><img loading="lazy" data-src='/images/ResearchClawBench.png' alt="ResearchClawBench" width="1659" height="1132"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2606.07591"><b>ResearchClawBench: A Benchmark for End-to-End Autonomous Scientific Research</b></a> \\
+*arXiv, 2026* \\
+**<span class="author-highlight">Wanghan Xu*</span>**, Shuo Li\*, Tianlin Ye, Qinglong Cao, Yixin Chen, Hengjian Gao ... (50 authors)\\
+[<a href="https://arxiv.org/pdf/2606.07591">arXiv</a>] [<a href="https://internscience.github.io/ResearchClawBench-Home/">Project Page</a>] [<a href="https://github.com/InternScience/ResearchClawBench">Code</a>] [<a href="https://huggingface.co/datasets/InternScience/ResearchClawBench">Dataset</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/ReCrit.png"><img loading="lazy" data-src='/images/ReCrit.png' alt="ReCrit" width="1718" height="774"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2605.18799"><b>ReCrit: Transition-Aware Reinforcement Learning for Scientific Critic Reasoning</b></a> \\
+*arXiv, 2026* \\
+**<span class="author-highlight">Wanghan Xu</span>**, Yuhao Zhou, Hengyuan Zhao, Shuo Li, Dianzhi Yu, Zhenfei Yin, Yaowen Hu, Fengli Xu, Wanli Ouyang, Wenlong Zhang, Lei Bai \\
+[<a href="https://arxiv.org/pdf/2605.18799">arXiv</a>] [<a href="https://black-yt.github.io/ReCrit/">Project Page</a>] [<a href="https://github.com/black-yt/ReCrit">Code</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/RSI-Anything.png"><img loading="lazy" data-src='/images/RSI-Anything.png' alt="RSI-Anything framework overview" width="2179" height="873"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2610.13912"><b>RSI-Anything: Unlocking Recursive Self-Improvement with World Models</b></a> \\
+*arXiv, 2026* \\
+Taoyong Cui, Pinxian Zeng, **<span class="author-highlight">Wanghan Xu</span>**, Hao Xiao, Shuhan Xue, Qiang Gao, Wanli Ouyang, Pheng Ann Heng, Zhenfei Yin, Yingcheng Wu, Ling Yang \\
+[<a href="https://arxiv.org/pdf/2610.13912">arXiv</a>] [<a href="https://github.com/Gen-Verse/RSI-Anything">Code</a>] [<a href="https://huggingface.co/datasets/Gen-Verse/RSI-Anything">Model</a>] [<a href="https://mp.weixin.qq.com/s/zEt5cu_6gPXUdh25iers_Q">机器之心</a>]
 
   </div>
 </div>
@@ -67,39 +144,57 @@ Jiajie Jin ... (40 authors) \\
 
 
 
-<div class='paper-box' data-core='true'>
+<div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge core">Key Contributor</div>
-      <a href="/images/RSI-Anything.png"><img loading="lazy" data-src='/images/RSI-Anything.png' alt="RSI-Anything framework overview" width="2179" height="873"></a>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/EvoMemory.png"><img loading="lazy" data-src='/images/EvoMemory.png' alt="EvoMemory" width="1743" height="788"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://arxiv.org/pdf/2610.13912"><b>RSI-Anything: Unlocking Recursive Self-Improvement with World Models</b></a> \\
+<a class=PaperTitle href="https://arxiv.org/pdf/2605.21951"><b>Dynamic Mixture of Latent Memories for Self-Evolving Agents</b></a> \\
 *arXiv, 2026* \\
-Taoyong Cui, Pinxian Zeng, **<span class="author-highlight">Wanghan Xu</span>**, Hao Xiao, Shuhan Xue, Qiang Gao, Wanli Ouyang, Pheng Ann Heng, Zhenfei Yin, Yingcheng Wu, Ling Yang \\
-[<a href="https://arxiv.org/pdf/2610.13912">arXiv</a>] [<a href="https://github.com/Gen-Verse/RSI-Anything">Code</a>] [<a href="https://huggingface.co/datasets/Gen-Verse/RSI-Anything">Model</a>] [<a href="https://mp.weixin.qq.com/s/zEt5cu_6gPXUdh25iers_Q">机器之心</a>]
+Dianzhi Yu, Vireo Zhang, Hongru Wang, Yanyu Chen, Minda Hu, **<span class="author-highlight">Wanghan Xu</span>**, Siki Chen, Philip Torr, Zhenfei Yin, Irwin King \\
+[<a href="https://arxiv.org/pdf/2605.21951">arXiv</a>]
 
   </div>
 </div>
 
 
 
-<div class='paper-box' data-core='true'>
+<div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
-    <div class="paper-box-media">
-      <div class="badge core">Key Contributor</div>
-      <a href="/images/Atria.png"><img loading="lazy" data-src='/images/Atria.png' alt="Atria Dawn Preview benchmark results" width="4000" height="2250"></a>
-      <iframe class="paper-video" loading="lazy" data-src="//player.bilibili.com/player.html?isOutside=true&aid=117269904623547&bvid=BV1CKe56NEyE&cid=41894611921&p=1" title="Atria Dawn Preview introduction video" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+    <div>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/SciOrch.png"><img loading="lazy" data-src='/images/SciOrch.png' alt="SciOrch" width="1937" height="980"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://arxiv.org/pdf/2609.15818"><b>Atria Dawn: The Dawn of Agentic Superintelligence</b></a> \\
-*Technical Report, 2026* \\
-**<span class="author-highlight">Wanghan Xu</span>**, one of the core contributors among 143 contributors \\
-[<a href="https://arxiv.org/pdf/2609.15818">arXiv</a>] [<a href="https://atria-asi.ai/">Website</a>] [<a href="https://github.com/atria-asi/Atria-Dawn">GitHub</a>] [<a href="https://huggingface.co/internlm/Atria-Dawn-Preview">Hugging Face</a>] [<a href="https://www.modelscope.cn/models/Shanghai_AI_Laboratory/Atria-Dawn-Preview">ModelScope</a>] [<a href="https://discovery.intern-ai.org.cn/token-plan/home?tabIndex=0">API</a>] [<a href="https://x.com/AtriaASI/status/2099490911822794901?s=20">X</a>] [<a href="https://mp.weixin.qq.com/s/vVA9ZKR8DcAHr-1gDOP50Q">新智元</a>]
+<a class=PaperTitle href="https://arxiv.org/pdf/2606.15872"><b>SciOrch: Learning to Orchestrate Expert LLMs for Solving Frontier Multimodal Scientific Reasoning Tasks</b></a> \\
+*EMNLP 2026 Findings* \\
+Jingru Guo, Xiangyuan Xue, Lian Zhang, **<span class="author-highlight">Wanghan Xu</span>**, Siki Chen, Philip Torr, Wanli Ouyang, Lei Bai, Zhenfei Yin \\
+[<a href="https://arxiv.org/pdf/2606.15872">arXiv</a>] [<a href="https://github.com/llexieguo/SciOrch">Code</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/SciPRM.png"><img loading="lazy" data-src='/images/SciPRM.png' alt="Sci-PRM" width="1818" height="762"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2606.04579"><b>Sci-PRM: A Tool Aware Process Reward Model for Scientific Reasoning Verification</b></a> \\
+*KDD, 2026 (Accept)* \\
+Xiangyu Zhao, Hengyuan Zhao, Yiheng Wang, **<span class="author-highlight">Wanghan Xu</span>**, Yuhao Zhou, Qinglong Cao, Zhiwang Zhou, Lei Bai, Wenlong Zhang, Xiao-Ming Wu \\
+[<a href="https://arxiv.org/pdf/2606.04579">arXiv</a>] [<a href="https://github.com/InternScience/Sci-PRM">Code</a>]
 
   </div>
 </div>
@@ -148,120 +243,6 @@ Yifan Zhou, Qihao Yang, Yan Li, Donggang Li, Xiru Hu, Hokin Deng, Ziyang Gong, X
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/SciOrch.png"><img loading="lazy" data-src='/images/SciOrch.png' alt="SciOrch" width="1937" height="980"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://arxiv.org/pdf/2606.15872"><b>SciOrch: Learning to Orchestrate Expert LLMs for Solving Frontier Multimodal Scientific Reasoning Tasks</b></a> \\
-*EMNLP 2026 Findings* \\
-Jingru Guo, Xiangyuan Xue, Lian Zhang, **<span class="author-highlight">Wanghan Xu</span>**, Siki Chen, Philip Torr, Wanli Ouyang, Lei Bai, Zhenfei Yin \\
-[<a href="https://arxiv.org/pdf/2606.15872">arXiv</a>] [<a href="https://github.com/llexieguo/SciOrch">Code</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='true'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge core">Key Contributor</div>
-      <a href="/images/ResearchClawBench.png"><img loading="lazy" data-src='/images/ResearchClawBench.png' alt="ResearchClawBench" width="1659" height="1132"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://arxiv.org/pdf/2606.07591"><b>ResearchClawBench: A Benchmark for End-to-End Autonomous Scientific Research</b></a> \\
-*arXiv, 2026* \\
-**<span class="author-highlight">Wanghan Xu*</span>**, Shuo Li\*, Tianlin Ye, Qinglong Cao, Yixin Chen, Hengjian Gao ... (50 authors)\\
-[<a href="https://arxiv.org/pdf/2606.07591">arXiv</a>] [<a href="https://internscience.github.io/ResearchClawBench-Home/">Project Page</a>] [<a href="https://github.com/InternScience/ResearchClawBench">Code</a>] [<a href="https://huggingface.co/datasets/InternScience/ResearchClawBench">Dataset</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='false'>
-  <div class='paper-box-image'>
-    <div>
-      <!-- <div class="badge"></div> -->
-      <a href="/images/SciPRM.png"><img loading="lazy" data-src='/images/SciPRM.png' alt="Sci-PRM" width="1818" height="762"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://arxiv.org/pdf/2606.04579"><b>Sci-PRM: A Tool Aware Process Reward Model for Scientific Reasoning Verification</b></a> \\
-*KDD, 2026 (Accept)* \\
-Xiangyu Zhao, Hengyuan Zhao, Yiheng Wang, **<span class="author-highlight">Wanghan Xu</span>**, Yuhao Zhou, Qinglong Cao, Zhiwang Zhou, Lei Bai, Wenlong Zhang, Xiao-Ming Wu \\
-[<a href="https://arxiv.org/pdf/2606.04579">arXiv</a>] [<a href="https://github.com/InternScience/Sci-PRM">Code</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='false'>
-  <div class='paper-box-image'>
-    <div>
-      <!-- <div class="badge"></div> -->
-      <a href="/images/EvoMemory.png"><img loading="lazy" data-src='/images/EvoMemory.png' alt="EvoMemory" width="1743" height="788"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://arxiv.org/pdf/2605.21951"><b>Dynamic Mixture of Latent Memories for Self-Evolving Agents</b></a> \\
-*arXiv, 2026* \\
-Dianzhi Yu, Vireo Zhang, Hongru Wang, Yanyu Chen, Minda Hu, **<span class="author-highlight">Wanghan Xu</span>**, Siki Chen, Philip Torr, Zhenfei Yin, Irwin King \\
-[<a href="https://arxiv.org/pdf/2605.21951">arXiv</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='true'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge core">Key Contributor</div>
-      <a href="/images/ReCrit.png"><img loading="lazy" data-src='/images/ReCrit.png' alt="ReCrit" width="1718" height="774"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://arxiv.org/pdf/2605.18799"><b>ReCrit: Transition-Aware Reinforcement Learning for Scientific Critic Reasoning</b></a> \\
-*arXiv, 2026* \\
-**<span class="author-highlight">Wanghan Xu</span>**, Yuhao Zhou, Hengyuan Zhao, Shuo Li, Dianzhi Yu, Zhenfei Yin, Yaowen Hu, Fengli Xu, Wanli Ouyang, Wenlong Zhang, Lei Bai \\
-[<a href="https://arxiv.org/pdf/2605.18799">arXiv</a>] [<a href="https://black-yt.github.io/ReCrit/">Project Page</a>] [<a href="https://github.com/black-yt/ReCrit">Code</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='false'>
-  <div class='paper-box-image'>
-    <div>
-      <!-- <div class="badge"></div> -->
-      <a href="/images/Earth-Survey.png"><img loading="lazy" data-src='/images/Earth-Survey.png' alt="Earth-Survey" width="1577" height="695"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://arxiv.org/pdf/2605.12542"><b>Earth Science Foundation Models: From Perception to Reasoning and Discovery</b></a> \\
-*arXiv, 2026* \\
-Xiangyu Zhao, Bo Liu, Yuehan Zhang, Zelin Song, **<span class="author-highlight">Wanghan Xu</span>**, Feng Liu, Fengxiang Wang, Ben Fei, Fenghua Ling, Wangxu Wei, Wenlong Zhang, Xiao-Ming Wu \\
-[<a href="https://arxiv.org/pdf/2605.12542">arXiv</a>] [<a href="https://github.com/xiangyu-mm/Cool-EarthScience-Foundation-Models">Data</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='false'>
-  <div class='paper-box-image'>
-    <div>
-      <!-- <div class="badge"></div> -->
       <a href="/images/Intern-S1-Pro.png"><img loading="lazy" data-src='/images/Intern-S1-Pro.png' alt="Intern-S1-Pro" width="1321" height="700"></a>
     </div>
   </div>
@@ -296,44 +277,6 @@ Shiyang Feng ... (57 authors) \\
 
 
 
-<div class='paper-box' data-core='false'>
-  <div class='paper-box-image'>
-    <div>
-      <!-- <div class="badge"></div> -->
-      <a href="/images/EvalKit.png"><img loading="lazy" data-src='/images/EvalKit.png' alt="EvalKit" width="905" height="477"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://arxiv.org/pdf/2512.22334"><b>SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence</b></a> \\
-*Preprint, 2025* \\
-Yiheng Wang ... (38 authors)\\
-[<a href="https://arxiv.org/pdf/2512.22334">PDF</a>] [<a href="https://opencompass.org.cn/Intern-Discovery-Eval/rank">Project Page</a>] [<a href="https://github.com/InternScience/SciEvalKit">Code</a>] [<a href="https://huggingface.co/spaces/InternScience/SciEval-Leaderboard">Leaderboard</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='false'>
-  <div class='paper-box-image'>
-    <div>
-      <!-- <div class="badge"></div> -->
-      <a href="/images/Omni-Weather.png"><img loading="lazy" data-src='/images/Omni-Weather.png' alt="Omni-Weather" width="1643" height="875"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://openreview.net/pdf?id=3WnXsp72v6"><b>Omni-Weather: Unified Multimodal Foundation Model for Weather Generation and Understanding</b></a> \\
-*ICLR, 2026 (Accept)* \\
-Zhiwang Zhou, Yuandong Pu, Xuming He, Yidi Liu, Yixin Chen, Junchao Gong, Xiang Zhuang, **<span class="author-highlight">Wanghan Xu</span>**, Qinglong Cao, Shixiang Tang, Yihao Liu, Wenlong Zhang, Lei Bai \\
-[<a href="https://openreview.net/pdf?id=3WnXsp72v6">ICLR</a>] [<a href="https://arxiv.org/pdf/2512.21643">arXiv</a>] [<a href="https://github.com/Zhouzone/OmniWeather">Code</a>]
-
-  </div>
-</div>
-
-
-
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div>
@@ -353,57 +296,19 @@ Zhiwang Zhou, Yuandong Pu, Xuming He, Yidi Liu, Yixin Chen, Junchao Gong, Xiang 
 
 
 
-<div class='paper-box' data-core='false'>
+<div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div>
-      <!-- <div class="badge"></div> -->
-      <a href="/images/LO-SDA.png"><img loading="lazy" data-src='/images/LO-SDA.png' alt="LO-SDA" width="1312" height="927"></a>
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/InfGen.png"><img loading="lazy" data-src='/images/InfGen.png' alt="InfGen" width="1024" height="512"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://arxiv.org/pdf/2510.22562"><b>LO-SDA: Latent Optimization for Score-based Atmospheric Data Assimilation</b></a> \\
-*arXiv, 2025* \\
-Jing-An Sun, Hang Fan, Ben Fei, Junchao Gong, Kun Chen, Fenghua Ling, Wenlong Zhang, **<span class="author-highlight">Wanghan Xu</span>**, Li Yan, Pierre Gentine, Lei Bai \\
-[<a href="https://arxiv.org/pdf/2510.22562">arXiv</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='false'>
-  <div class='paper-box-image'>
-    <div>
-      <!-- <div class="badge"></div> -->
-      <a href="/images/DAWP.png"><img loading="lazy" data-src='/images/DAWP.png' alt="DAWP" width="1600" height="760"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://openreview.net/pdf?id=32JgYdTfT9"><b>DAWP: A Framework for Global Observation Forecasting via Data Assimilation and Weather Prediction in Satellite Observation Space</b></a> \\
-*NeurIPS, 2025 (Accept)* \\
-Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<span class="author-highlight">Wanghan Xu</span>**, Weidong Yang, Xiaokang Yang, Lei Bai \\
-[<a href="https://openreview.net/pdf?id=32JgYdTfT9">NeurIPS</a>] [<a href="https://arxiv.org/pdf/2510.15978">arXiv</a>] [<a href="https://github.com/jasong-ovo/DAWP-NIPS25">Code</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='false'>
-  <div class='paper-box-image'>
-    <div>
-      <!-- <div class="badge"></div> -->
-      <a href="/images/Earth-Agent.png"><img loading="lazy" data-src='/images/Earth-Agent.png' alt="Earth-Agent" width="1658" height="942"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://openreview.net/pdf?id=dkIXAbWuxO"><b>Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents</b></a> \\
-*ICLR, 2026 (Accept)* \\
-Peilin Feng, Zhutao Lv, Junyan Ye, Xiaolei Wang, Xinjie Huo, Jinhua Yu, **<span class="author-highlight">Wanghan Xu</span>**, Wenlong Zhang, Lei Bai, Conghui He, Weijia Li \\
-[<a href="https://openreview.net/pdf?id=dkIXAbWuxO">ICLR</a>] [<a href="https://arxiv.org/pdf/2509.23141">arXiv</a>] [<a href="https://opendatalab.github.io/Earth-Agent/">Project Page</a>] [<a href="https://github.com/opendatalab/Earth-Agent">Code</a>] [<a href="https://huggingface.co/datasets/Sssunset/Earth-Bench">Dataset</a>] [<a href="https://mp.weixin.qq.com/s/-rOj8w2Gv4Lf9baIJyoGoA">机器之心</a>]
+<a class=PaperTitle href="https://openaccess.thecvf.com/content/ICCV2025/papers/Han_InfGen_A_Resolution-Agnostic_Paradigm_for_Scalable_Image_Synthesis_ICCV_2025_paper.pdf"><b>InfGen: A Resolution-Agnostic Paradigm for Scalable Image Synthesis</b></a> \\
+*ICCV, 2025 (Accept)* \\
+Tao Han, **<span class="author-highlight">Wanghan Xu</span>**, Junchao Gong, Xiaoyu Yue, Song Guo, Luping Zhou, Lei Bai \\
+[<a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Han_InfGen_A_Resolution-Agnostic_Paradigm_for_Scalable_Image_Synthesis_ICCV_2025_paper.pdf">ICCV</a>] [<a href="https://arxiv.org/pdf/2509.10441">arXiv</a>] [<a href="https://github.com/taohan10200/InfGen">Code</a>]
 
   </div>
 </div>
@@ -423,25 +328,6 @@ Peilin Feng, Zhutao Lv, Junyan Ye, Xiaolei Wang, Xinjie Huo, Jinhua Yu, **<span 
 *ICLR, 2026 (Accept)* \\
 Xiangru Tang\*, **<span class="author-highlight">Wanghan Xu*</span>**, Yujie Wang\*, Zijie Guo\*, Daniel Shao, Jiapeng Chen, Cixuan Zhang, Ziyi Wang, Lixin Zhang, Guancheng Wan, Wenlong Zhang, Lei Bai, Zhenfei Yin, Philip Torr, Hanrui Wang, Di Jin \\
 [<a href="https://openreview.net/pdf?id=bGtmGTbmaz">ICLR</a>] [<a href="https://arxiv.org/pdf/2509.21193">arXiv</a>] [<a href="https://github.com/tangxiangru/Eigen-Agent">Code</a>] [<a href="https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247829247&idx=3&sn=958cd2958cab31c1885538f9caf7b5c0&chksm=e9f37ecd71b13373ca3c382c435b3a999ceb06d783d630aa0dede64ce43079daa5302a359062&mpshare=1&scene=24&srcid=0928F9AefT0tpiFVM4lWOzhb&sharer_shareinfo=462230b613cc7209451c5701a66d3b3e&sharer_shareinfo_first=f15603e48119a5960b8f603995f045d5#rd">量子位</a>] [<a href="https://www.bilibili.com/video/BV1own2zFEf7/?share_source=copy_web&vd_source=7b9d898a8c3bbebf65c411956ed7f8ce">BiliBili</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='true'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge core">Key Contributor</div>
-      <a href="/images/InfGen.png"><img loading="lazy" data-src='/images/InfGen.png' alt="InfGen" width="1024" height="512"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://openaccess.thecvf.com/content/ICCV2025/papers/Han_InfGen_A_Resolution-Agnostic_Paradigm_for_Scalable_Image_Synthesis_ICCV_2025_paper.pdf"><b>InfGen: A Resolution-Agnostic Paradigm for Scalable Image Synthesis</b></a> \\
-*ICCV, 2025 (Accept)* \\
-Tao Han, **<span class="author-highlight">Wanghan Xu</span>**, Junchao Gong, Xiaoyu Yue, Song Guo, Luping Zhou, Lei Bai \\
-[<a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Han_InfGen_A_Resolution-Agnostic_Paradigm_for_Scalable_Image_Synthesis_ICCV_2025_paper.pdf">ICCV</a>] [<a href="https://arxiv.org/pdf/2509.10441">arXiv</a>] [<a href="https://github.com/taohan10200/InfGen">Code</a>]
 
   </div>
 </div>
@@ -486,6 +372,158 @@ Lei Bai ... (177 authors listed in alphabetical order by their last names) \\
 
 
 
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/Manalyzer.png"><img loading="lazy" data-src='/images/Manalyzer.png' alt="Manalyzer" width="1663" height="1135"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2505.20310"><b>Manalyzer: End-to-end Automated Meta-analysis with Multi-agent System</b></a> \\
+*arXiv, 2025* \\
+**<span class="author-highlight">Wanghan Xu</span>**, Wenlong Zhang, Fenghua Ling, Ben Fei, Yusong Hu, Runmin Ma, Bo Zhang, Fangxuan Ren, Jintai Lin, Wanli Ouyang, Lei Bai \\
+[<a href="https://arxiv.org/pdf/2505.20310">arXiv</a>] [<a href="https://black-yt.github.io/meta-analysis-page/">Project Page</a>] [<a href="https://github.com/black-yt/Manalyzer">Code</a>] [<a href="https://huggingface.co/datasets/black-yt/Manalyzer">Dataset</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/RepAlign.png"><img loading="lazy" data-src='/images/RepAlign.png' alt="RepAlign" width="900" height="563"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2502.00359"><b>Exploring Representation-Aligned Latent Space for Better Generation</b></a> \\
+*arXiv, 2025* \\
+**<span class="author-highlight">Wanghan Xu</span>**, Xiaoyu Yue, Zidong Wang, Yao Teng, Wenlong Zhang, Xihui Liu, Luping Zhou, Wanli Ouyang, Lei Bai \\
+[<a href="https://arxiv.org/pdf/2502.00359">arXiv</a>] [<a href="https://github.com/black-yt/ReaLS">Code</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/EvalKit.png"><img loading="lazy" data-src='/images/EvalKit.png' alt="EvalKit" width="905" height="477"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2512.22334"><b>SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence</b></a> \\
+*Preprint, 2025* \\
+Yiheng Wang ... (38 authors)\\
+[<a href="https://arxiv.org/pdf/2512.22334">PDF</a>] [<a href="https://opencompass.org.cn/Intern-Discovery-Eval/rank">Project Page</a>] [<a href="https://github.com/InternScience/SciEvalKit">Code</a>] [<a href="https://huggingface.co/spaces/InternScience/SciEval-Leaderboard">Leaderboard</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/EarthSE.png"><img loading="lazy" data-src='/images/EarthSE.png' alt="EarthSE" width="2081" height="942"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://openreview.net/pdf?id=jyYE06FL8G"><b>EarthSE: A Benchmark Evaluating Earth Scientific Exploration Capability for Large Language Models</b></a> \\
+*ICLR, 2026 (Accept)* \\
+**<span class="author-highlight">Wanghan Xu</span>**, Xiangyu Zhao, Yuhao Zhou, Xiaoyu Yue, Ben Fei, Fenghua Ling, Wenlong Zhang, Lei Bai \\
+[<a href="https://openreview.net/pdf?id=jyYE06FL8G">ICLR</a>] [<a href="https://arxiv.org/pdf/2505.17139">arXiv</a>] [<a href="https://github.com/black-yt/EarthSE">Code</a>] [<a href="https://huggingface.co/ai-earth">Dataset</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/MSEarth.png"><img loading="lazy" data-src='/images/MSEarth.png' alt="MSEarth" width="1024" height="545"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2505.20740"><b>MSEarth: A Benchmark for Multimodal Scientific Comprehension of Earth Science</b></a> \\
+*ACL Main Conference, 2026 (Accept)* \\
+Xiangyu Zhao\*, **<span class="author-highlight">Wanghan Xu*</span>**, Bo Liu, Yuhao Zhou, Fenghua Ling, Ben Fei, Xiaoyu Yue, Lei Bai, Wenlong Zhang, Xiao-Ming Wu \\
+[<a href="https://arxiv.org/pdf/2505.20740">arXiv</a>] [<a href="https://github.com/xiangyu-mm/MSEarth">Code</a>] [<a href="https://huggingface.co/MSEarth-Data">Dataset</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/Earth-Agent.png"><img loading="lazy" data-src='/images/Earth-Agent.png' alt="Earth-Agent" width="1658" height="942"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://openreview.net/pdf?id=dkIXAbWuxO"><b>Earth-Agent: Unlocking the Full Landscape of Earth Observation with Agents</b></a> \\
+*ICLR, 2026 (Accept)* \\
+Peilin Feng, Zhutao Lv, Junyan Ye, Xiaolei Wang, Xinjie Huo, Jinhua Yu, **<span class="author-highlight">Wanghan Xu</span>**, Wenlong Zhang, Lei Bai, Conghui He, Weijia Li \\
+[<a href="https://openreview.net/pdf?id=dkIXAbWuxO">ICLR</a>] [<a href="https://arxiv.org/pdf/2509.23141">arXiv</a>] [<a href="https://opendatalab.github.io/Earth-Agent/">Project Page</a>] [<a href="https://github.com/opendatalab/Earth-Agent">Code</a>] [<a href="https://huggingface.co/datasets/Sssunset/Earth-Bench">Dataset</a>] [<a href="https://mp.weixin.qq.com/s/-rOj8w2Gv4Lf9baIJyoGoA">机器之心</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/Omni-Weather.png"><img loading="lazy" data-src='/images/Omni-Weather.png' alt="Omni-Weather" width="1643" height="875"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://openreview.net/pdf?id=3WnXsp72v6"><b>Omni-Weather: Unified Multimodal Foundation Model for Weather Generation and Understanding</b></a> \\
+*ICLR, 2026 (Accept)* \\
+Zhiwang Zhou, Yuandong Pu, Xuming He, Yidi Liu, Yixin Chen, Junchao Gong, Xiang Zhuang, **<span class="author-highlight">Wanghan Xu</span>**, Qinglong Cao, Shixiang Tang, Yihao Liu, Wenlong Zhang, Lei Bai \\
+[<a href="https://openreview.net/pdf?id=3WnXsp72v6">ICLR</a>] [<a href="https://arxiv.org/pdf/2512.21643">arXiv</a>] [<a href="https://github.com/Zhouzone/OmniWeather">Code</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/Earth-Survey.png"><img loading="lazy" data-src='/images/Earth-Survey.png' alt="Earth-Survey" width="1577" height="695"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2605.12542"><b>Earth Science Foundation Models: From Perception to Reasoning and Discovery</b></a> \\
+*arXiv, 2026* \\
+Xiangyu Zhao, Bo Liu, Yuehan Zhang, Zelin Song, **<span class="author-highlight">Wanghan Xu</span>**, Feng Liu, Fengxiang Wang, Ben Fei, Fenghua Ling, Wangxu Wei, Wenlong Zhang, Xiao-Ming Wu \\
+[<a href="https://arxiv.org/pdf/2605.12542">arXiv</a>] [<a href="https://github.com/xiangyu-mm/Cool-EarthScience-Foundation-Models">Data</a>]
+
+  </div>
+</div>
+
+
+
 <div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
@@ -524,76 +562,19 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
 
 
 
-<div class='paper-box' data-core='true'>
+<div class='paper-box' data-core='false'>
   <div class='paper-box-image'>
     <div>
-      <div class="badge core">Key Contributor</div>
-      <a href="/images/MSEarth.png"><img loading="lazy" data-src='/images/MSEarth.png' alt="MSEarth" width="1024" height="545"></a>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/DAWP.png"><img loading="lazy" data-src='/images/DAWP.png' alt="DAWP" width="1600" height="760"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://arxiv.org/pdf/2505.20740"><b>MSEarth: A Benchmark for Multimodal Scientific Comprehension of Earth Science</b></a> \\
-*ACL Main Conference, 2026 (Accept)* \\
-Xiangyu Zhao\*, **<span class="author-highlight">Wanghan Xu*</span>**, Bo Liu, Yuhao Zhou, Fenghua Ling, Ben Fei, Xiaoyu Yue, Lei Bai, Wenlong Zhang, Xiao-Ming Wu \\
-[<a href="https://arxiv.org/pdf/2505.20740">arXiv</a>] [<a href="https://github.com/xiangyu-mm/MSEarth">Code</a>] [<a href="https://huggingface.co/MSEarth-Data">Dataset</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='true'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge core">Key Contributor</div>
-      <a href="/images/Manalyzer.png"><img loading="lazy" data-src='/images/Manalyzer.png' alt="Manalyzer" width="1663" height="1135"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://arxiv.org/pdf/2505.20310"><b>Manalyzer: End-to-end Automated Meta-analysis with Multi-agent System</b></a> \\
-*arXiv, 2025* \\
-**<span class="author-highlight">Wanghan Xu</span>**, Wenlong Zhang, Fenghua Ling, Ben Fei, Yusong Hu, Runmin Ma, Bo Zhang, Fangxuan Ren, Jintai Lin, Wanli Ouyang, Lei Bai \\
-[<a href="https://arxiv.org/pdf/2505.20310">arXiv</a>] [<a href="https://black-yt.github.io/meta-analysis-page/">Project Page</a>] [<a href="https://github.com/black-yt/Manalyzer">Code</a>] [<a href="https://huggingface.co/datasets/black-yt/Manalyzer">Dataset</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='true'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge core">Key Contributor</div>
-      <a href="/images/EarthSE.png"><img loading="lazy" data-src='/images/EarthSE.png' alt="EarthSE" width="2081" height="942"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://openreview.net/pdf?id=jyYE06FL8G"><b>EarthSE: A Benchmark Evaluating Earth Scientific Exploration Capability for Large Language Models</b></a> \\
-*ICLR, 2026 (Accept)* \\
-**<span class="author-highlight">Wanghan Xu</span>**, Xiangyu Zhao, Yuhao Zhou, Xiaoyu Yue, Ben Fei, Fenghua Ling, Wenlong Zhang, Lei Bai \\
-[<a href="https://openreview.net/pdf?id=jyYE06FL8G">ICLR</a>] [<a href="https://arxiv.org/pdf/2505.17139">arXiv</a>] [<a href="https://github.com/black-yt/EarthSE">Code</a>] [<a href="https://huggingface.co/ai-earth">Dataset</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='true'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge core">Key Contributor</div>
-      <a href="/images/RepAlign.png"><img loading="lazy" data-src='/images/RepAlign.png' alt="RepAlign" width="900" height="563"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://arxiv.org/pdf/2502.00359"><b>Exploring Representation-Aligned Latent Space for Better Generation</b></a> \\
-*arXiv, 2025* \\
-**<span class="author-highlight">Wanghan Xu</span>**, Xiaoyu Yue, Zidong Wang, Yao Teng, Wenlong Zhang, Xihui Liu, Luping Zhou, Wanli Ouyang, Lei Bai \\
-[<a href="https://arxiv.org/pdf/2502.00359">arXiv</a>] [<a href="https://github.com/black-yt/ReaLS">Code</a>]
+<a class=PaperTitle href="https://openreview.net/pdf?id=32JgYdTfT9"><b>DAWP: A Framework for Global Observation Forecasting via Data Assimilation and Weather Prediction in Satellite Observation Space</b></a> \\
+*NeurIPS, 2025 (Accept)* \\
+Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<span class="author-highlight">Wanghan Xu</span>**, Weidong Yang, Xiaokang Yang, Lei Bai \\
+[<a href="https://openreview.net/pdf?id=32JgYdTfT9">NeurIPS</a>] [<a href="https://arxiv.org/pdf/2510.15978">arXiv</a>] [<a href="https://github.com/jasong-ovo/DAWP-NIPS25">Code</a>]
 
   </div>
 </div>
@@ -604,15 +585,15 @@ Xiangyu Zhao\*, **<span class="author-highlight">Wanghan Xu*</span>**, Bo Liu, Y
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/WEATHER-5K.png"><img loading="lazy" data-src='/images/WEATHER-5K.png' alt="WEATHER-5K" width="1604" height="784"></a>
+      <a href="/images/LO-SDA.png"><img loading="lazy" data-src='/images/LO-SDA.png' alt="LO-SDA" width="1312" height="927"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://arxiv.org/pdf/2406.14399"><b>WEATHER-5K: A Large-scale Global Station Weather Dataset Towards Comprehensive Time-series Forecasting Benchmark</b></a> \\
-*arXiv, 2024* \\
-Tao Han, Song Guo, Zhenghao Chen, **<span class="author-highlight">Wanghan Xu</span>**, Lei Bai\\
-[<a href="https://arxiv.org/pdf/2406.14399">arXiv</a>] [<a href="https://github.com/taohan10200/WEATHER-5K">Code</a>]
+<a class=PaperTitle href="https://arxiv.org/pdf/2510.22562"><b>LO-SDA: Latent Optimization for Score-based Atmospheric Data Assimilation</b></a> \\
+*arXiv, 2025* \\
+Jing-An Sun, Hang Fan, Ben Fei, Junchao Gong, Kun Chen, Fenghua Ling, Wenlong Zhang, **<span class="author-highlight">Wanghan Xu</span>**, Li Yan, Pierre Gentine, Lei Bai \\
+[<a href="https://arxiv.org/pdf/2510.22562">arXiv</a>]
 
   </div>
 </div>
@@ -632,6 +613,63 @@ Tao Han, Song Guo, Zhenghao Chen, **<span class="author-highlight">Wanghan Xu</s
 *NeurIPS, 2024 (Accept)* \\
 **<span class="author-highlight">Wanghan Xu</span>**, Fenghua Ling, Wenlong Zhang, Tao Han, Hao Chen, Wanli Ouyang, Lei Bai \\
 [<a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/298c3e32d7d402189444be2ff5d19979-Paper-Conference.pdf">NeurIPS</a>] [<a href="https://arxiv.org/pdf/2405.13796">arXiv</a>] [<a href="https://github.com/black-yt/WeatherGFT">Code</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/ExtremeCast.png"><img loading="lazy" data-src='/images/ExtremeCast.png' alt="ExtremeCast" width="1405" height="944"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2402.01295"><b>ExtremeCast: Boosting Extreme Value Prediction for Global Weather Forecast</b></a> \\
+*arXiv, 2024* \\
+**<span class="author-highlight">Wanghan Xu</span>**, Kang Chen, Tao Han, Hao Chen, Wanli Ouyang, Lei Bai \\
+[<a href="https://arxiv.org/pdf/2402.01295">arXiv</a>] [<a href="https://github.com/black-yt/ExtremeCast">Code</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div>
+      <div class="badge core">Key Contributor</div>
+      <a href="/images/CasCast.png"><img loading="lazy" data-src='/images/CasCast.png' alt="CasCast" width="1675" height="697"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://openreview.net/pdf?id=YuNFJSEkTi"><b>CasCast: Skillful High-resolution Precipitation Nowcasting via Cascaded Modelling</b></a> \\
+*ICML, 2024 (Accept)* \\
+Junchao Gong, Lei Bai, Peng Ye, **<span class="author-highlight">Wanghan Xu</span>**, Na Liu, Jianhua Dai, Xiaokang Yang, Wanli Ouyang \\
+[<a href="https://openreview.net/pdf?id=YuNFJSEkTi">ICML</a>] [<a href="https://arxiv.org/pdf/2402.04290">arXiv</a>] [<a href="https://github.com/OpenEarthLab/CasCast">Code</a>]
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='false'>
+  <div class='paper-box-image'>
+    <div>
+      <!-- <div class="badge"></div> -->
+      <a href="/images/WEATHER-5K.png"><img loading="lazy" data-src='/images/WEATHER-5K.png' alt="WEATHER-5K" width="1604" height="784"></a>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://arxiv.org/pdf/2406.14399"><b>WEATHER-5K: A Large-scale Global Station Weather Dataset Towards Comprehensive Time-series Forecasting Benchmark</b></a> \\
+*arXiv, 2024* \\
+Tao Han, Song Guo, Zhenghao Chen, **<span class="author-highlight">Wanghan Xu</span>**, Lei Bai\\
+[<a href="https://arxiv.org/pdf/2406.14399">arXiv</a>] [<a href="https://github.com/taohan10200/WEATHER-5K">Code</a>]
 
   </div>
 </div>
@@ -661,25 +699,6 @@ Tao Han, Zhenghao Chen, Song Guo, **<span class="author-highlight">Wanghan Xu</s
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/GraphPub.png"><img loading="lazy" data-src='/images/GraphPub.png' alt="GraphPub" width="2069" height="844"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://arxiv.org/pdf/2403.00030"><b>GraphPub: Generation of Differential Privacy Graph with High Availability</b></a> \\
-*arXiv, 2024* \\
-**<span class="author-highlight">Wanghan Xu</span>**, Bin Shi, Ao Liu, Jiqiang Zhang, Bo Dong \\
-[<a href="https://arxiv.org/pdf/2403.00030">arXiv</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='true'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge core">Key Contributor</div>
       <a href="/images/3FWL.png"><img loading="lazy" data-src='/images/3FWL.png' alt="3FWL" width="1335" height="902"></a>
     </div>
   </div>
@@ -699,34 +718,15 @@ Tao Han, Zhenghao Chen, Song Guo, **<span class="author-highlight">Wanghan Xu</s
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/CasCast.png"><img loading="lazy" data-src='/images/CasCast.png' alt="CasCast" width="1675" height="697"></a>
+      <a href="/images/GraphPub.png"><img loading="lazy" data-src='/images/GraphPub.png' alt="GraphPub" width="2069" height="844"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
 
-<a class=PaperTitle href="https://openreview.net/pdf?id=YuNFJSEkTi"><b>CasCast: Skillful High-resolution Precipitation Nowcasting via Cascaded Modelling</b></a> \\
-*ICML, 2024 (Accept)* \\
-Junchao Gong, Lei Bai, Peng Ye, **<span class="author-highlight">Wanghan Xu</span>**, Na Liu, Jianhua Dai, Xiaokang Yang, Wanli Ouyang \\
-[<a href="https://openreview.net/pdf?id=YuNFJSEkTi">ICML</a>] [<a href="https://arxiv.org/pdf/2402.04290">arXiv</a>] [<a href="https://github.com/OpenEarthLab/CasCast">Code</a>]
-
-  </div>
-</div>
-
-
-
-<div class='paper-box' data-core='true'>
-  <div class='paper-box-image'>
-    <div>
-      <div class="badge core">Key Contributor</div>
-      <a href="/images/ExtremeCast.png"><img loading="lazy" data-src='/images/ExtremeCast.png' alt="ExtremeCast" width="1405" height="944"></a>
-    </div>
-  </div>
-  <div class='paper-box-text' markdown="1">
-
-<a class=PaperTitle href="https://arxiv.org/pdf/2402.01295"><b>ExtremeCast: Boosting Extreme Value Prediction for Global Weather Forecast</b></a> \\
+<a class=PaperTitle href="https://arxiv.org/pdf/2403.00030"><b>GraphPub: Generation of Differential Privacy Graph with High Availability</b></a> \\
 *arXiv, 2024* \\
-**<span class="author-highlight">Wanghan Xu</span>**, Kang Chen, Tao Han, Hao Chen, Wanli Ouyang, Lei Bai \\
-[<a href="https://arxiv.org/pdf/2402.01295">arXiv</a>] [<a href="https://github.com/black-yt/ExtremeCast">Code</a>]
+**<span class="author-highlight">Wanghan Xu</span>**, Bin Shi, Ao Liu, Jiqiang Zhang, Bo Dong \\
+[<a href="https://arxiv.org/pdf/2403.00030">arXiv</a>]
 
   </div>
 </div>
