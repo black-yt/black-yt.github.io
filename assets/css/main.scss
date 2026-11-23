@@ -429,6 +429,26 @@ h1:before, .anchor:before {
     transform: rotate(180deg);
 }
 
+.js .publications-list:not(.is-ready) > .paper-box:nth-child(n + 11),
+.publications-list > .paper-box[hidden],
+.publications-toggle > [hidden] {
+    display: none;
+}
+
+.publications-toggle {
+    text-align: center;
+    margin: 0.75em 0;
+
+    .fa-chevron-down {
+        font-size: 0.78em;
+        transition: transform 0.35s ease;
+    }
+
+    [aria-expanded="true"] .fa-chevron-down {
+        transform: rotate(180deg);
+    }
+}
+
 .seg-toggle-btn {
     appearance: none;
     display: inline-flex;

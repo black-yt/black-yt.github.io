@@ -486,22 +486,53 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Publication filter
+  // Limit each publication filter before activating its media.
   var pubFilter = document.getElementById('pubFilter');
-  var boxes = document.querySelectorAll('.paper-box[data-core]');
-  if (pubFilter) {
-    pubFilter.querySelectorAll('.seg-btn').forEach(function(btn) {
+  var publicationList = document.getElementById('publicationList');
+  var pubToggle = document.getElementById('pubToggleBtn');
+  if (pubFilter && publicationList && pubToggle) {
+    var boxes = publicationList.querySelectorAll('.paper-box');
+    var filterButtons = pubFilter.querySelectorAll('.seg-btn');
+    var filter = 'all';
+    var expanded = false;
+    var previewCount = 10;
+
+    function renderPublications() {
+      var matchingCount = 0;
+      boxes.forEach(function(box) {
+        var matches = filter === 'all' || box.dataset.core === 'true';
+        if (matches) matchingCount++;
+        box.hidden = !matches || (!expanded && matchingCount > previewCount);
+        if (!box.hidden) {
+          box.querySelectorAll('[data-src]:not([src])').forEach(function(media) {
+            media.src = media.dataset.src;
+          });
+        }
+      });
+      publicationList.classList.add('is-ready');
+      pubToggle.hidden = matchingCount <= previewCount;
+      pubToggle.setAttribute('aria-expanded', String(expanded));
+      pubToggle.querySelector('span').textContent = expanded ? 'Show Less' : 'Show More';
+    }
+
+    filterButtons.forEach(function(btn) {
       btn.addEventListener('click', function() {
-        pubFilter.querySelectorAll('.seg-btn').forEach(function(b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-        moveSegIndicator(pubFilter, btn);
-        var filter = btn.dataset.filter;
-        boxes.forEach(function(box) {
-          var isCore = box.dataset.core === 'true';
-          box.style.display = (filter === 'all' || (filter === 'core' && isCore)) ? '' : 'none';
+        filter = btn.dataset.filter;
+        filterButtons.forEach(function(button) {
+          var active = button === btn;
+          button.classList.toggle('active', active);
+          button.setAttribute('aria-pressed', String(active));
         });
+        moveSegIndicator(pubFilter, btn);
+        renderPublications();
       });
     });
+    pubToggle.addEventListener('click', function() {
+      expanded = !expanded;
+      renderPublications();
+      if (!expanded) pubToggle.scrollIntoView({ block: 'nearest' });
+    });
+    renderPublications();
   }
 
   // News toggle
