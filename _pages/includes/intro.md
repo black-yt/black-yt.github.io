@@ -12,6 +12,12 @@ If you are interested in advancing agentic coding capabilities through RSI, feel
 🤜 Here are some fun Apps I developed that might be helpful to you! 🤛
 
 <div class="app-cards">
+  <a href="https://loopy-site-two.vercel.app/" class="app-card" target="_blank" rel="noopener">
+    <div class="app-card__inner">
+      <div class="app-card__name">Personal Agent</div>
+      <div class="app-card__desc">Long-term Memory · Proactive Messaging · Continuous Evolution</div>
+    </div>
+  </a>
   <a href="https://dr-sigma-wheat.vercel.app/" class="app-card" target="_blank" rel="noopener">
     <div class="app-card__inner">
       <div class="app-card__name">Deep Research</div>

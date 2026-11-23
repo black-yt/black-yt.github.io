@@ -409,14 +409,16 @@ h1:before, .anchor:before {
 
 
 
-.news-toggle-container {
+.news-toggle-container,
+.publications-toggle {
     text-align: center;
     margin-top: -20px;
     position: relative;
     z-index: 10;
 }
 
-.news-content.expanded ~ .news-toggle-container {
+.news-content.expanded ~ .news-toggle-container,
+.publications-list:not(.is-collapsed) + .publications-toggle {
     margin-top: 0.75em;
 }
 
@@ -447,9 +449,13 @@ h1:before, .anchor:before {
     height: auto;
 }
 
+.js .publications-list.is-collapsed {
+    -webkit-mask-image: linear-gradient(to bottom, black calc(100% - 135px), transparent);
+    mask-image: linear-gradient(to bottom, black calc(100% - 135px), transparent);
+}
+
 .publications-toggle {
-    text-align: center;
-    margin: 0.75em 0;
+    margin-bottom: 0.75em;
 
     .fa-chevron-down {
         font-size: 0.78em;

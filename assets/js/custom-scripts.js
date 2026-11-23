@@ -511,6 +511,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
       publicationList.classList.add('is-ready');
       pubToggle.hidden = matchingCount <= previewCount;
+      publicationList.classList.toggle('is-collapsed', !expanded && !pubToggle.hidden);
       pubToggle.setAttribute('aria-expanded', String(expanded));
       pubToggle.querySelector('span').textContent = expanded ? 'Show Less' : 'Show More';
     }

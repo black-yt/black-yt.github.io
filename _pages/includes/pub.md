@@ -7,7 +7,7 @@
 </div>
 
 <!-- Keep cards in the intended display order. Use data-src for media and intrinsic pixel dimensions for thumbnails. -->
-<div class="publications-list" id="publicationList" markdown="1">
+<div class="publications-list is-collapsed" id="publicationList" markdown="1">
 
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
