@@ -431,8 +431,20 @@ h1:before, .anchor:before {
 
 .js .publications-list:not(.is-ready) > .paper-box:nth-child(n + 7),
 .publications-list > .paper-box[hidden],
+.no-js .publications-toggle,
 .publications-toggle > [hidden] {
     display: none;
+}
+
+.publications-list .paper-box-image > div {
+    width: 100%;
+    max-width: 400px;
+}
+
+.publications-list .paper-box-image img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .publications-toggle {

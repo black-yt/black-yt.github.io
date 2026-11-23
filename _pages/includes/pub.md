@@ -6,14 +6,14 @@
   <button type="button" class="seg-btn" data-filter="core" aria-pressed="false">Key Contributor</button>
 </div>
 
-<!-- Keep publication cards newest first by first public release. Use data-src for publication media. -->
+<!-- Keep cards newest first. Use data-src for media and intrinsic pixel dimensions for thumbnails. -->
 <div class="publications-list" id="publicationList" markdown="1">
 
 <div class='paper-box' data-core='true'>
   <div class='paper-box-image'>
     <div class="paper-box-media">
       <div class="badge core">Key Contributor</div>
-      <a href="/images/Sage-S2.1-Flash.png"><img loading="lazy" data-src='/images/Sage-S2.1-Flash.png' alt="Sage S2.1 Flash" width="100%"></a>
+      <a href="/images/Sage-S2.1-Flash.png"><img loading="lazy" data-src='/images/Sage-S2.1-Flash.png' alt="Sage S2.1 Flash" width="2014" height="1015"></a>
       <iframe class="paper-video" loading="lazy" data-src="//player.bilibili.com/player.html?isOutside=true&aid=117626957202168&bvid=BV1K8sN6sEVk&cid=43662773876&p=1" title="Sage S2.1 Flash introduction video" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
     </div>
   </div>
@@ -33,7 +33,7 @@
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/ARE-bench.png"><img loading="lazy" data-src='/images/ARE-bench.png' alt="ARE-bench overview" width="100%"></a>
+      <a href="/images/ARE-bench.png"><img loading="lazy" data-src='/images/ARE-bench.png' alt="ARE-bench overview" width="1745" height="1051"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -52,7 +52,7 @@ Jiahang Lin\*, Wanying Ren\*, **<span class="author-highlight">Wanghan Xu*</span
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/CoworkOS.png"><img loading="lazy" data-src='/images/CoworkOS.png' alt="CoworkOS real-world automation examples" width="100%"></a>
+      <a href="/images/CoworkOS.png"><img loading="lazy" data-src='/images/CoworkOS.png' alt="CoworkOS real-world automation examples" width="2356" height="1018"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -71,7 +71,7 @@ Jiajie Jin ... (40 authors) \\
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/RSI-Anything.png"><img loading="lazy" data-src='/images/RSI-Anything.png' alt="RSI-Anything framework overview" width="100%"></a>
+      <a href="/images/RSI-Anything.png"><img loading="lazy" data-src='/images/RSI-Anything.png' alt="RSI-Anything framework overview" width="2179" height="873"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -90,7 +90,7 @@ Taoyong Cui, Pinxian Zeng, **<span class="author-highlight">Wanghan Xu</span>**,
   <div class='paper-box-image'>
     <div class="paper-box-media">
       <div class="badge core">Key Contributor</div>
-      <a href="/images/Atria.png"><img loading="lazy" data-src='/images/Atria.png' alt="Atria Dawn Preview benchmark results" width="100%"></a>
+      <a href="/images/Atria.png"><img loading="lazy" data-src='/images/Atria.png' alt="Atria Dawn Preview benchmark results" width="4000" height="2250"></a>
       <iframe class="paper-video" loading="lazy" data-src="//player.bilibili.com/player.html?isOutside=true&aid=117269904623547&bvid=BV1CKe56NEyE&cid=41894611921&p=1" title="Atria Dawn Preview introduction video" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
     </div>
   </div>
@@ -110,7 +110,7 @@ Taoyong Cui, Pinxian Zeng, **<span class="author-highlight">Wanghan Xu</span>**,
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/BenchmarkRadar.png"><img loading="lazy" data-src='/images/BenchmarkRadar.png' alt="Benchmark Radar Pareto view of benchmark scores and model coverage" width="100%"></a>
+      <a href="/images/BenchmarkRadar.png"><img loading="lazy" data-src='/images/BenchmarkRadar.png' alt="Benchmark Radar Pareto view of benchmark scores and model coverage" width="1396" height="715"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -129,7 +129,7 @@ Koutian Wu, Junjie Zhou, Ergan Shang, Jiayu Wang, Pengqian Han, Junkai Wang, **<
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/IdeaGen.png"><img loading="lazy" data-src='/images/IdeaGen.png' alt="IdeaGen" width="100%"></a>
+      <a href="/images/IdeaGen.png"><img loading="lazy" data-src='/images/IdeaGen.png' alt="IdeaGen" width="1219" height="688"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -148,7 +148,7 @@ Yifan Zhou, Qihao Yang, Yan Li, Donggang Li, Xiru Hu, Hokin Deng, Ziyang Gong, X
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/SciOrch.png"><img loading="lazy" data-src='/images/SciOrch.png' alt="SciOrch" width="100%"></a>
+      <a href="/images/SciOrch.png"><img loading="lazy" data-src='/images/SciOrch.png' alt="SciOrch" width="1937" height="980"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -167,7 +167,7 @@ Jingru Guo, Xiangyuan Xue, Lian Zhang, **<span class="author-highlight">Wanghan 
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/ResearchClawBench.png"><img loading="lazy" data-src='/images/ResearchClawBench.png' alt="ResearchClawBench" width="100%"></a>
+      <a href="/images/ResearchClawBench.png"><img loading="lazy" data-src='/images/ResearchClawBench.png' alt="ResearchClawBench" width="1659" height="1132"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -186,7 +186,7 @@ Jingru Guo, Xiangyuan Xue, Lian Zhang, **<span class="author-highlight">Wanghan 
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/SciPRM.png"><img loading="lazy" data-src='/images/SciPRM.png' alt="Sci-PRM" width="100%"></a>
+      <a href="/images/SciPRM.png"><img loading="lazy" data-src='/images/SciPRM.png' alt="Sci-PRM" width="1818" height="762"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -205,7 +205,7 @@ Xiangyu Zhao, Hengyuan Zhao, Yiheng Wang, **<span class="author-highlight">Wangh
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/EvoMemory.png"><img loading="lazy" data-src='/images/EvoMemory.png' alt="EvoMemory" width="100%"></a>
+      <a href="/images/EvoMemory.png"><img loading="lazy" data-src='/images/EvoMemory.png' alt="EvoMemory" width="1743" height="788"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -224,7 +224,7 @@ Dianzhi Yu, Vireo Zhang, Hongru Wang, Yanyu Chen, Minda Hu, **<span class="autho
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/ReCrit.png"><img loading="lazy" data-src='/images/ReCrit.png' alt="ReCrit" width="100%"></a>
+      <a href="/images/ReCrit.png"><img loading="lazy" data-src='/images/ReCrit.png' alt="ReCrit" width="1718" height="774"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -243,7 +243,7 @@ Dianzhi Yu, Vireo Zhang, Hongru Wang, Yanyu Chen, Minda Hu, **<span class="autho
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/Earth-Survey.png"><img loading="lazy" data-src='/images/Earth-Survey.png' alt="Earth-Survey" width="100%"></a>
+      <a href="/images/Earth-Survey.png"><img loading="lazy" data-src='/images/Earth-Survey.png' alt="Earth-Survey" width="1577" height="695"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -262,7 +262,7 @@ Xiangyu Zhao, Bo Liu, Yuehan Zhang, Zelin Song, **<span class="author-highlight"
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/Intern-S1-Pro.png"><img loading="lazy" data-src='/images/Intern-S1-Pro.png' alt="Intern-S1-Pro" width="100%"></a>
+      <a href="/images/Intern-S1-Pro.png"><img loading="lazy" data-src='/images/Intern-S1-Pro.png' alt="Intern-S1-Pro" width="1321" height="700"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -281,7 +281,7 @@ Yicheng Zou ... (174 authors) \\
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/InternAgent.png"><img loading="lazy" data-src='/images/InternAgent.png' alt="InternAgent" width="100%"></a>
+      <a href="/images/InternAgent.png"><img loading="lazy" data-src='/images/InternAgent.png' alt="InternAgent" width="1226" height="556"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -300,7 +300,7 @@ Shiyang Feng ... (57 authors) \\
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/EvalKit.png"><img loading="lazy" data-src='/images/EvalKit.png' alt="EvalKit" width="100%"></a>
+      <a href="/images/EvalKit.png"><img loading="lazy" data-src='/images/EvalKit.png' alt="EvalKit" width="905" height="477"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -319,7 +319,7 @@ Yiheng Wang ... (38 authors)\\
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/Omni-Weather.png"><img loading="lazy" data-src='/images/Omni-Weather.png' alt="Omni-Weather" width="100%"></a>
+      <a href="/images/Omni-Weather.png"><img loading="lazy" data-src='/images/Omni-Weather.png' alt="Omni-Weather" width="1643" height="875"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -338,7 +338,7 @@ Zhiwang Zhou, Yuandong Pu, Xuming He, Yidi Liu, Yixin Chen, Junchao Gong, Xiang 
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/SGI.png"><img loading="lazy" data-src='/images/SGI.png' alt="SGI" width="100%"></a>
+      <a href="/images/SGI.png"><img loading="lazy" data-src='/images/SGI.png' alt="SGI" width="1200" height="573"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -357,7 +357,7 @@ Zhiwang Zhou, Yuandong Pu, Xuming He, Yidi Liu, Yixin Chen, Junchao Gong, Xiang 
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/LO-SDA.png"><img loading="lazy" data-src='/images/LO-SDA.png' alt="LO-SDA" width="100%"></a>
+      <a href="/images/LO-SDA.png"><img loading="lazy" data-src='/images/LO-SDA.png' alt="LO-SDA" width="1312" height="927"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -376,7 +376,7 @@ Jing-An Sun, Hang Fan, Ben Fei, Junchao Gong, Kun Chen, Fenghua Ling, Wenlong Zh
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/DAWP.png"><img loading="lazy" data-src='/images/DAWP.png' alt="DAWP" width="100%"></a>
+      <a href="/images/DAWP.png"><img loading="lazy" data-src='/images/DAWP.png' alt="DAWP" width="1600" height="760"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -395,7 +395,7 @@ Junchao Gong, Jingyi Xu, Ben Fei, Fenghua Ling, Wenlong Zhang, Kun Chen, **<span
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/Earth-Agent.png"><img loading="lazy" data-src='/images/Earth-Agent.png' alt="Earth-Agent" width="100%"></a>
+      <a href="/images/Earth-Agent.png"><img loading="lazy" data-src='/images/Earth-Agent.png' alt="Earth-Agent" width="1658" height="942"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -414,7 +414,7 @@ Peilin Feng, Zhutao Lv, Junyan Ye, Xiaolei Wang, Xinjie Huo, Jinhua Yu, **<span 
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/Eigen1.png"><img loading="lazy" data-src='/images/Eigen1.png' alt="Eigen-Agent" width="100%"></a>
+      <a href="/images/Eigen1.png"><img loading="lazy" data-src='/images/Eigen1.png' alt="Eigen-Agent" width="1578" height="1044"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -433,7 +433,7 @@ Xiangru Tang\*, **<span class="author-highlight">Wanghan Xu*</span>**, Yujie Wan
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/InfGen.png"><img loading="lazy" data-src='/images/InfGen.png' alt="InfGen" width="100%"></a>
+      <a href="/images/InfGen.png"><img loading="lazy" data-src='/images/InfGen.png' alt="InfGen" width="1024" height="512"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -452,7 +452,7 @@ Tao Han, **<span class="author-highlight">Wanghan Xu</span>**, Junchao Gong, Xia
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/LLM_Survey.png"><img loading="lazy" data-src='/images/LLM_Survey.png' alt="LLM_Survey" width="100%"></a>
+      <a href="/images/LLM_Survey.png"><img loading="lazy" data-src='/images/LLM_Survey.png' alt="LLM_Survey" width="2087" height="949"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -471,7 +471,7 @@ Ming Hu, Chenglong Ma, Wei Li, **<span class="author-highlight">Wanghan Xu</span
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/Intern-S1.png"><img loading="lazy" data-src='/images/Intern-S1.png' alt="Intern-S1" width="100%"></a>
+      <a href="/images/Intern-S1.png"><img loading="lazy" data-src='/images/Intern-S1.png' alt="Intern-S1" width="1917" height="575"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -490,7 +490,7 @@ Lei Bai ... (177 authors listed in alphabetical order by their last names) \\
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/EarthLink.png"><img loading="lazy" data-src='/images/EarthLink.png' alt="EarthLink" width="100%"></a>
+      <a href="/images/EarthLink.png"><img loading="lazy" data-src='/images/EarthLink.png' alt="EarthLink" width="1364" height="909"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -509,7 +509,7 @@ Zijie Guo, Jiong Wang, Xiaoyu Yue, Wangxu Wei, Zhe Jiang,**<span class="author-h
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/Align-DA.png"><img loading="lazy" data-src='/images/Align-DA.png' alt="Align-DA" width="100%"></a>
+      <a href="/images/Align-DA.png"><img loading="lazy" data-src='/images/Align-DA.png' alt="Align-DA" width="1546" height="835"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -528,7 +528,7 @@ Jing-An Sun, Hang Fan, Junchao Gong, Ben Fei, Kun Chen, Fenghua Ling, Wenlong Zh
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/MSEarth.png"><img loading="lazy" data-src='/images/MSEarth.png' alt="MSEarth" width="100%"></a>
+      <a href="/images/MSEarth.png"><img loading="lazy" data-src='/images/MSEarth.png' alt="MSEarth" width="1024" height="545"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -547,7 +547,7 @@ Xiangyu Zhao\*, **<span class="author-highlight">Wanghan Xu*</span>**, Bo Liu, Y
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/Manalyzer.png"><img loading="lazy" data-src='/images/Manalyzer.png' alt="Manalyzer" width="100%"></a>
+      <a href="/images/Manalyzer.png"><img loading="lazy" data-src='/images/Manalyzer.png' alt="Manalyzer" width="1663" height="1135"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -566,7 +566,7 @@ Xiangyu Zhao\*, **<span class="author-highlight">Wanghan Xu*</span>**, Bo Liu, Y
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/EarthSE.png"><img loading="lazy" data-src='/images/EarthSE.png' alt="EarthSE" width="100%"></a>
+      <a href="/images/EarthSE.png"><img loading="lazy" data-src='/images/EarthSE.png' alt="EarthSE" width="2081" height="942"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -585,7 +585,7 @@ Xiangyu Zhao\*, **<span class="author-highlight">Wanghan Xu*</span>**, Bo Liu, Y
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/RepAlign.png"><img loading="lazy" data-src='/images/RepAlign.png' alt="RepAlign" width="100%"></a>
+      <a href="/images/RepAlign.png"><img loading="lazy" data-src='/images/RepAlign.png' alt="RepAlign" width="900" height="563"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -604,7 +604,7 @@ Xiangyu Zhao\*, **<span class="author-highlight">Wanghan Xu*</span>**, Bo Liu, Y
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/WEATHER-5K.png"><img loading="lazy" data-src='/images/WEATHER-5K.png' alt="WEATHER-5K" width="100%"></a>
+      <a href="/images/WEATHER-5K.png"><img loading="lazy" data-src='/images/WEATHER-5K.png' alt="WEATHER-5K" width="1604" height="784"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -623,7 +623,7 @@ Tao Han, Song Guo, Zhenghao Chen, **<span class="author-highlight">Wanghan Xu</s
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/GFT.png"><img loading="lazy" data-src='/images/GFT.png' alt="GFT" width="100%"></a>
+      <a href="/images/GFT.png"><img loading="lazy" data-src='/images/GFT.png' alt="GFT" width="1712" height="915"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -642,7 +642,7 @@ Tao Han, Song Guo, Zhenghao Chen, **<span class="author-highlight">Wanghan Xu</s
   <div class='paper-box-image'>
     <div>
       <!-- <div class="badge"></div> -->
-      <a href="/images/CRA5.png"><img loading="lazy" data-src='/images/CRA5.png' alt="CRA5" width="100%"></a>
+      <a href="/images/CRA5.png"><img loading="lazy" data-src='/images/CRA5.png' alt="CRA5" width="1757" height="820"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -661,7 +661,7 @@ Tao Han, Zhenghao Chen, Song Guo, **<span class="author-highlight">Wanghan Xu</s
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/GraphPub.png"><img loading="lazy" data-src='/images/GraphPub.png' alt="GraphPub" width="100%"></a>
+      <a href="/images/GraphPub.png"><img loading="lazy" data-src='/images/GraphPub.png' alt="GraphPub" width="2069" height="844"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -680,7 +680,7 @@ Tao Han, Zhenghao Chen, Song Guo, **<span class="author-highlight">Wanghan Xu</s
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/3FWL.png"><img loading="lazy" data-src='/images/3FWL.png' alt="3FWL" width="100%"></a>
+      <a href="/images/3FWL.png"><img loading="lazy" data-src='/images/3FWL.png' alt="3FWL" width="1335" height="902"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -699,7 +699,7 @@ Tao Han, Zhenghao Chen, Song Guo, **<span class="author-highlight">Wanghan Xu</s
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/CasCast.png"><img loading="lazy" data-src='/images/CasCast.png' alt="CasCast" width="100%"></a>
+      <a href="/images/CasCast.png"><img loading="lazy" data-src='/images/CasCast.png' alt="CasCast" width="1675" height="697"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -718,7 +718,7 @@ Junchao Gong, Lei Bai, Peng Ye, **<span class="author-highlight">Wanghan Xu</spa
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/ExtremeCast.png"><img loading="lazy" data-src='/images/ExtremeCast.png' alt="ExtremeCast" width="100%"></a>
+      <a href="/images/ExtremeCast.png"><img loading="lazy" data-src='/images/ExtremeCast.png' alt="ExtremeCast" width="1405" height="944"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -737,7 +737,7 @@ Junchao Gong, Lei Bai, Peng Ye, **<span class="author-highlight">Wanghan Xu</spa
   <div class='paper-box-image'>
     <div>
       <div class="badge core">Key Contributor</div>
-      <a href="/images/MDP.png"><img loading="lazy" data-src='/images/MDP.png' alt="MDP" width="100%"></a>
+      <a href="/images/MDP.png"><img loading="lazy" data-src='/images/MDP.png' alt="MDP" width="1012" height="993"></a>
     </div>
   </div>
   <div class='paper-box-text' markdown="1">
@@ -753,7 +753,7 @@ Junchao Gong, Lei Bai, Peng Ye, **<span class="author-highlight">Wanghan Xu</spa
 </div>
 
 <div class="publications-toggle">
-  <button type="button" class="seg-toggle-btn" id="pubToggleBtn" aria-expanded="false" aria-controls="publicationList" hidden>
+  <button type="button" class="seg-toggle-btn" id="pubToggleBtn" aria-expanded="false" aria-controls="publicationList" disabled>
     <span>Show More</span>
     <i class="fas fa-chevron-down" aria-hidden="true"></i>
   </button>

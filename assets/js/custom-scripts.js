@@ -533,6 +533,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!expanded) pubToggle.scrollIntoView({ block: 'nearest' });
     });
     renderPublications();
+    pubToggle.disabled = false;
   }
 
   // News toggle
