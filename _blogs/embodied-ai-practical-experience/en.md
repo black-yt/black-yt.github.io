@@ -76,12 +76,12 @@ Early scheduling left a gap between chunks. Waiting for a chunk to finish before
 
 A world action model predicts future imagery and actions from visual and action history. While the robot executes chunk $$A_k$$, the future dynamics module (FDM) uses the most recent grounded history and the actions in $$A_k$$ to forecast visual features at the future handoff. The policy uses that forecast to prepare $$A_{k+1}$$ while the current chunk runs. Once camera observations arrive, the executed actions and their observed outcomes correct the history for subsequent predictions. The forecast is provisional. The prefetch queue must stay aligned with the execution index and timestamps. Preparing the next chunk early and making its first commands continuous are separate design problems. For an example of the latter, see the prefix constraints used in real-time chunking [[3]](#ref-real-time-chunking).
 
-The pseudocode shows the steady-state loop. The current chunk has already been prefetched, and camera feedback from the previous chunk is available. The controller starts asynchronously so inference can run while the current commands are being sent.
+The pseudocode compares a single handoff. Both sides take the current actions from the queue. On the left, inference uses a real frame captured after execution finishes. On the right, the previous chunk's feedback corrects the history while the current chunk runs, and the FDM predicts the frame at its end.
 
-![Asynchronous scheduling pseudocode. Start the current chunk, correct history with previous feedback, forecast visual features, queue the next actions, and collect feedback from the current execution.]({{ '/blogs/embodied-ai-practical-experience/assets/async-pseudocode.png' | relative_url }})
+![Pseudocode comparison for an action handoff. The left side waits for a real frame before predicting the next actions. The right side predicts the frame and the next actions during execution, then collects real feedback.]({{ '/blogs/embodied-ai-practical-experience/assets/async-pseudocode.png' | relative_url }})
 {: .blog-pseudocode}
 
-The FDM forecasts visual features from the corrected history and the current actions. At the end of the loop, the real images and corresponding action-command history are collected for the next correction. Both execution and inference complete their current work before the next chunk starts.
+In the lookahead path, the real images and corresponding action-command history are collected after the current chunk ends. They correct the history at the next handoff. Execution and inference must both be ready before the controller sends the next chunk.
 
 ![Serial scheduling runs inference after execution. Asynchronous scheduling places the future visual prediction and next action inference inside the current execution window.]({{ '/blogs/embodied-ai-practical-experience/assets/chunk-timeline.png' | relative_url }})
 {: .blog-figure-image}

@@ -970,9 +970,14 @@ body, #main {
         cursor: zoom-in;
     }
 
-    .blog-pseudocode img {
-        width: 100%;
-        max-width: 100%;
+    .blog-pseudocode {
+        overflow-x: auto;
+
+        img {
+            width: 100%;
+            min-width: 760px;
+            max-width: none;
+        }
     }
 
     // Keep image-to-caption spacing; add breathing room outside the pair.
