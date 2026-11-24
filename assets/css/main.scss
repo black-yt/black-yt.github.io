@@ -189,6 +189,9 @@
         aspect-ratio: 16 / 9;
         border: 0;
         border-radius: 6px;
+    }
+
+    .paper-box-media > a + .paper-video {
         margin-top: 0.75em;
     }
 
