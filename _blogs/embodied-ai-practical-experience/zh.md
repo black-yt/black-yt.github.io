@@ -76,12 +76,12 @@ $$
 
 世界动作模型从视觉和动作历史预测后续画面与动作。执行片段 $$A_k$$ 时，未来动力学模块（FDM）根据已有观测和当前动作预测该段结束时的视觉特征。策略用这份预测准备 $$A_{k+1}$$。提前准备下一段和保证交接连续是两个独立问题。有关后者，实时动作分块工作提供了基于前缀约束的另一种实现 [[3]](#ref-real-time-chunking)。
 
-下面两侧都从当前帧预测动作。左侧等真机做完动作，拍到真实帧后才预测下一段。右侧利用真机动作持续的时间，让 FDM 预测结束时的画面，并提前算出下一段。
+两侧都从当前帧 `frame[i]` 预测动作。左侧等真机做完动作，拍到真实帧后才预测下一段。右侧在动作执行时用 FDM 预测 `frame[i + 1]`，提前算出下一段。
 
-![左右伪代码对比。左侧阻塞等待真机执行，再采集真实帧和预测下一段动作。右侧用红色标出耗时的真机执行，同时用 FDM 预测下一帧和下一段动作，最后用实拍帧替换预测帧。]({{ '/blogs/embodied-ai-practical-experience/assets/async-pseudocode.png' | relative_url }})
+![左右伪代码对比。红色标出左侧等待机器人完成动作的时间。右侧在动作执行时用 FDM 预测第 i+1 帧和下一段动作，执行结束后采集实拍帧，写入第 i+1 帧的位置。]({{ '/blogs/embodied-ai-practical-experience/assets/async-pseudocode.png' | relative_url }})
 {: .blog-pseudocode}
 
-右侧最后一次赋值用实拍帧覆盖预测帧，让后续推理回到真实观测。
+右侧最后两行先采集 `real_frame`，再把它写入 `frame[i + 1]`，让后续推理回到真实观测。
 
 ![串行调度先执行后推理，异步调度把未来视觉预测和下一段推理安排在当前动作窗口内。]({{ '/blogs/embodied-ai-practical-experience/assets/chunk-timeline.png' | relative_url }})
 {: .blog-figure-image}

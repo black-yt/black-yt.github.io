@@ -76,12 +76,12 @@ Early scheduling left a gap between chunks. Waiting for a chunk to finish before
 
 A world action model predicts future imagery and actions from visual and action history. While the robot executes chunk $$A_k$$, the future dynamics module (FDM) uses the available observations and current actions to forecast visual features at the end of the chunk. The policy uses that forecast to prepare $$A_{k+1}$$. Preparing the next chunk early and making its first commands continuous are separate design problems. For an example of the latter, see the prefix constraints used in real-time chunking [[3]](#ref-real-time-chunking).
 
-Both sides start by predicting an action from the current frame. On the left, the robot finishes the motion and the camera captures a real frame before the policy predicts the next action. On the right, the FDM predicts the end-of-motion frame while the robot moves, allowing the policy to compute the next action early.
+Both sides predict the current action from `frame[i]`. On the left, the policy waits for the robot to finish and for the camera to capture the next frame. On the right, the FDM predicts `frame[i + 1]` while the robot moves, so the policy can compute the next action early.
 
-![Side-by-side pseudocode. The left side waits for physical execution, then captures a real frame and predicts the next action. The right side highlights slow robot execution in red, predicts the frame and next action during motion, and finally replaces the predicted frame with a real one.]({{ '/blogs/embodied-ai-practical-experience/assets/async-pseudocode.png' | relative_url }})
+![Side-by-side pseudocode. Red marks the wait for motion to finish on the left. On the right, the FDM predicts frame i+1 during motion so the policy can compute the next action early. The real camera frame is then written to the same index.]({{ '/blogs/embodied-ai-practical-experience/assets/async-pseudocode.png' | relative_url }})
 {: .blog-pseudocode}
 
-The final assignment on the right replaces the predicted frame with a camera observation for subsequent inference.
+The last two lines on the right capture `real_frame` and write it to `frame[i + 1]`, restoring the observed image for subsequent inference.
 
 ![Serial scheduling runs inference after execution. Asynchronous scheduling places the future visual prediction and next action inference inside the current execution window.]({{ '/blogs/embodied-ai-practical-experience/assets/chunk-timeline.png' | relative_url }})
 {: .blog-figure-image}
