@@ -1,18 +1,19 @@
 ---
-title: "双臂精细操作的工程实践"
+title: "具身AI实操经验"
 date: 2026-11-24
 lang: zh
 translation_key: bimanual-manipulation-engineering
-permalink: /blogs/bimanual-manipulation-engineering/zh/
+permalink: /blogs/embodied-ai-practical-experience/zh/
+redirect_from: /blogs/bimanual-manipulation-engineering/zh/
 description: "从夹爪提前闭合、动作片段交接等待和末端对准偏差出发，复盘双臂机器人从示教到真机执行的五个工程问题。"
-cover: /blogs/bimanual-manipulation-engineering/assets/chunk-timeline.png
+cover: /blogs/embodied-ai-practical-experience/assets/chunk-timeline.png
 ---
 
-> 本文写给已经了解模仿学习、希望把策略跑到真机上的读者。正文会注明每组结果的测量口径。
+> 你可以在[项目主页](https://black-yt.github.io/embodied-ai-projects/projects/project-01/)浏览更多实机演示。
 
 “把培养皿里的液体移到小试管里。”要让双臂机器人执行这条指令，枪尖需要先到达液面，再移向窄管口。最后几厘米里，工具要对准，另一侧手臂要维持合适的姿态，拇指还要在枪尖到位之后按下。头部相机能看清器皿在实验台上的布局，双腕视角则更容易看清管口、枪尖和手指的相对位置。
 
-我们用细胞培养中的桌面流程来研究这类双臂精细操作。完整流程还包括取工具、换枪头和转运器皿。项目先把四种移液和两种吹打拆成六个可独立训练和执行的技能，让策略根据自然语言和三路图像生成动作。示教库有 **3,507 条完整轨迹**，覆盖 12 项流程，按同步采样和 30 Hz 估算约 **2,500 分钟**。动作能否稳定执行，取决于示教何时开始、片段怎样接续、以及模型用什么坐标来表达目标。[项目展示](https://black-yt.github.io/embodied-ai-projects/projects/project-01/)
+我们用细胞培养中的桌面流程来研究这类双臂精细操作。完整流程还包括取工具、换枪头和转运器皿。项目先把四种移液和两种吹打拆成六个可独立训练和执行的技能，让策略根据自然语言和三路图像生成动作。示教库有 **3,507 条完整轨迹**，覆盖 12 项流程，按同步采样和 30 Hz 估算约 **2,500 分钟**。动作能否稳定执行，取决于示教何时开始、片段怎样接续、以及模型用什么坐标来表达目标。
 
 ## 为什么还没对准，夹爪就闭合了
 
@@ -61,7 +62,7 @@ $$
 
 固定 $$\lambda$$ 时，可一次求解线性方程。随后检查每个中间点的偏移，超限时降低并二分搜索权重。这一版配置将位置偏移限制在 **2 mm**，旋转偏移限制在 **1°**。旋转先对齐相邻四元数符号，再相对起始旋转映射到旋转向量空间做同类处理，最后回到 SO(3) 检查角度偏移。夹爪指令逐值透传。执行端如果选择了平滑后的动作，送回历史的动作也用实际下发版本。
 
-![同一个离线位置序列的原预测与平滑结果，两端保持重合。]({{ '/blogs/bimanual-manipulation-engineering/assets/bounded-smoothing.png' | relative_url }})
+![同一个离线位置序列的原预测与平滑结果，两端保持重合。]({{ '/blogs/embodied-ai-practical-experience/assets/bounded-smoothing.png' | relative_url }})
 {: .blog-figure-image}
 
 *图 1. 离线构造的一维校验序列。位置最多调整约 2 mm，末点仍为 20 mm。*
@@ -73,25 +74,16 @@ $$
 
 早期调度的等待出现在动作片段末尾。执行完一段再收图和推理，会在每次交接留出停顿。直接把较早的图像交给并行推理，又会让下一段动作错以为末端还在旧位置。对于正在向管口靠近的工具，这个时间错位足以影响对准。
 
-世界动作模型从视觉和动作历史预测后续画面与动作。执行片段 $$A_k$$ 时，未来动力学模块（FDM）用已落地的观测历史和即将执行的 $$A_k$$ 预测更新时刻的视觉特征。策略以这份前瞻特征为条件准备 $$A_{k+1}$$，当前段继续执行。真实帧到达后，系统把已经执行的动作与对应观测用于校正历史，供接下来的预测使用。预测特征是临时条件，消费队列要与执行片段编号和时间对齐。提前准备下一段和保证交接连续是两个独立问题。有关后者，实时动作分块工作提供了基于前缀约束的另一种实现 [[3]](#ref-real-time-chunking)。
+世界动作模型从视觉和动作历史预测后续画面与动作。执行片段 $$A_k$$ 时，未来动力学模块（FDM）根据已有观测和当前动作预测该段结束时的视觉特征。策略用这份预测准备 $$A_{k+1}$$。提前准备下一段和保证交接连续是两个独立问题。有关后者，实时动作分块工作提供了基于前缀约束的另一种实现 [[3]](#ref-real-time-chunking)。
 
-下面是稳态调度的简化伪代码。进入循环时，当前动作已预取就绪，上一段的相机反馈也已收集。控制器启动后立即返回，推理端在当前段执行的同时工作。
+两侧都从当前帧 `frame[i]` 预测动作。左侧等真机做完动作，拍到真实帧后才预测下一段。右侧在动作执行时用 FDM 预测 `frame[i + 1]`，提前算出下一段。
 
-```python
-for k in steady_chunks:
-    current = ready.pop(k)
-    execution = controller.start(current)  # Non-blocking
+![左右伪代码对比。红色标出左侧等待机器人完成动作的时间。右侧在动作执行时用 FDM 预测第 i+1 帧和下一段动作，执行结束后采集实拍帧，写入第 i+1 帧的位置。]({{ '/blogs/embodied-ai-practical-experience/assets/async-pseudocode.png' | relative_url }})
+{: .blog-pseudocode}
 
-    history = correct(history, previous_feedback)
-    future_features = fdm.predict_visual_features(history, current)
-    ready[k + 1] = predict_actions(history, current, future_features)
+右侧最后两行先采集 `real_frame`，再把它写入 `frame[i + 1]`，让后续推理回到真实观测。
 
-    previous_feedback = execution.wait_for_feedback()
-```
-
-FDM 用校正后的历史和当前动作预测视觉特征。循环末尾收集真实图像和对应的动作指令记录，留到下一轮修正历史。下一段开始前，控制器与推理各自完成当前工作。
-
-![串行调度先执行后推理，异步调度把未来视觉预测和下一段推理安排在当前动作窗口内。]({{ '/blogs/bimanual-manipulation-engineering/assets/chunk-timeline.png' | relative_url }})
+![串行调度先执行后推理，异步调度把未来视觉预测和下一段推理安排在当前动作窗口内。]({{ '/blogs/embodied-ai-practical-experience/assets/chunk-timeline.png' | relative_url }})
 {: .blog-figure-image}
 
 *图 2. 异步前瞻把下一段计算放进执行窗口，真实反馈随后校正历史。时间轴为示意。*
@@ -122,7 +114,7 @@ FDM 用校正后的历史和当前动作预测视觉特征。循环末尾收集�
 
 我们在同一组**拾取移液器并换枪头**的示教上，分别训练 Joint 和 EE 版本，共用预训练起点，各训练 **5,000 步**。两套模型使用同一批 **30 条验证轨迹**，覆盖 **383 个 50 步动作片段、18,497 帧有效数据**。每段从记录的真实观测开始做开环预测。对照时把 Joint 预测经 FK 转成工具位姿，在同一坐标系下与 EE 预测、示教目标比较。位置用毫米衡量，姿态用旋转角误差衡量，跳过片段补齐的尾帧。
 
-![以 Joint 为基准，EE 的左、右臂平均位置误差分别高 5.2% 和 21.9%。EE 的左臂 P95 低 8.0%，右臂 P95 高 3.5%。右侧列出原始毫米值。]({{ '/blogs/bimanual-manipulation-engineering/assets/action-representation-errors.png' | relative_url }})
+![以 Joint 为基准，EE 的左、右臂平均位置误差分别高 5.2% 和 21.9%。EE 的左臂 P95 低 8.0%，右臂 P95 高 3.5%。右侧列出原始毫米值。]({{ '/blogs/embodied-ai-practical-experience/assets/action-representation-errors.png' | relative_url }})
 {: .blog-figure-image}
 
 *图 3. EE 相对 Joint 的末端位置误差变化，计算为（EE − Joint）/ Joint。右侧保留原始毫米值。P95 是 95% 的有效帧误差都不超过的值。*

@@ -1,18 +1,19 @@
 ---
-title: "Engineering Bimanual Dexterous Manipulation"
+title: "Practical Experience with Embodied AI"
 date: 2026-11-24
 lang: en
 translation_key: bimanual-manipulation-engineering
-permalink: /blogs/bimanual-manipulation-engineering/
+permalink: /blogs/embodied-ai-practical-experience/
+redirect_from: /blogs/bimanual-manipulation-engineering/
 description: "Five lessons from bringing a bimanual robot policy from demonstrations to the lab, motivated by premature grasps, chunk handoff delays, and tool alignment errors."
-cover: /blogs/bimanual-manipulation-engineering/assets/chunk-timeline.png
+cover: /blogs/embodied-ai-practical-experience/assets/chunk-timeline.png
 ---
 
-> This article is for readers who know the basics of imitation learning and want to deploy a policy on a real robot. Each result specifies how it was measured.
+> You can see more real-robot demonstrations on the [project page](https://black-yt.github.io/embodied-ai-projects/projects/project-01/).
 
 “Transfer the liquid from the dish into the small tube.” To follow that instruction, a bimanual robot has to bring the pipette tip to the liquid surface and then move it to a narrow opening. In the final centimeters, the tool has to line up, the other arm has to hold its pose, and the thumb has to press once the tip is in place. The head camera shows where the vessels sit on the bench. The wrist cameras show the relative positions of the opening, the tip, and the fingers.
 
-We study this kind of bimanual dexterity in a tabletop cell-culture workflow. The full workflow also includes picking up the tool, changing its tip, and moving vessels. We began with four transfers and two mixing operations that can be trained and run as standalone skills. The policy generates actions from a natural-language instruction and the three camera views. The demonstration pool contains **3,507 full trajectories** across 12 tasks, totaling about **2,500 minutes** based on synchronized samples at 30 Hz. How reliably the actions run depends on where a demonstration starts, how action chunks meet, and what coordinates the model uses for its targets. [Project page](https://black-yt.github.io/embodied-ai-projects/projects/project-01/)
+We study this kind of bimanual dexterity in a tabletop cell-culture workflow. The full workflow also includes picking up the tool, changing its tip, and moving vessels. We began with four transfers and two mixing operations that can be trained and run as standalone skills. The policy generates actions from a natural-language instruction and the three camera views. The demonstration pool contains **3,507 full trajectories** across 12 tasks, totaling about **2,500 minutes** based on synchronized samples at 30 Hz. How reliably the actions run depends on where a demonstration starts, how action chunks meet, and what coordinates the model uses for its targets.
 
 ## Why did the gripper close before alignment?
 
@@ -61,7 +62,7 @@ $$
 
 For a fixed $$\lambda$$, a linear solve gives the solution. The implementation checks the deviation at each interior point, reduces the weight if needed, and searches the bracket by bisection. The tested limits were **2 mm** for position and **1°** for orientation. For orientation, we align the signs of neighboring quaternions, optimize rotation vectors relative to the initial orientation, and check angular deviations on SO(3). Gripper commands pass through unchanged. If the controller sends the smoothed actions, the action history also records the commands that were sent.
 
-![Raw and smoothed versions of the same offline position sequence, with the same two endpoints.]({{ '/blogs/bimanual-manipulation-engineering/assets/bounded-smoothing.png' | relative_url }})
+![Raw and smoothed versions of the same offline position sequence, with the same two endpoints.]({{ '/blogs/embodied-ai-practical-experience/assets/bounded-smoothing.png' | relative_url }})
 {: .blog-figure-image}
 
 *Figure 1. A constructed one-dimensional check of the smoother. The largest position adjustment is about 2 mm, and the final point stays at 20 mm.*
@@ -73,25 +74,16 @@ A separate replay used ten saved model predictions. The median smoothing time wa
 
 Early scheduling left a gap between chunks. Waiting for a chunk to finish before collecting images and running inference left the arm waiting at each handoff. Feeding an older image into a parallel request creates a second problem. The next chunk may start from a visual state the robot has already moved past. Even during a short approach to a tube opening, this difference can affect alignment.
 
-A world action model predicts future imagery and actions from visual and action history. While the robot executes chunk $$A_k$$, the future dynamics module (FDM) uses the most recent grounded history and the actions in $$A_k$$ to forecast visual features at the future handoff. The policy uses that forecast to prepare $$A_{k+1}$$ while the current chunk runs. Once camera observations arrive, the executed actions and their observed outcomes correct the history for subsequent predictions. The forecast is provisional. The prefetch queue must stay aligned with the execution index and timestamps. Preparing the next chunk early and making its first commands continuous are separate design problems. For an example of the latter, see the prefix constraints used in real-time chunking [[3]](#ref-real-time-chunking).
+A world action model predicts future imagery and actions from visual and action history. While the robot executes chunk $$A_k$$, the future dynamics module (FDM) uses the available observations and current actions to forecast visual features at the end of the chunk. The policy uses that forecast to prepare $$A_{k+1}$$. Preparing the next chunk early and making its first commands continuous are separate design problems. For an example of the latter, see the prefix constraints used in real-time chunking [[3]](#ref-real-time-chunking).
 
-The pseudocode shows the steady-state loop. The current chunk has already been prefetched, and camera feedback from the previous chunk is available. The controller starts asynchronously so inference can run while the current commands are being sent.
+Both sides predict the current action from `frame[i]`. On the left, the policy waits for the robot to finish and for the camera to capture the next frame. On the right, the FDM predicts `frame[i + 1]` while the robot moves, so the policy can compute the next action early.
 
-```python
-for k in steady_chunks:
-    current = ready.pop(k)
-    execution = controller.start(current)  # Non-blocking
+![Side-by-side pseudocode. Red marks the wait for motion to finish on the left. On the right, the FDM predicts frame i+1 during motion so the policy can compute the next action early. The real camera frame is then written to the same index.]({{ '/blogs/embodied-ai-practical-experience/assets/async-pseudocode.png' | relative_url }})
+{: .blog-pseudocode}
 
-    history = correct(history, previous_feedback)
-    future_features = fdm.predict_visual_features(history, current)
-    ready[k + 1] = predict_actions(history, current, future_features)
+The last two lines on the right capture `real_frame` and write it to `frame[i + 1]`, restoring the observed image for subsequent inference.
 
-    previous_feedback = execution.wait_for_feedback()
-```
-
-The FDM forecasts visual features from the corrected history and the current actions. At the end of the loop, the real images and corresponding action-command history are collected for the next correction. Both execution and inference complete their current work before the next chunk starts.
-
-![Serial scheduling runs inference after execution. Asynchronous scheduling places the future visual prediction and next action inference inside the current execution window.]({{ '/blogs/bimanual-manipulation-engineering/assets/chunk-timeline.png' | relative_url }})
+![Serial scheduling runs inference after execution. Asynchronous scheduling places the future visual prediction and next action inference inside the current execution window.]({{ '/blogs/embodied-ai-practical-experience/assets/chunk-timeline.png' | relative_url }})
 {: .blog-figure-image}
 
 *Figure 2. Asynchronous lookahead schedules computation inside the current action window. Observed feedback subsequently corrects the history. Timing is schematic.*
@@ -122,7 +114,7 @@ The training signal changes with the representation. Joint supervision is expres
 
 We trained Joint and EE versions on the same demonstrations of **picking up a pipette and attaching a new tip**. Both used the same pretrained initialization and **5,000 training steps**. We evaluated them on the same **30 validation trajectories**, covering **383 chunks of 50 steps and 18,497 valid frames**. Each open-loop chunk started from a recorded observation. We mapped Joint predictions to tool poses with FK and compared both versions with the demonstrated poses in a common frame. We measured position in millimeters and orientation with angular error, excluding padding at the end of chunks.
 
-![Relative to Joint, EE has 5.2% and 21.9% higher mean position errors for the left and right arms. Its left-arm P95 is 8.0% lower and its right-arm P95 is 3.5% higher. Absolute values in millimeters are shown at right.]({{ '/blogs/bimanual-manipulation-engineering/assets/action-representation-errors.png' | relative_url }})
+![Relative to Joint, EE has 5.2% and 21.9% higher mean position errors for the left and right arms. Its left-arm P95 is 8.0% lower and its right-arm P95 is 3.5% higher. Absolute values in millimeters are shown at right.]({{ '/blogs/embodied-ai-practical-experience/assets/action-representation-errors.png' | relative_url }})
 {: .blog-figure-image}
 
 *Figure 3. Relative change in end-effector position error from Joint to EE, computed as (EE − Joint) / Joint. Absolute errors in millimeters are shown on the right. P95 is the error at or below which 95% of valid frames fall.*
