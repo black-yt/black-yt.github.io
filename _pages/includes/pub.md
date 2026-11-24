@@ -19,7 +19,7 @@
   <div class='paper-box-text' markdown="1">
 
 <a class=PaperTitle href="https://black-yt.github.io/embodied-ai-projects/projects/project-01/index.html"><b>Dexterous Manipulation Project</b></a> \\
-*2026* \\
+*Project, 2026* \\
 **<span class="author-highlight">Wanghan Xu</span>**, one of the core contributors \\
 [<a href="https://black-yt.github.io/embodied-ai-projects/projects/project-01/index.html">Project Page</a>]
 

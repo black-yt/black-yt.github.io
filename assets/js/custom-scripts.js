@@ -654,6 +654,7 @@ document.addEventListener('DOMContentLoaded', function() {
         title.textContent = trigger.dataset.videoTitle;
         video = document.createElement('video');
         video.controls = true;
+        video.loop = true;
         video.playsInline = true;
         video.preload = 'none';
         video.poster = trigger.dataset.videoPoster;
