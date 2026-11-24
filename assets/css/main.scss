@@ -970,6 +970,11 @@ body, #main {
         cursor: zoom-in;
     }
 
+    .blog-pseudocode img {
+        width: 100%;
+        max-width: 100%;
+    }
+
     // Keep image-to-caption spacing; add breathing room outside the pair.
     .blog-figure-image {
         margin-top: 2em;
