@@ -13,6 +13,23 @@
   <div class='paper-box-image'>
     <div class="paper-box-media">
       <div class="badge core">Key Contributor</div>
+      <iframe class="paper-video" loading="lazy" data-src="//player.bilibili.com/player.html?isOutside=true&amp;aid=117670796266129&amp;bvid=BV1e1yfzXEKQ&amp;cid=43884676838&amp;p=1" title="Dexterous Manipulation Project demo" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class='paper-box-text' markdown="1">
+
+<a class=PaperTitle href="https://black-yt.github.io/embodied-ai-projects/projects/project-01/index.html"><b>Dexterous Manipulation Project</b></a> \\
+*2026*
+
+  </div>
+</div>
+
+
+
+<div class='paper-box' data-core='true'>
+  <div class='paper-box-image'>
+    <div class="paper-box-media">
+      <div class="badge core">Key Contributor</div>
       <a href="/images/Sage-S2.1-Flash.png"><img loading="lazy" data-src='/images/Sage-S2.1-Flash.png' alt="Sage S2.1 Flash" width="2014" height="1015"></a>
       <iframe class="paper-video" loading="lazy" data-src="//player.bilibili.com/player.html?isOutside=true&aid=117626957202168&bvid=BV1K8sN6sEVk&cid=43662773876&p=1" title="Sage S2.1 Flash introduction video" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
     </div>
