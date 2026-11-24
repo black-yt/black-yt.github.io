@@ -26,7 +26,7 @@ Research Topics: Embodied AI, World Model, VLA
 <a class=PaperTitle href="https://www.shlab.org.cn/"><b>Research Intern at the Large Model Center, Shanghai AI Laboratory</b></a> \\
 *2023.07–2026.06* \\
 Research Topics: LLMs, Agent Training, Agent Coding \\
-[Sage S2.1 Flash](https://arxiv.org/pdf/2611.21072), [Atria Dawn](https://arxiv.org/pdf/2609.15818), [ResearchClawBench](https://arxiv.org/pdf/2606.07591)
+Selected Work: [Sage S2.1 Flash](https://arxiv.org/pdf/2611.21072), [Atria Dawn](https://arxiv.org/pdf/2609.15818), [ResearchClawBench](https://arxiv.org/pdf/2606.07591)
 
   </div>
 </div>
