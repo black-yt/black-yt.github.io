@@ -1,6 +1,6 @@
-# <i class="fas fa-book-open section-icon"></i> Publications
+<h1 id="-publications"><i class="fas fa-book-open section-icon"></i> Research Work</h1>
 
-<div class="seg-control" id="pubFilter" role="group" aria-label="Publications filter">
+<div class="seg-control" id="pubFilter" role="group" aria-label="Research Work filter">
   <div class="seg-indicator"></div>
   <button type="button" class="seg-btn active" data-filter="all" aria-pressed="true">All</button>
   <button type="button" class="seg-btn" data-filter="core" aria-pressed="false">Key Contributor</button>
