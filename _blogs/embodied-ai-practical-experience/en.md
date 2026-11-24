@@ -6,7 +6,7 @@ translation_key: bimanual-manipulation-engineering
 permalink: /blogs/embodied-ai-practical-experience/
 redirect_from: /blogs/bimanual-manipulation-engineering/
 description: "Five lessons from bringing a bimanual robot policy from demonstrations to the lab, motivated by premature grasps, chunk handoff delays, and tool alignment errors."
-cover: /blogs/embodied-ai-practical-experience/assets/chunk-timeline.png
+cover: /blogs/embodied-ai-practical-experience/assets/robot-video-cover.webp
 ---
 
 > You can see more real-robot demonstrations on the [project page](https://black-yt.github.io/embodied-ai-projects/projects/project-01/).
@@ -76,17 +76,20 @@ Early scheduling left a gap between chunks. Waiting for a chunk to finish before
 
 A world action model predicts future imagery and actions from visual and action history. While the robot executes chunk $$A_k$$, the future dynamics module (FDM) uses the available observations and current actions to forecast visual features at the end of the chunk. The policy uses that forecast to prepare $$A_{k+1}$$. Preparing the next chunk early and making its first commands continuous are separate design problems. For an example of the latter, see the prefix constraints used in real-time chunking [[3]](#ref-real-time-chunking).
 
-Both sides predict the current action from `frame[i]`. On the left, the policy waits for the robot to finish and for the camera to capture the next frame. On the right, the FDM predicts `frame[i + 1]` while the robot moves, so the policy can compute the next action early.
+Both sides predict the current action from frame i. On the left, the policy waits for the robot to finish and for the camera to capture the next frame. On the right, the FDM predicts frame i + 1 while the robot moves, so the policy can compute the next action early.
 
 ![Side-by-side pseudocode. Red marks the wait for motion to finish on the left. On the right, the FDM predicts frame i+1 during motion so the policy can compute the next action early. The real camera frame is then written to the same index.]({{ '/blogs/embodied-ai-practical-experience/assets/async-pseudocode.png' | relative_url }})
-{: .blog-pseudocode}
+{: .blog-pseudocode .blog-figure-image}
 
-The last two lines on the right capture `real_frame` and write it to `frame[i + 1]`, restoring the observed image for subsequent inference.
+*Figure 2. Pseudocode for action handoffs with serial waiting and FDM lookahead.*
+{: .blog-caption}
+
+The last two lines on the right capture a real frame after the motion ends and replace the prediction at step i + 1. Subsequent inference uses the observed frame.
 
 ![Serial scheduling runs inference after execution. Asynchronous scheduling places the future visual prediction and next action inference inside the current execution window.]({{ '/blogs/embodied-ai-practical-experience/assets/chunk-timeline.png' | relative_url }})
 {: .blog-figure-image}
 
-*Figure 2. Asynchronous lookahead schedules computation inside the current action window. Observed feedback subsequently corrects the history. Timing is schematic.*
+*Figure 3. Asynchronous lookahead schedules computation inside the current action window. Observed feedback subsequently corrects the history. Timing is schematic.*
 {: .blog-caption}
 
 This execution path sends **16 control targets** per chunk. The serial time is approximately $$T_{\mathrm{exec}}+T_{\mathrm{infer}}$$. In steady state, overlap can approach $$\max(T_{\mathrm{exec}},T_{\mathrm{infer}})$$ plus scheduling and handoff overhead. An independent timing run measured 11 steady cycles, including history correction and next-chunk inference, at **0.808 s median** and **0.823 s P90**. A 30 Hz command rate gives a nominal **0.533 s** execution window, so that inference workload cannot fit within it. At 18 Hz the nominal window is **0.889 s**, which can contain the measured durations. Changing the rate also changes physical motion speed and needs its own validation.
@@ -117,7 +120,7 @@ We trained Joint and EE versions on the same demonstrations of **picking up a pi
 ![Relative to Joint, EE has 5.2% and 21.9% higher mean position errors for the left and right arms. Its left-arm P95 is 8.0% lower and its right-arm P95 is 3.5% higher. Absolute values in millimeters are shown at right.]({{ '/blogs/embodied-ai-practical-experience/assets/action-representation-errors.png' | relative_url }})
 {: .blog-figure-image}
 
-*Figure 3. Relative change in end-effector position error from Joint to EE, computed as (EE − Joint) / Joint. Absolute errors in millimeters are shown on the right. P95 is the error at or below which 95% of valid frames fall.*
+*Figure 4. Relative change in end-effector position error from Joint to EE, computed as (EE − Joint) / Joint. Absolute errors in millimeters are shown on the right. P95 is the error at or below which 95% of valid frames fall.*
 {: .blog-caption}
 
 Joint had lower mean position and orientation errors for both arms in this comparison. EE had lower left-arm tail errors. The left position P95 dropped from **103.78 mm** to **95.50 mm**, and the left orientation P95 from **10.98°** to **10.62°**. The mean and the P95 can favor different choices when occasional large misses matter to the task.
