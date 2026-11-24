@@ -10,7 +10,8 @@
 
 <a class=PaperTitle href="https://www.robbyant.com/"><b>Research Intern at the LingBot Team, Robbyant, Ant Group</b></a> \\
 *2026.06–Present* \\
-Research Topics: Embodied AI, World Model, VLA
+Research Topics: Embodied AI, World Model, VLA \\
+Selected Work: [Dexterous Manipulation](https://black-yt.github.io/embodied-ai-projects/projects/project-01/index.html)
 
   </div>
 </div>
