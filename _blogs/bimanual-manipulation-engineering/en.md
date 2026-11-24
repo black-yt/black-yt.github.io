@@ -8,13 +8,15 @@ description: "Five lessons from bringing a bimanual robot policy from demonstrat
 cover: /blogs/bimanual-manipulation-engineering/assets/chunk-timeline.png
 ---
 
-> This article is for readers who know the basics of imitation learning and want to deploy a policy on a real robot. The numbers come from a data audit, offline computations, no-motion timing tests, and physical trials. Each result is labeled with its measurement conditions.
+> This article is for readers who know the basics of imitation learning and want to deploy a policy on a real robot. Each result specifies how it was measured.
 
-When we asked a bimanual robot to pick up a tool, the policy could move toward it, yet the gripper sometimes closed before it was aligned. The first predicted chunk also tended to hold or jitter briefly before the approach. When we put the demonstrations and predictions on the same timeline, we saw that the wait before the operator began had been included in the training labels for task onset.
+“Transfer the liquid from the dish into the small tube.” To follow that instruction, a bimanual robot has to bring the pipette tip to the liquid surface and then move it to a narrow opening. In the final centimeters, the tool has to line up, the other arm has to hold its pose, and the thumb has to press once the tip is in place. The head camera shows where the vessels sit on the bench. The wrist cameras show the relative positions of the opening, the tip, and the fingers.
 
-This article follows five problems that came up in deployment. The project uses a head camera, two wrist cameras, and a natural-language instruction to control both arms. We evaluate fine tool use on liquid transfer and mixing operations from a cell-culture workflow. The demonstration pool contains **3,507 full trajectories** from 12 tabletop tasks, totaling about **2,500 minutes** based on synchronized samples and a 30 Hz rate. Six standalone skills account for the physical trials discussed below. [Project page and trial videos](https://black-yt.github.io/embodied-ai-projects/projects/project-01/#gallery)
+We study this kind of bimanual dexterity in a tabletop cell-culture workflow. The full workflow also includes picking up the tool, changing its tip, and moving vessels. We began with four transfers and two mixing operations that can be trained and run as standalone skills. The policy generates actions from a natural-language instruction and the three camera views. The demonstration pool contains **3,507 full trajectories** across 12 tasks, totaling about **2,500 minutes** based on synchronized samples at 30 Hz. How reliably the actions run depends on where a demonstration starts, how action chunks meet, and what coordinates the model uses for its targets. [Project page](https://black-yt.github.io/embodied-ai-projects/projects/project-01/)
 
 ## Why did the gripper close before alignment?
+
+Picking up the tool was where we first ran into a timing problem. The policy could move toward the tool, yet the gripper sometimes closed before alignment. The first predicted chunk also tended to hold or jitter briefly before the approach. Putting the demonstrations and predictions on one timeline showed that idle time before the operator began was included in the training labels for task onset.
 
 In the tool-pickup demonstrations, very similar starting images could carry different action labels. Some operators were waiting after starting the recording. Others had already begun to approach the tool. With variable wait lengths, the policy saw similar geometry while learning to hold, move, and eventually close the gripper. When the policy predicts several steps at once, low-motion steps can also crowd out the beginning of useful motion in its first prediction. See ACT for background on action chunking [[1]](#ref-act).
 
@@ -73,6 +75,22 @@ Early scheduling left a gap between chunks. Waiting for a chunk to finish before
 
 A world action model predicts future imagery and actions from visual and action history. While the robot executes chunk $$A_k$$, the future dynamics module (FDM) uses the most recent grounded history and the actions in $$A_k$$ to forecast visual features at the future handoff. The policy uses that forecast to prepare $$A_{k+1}$$ while the current chunk runs. Once camera observations arrive, the executed actions and their observed outcomes correct the history for subsequent predictions. The forecast is provisional. The prefetch queue must stay aligned with the execution index and timestamps. Preparing the next chunk early and making its first commands continuous are separate design problems. For an example of the latter, see the prefix constraints used in real-time chunking [[3]](#ref-real-time-chunking).
 
+The pseudocode shows the steady-state loop. The current chunk has already been prefetched, and camera feedback from the previous chunk is available. The controller starts asynchronously so inference can run while the current commands are being sent.
+
+```python
+for k in steady_chunks:
+    current = ready.pop(k)
+    execution = controller.start(current)  # Non-blocking
+
+    history = correct(history, previous_feedback)
+    future_features = fdm.predict_visual_features(history, current)
+    ready[k + 1] = predict_actions(history, current, future_features)
+
+    previous_feedback = execution.wait_for_feedback()
+```
+
+The FDM forecasts visual features from the corrected history and the current actions. At the end of the loop, the real images and corresponding action-command history are collected for the next correction. Both execution and inference complete their current work before the next chunk starts.
+
 ![Serial scheduling runs inference after execution. Asynchronous scheduling places the future visual prediction and next action inference inside the current execution window.]({{ '/blogs/bimanual-manipulation-engineering/assets/chunk-timeline.png' | relative_url }})
 {: .blog-figure-image}
 
@@ -96,35 +114,23 @@ This execution path sends **16 control targets** per chunk. The serial time is a
 
 These measurements describe command dispatch. To diagnose a handoff, I would log the last command in the current chunk, the next chunk's ready time, its first command, and the observation timestamps. The interval between commands across the boundary exposes idle time. Warm-up, history correction, and queueing are separate from a single model forward pass.
 
-## Why check both representations of the same trajectory?
+## Should the policy learn joint targets or end-effector poses?
 
-During mixing in a tilted dish, the left hand presses the tool while the right arm should mostly hold position. An early policy using absolute joint targets produced an obvious right-arm jump. A later relative-joint policy kept that arm mostly still in physical tests while the left hand performed the mixing motion. An accurate transfer policy retained its absolute outputs. The useful debugging practice was to inspect each arm and each chunk boundary, because an average across both arms can hide motion in a limb that should stay still.
+If the main concern is whether the tip enters the tube, an end-effector pose (EE) is a natural target. Joint angles (Joint) express how individual joints should move when one arm needs to hold a particular posture. For a given joint trajectory, forward kinematics (FK) recovers the tool pose at each step. With a shared coordinate frame and the same continuous inverse kinematics (IK) branch, both representations can describe the same motion.
 
-End-effector (EE) outputs specify the tool's target position and orientation. Inverse kinematics (IK) finds joint targets that realize the pose. Joint outputs specify the joint angles directly, and forward kinematics (FK) recovers the tool pose for checking. With the same timestamps, reference frame, tool center point, and continuous IK branch, the two representations can describe exactly the same trajectory. An EE target often has multiple IK solutions. Seeding from the previous joint configuration helps track the branch, alongside checks for joint limits, self-collision, and large steps. With relative joint outputs, the execution client reconstructs the absolute target using the measured joint state and the convention used in training. Grasp commands retain their own semantics.
+The training signal changes with the representation. Joint supervision is expressed in angles. Similar angular errors can produce different tip deviations at different postures. EE supervision is expressed in tool position and orientation, with IK selecting a joint solution at execution time. The practical choice depends on how much the task relies on tool alignment, a stable joint posture, or continuity of motion.
 
-For verification, use FK to compare predicted joint angles with demonstrated tool poses, and run IK on demonstrated poses to check the largest step at a boundary for each arm. In one test with hardware outputs blocked, **all 160 IK targets converged**, with a maximum position residual of about **9 μm**. That measures the numeric residual against the commanded target. Actual tool alignment depends on calibration, tool mounting, and object placement, so it needs visual and physical checks.
+We trained Joint and EE versions on the same demonstrations of **picking up a pipette and attaching a new tip**. Both used the same pretrained initialization and **5,000 training steps**. We evaluated them on the same **30 validation trajectories**, covering **383 chunks of 50 steps and 18,497 valid frames**. Each open-loop chunk started from a recorded observation. We mapped Joint predictions to tool poses with FK and compared both versions with the demonstrated poses in a common frame. We measured position in millimeters and orientation with angular error, excluding padding at the end of chunks.
 
-## What did the physical trials tell us to inspect next?
+![Relative to Joint, EE has 5.2% and 21.9% higher mean position errors for the left and right arms. Its left-arm P95 is 8.0% lower and its right-arm P95 is 3.5% higher. Absolute values in millimeters are shown at right.]({{ '/blogs/bimanual-manipulation-engineering/assets/action-representation-errors.png' | relative_url }})
+{: .blog-figure-image}
 
-On one bimanual robot, the six standalone skills produced **55 trial records, 51 successes, and 4 failures (92.7%)**. One failure was at the source during aspiration. Three were at the target tube during alignment. In all three dispensing failures, the tool arrived near the target but the tip was slightly left of the opening and dispensed outside. That narrows the next experiment to comparing predicted actions, joint commands, and observed tip positions in the final centimeters with the setup held fixed. The video localizes the stage of failure. The individual contributions of model prediction, placement, and calibration still need controlled comparisons.
+*Figure 3. Relative change in end-effector position error from Joint to EE, computed as (EE − Joint) / Joint. Absolute errors in millimeters are shown on the right. P95 is the error at or below which 95% of valid frames fall.*
+{: .blog-caption}
 
-*Table 3. Video-scored physical trials for the six standalone skills.*
-{: .blog-table-caption #physical-trials}
+Joint had lower mean position and orientation errors for both arms in this comparison. EE had lower left-arm tail errors. The left position P95 dropped from **103.78 mm** to **95.50 mm**, and the left orientation P95 from **10.98°** to **10.62°**. The mean and the P95 can favor different choices when occasional large misses matter to the task.
 
-<div class="blog-table-scroll" role="region" aria-labelledby="physical-trials" tabindex="0" markdown="1">
-
-| Skill | Successful / recorded |
-| --- | ---: |
-| Tube to dish · setup A | 5 / 5 |
-| Tube to dish · setup B | 3 / 4 |
-| Dish to tube | 14 / 16 |
-| Tube A to tube B | 10 / 11 |
-| Mixing in a tilted dish | 9 / 9 |
-| Mixing in a tube | 10 / 10 |
-
-</div>
-
-The criteria were visible tool entry and exit, liquid response during a press, and delivery to the intended location. Two tilted-dish records with ambiguous cycle boundaries were counted as successes after operator review. Transfer volume and mixing quality still need quantitative measurement. Compare two public wrist-camera clips of the same task to inspect alignment near the end. [Successful dish-to-tube transfer](https://black-yt.github.io/embodied-ai-projects/projects/project-01/assets/media/dish-to-tube/02/left-wrist.mp4) · [Target opening missed](https://black-yt.github.io/embodied-ai-projects/projects/project-01/assets/media/dish-to-tube/01/left-wrist.mp4)
+These runs used relative joint targets and absolute EE targets, respectively, and each used its own state representation. To isolate the action output space, a follow-up should keep the state input and target reference convention fixed. For deployment, the task also determines what to measure. Insertion calls for tip alignment at the opening. A support phase calls for measuring drift in the other arm. The figure reports open-loop prediction errors.
 
 ## References
 {: .blog-references-heading}
